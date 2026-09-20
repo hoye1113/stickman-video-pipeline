@@ -1,0 +1,15 @@
+Create an approximately 10-second 9:16 vertical 2D kinetic motion-graphics clip targeting 720p at 24 FPS with synchronized audio.
+
+Use a flat, uniform, digitally pure-black canvas and Stick Figure A with identical hollow circular head, no face, no clothing, uniform medium white line weight. Accents: saturated danger red and anxiety violet. Compose vertically in 9:16 with safe margins. Strictly no visible text, letters, numbers, speech bubbles, or subtitles.
+
+First frame: From the dark crimson ripples of Clip 6, top-down perspective of A gripping a minimalist white steering wheel in a dark speeding car outline.
+
+[0–3s] Minimalist white road perspective lines rush downward rapidly beneath the car. Saturated danger red streetlamp rings fly past outside the frame.
+[3–7s] A giant phone handset icon explodes in flashing danger red light on the dashboard. A swerves the steering wheel frantically back and forth as the car skids sideways.
+[7–10s] A slams both feet on the brake pedal. The car screeching halts with its front wheels dangling directly over a pitch-black vertical cliff edge for Clip 8.
+
+Audio-only dialogue, exactly once: "Mr. Li ended the affair quickly, but lived in perpetual terror. One unexpected phone call from his wife forced a frantic three-hour midnight sprint." Do not display or transcribe dialogue visually.
+
+Identical narrator: warm, articulate, mature young adult American male voice, calm analytical and deeply introspective tone, voice-first mix, audio voiceover only, strictly no speech bubbles or dialogue boxes. Audio: Transitioning BGM to tense cello pulse, roaring car engine, piercing tire screech, frantic phone ring vibration, and sharp gasp; voice dominant.
+
+Do not generate photorealism, 3D humanoid CGI, eyes, hair, clothing, speech bubbles, text boxes, visible text, subtitles, or watermarks. Do not alter dialogue.

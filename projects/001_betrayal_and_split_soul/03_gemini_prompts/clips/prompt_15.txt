@@ -1,0 +1,15 @@
+Create an approximately 10-second 9:16 vertical 2D kinetic motion-graphics clip targeting 720p at 24 FPS with synchronized audio.
+
+Use a flat, uniform, digitally pure-black canvas and Stick Figures A and B with identical hollow circular heads, no faces, no clothing, uniform medium white line weight. Accents: clarity gold. Compose vertically in 9:16 with safe margins. Strictly no visible text, letters, numbers, speech bubbles, or subtitles.
+
+First frame: From the balance scale of Clip 14, wide vertical composition showing A on the left cliff and B on the right cliff, connected by a fragile white paper bridge.
+
+[0–3s] A and B look toward each other across the flimsy paper bridge stretching over a deep chasm.
+[3–7s] A vertical bolt of clarity gold lightning strikes down from top center, instantly vaporizing the paper bridge into burning embers that fall away into the abyss.
+[7–10s] A and B stand grounded on solid black granite cliffs on either side. All fake cover is gone; only pure truth and sturdy stone remain for Clip 16.
+
+Audio-only dialogue, exactly once: "Do not settle for fragile apologies to keep an illusion alive. Sometimes, the rotten bridge must burn completely before an honest foundation can be built." Do not display or transcribe dialogue visually.
+
+Identical narrator: warm, articulate, mature young adult American male voice, calm analytical and deeply introspective tone, voice-first mix, audio voiceover only, strictly no speech bubbles or dialogue boxes. Audio: Seamlessly continues 104 BPM piano, sharp crack of thunder lightning, sizzling paper burn, and solid stone impact; voice dominant.
+
+Do not generate photorealism, 3D humanoid rendering, eyes, hair, clothing, speech bubbles, text boxes, visible writing, subtitles, or watermarks. Do not alter dialogue.

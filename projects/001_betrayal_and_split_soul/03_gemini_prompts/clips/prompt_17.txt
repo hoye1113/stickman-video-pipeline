@@ -1,0 +1,15 @@
+Create an approximately 10-second 9:16 vertical 2D kinetic motion-graphics clip targeting 720p at 24 FPS with synchronized audio.
+
+Use a flat, uniform, digitally pure-black canvas and Stick Figures A and B with identical hollow circular heads, no faces, no clothing, uniform medium white line weight. Accents: anxiety violet and clarity gold. Compose vertically in 9:16 with safe margins. Strictly no visible text, letters, numbers, speech bubbles, or subtitles.
+
+First frame: Camera pulls back into high vertical elevation to reveal an ancient, tangled knot of anxiety violet circular lines beneath the chasm floor.
+
+[0–3s] The violet knot pulses like a parasitic loop, representing years of marital attrition.
+[3–7s] A vertical beam of intense clarity gold light plunges downward like a giant sword, slicing cleanly through the violet knot and shattering the loop into harmless fading dust.
+[7–10s] A and B stand side-by-side on the illuminated bridge, facing an emerging golden horizon at the top of the frame for Clip 18.
+
+Audio-only dialogue, exactly once: "The fatal poison in marriage was never just the mistake itself. It is both partners bleeding endlessly in the wrong cycle. Stop the bleeding. Choose radical truth." Do not display or transcribe dialogue visually.
+
+Identical narrator: warm, articulate, mature young adult American male voice, calm analytical and deeply introspective tone, voice-first mix, audio voiceover only, strictly no speech bubbles or dialogue boxes. Audio: Climax chord of full orchestra and piano, resounding blade severing slash, shattering chain explosion, and warm radiant sunrise synth; voice dominant.
+
+Do not generate photorealism, 3D humanoid rendering, eyes, hair, clothing, speech bubbles, text boxes, visible text, subtitles, or watermarks. Do not alter dialogue.

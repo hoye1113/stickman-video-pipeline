@@ -1,0 +1,15 @@
+Create an approximately 10-second 9:16 vertical 2D kinetic motion-graphics clip targeting 720p at 24 FPS with synchronized audio.
+
+Use a flat, uniform, digitally pure-black canvas and Stick Figures A and B with identical hollow circular heads, no faces, no clothing, uniform medium white line weight. Accents: clarity gold. Compose vertically in 9:16 with safe margins, leaving clear negative space in the upper vertical third. Strictly no visible text, letters, numbers, speech bubbles, or subtitles.
+
+First frame: A and B stand side-by-side in vertical center, bathed in warm clarity gold ambient light.
+
+[0–3s] A and B take steady, synchronized steps forward along the wide golden path toward the upper horizon.
+[3–7s] The dark mist behind them completely dissolves into clean black space. The top third of the screen remains clean, dark negative space reserved for post-production text.
+[7–10s] A and B halt, standing side-by-side as two equal, sovereign silhouettes. A single warm golden halo pulses gently above their heads, holding the final frame into a gentle freeze.
+
+Audio-only dialogue, exactly once: "Real love is not flawless innocence; it is the courage to rebuild on solid rock. Confront the reality, set your boundaries, and take back your life." Do not display or transcribe dialogue visually.
+
+Identical narrator: warm, articulate, mature young adult American male voice, calm analytical and deeply introspective tone, voice-first mix, audio voiceover only, strictly no speech bubbles or dialogue boxes. Audio: Warm, triumphant, yet deeply grounded piano chord, gentle breeze whoosh, and peaceful sustained acoustic decay fading out smoothly; voice dominant.
+
+Do not generate photorealism, 3D humanoid models, facial features, clothing, speech bubbles, text boxes, visible words, subtitles, or watermarks. Do not alter dialogue.

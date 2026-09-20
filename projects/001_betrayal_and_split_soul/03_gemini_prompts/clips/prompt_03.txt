@@ -1,0 +1,15 @@
+Create an approximately 10-second 9:16 vertical 2D kinetic motion-graphics clip targeting 720p at 24 FPS with synchronized audio.
+
+Use a flat, uniform, digitally pure-black canvas and Stick Figure A with identical hollow circular head, no face, no eyes, no clothing, uniform medium white line weight. Accents: saturated danger red and anxiety violet. Compose vertically in 9:16 with safe margins. Strictly no visible text, letters, numbers, speech bubbles, or subtitles.
+
+First frame: A lands with a heavy bounce onto a flat black floor beside a sleek white outline of a smartphone lying flat.
+
+[0–3s] The phone screen erupts with an intense flash of saturated danger red light, projecting upward into the dark vertical space.
+[3–7s] High above in the upper frame, an enormous pair of icy white stylized eyes (wife's gaze) illuminates. A trembles violently and collapses onto both knees in total defeat, bowing toward the phone.
+[7–10s] A stretches its hands upward in desperate pleading. From the floor around A, heavy vertical anxiety violet iron bars burst upward at high speed, surrounding A in a cage for Clip 4.
+
+Audio-only dialogue, exactly once: "Take Mr. Zhou. When a random notification exposed his three-year secret, his desperate kneel down was not pure guilt. It was sheer panic over losing control." Do not display or transcribe dialogue visually.
+
+Identical narrator: warm, articulate, mature young adult American male voice, calm analytical and deeply introspective tone, voice-first mix, audio voiceover only, strictly no speech bubbles or dialogue boxes. Audio: Seamlessly continues 68 BPM piano from clip 2, sharp mechanical notification chime, heavy knee-thud impact, and clanging metal bars; voice dominant.
+
+Do not generate photorealism, 3D humanoid CGI, realistic eyes, facial details, hair, clothing, speech bubbles, text boxes, visible words, subtitles, or watermarks. Do not alter dialogue.

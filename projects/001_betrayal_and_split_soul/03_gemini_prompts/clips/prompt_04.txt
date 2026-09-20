@@ -1,0 +1,15 @@
+Create an approximately 10-second 9:16 vertical 2D kinetic motion-graphics clip targeting 720p at 24 FPS with synchronized audio.
+
+Use a flat, uniform, digitally pure-black canvas and Stick Figure A with identical hollow circular head, no face, no clothing, uniform medium white line weight. Accents: saturated danger red and anxiety violet. Compose vertically in 9:16 with safe margins. Strictly no visible text, letters, numbers, speech bubbles, or subtitles.
+
+First frame: The violet bars from Clip 3 fuse into a tight, transparent vertical glass box sealing A inside.
+
+[0–3s] Inside the glass box, A mechanically puts on a white smiling mask icon over its circular head.
+[3–7s] From above the box, multiple horizontal anxiety violet laser beams sweep downward, scanning A continuously. A frantically wipes a small white floor patch and holds out an icon-only phone with trembling arms.
+[7–10s] The air inside the glass box turns smoky dark violet. A clutches its neck in suffocation, collapses backward against the glass wall, and the white smiling mask falls off and shatters for Clip 5.
+
+Audio-only dialogue, exactly once: "He deleted accounts and surrendered passwords, living as a daytime saint and nighttime prisoner. Pseudo-remorse creates a suffocating cage, turning marriage into chronic exhaustion." Do not display or transcribe dialogue visually.
+
+Identical narrator: warm, articulate, mature young adult American male voice, calm analytical and deeply introspective tone, voice-first mix, audio voiceover only, strictly no speech bubbles or dialogue boxes. Audio: Seamlessly continues 68 BPM piano from clip 3, rhythmic ticking clock, high-voltage scanner hum, gasping breath, and glass mask crack; voice dominant.
+
+Do not generate photorealism, 3D humanoid rendering, eyes, hair, clothing, speech bubbles, text boxes, visible letters, subtitles, or watermarks. Do not alter dialogue.

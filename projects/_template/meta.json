@@ -1,0 +1,20 @@
+{
+  "project_id": "template",
+  "title_zh": "项目中文标题",
+  "title_en": "Project English Title",
+  "aspect_ratio": "9:16",
+  "resolution": "720p",
+  "fps": 24,
+  "style": "Style 1 Dark",
+  "accents": [
+    "Saturated Danger Red",
+    "Anxiety Violet",
+    "Clarity Gold"
+  ],
+  "narrator": "warm, articulate, mature young adult American male voice, calm analytical and deeply introspective tone",
+  "total_clips": 18,
+  "clips_generated": [],
+  "status": "draft",
+  "created_at": "",
+  "source_file": ""
+}

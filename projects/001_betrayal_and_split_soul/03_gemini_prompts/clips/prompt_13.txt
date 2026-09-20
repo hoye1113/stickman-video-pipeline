@@ -1,0 +1,15 @@
+Create an approximately 10-second 9:16 vertical 2D kinetic motion-graphics clip targeting 720p at 24 FPS with synchronized audio.
+
+Use a flat, uniform, digitally pure-black canvas and Stick Figure A with identical hollow circular head, no face, no clothing, uniform medium white line weight. Accents: clarity gold and saturated danger red. Compose vertically in 9:16 with safe margins. Strictly no visible text, letters, numbers, speech bubbles, or subtitles.
+
+First frame: The golden crack from Clip 12 splits wide open, unfolding into a steep vertical flight of white stairs ascending toward the top.
+
+[0–3s] Resting on the stairs is an enormous, heavy black boulder with rough texture lines.
+[3–7s] A steps up, lowers its shoulder, and pushes with all its strength against the bottom of the boulder. White strain lines radiate from A's arms as it forces the boulder upward one step.
+[7–10s] Golden flame-like light erupts from beneath A's feet, burning away the dark red stains clinging to the boulder and purifying it pure white. A takes another solid step upward for Clip 14.
+
+Audio-only dialogue, exactly once: "True redemption requires the spine to carry real weight. Stop playing the victim. Pay the full price of your actions instead of demanding cheap forgiveness." Do not display or transcribe dialogue visually.
+
+Identical narrator: warm, articulate, mature young adult American male voice, calm analytical and deeply introspective tone, voice-first mix, audio voiceover only, strictly no speech bubbles or dialogue boxes. Audio: BGM shifts to 104 BPM resolute, grounded acoustic piano and warm synth pads, heavy grinding stone rumble, and crackling golden fire; voice dominant.
+
+Do not generate photorealism, 3D humanoid models, facial features, clothing, speech bubbles, text boxes, visible words, subtitles, or watermarks. Do not alter dialogue.

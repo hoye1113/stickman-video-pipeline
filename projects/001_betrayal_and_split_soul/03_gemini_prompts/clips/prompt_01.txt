@@ -1,0 +1,15 @@
+Create an approximately 10-second 9:16 vertical 2D kinetic motion-graphics clip targeting 720p at 24 FPS with synchronized audio.
+
+Use a flat, uniform, digitally pure-black canvas and one minimalist white stick figure, Stick Figure A, standing in the vertical center. Lock a hollow circular head, no facial features, no eyes, no pupils, no hair, no clothing, no filled body, stable human-like proportions, and uniform medium white line weight. Accents are saturated danger red and anxiety violet only. Compose vertically with interface-safe margins, keeping action within the central vertical 20% to 80% area. Generate strictly no visible words, letters, numbers, captions, subtitles, speech bubbles, or dialogue boxes; keep all visual metaphors icon-only.
+
+First frame: Stick Figure A stands alone and motionless in empty black space.
+
+[0–3s] The camera slowly pushes vertically downward toward A. From the top of the frame, an ominous, glowing saturated danger red mask silhouette slowly descends over A.
+[3–7s] A tilts its head up to face the mask. Faint red embers pulse inside the mask's eye sockets. Suddenly, a jagged vertical fissure of anxiety violet light cracks the mask right down the middle.
+[7–10s] The violet fracture tears completely through the floor beneath A's feet. The camera plunges vertically downward directly into the radiating violet fissure as violet line energy fills the frame for Clip 2.
+
+Audio-only dialogue, exactly once: "Can a man who betrayed his marriage ever truly love his wife again? When he holds her, who is really in his mind?" Do not display or transcribe dialogue visually.
+
+Identical narrator: warm, articulate, mature young adult American male voice, calm analytical and deeply introspective tone, voice-first mix, audio voiceover only, strictly no speech bubbles or dialogue boxes. Audio: 68 BPM quiet, thoughtful minor-key acoustic piano, a single muffled heartbeat thud, and subtle electric hum; voice dominant.
+
+Do not generate photorealism, 3D humanoid CGI, realistic faces, eyes, pupils, hair, clothing, extra limbs, disconnected lines, speech bubbles, text boxes, visible writing, captions, subtitles, logos, or watermarks. Do not alter or omit dialogue.

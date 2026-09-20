@@ -1,0 +1,15 @@
+Create an approximately 10-second 9:16 vertical 2D kinetic motion-graphics clip targeting 720p at 24 FPS with synchronized audio.
+
+Use a flat, uniform, digitally pure-black canvas and Stick Figure A with identical hollow circular head, no facial features, no eyes, no pupils, no clothing, uniform medium white line weight. Accents: saturated danger red and anxiety violet. Compose vertically within 9:16 safe margins. Generate strictly no visible words, letters, numbers, speech bubbles, or captions; icon-only graphics.
+
+First frame: Camera bursts upward out of the violet fissure from Clip 1 to reveal A standing with arms outstretched horizontally like a mechanical scale balance.
+
+[0–3s] In A's left hand rests a minimalist white house icon (family); in A's right hand hovers a pulsing liquid sphere of saturated danger red (affair).
+[3–7s] The two hands tilt violently up and down in chaotic oscillation. A's body begins to split along its vertical centerline into two flickering, semi-transparent ghost figures pulling in opposite directions.
+[7–10s] The floor beneath A shatters into floating violet shards. A's double silhouettes drop vertically into a dark abyss, rushing directly toward the lower camera boundary for Clip 3.
+
+Audio-only dialogue, exactly once: "The truth is far colder than you think. Most unfaithful men are not living in pleasure—they are trapped in a violent internal civil war." Do not display or transcribe dialogue visually.
+
+Identical narrator: warm, articulate, mature young adult American male voice, calm analytical and deeply introspective tone, voice-first mix, audio voiceover only, strictly no speech bubbles or dialogue boxes. Audio: Seamlessly continues identical 68 BPM minor-key piano from clip 1, adding metallic scale clinking, static glitch buzzing, and a low falling drone; voice dominant.
+
+Do not generate photorealism, 3D humanoid models, facial features, eyes, hair, clothing, speech bubbles, text boxes, visible letters, numbers, subtitles, or watermarks. Do not alter dialogue.

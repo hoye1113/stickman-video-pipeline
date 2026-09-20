@@ -1,0 +1,15 @@
+Create an approximately 10-second 9:16 vertical 2D kinetic motion-graphics clip targeting 720p at 24 FPS with synchronized audio.
+
+Use a flat, uniform, digitally pure-black canvas and Stick Figure A with identical hollow circular head, no face, no clothing, uniform medium white line weight. Accents: saturated danger red. Compose vertically in 9:16 with safe margins. Strictly no visible text, letters, numbers, speech bubbles, or subtitles.
+
+First frame: In the blackness from Clip 8, a vertical spotlight shines down from top center, illuminating A sitting on the floor.
+
+[0–3s] A giant minimalist white syringe filled with glowing saturated danger red liquid descends from the top of the frame, pressing its tip against A's head.
+[3–7s] The syringe plunger depresses, injecting liquid into A. A red cloth band wraps around A's circular head, blinding its sight, while illusory heart icons float upward.
+[7–10s] The giant glass syringe suddenly shatters into dozens of flying red glass shards. The red blindfold disintegrates, revealing A's hollow circular head reeling backward in pain for Clip 10.
+
+Audio-only dialogue, exactly once: "Affairs are nothing more than emotional painkillers. They inject temporary dopamine to numb aging and boredom, but they cure absolutely nothing." Do not display or transcribe dialogue visually.
+
+Identical narrator: warm, articulate, mature young adult American male voice, calm analytical and deeply introspective tone, voice-first mix, audio voiceover only, strictly no speech bubbles or dialogue boxes. Audio: Minor-key piano returns with solemn weight, hollow liquid injection squelch, faint surreal echo, and crisp exploding glass shatter; voice dominant.
+
+Do not generate photorealism, 3D humanoid rendering, eyes, hair, clothing, speech bubbles, text boxes, visible words, subtitles, or watermarks. Do not alter dialogue.

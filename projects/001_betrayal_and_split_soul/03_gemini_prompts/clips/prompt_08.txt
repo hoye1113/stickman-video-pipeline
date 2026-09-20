@@ -1,0 +1,15 @@
+Create an approximately 10-second 9:16 vertical 2D kinetic motion-graphics clip targeting 720p at 24 FPS with synchronized audio.
+
+Use a flat, uniform, digitally pure-black canvas and Stick Figure A with identical hollow circular head, no face, no clothing, uniform medium white line weight. Accents: saturated danger red and anxiety violet. Compose vertically in 9:16 with safe margins. Strictly no visible text, letters, numbers, speech bubbles, or subtitles.
+
+First frame: High-angle vertical view looking straight down past the dangling car into the abyss, where A hangs horizontally suspended in empty air.
+
+[0–3s] Over A's chest floats a vertical white battery meter with four glowing bars.
+[3–7s] Heavy floating violet boulder icons drop from above and stack onto A's chest. The battery bars rapidly drain from green to a single blinking saturated danger red bar, flashing rapidly.
+[7–10s] The final red battery bar fizzles out with a spark. A's limbs go limp like a cut marionette, and A plunges straight down into pure blackness for Clip 9.
+
+Audio-only dialogue, exactly once: "He realized this double life was never romantic freedom. It was a brutal energy vampire, exhausting every drop of sanity until complete collapse." Do not display or transcribe dialogue visually.
+
+Identical narrator: warm, articulate, mature young adult American male voice, calm analytical and deeply introspective tone, voice-first mix, audio voiceover only, strictly no speech bubbles or dialogue boxes. Audio: Seamlessly continues tense cello from clip 7, heavy thudding impact, rapid battery-warning beeps, electrical short-circuit spark, and silence; voice dominant.
+
+Do not generate photorealism, 3D humanoid rendering, eyes, hair, clothing, speech bubbles, text boxes, visible letters, subtitles, or watermarks. Do not alter dialogue.

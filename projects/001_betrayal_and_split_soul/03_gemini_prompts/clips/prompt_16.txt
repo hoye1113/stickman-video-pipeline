@@ -1,0 +1,15 @@
+Create an approximately 10-second 9:16 vertical 2D kinetic motion-graphics clip targeting 720p at 24 FPS with synchronized audio.
+
+Use a flat, uniform, digitally pure-black canvas and Stick Figures A and B with identical hollow circular heads, no faces, no clothing, uniform medium white line weight. Accents: clarity gold. Compose vertically in 9:16 with safe margins. Strictly no visible text, letters, numbers, speech bubbles, or subtitles.
+
+First frame: From the solid cliffs of Clip 15, two vertical pillars of brilliant clarity gold rise out of the ground on both sides of the chasm.
+
+[0–3s] The golden pillars lock into the bedrock with crisp geometric stability.
+[3–7s] Between the pillars, thick glowing cables of clarity gold light shoot across the chasm, weaving a transparent, rock-solid suspension bridge connecting A and B.
+[7–10s] A and B step simultaneously onto the golden bridge. As their feet touch the bridge surface, concentric circular ripples of gold light expand outward across the dark chasm for Clip 17.
+
+Audio-only dialogue, exactly once: "Healing is not rewinding to an innocent past. It is writing non-negotiable boundaries, forging clear rules, and making the relationship sustainable again." Do not display or transcribe dialogue visually.
+
+Identical narrator: warm, articulate, mature young adult American male voice, calm analytical and deeply introspective tone, voice-first mix, audio voiceover only, strictly no speech bubbles or dialogue boxes. Audio: Piano builds into sweeping, majestic orchestral strings, metallic cable tension ping, firm footstep click, and expanding golden chime ripples; voice dominant.
+
+Do not generate photorealism, 3D humanoid models, facial features, clothing, speech bubbles, text boxes, visible text, subtitles, or watermarks. Do not alter dialogue.

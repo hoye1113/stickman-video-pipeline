@@ -1,0 +1,15 @@
+Create an approximately 10-second 9:16 vertical 2D kinetic motion-graphics clip targeting 720p at 24 FPS with synchronized audio.
+
+Use a flat, uniform, digitally pure-black canvas and Stick Figure A with identical hollow circular head, no face, no clothing, uniform medium white line weight. Accents: saturated danger red. Compose vertically in 9:16 with safe margins. Strictly no visible text, letters, numbers, speech bubbles, or subtitles.
+
+First frame: Flying red shards from Clip 9 assemble in the upper frame into the peaked roofline of a minimalist white house framework.
+
+[0–3s] The entire white house structure tilts precariously sideways under heavy downward gravity. A braces its two arms underneath the beams, struggling to keep it upright.
+[3–7s] A vertical torrent of saturated danger red rain pounds down from above. A's knees buckle and tremble, yet A refuses to let go of the roof beam.
+[7–10s] The camera pulls back vertically: inside the house stand the peaceful white silhouettes of a wife and child, but A's shadow cast on the floor is a slithering danger red serpent for Clip 11.
+
+Audio-only dialogue, exactly once: "Here lies the paradox: the man who betrayed the home is often the most terrified of its collapse. Yet staying inside is not the same as healing." Do not display or transcribe dialogue visually.
+
+Identical narrator: warm, articulate, mature young adult American male voice, calm analytical and deeply introspective tone, voice-first mix, audio voiceover only, strictly no speech bubbles or dialogue boxes. Audio: Seamlessly continues piano from clip 9, howling wind, torrential rain impact, creaking structural timber, and deep ominous heartbeat; voice dominant.
+
+Do not generate photorealism, 3D humanoid models, facial features, clothing, speech bubbles, text boxes, visible text, subtitles, or watermarks. Do not alter dialogue.

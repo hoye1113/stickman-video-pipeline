@@ -1,0 +1,65 @@
+# Video and Media Assets (Prevent GitHub bloat)
+projects/**/04_raw_clips/*.mp4
+projects/**/04_raw_clips/*.webm
+projects/**/04_raw_clips/*.mkv
+projects/**/04_raw_clips/*.mov
+projects/**/04_raw_clips/*.png
+projects/**/04_raw_clips/concat_list.txt
+projects/**/06_final_video/*.mp4
+projects/**/06_final_video/*.webm
+projects/**/06_final_video/*.mkv
+projects/**/06_final_video/*.mov
+
+# Global media ignores
+*.mp4
+*.webm
+*.avi
+*.mov
+*.mkv
+
+# Keep directory structure
+!.gitkeep
+
+# Python cache and environments
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+ENV/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Node / JS
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Browser skill and daemon state
+.bsk/
+*.log
+
+# OS & IDE temporary files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo
