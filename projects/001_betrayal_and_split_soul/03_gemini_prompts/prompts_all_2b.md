@@ -1,20 +1,22 @@
-# Phase B — Style 2B 生产脚本总汇 (18 Clips Cinematic Package)
+# Phase B — Style 2B 4:3 横版生产脚本总汇 (18 Clips Cinematic Package)
 
 **适用平台**：Google Flow (`https://labs.google/fx/tools/flow`)  
-**画幅规格**：`9:16` 竖屏，约 10 秒/段，720p、24 FPS、同步音频  
+**画幅规格**：`4:3` 横屏（Academy 经典比例 1.33:1），约 10 秒/段，720p（960×720）、24 FPS、同步音频  
 **视觉风格**：**Style 2B — Cinematic Story**（全彩电影叙事环境 + 极简线条角色）  
 **角色设定**：A = 红帽 + 黄衫；B = 无帽 + 灰衫  
-**安全合规**：全部提示词遵循 `docs/prompt_safety_policy.md`（无伤害、无成瘾物、无危险情境描写）
+**安全合规**：全部提示词 100% 遵循 `docs/prompt_safety_policy.md`（无暴力、无武器、无成瘾物、无危险伤害情境描写，全量隐喻转译）  
+**生产目录**：`03_gemini_prompts/clips_safe/`（包含完整 18 个独立 prompt 文件，直接顺序调用，无外部依赖与回退）
 
 ---
 
 ## 全局连续性契约 (Global Continuity Block)
 
-- **角色**：极简 2D 线条角色（黑线、鲜亮色块）合成在全彩电影感环境中；空心圆头、点状简眼，禁止写实皮肤/人脸/3D 拟真。
-- **环境**：每段写明"具体场景 + 时间 + 光源"，统一采用电影感体积光与浅景深；场景沿"同一叙事世界"演进（公寓 → 卧室 → 长廊 → 山路 → 岩壁 → 暗室 → 断崖 → 采石场 → 天台 → 日出高地）。
-- **强调色语义**：vivid red＝诱惑与警报；cool violet＝焦虑与内耗；warm gold＝清醒与边界。
-- **零文字契约**：画面严禁出现任何可见文字、字幕、对话框与界面文案。
-- **音频双锁**：18 段逐字复用同一位旁白；Clip 1 确立 68 BPM 钢琴与心跳基调，Clips 2–18 显式继承并演进 BGM。
+- **画幅与构图**：`4:3` 横向舞台构图，角色与关键视觉动作稳定置于画面水平及垂直居中安全区内，左右留有均衡呼吸空间。
+- **角色**：极简 2D 线条角色（黑线、鲜亮色块）合成在全彩电影感环境中；空心圆头、点状简眼，严禁写实皮肤/人脸/3D 拟真模型。
+- **环境**：每段写明“具体场景 + 时间 + 光源”，统一采用电影感体积光与浅景深；场景沿“同一叙事世界”演进（公寓 → 卧室 → 走廊 → 山路 → 岩壁 → 暗室 → 断崖 → 采石场 → 天台 → 日出高地）。
+- **强调色语义**：Saturated Danger Red＝诱惑与警报；Anxiety Violet＝焦虑与内耗；Warm Gold＝清醒与边界。
+- **零文字契约**：画面严禁出现任何可见文字、字母、数字、字幕、对话框与界面文案。
+- **音频双锁**：18 段逐字复用同一位年轻美式沉稳男声旁白；Clip 1 确立 68 BPM 钢琴与心跳基调，Clips 2–18 显式继承并演进 BGM。
 - **动态拍点**：每段严格按 `[0–3s]`、`[3–7s]`、`[7–10s]` 组织物理动作；相邻片段首尾帧镜头动量严格咬合。
 
 ---
@@ -22,21 +24,21 @@
 ## Clip 01 — The Soul Question (灵魂拷问)
 
 ```text
-Create an approximately 10-second 9:16 vertical cinematic 2D animation clip targeting 720p at 24 FPS with synchronized audio.
+Create an approximately 10-second 4:3 horizontal cinematic 2D animation clip targeting 720p at 24 FPS with synchronized audio.
 
 This is a non-violent educational 2D line-animation about psychology; all characters are abstract minimalist symbols; every image is a symbolic metaphor.
 
-Environment: a dim city apartment living room at night, cool blue-grey tones, one warm floor lamp beside a sofa, blurred city lights beyond the window. Cinematic volumetric lighting, soft depth of field, quiet melancholic mood.
+Environment: a dim city apartment living room at night, cool blue-grey tones, one warm floor lamp beside a sofa, blurred city lights beyond the wide window. Cinematic volumetric lighting, soft depth of field, quiet melancholic mood.
 
-Character: Stick Figure A — a minimalist 2D animated stick figure wearing a bright red beanie (smooth rounded knit, no pom-pom) and a yellow t-shirt, simple black stick limbs and shorts, hollow circular head with minimal dot eyes, simple black lines, vibrant colors, smooth 2D animation style. Compose vertically in 9:16, keeping the character within the central safe area.
+Character: Stick Figure A — a minimalist 2D animated stick figure wearing a bright red beanie (smooth rounded knit, no pom-pom) and a yellow t-shirt, simple black stick limbs and shorts, hollow circular head with minimal dot eyes, simple black lines, vibrant colors, smooth 2D animation style. Compose horizontally in 4:3 ratio with cinematic staging, keeping key subjects within the central safe area.
 
-First frame: A sits alone at the edge of the sofa, motionless, in the dim room.
+First frame: Stick Figure A sits alone at the edge of the sofa in the 4:3 frame, motionless, in the dim room.
 
-[0–3s] The camera slowly pushes in; a red mask silhouette descends from above, hovering over A.
+[0–3s] The camera slowly pushes in horizontally; an ominous saturated danger red mask silhouette descends from above, hovering over A.
 [3–7s] A lifts its head toward the mask; faint red light pulses inside the mask's empty eye sockets.
-[7–10s] The mask splits down the middle into a jagged cool violet fissure; violet light runs down the floor and the camera plunges toward the glowing crack for Clip 2.
+[7–10s] The mask splits down the middle into a jagged cool violet fissure; violet light runs across the floor and the camera plunges toward the glowing crack for Clip 2.
 
-Final frame: the violet fissure remains open on the floor, camera diving into it.
+Final frame: the violet fissure remains open on the floor, camera diving into the violet fracture.
 
 Audio-only dialogue, exactly once: "Can a man who betrayed his marriage ever truly love his wife again? When he holds her, who is really in his mind?" Do not display or transcribe dialogue visually.
 
@@ -47,519 +49,476 @@ Negative constraints: no photorealistic human skin or faces, no 3D humanoid CGI 
 
 ---
 
-## Clip 02 — The Internal Civil War (内在裂解)
+## Clip 02 — Internal Civil War (撕裂内战)
 
 ```text
-Create an approximately 10-second 9:16 vertical cinematic 2D animation clip targeting 720p at 24 FPS with synchronized audio.
+Create an approximately 10-second 4:3 horizontal cinematic 2D animation clip targeting 720p at 24 FPS with synchronized audio.
 
 This is a non-violent educational 2D line-animation about psychology; all characters are abstract minimalist symbols; every image is a symbolic metaphor.
 
-Environment: the same apartment living room, now colder; the floor lamp dims, papers and a cold coffee cup rest on the table, hairline cracks spread across the wooden floor. Cinematic volumetric lighting, soft depth of field, tense stillness.
+Environment: the same apartment living room, cooler light, scattered documents and a cold coffee mug on the coffee table, violet floor fracture visible across the lower 4:3 frame. Cinematic soft focus, high contrast, tense atmosphere.
 
-Character: Stick Figure A — the same minimalist 2D animated stick figure wearing a bright red beanie and a yellow t-shirt, simple black stick limbs, hollow circular head with minimal dot eyes, simple black lines, vibrant colors.
+Character: Stick Figure A — a minimalist 2D animated stick figure wearing a bright red beanie (smooth rounded knit, no pom-pom) and a yellow t-shirt, simple black stick limbs and shorts, hollow circular head with minimal dot eyes, simple black lines, vibrant colors, smooth 2D animation style. Compose horizontally in 4:3 ratio with cinematic staging, keeping key subjects within the central safe area.
 
-First frame: the camera rises out of the violet fissure from Clip 1, revealing A standing with both arms outstretched like a scale balance.
+First frame: camera emerges from the floor fissure; Stick Figure A stands center stage with arms outstretched horizontally like a mechanical scale balance.
 
-[0–3s] A's left hand holds a small white house model; A's right hand carries a pulsing vivid red orb.
-[3–7s] The two arms tilt sharply up and down; A's body splits along its centerline into two flickering semi-transparent ghost figures pulling in opposite directions.
-[7–10s] The floor cracks into floating cool violet shards; both silhouettes drop into the dark below for Clip 3.
+[0–3s] In A's left hand floats a clean white miniature house icon (representing family); in A's right hand pulses an intense red glowing sphere (representing thrill).
+[3–7s] Both arms tilt and oscillate violently up and down, failing to find balance as the red sphere throbs erratically.
+[7–10s] A's body splits down the center into a translucent double silhouette; the floor fractures into geometric violet shards as the dual silhouettes descend into the dark space below.
 
-Final frame: A's double silhouette falls into darkness, violet shards scattering above.
+Final frame: the twin silhouettes sink downward into dark violet depth.
 
 Audio-only dialogue, exactly once: "The truth is far colder than you think. Most unfaithful men are not living in pleasure—they are trapped in a violent internal civil war." Do not display or transcribe dialogue visually.
 
-Identical narrator: warm, articulate, mature young adult American male voice, calm analytical and deeply introspective tone, voice-first mix, audio voiceover only, strictly no speech bubbles or dialogue boxes. Audio: the identical 68 BPM minor-key piano continues seamlessly, joined by metallic scale clinking, static glitch buzz, and a low falling drone; voice dominant.
+Identical narrator: warm, articulate, mature young adult American male voice, calm analytical and deeply introspective tone, voice-first mix, audio voiceover only, strictly no speech bubbles or dialogue boxes. Audio: continues 68 BPM quiet piano, sustained single piano note, metallic balance rattle, subtle tearing static distortion; voice dominant.
 
 Negative constraints: no photorealistic human skin or faces, no 3D humanoid CGI uncanny valley models, no chaotic line glitches, no speech bubbles, no dialogue text boxes, no visible text. No violence, no weapons, no injury, no depiction of harm, no substances. Do not alter dialogue.
 ```
 
 ---
 
-## Clip 03 — Notification Shock (意外曝光)
+## Clip 03 — Sudden Exposure (意外曝光)
 
 ```text
-Create an approximately 10-second 9:16 vertical cinematic 2D animation clip targeting 720p at 24 FPS with synchronized audio.
+Create an approximately 10-second 4:3 horizontal cinematic 2D animation clip targeting 720p at 24 FPS with synchronized audio.
 
 This is a non-violent educational 2D line-animation about psychology; all characters are abstract minimalist symbols; every image is a symbolic metaphor.
 
-Environment: a dark bedroom at night, warm bedside lamp, curtains half drawn, passing car headlights sweeping faint light across the wall. Cinematic volumetric lighting, soft depth of field, anxious mood.
+Environment: a dim bedroom at night, warm yellow bedside lamp illuminating the right side of the 4:3 frame, shadows of passing headlights sweeping across the back wall. Dramatic atmospheric shadows, claustrophobic mood.
 
-Character: Stick Figure A — the same minimalist 2D animated stick figure wearing a bright red beanie and a yellow t-shirt, simple black stick limbs, hollow circular head with minimal dot eyes, simple black lines, vibrant colors.
+Character: Stick Figure A — a minimalist 2D animated stick figure wearing a bright red beanie (smooth rounded knit, no pom-pom) and a yellow t-shirt, simple black stick limbs and shorts, hollow circular head with minimal dot eyes, simple black lines, vibrant colors, smooth 2D animation style. Compose horizontally in 4:3 ratio with cinematic staging, keeping key subjects within the central safe area.
 
-First frame: A crouches on the bedroom floor beside a small glowing phone.
+First frame: A lands in a kneeling position on the bedroom floor beside a glowing smartphone screen.
 
-[0–3s] The phone suddenly bursts into vivid red light, casting long shadows across the room.
-[3–7s] On the wall, a huge cold pale eye silhouette appears; A scrambles backward and sits against the wall, head lowered.
-[7–10s] Cool violet vertical light bars rise around A like window blinds turning into light, closing in slowly for Clip 4.
+[0–3s] The smartphone screen pulses with a sudden burst of warning red light.
+[3–7s] A giant cold silhouette of a wife's watchful eyes projects across the bedroom wall; A recoils backwards in shock and panic.
+[7–10s] Vertical cool violet shadow slats rise from the floor like geometric prison bars, closing in around A.
 
-Final frame: the violet light bars surround A, tightening their spacing.
+Final frame: vertical violet slats fully surround A in the center frame.
 
 Audio-only dialogue, exactly once: "Take Mr. Zhou. When a random notification exposed his three-year secret, his desperate kneel down was not pure guilt. It was sheer panic over losing control." Do not display or transcribe dialogue visually.
 
-Identical narrator: warm, articulate, mature young adult American male voice, calm analytical and deeply introspective tone, voice-first mix, audio voiceover only, strictly no speech bubbles or dialogue boxes. Audio: the same minor-key piano continues, with a sharp notification chime, a heavy thud, and rising metallic bar tones; voice dominant.
+Identical narrator: warm, articulate, mature young adult American male voice, calm analytical and deeply introspective tone, voice-first mix, audio voiceover only, strictly no speech bubbles or dialogue boxes. Audio: sharp brief electronic alert chime, knee impact thud, rising metallic slat whir; voice dominant.
 
 Negative constraints: no photorealistic human skin or faces, no 3D humanoid CGI uncanny valley models, no chaotic line glitches, no speech bubbles, no dialogue text boxes, no visible text. No violence, no weapons, no injury, no depiction of harm, no substances. Do not alter dialogue.
 ```
 
 ---
 
-## Clip 04 — Pseudo-Remorse (窒息的伪和平)
+## Clip 04 — The Glass Cage (假性回归牢笼)
 
 ```text
-Create an approximately 10-second 9:16 vertical cinematic 2D animation clip targeting 720p at 24 FPS with synchronized audio.
+Create an approximately 10-second 4:3 horizontal cinematic 2D animation clip targeting 720p at 24 FPS with synchronized audio.
 
 This is a non-violent educational 2D line-animation about psychology; all characters are abstract minimalist symbols; every image is a symbolic metaphor.
 
-Environment: the same apartment interior, shutters closed, thin haze in the air, a single hard ceiling light, cool blue-grey palette. Cinematic volumetric lighting, soft depth of field, airless stillness.
+Environment: an enclosed room bathed in cool blue-grey haze, harsh downward overhead spotlight illuminating dust particles in the 4:3 stage. Tense, sterile, exhausting atmosphere.
 
-Character: Stick Figure A — the same minimalist 2D animated stick figure wearing a bright red beanie and a yellow t-shirt, simple black stick limbs, hollow circular head with minimal dot eyes, simple black lines, vibrant colors.
+Character: Stick Figure A — a minimalist 2D animated stick figure wearing a bright red beanie (smooth rounded knit, no pom-pom) and a yellow t-shirt, simple black stick limbs and shorts, hollow circular head with minimal dot eyes, simple black lines, vibrant colors, smooth 2D animation style. Compose horizontally in 4:3 ratio with cinematic staging, keeping key subjects within the central safe area.
 
-First frame: the violet light bars from Clip 3 close into a transparent glass box around A.
+First frame: the violet slat cage solidifies into a transparent glass cube in the horizontal center; A stands inside wearing a white smiling mask.
 
-[0–3s] Inside the box, A puts on a plain white smiling mask and sits very straight.
-[3–7s] Outside, several cool violet eye-shapes drift through the haze, scanning the room; A mechanically wipes the table and hands a phone forward.
-[7–10s] The haze thickens inside the box; A leans against the glass wall and slowly slides down, and the white mask slips off and cracks on the floor for Clip 5.
+[0–3s] A stands rigidly inside the glass box, wearing the clean white smiling mask.
+[3–7s] Sweeping cool violet searchlights scan outside the glass box; A performs stiff mechanical actions, wiping the tabletop and offering a smartphone.
+[7–10s] Air inside the box thickens with haze; A slides down against the glass wall exhausted, and the white smiling mask slips off, shattering on the floor.
 
-Final frame: A sits collapsed against the glass, the cracked white mask on the floor.
+Final frame: A sits slumped inside the box, mask fragments scattered on the floor.
 
 Audio-only dialogue, exactly once: "He deleted accounts and surrendered passwords, living as a daytime saint and nighttime prisoner. Pseudo-remorse creates a suffocating cage, turning marriage into chronic exhaustion." Do not display or transcribe dialogue visually.
 
-Identical narrator: warm, articulate, mature young adult American male voice, calm analytical and deeply introspective tone, voice-first mix, audio voiceover only, strictly no speech bubbles or dialogue boxes. Audio: the same piano continues, with a muffled pendulum, mechanical ticking, quickened heartbeat, and a low room hum; voice dominant.
+Identical narrator: warm, articulate, mature young adult American male voice, calm analytical and deeply introspective tone, voice-first mix, audio voiceover only, strictly no speech bubbles or dialogue boxes. Audio: heavy pendulum ticking, subtle clockwork gear whir, accelerating heartbeat thrum; voice dominant.
 
 Negative constraints: no photorealistic human skin or faces, no 3D humanoid CGI uncanny valley models, no chaotic line glitches, no speech bubbles, no dialogue text boxes, no visible text. No violence, no weapons, no injury, no depiction of harm, no substances. Do not alter dialogue.
 ```
 
 ---
 
-## Clip 05 — The Narcotic of Vanity (平淡中的代偿)
+## Clip 05 — Narcissistic Compensation (自恋代偿)
 
 ```text
-Create an approximately 10-second 9:16 vertical cinematic 2D animation clip targeting 720p at 24 FPS with synchronized audio.
+Create an approximately 10-second 4:3 horizontal cinematic 2D animation clip targeting 720p at 24 FPS with synchronized audio.
 
 This is a non-violent educational 2D line-animation about psychology; all characters are abstract minimalist symbols; every image is a symbolic metaphor.
 
-Environment: a long monotonous grey corridor at dusk, doors repeating along the walls, pale light at the far end, dust floating in the air. Cinematic volumetric lighting, soft depth of field, monotonous mood.
+Environment: a long sterile grey office-to-home corridor at dusk, monotonous neutral walls stretching symmetrically across the 4:3 horizontal frame, a bright doorway glowing in the far distance. Cinematic depth of field, dull repetitive atmosphere.
 
-Character: Stick Figure A — the same minimalist 2D animated stick figure wearing a bright red beanie and a yellow t-shirt, simple black stick limbs, hollow circular head with minimal dot eyes, simple black lines, vibrant colors.
+Character: Stick Figure A — a minimalist 2D animated stick figure wearing a bright red beanie (smooth rounded knit, no pom-pom) and a yellow t-shirt, simple black stick limbs and shorts, hollow circular head with minimal dot eyes, simple black lines, vibrant colors, smooth 2D animation style. Compose horizontally in 4:3 ratio with cinematic staging, keeping key subjects within the central safe area.
 
-First frame: mask fragments from Clip 4 scatter and dissolve as A walks, hunched, along the grey corridor.
+First frame: camera pans from floor debris to A walking slowly down the grey hallway, posture slouched and wooden.
 
-[0–3s] A walks with tired, dragging steps down the endless corridor.
-[3–7s] A tilted glass floats in from the right and pours a glowing stream of vivid red light over A; A straightens unnaturally tall while faint star shapes drift upward around it.
-[7–10s] The star shapes collapse into a glowing red ribbon that coils gently around A's shoulders and pulls A backward toward a tall white door for Clip 6.
+[0–3s] A walks with mechanical, lifeless steps along the monotonous corridor.
+[3–7s] A large translucent decorative glass overhead tilts gently, pouring a cascade of warm glowing red light particles over A; A's posture instantly straightens, and floating golden star icons surround A's head.
+[7–10s] The golden stars compress into a bright red ribbon wrapping comfortably around A's shoulders, gently pulling A backwards toward the doorway.
 
-Final frame: A is drawn backward toward the white door, red ribbon taut across the shoulders.
+Final frame: A is pulled toward the white doorway, red ribbon glowing on shoulders.
 
 Audio-only dialogue, exactly once: "Then there is Mr. Liu. Decades of flat routine made him feel invisible. The outside affair was not love—it was a cheap painkiller to resurrect his dying vanity." Do not display or transcribe dialogue visually.
 
-Identical narrator: warm, articulate, mature young adult American male voice, calm analytical and deeply introspective tone, voice-first mix, audio voiceover only, strictly no speech bubbles or dialogue boxes. Audio: the same piano continues, with slow dragging footsteps, soft liquid pour, ethereal synth chord, and a taut ribbon snap; voice dominant.
+Identical narrator: warm, articulate, mature young adult American male voice, calm analytical and deeply introspective tone, voice-first mix, audio voiceover only, strictly no speech bubbles or dialogue boxes. Audio: monotonous slow mechanical footsteps, gentle ethereal synth shimmer, crisp ribbon tension resonance; voice dominant.
 
 Negative constraints: no photorealistic human skin or faces, no 3D humanoid CGI uncanny valley models, no chaotic line glitches, no speech bubbles, no dialogue text boxes, no visible text. No violence, no weapons, no injury, no depiction of harm, no substances. Do not alter dialogue.
 ```
 
 ---
 
-## Clip 06 — Guilt and Greed (愧疚与贪婪)
+## Clip 06 — Obedient Bargaining (顺从与同谋)
 
 ```text
-Create an approximately 10-second 9:16 vertical cinematic 2D animation clip targeting 720p at 24 FPS with synchronized audio.
+Create an approximately 10-second 4:3 horizontal cinematic 2D animation clip targeting 720p at 24 FPS with synchronized audio.
 
 This is a non-violent educational 2D line-animation about psychology; all characters are abstract minimalist symbols; every image is a symbolic metaphor.
 
-Environment: the end of the grey corridor; a tall white door glows with warm light through its seam; faint dark red ripples spread across the floor. Cinematic volumetric lighting, soft depth of field, uneasy warmth.
+Environment: the end of the corridor before a tall white door glowing with warm light, subtle dark crimson ripples expanding across the polished floor. High contrast, secretive and strained mood.
 
-Character: Stick Figure A — the same minimalist 2D animated stick figure wearing a bright red beanie and a yellow t-shirt, simple black stick limbs, hollow circular head with minimal dot eyes, simple black lines, vibrant colors.
+Character: Stick Figure A — a minimalist 2D animated stick figure wearing a bright red beanie (smooth rounded knit, no pom-pom) and a yellow t-shirt, simple black stick limbs and shorts, hollow circular head with minimal dot eyes, simple black lines, vibrant colors, smooth 2D animation style. Compose horizontally in 4:3 ratio with cinematic staging, keeping key subjects within the central safe area.
 
-First frame: the red ribbon from Clip 5 brings A to a stop in front of the tall white door.
+First frame: the red ribbon guides A to a stop directly before the white door; A assumes an excessively polite, obedient posture.
 
-[0–3s] A immediately adopts an exaggerated, submissive bow toward the doorway.
-[3–7s] With both hands, A offers a glowing vivid red heart icon forward, while its left hand quietly hides a small glowing red key behind its back.
-[7–10s] Above the door frame, a large cool violet question mark forms and rotates slowly; dark red ripples spread outward across the floor for Clip 7.
+[0–3s] A stands carefully before the door, posture obedient and eager to please.
+[3–7s] A presents a glowing red heart icon with both hands toward the open doorway, while hiding a luminous red key behind its back.
+[7–10s] A giant glowing violet question mark condenses above the doorway, rotating slowly as red ripples expand across the floor plane.
 
-Final frame: the violet question mark hovers above the door, ripples widening on the floor.
+Final frame: violet question mark hovers above the door as ripples spread outward.
 
 Audio-only dialogue, exactly once: "Guilt and betrayal easily coexist. He acted extra obedient at home, using synthetic sweetness as emotional currency to buy temporary peace of mind." Do not display or transcribe dialogue visually.
 
-Identical narrator: warm, articulate, mature young adult American male voice, calm analytical and deeply introspective tone, voice-first mix, audio voiceover only, strictly no speech bubbles or dialogue boxes. Audio: the same piano continues, adding a sweet false violin tremolo, a door latch click, and murky bubbling; voice dominant.
+Identical narrator: warm, articulate, mature young adult American male voice, calm analytical and deeply introspective tone, voice-first mix, audio voiceover only, strictly no speech bubbles or dialogue boxes. Audio: polite gentle string phrase, soft door latch click, low ambient resonant hum; voice dominant.
 
 Negative constraints: no photorealistic human skin or faces, no 3D humanoid CGI uncanny valley models, no chaotic line glitches, no speech bubbles, no dialogue text boxes, no visible text. No violence, no weapons, no injury, no depiction of harm, no substances. Do not alter dialogue.
 ```
 
 ---
 
-## Clip 07 — Midnight Sprint (深夜惊魂)
+## Clip 07 — Midnight Sprint (午夜狂奔)
 
 ```text
-Create an approximately 10-second 9:16 vertical cinematic 2D animation clip targeting 720p at 24 FPS with synchronized audio.
+Create an approximately 10-second 4:3 horizontal cinematic 2D animation clip targeting 720p at 24 FPS with synchronized audio.
 
 This is a non-violent educational 2D line-animation about psychology; all characters are abstract minimalist symbols; every image is a symbolic metaphor.
 
-Environment: a mountain road at midnight, wet asphalt reflecting vivid red streetlights, mist gathering ahead, distant city glow blurred below. Cinematic volumetric lighting, soft depth of field, tense night driving mood.
+Environment: a nighttime winding road seen through the windshield of a car, dashboard console illuminated in dim green, streetlights and dashed road markings streaking past in the 4:3 frame. Cinematic motion blur, suspenseful thriller atmosphere.
 
-Character: Stick Figure A — the same minimalist 2D animated stick figure wearing a bright red beanie and a yellow t-shirt, simple black stick limbs, hollow circular head with minimal dot eyes, simple black lines, vibrant colors.
+Character: Stick Figure A — a minimalist 2D animated stick figure wearing a bright red beanie (smooth rounded knit, no pom-pom) and a yellow t-shirt, simple black stick limbs and shorts, hollow circular head with minimal dot eyes, simple black lines, vibrant colors, smooth 2D animation style. Compose horizontally in 4:3 ratio with cinematic staging, keeping key subjects within the central safe area.
 
-First frame: the dark red ripples from Clip 6 resolve into a top-down view of A gripping a steering wheel inside a dark moving car.
+First frame: overhead angle looking into the vehicle, A gripping the steering wheel firmly with both hands as dashed center lines race backward.
 
-[0–3s] White lane-dash perspective lines rush downward beneath the car; vivid red streetlight rings flash past outside.
-[3–7s] A large phone handset icon flares with vivid red light on the dashboard; A turns the wheel quickly back and forth as the car skids sideways.
-[7–10s] A presses both feet on the brake pedal; the car screeches to a stop exactly at a white warning line as the road beyond fades into deep black for Clip 8.
+[0–3s] The car speeds along the winding mountain road through the night.
+[3–7s] A large incoming call icon flashes bright danger red on the dashboard; A reacts with sudden panic, wrenching the wheel as tires squeal in a sideways skid.
+[7–10s] A hits the brakes hard; the car stops smoothly right before a glowing white safety line across the asphalt, darkness beyond.
 
-Final frame: the car rests at the white warning line, darkness beyond the road edge.
+Final frame: car headlights beam onto the white safety line, dust settling.
 
 Audio-only dialogue, exactly once: "Mr. Li ended the affair quickly, but lived in perpetual terror. One unexpected phone call from his wife forced a frantic three-hour midnight sprint." Do not display or transcribe dialogue visually.
 
-Identical narrator: warm, articulate, mature young adult American male voice, calm analytical and deeply introspective tone, voice-first mix, audio voiceover only, strictly no speech bubbles or dialogue boxes. Audio: BGM shifts to a tense cello pulse, with roaring engine, piercing tire screech, urgent phone vibration, and a tense breath; voice dominant.
+Identical narrator: warm, articulate, mature young adult American male voice, calm analytical and deeply introspective tone, voice-first mix, audio voiceover only, strictly no speech bubbles or dialogue boxes. Audio: tense accelerating car engine, sudden tire brake screech, high-frequency phone vibration, sharp gasp; voice dominant.
 
 Negative constraints: no photorealistic human skin or faces, no 3D humanoid CGI uncanny valley models, no chaotic line glitches, no speech bubbles, no dialogue text boxes, no visible text. No violence, no weapons, no injury, no depiction of harm, no substances. Do not alter dialogue.
 ```
 
 ---
 
-## Clip 08 — Battery Drained (警觉耗竭)
+## Clip 08 — Energy Depletion (精神耗竭)
 
 ```text
-Create an approximately 10-second 9:16 vertical cinematic 2D animation clip targeting 720p at 24 FPS with synchronized audio.
+Create an approximately 10-second 4:3 horizontal cinematic 2D animation clip targeting 720p at 24 FPS with synchronized audio.
 
 This is a non-violent educational 2D line-animation about psychology; all characters are abstract minimalist symbols; every image is a symbolic metaphor.
 
-Environment: a rain-soaked rocky ledge at night, cold blue-grey light, glistening wet stone, rain streaks in the air. Cinematic volumetric lighting, soft depth of field, bleak exhaustion.
+Environment: a rainswept rocky ledge at night, glistening wet stone reflections, driving rain streaks illuminated by cool blue rim lighting across the 4:3 frame. Severe, heavy, exhausting atmosphere.
 
-Character: Stick Figure A — the same minimalist 2D animated stick figure wearing a bright red beanie and a yellow t-shirt, simple black stick limbs, hollow circular head with minimal dot eyes, simple black lines, vibrant colors.
+Character: Stick Figure A — a minimalist 2D animated stick figure wearing a bright red beanie (smooth rounded knit, no pom-pom) and a yellow t-shirt, simple black stick limbs and shorts, hollow circular head with minimal dot eyes, simple black lines, vibrant colors, smooth 2D animation style. Compose horizontally in 4:3 ratio with cinematic staging, keeping key subjects within the central safe area.
 
-First frame: high-angle view looking down past the stopped car toward the rocky ledge, where A lies prone on the wet stone.
+First frame: high angle looking down, A kneels exhausted on the wet rocky ledge; a four-bar white battery energy meter HUD floats horizontally above A's chest.
 
-[0–3s] A vertical white battery meter with four glowing bars floats above A's back.
-[3–7s] Heavy cool violet stone icons drift down and stack onto A's back; the battery bars drain rapidly to one blinking vivid red bar.
-[7–10s] The last bar fizzles out with a spark; A's limbs go slack like a resting marionette and A slides gently down the rock face into darkness for Clip 9.
+[0–3s] Rain streams over A as A struggles to stay upright on the rocky plateau.
+[3–7s] Heavy geometric violet stone blocks descend slowly from above, stacking heavily onto A's back; the battery meter drains rapidly from four bars down to one flashing red bar.
+[7–10s] The final red bar extinguishes; A's limbs loosen like a marionette with severed strings, slumping onto the ledge as darkness covers the scene.
 
-Final frame: A slides down into pure blackness, rain fading above.
+Final frame: A lies motionless on the ledge in darkness, empty HUD fading out.
 
 Audio-only dialogue, exactly once: "He realized this double life was never romantic freedom. It was a brutal energy vampire, exhausting every drop of sanity until complete collapse." Do not display or transcribe dialogue visually.
 
-Identical narrator: warm, articulate, mature young adult American male voice, calm analytical and deeply introspective tone, voice-first mix, audio voiceover only, strictly no speech bubbles or dialogue boxes. Audio: the tense cello continues, with heavy rain, dull impacts, rapid battery-warning beeps, an electrical short spark, then silence; voice dominant.
+Identical narrator: warm, articulate, mature young adult American male voice, calm analytical and deeply introspective tone, voice-first mix, audio voiceover only, strictly no speech bubbles or dialogue boxes. Audio: low battery warning beep, heavy stone impact thuds, power-down electrical hum; voice dominant.
 
 Negative constraints: no photorealistic human skin or faces, no 3D humanoid CGI uncanny valley models, no chaotic line glitches, no speech bubbles, no dialogue text boxes, no visible text. No violence, no weapons, no injury, no depiction of harm, no substances. Do not alter dialogue.
 ```
 
 ---
 
-## Clip 09 — The Emotional Painkiller (情绪麻醉剂)
+## Clip 09 — Emotional Painkiller (情绪麻醉剂)
 
 ```text
-Create an approximately 10-second 9:16 vertical cinematic 2D animation clip targeting 720p at 24 FPS with synchronized audio.
+Create an approximately 10-second 4:3 horizontal cinematic 2D animation clip targeting 720p at 24 FPS with synchronized audio.
 
 This is a non-violent educational 2D line-animation about psychology; all characters are abstract minimalist symbols; every image is a symbolic metaphor.
 
-Environment: a completely dark room, one vertical spotlight from above, fine dust drifting through the beam. Cinematic volumetric lighting, soft depth of field, solemn isolation.
+Environment: a dark minimalist studio space, a single soft warm spotlight illuminating a circular area in the horizontal center, subtle floating dust particles. Melancholic, hollow, introspective mood.
 
-Character: Stick Figure A — the same minimalist 2D animated stick figure wearing a bright red beanie and a yellow t-shirt, simple black stick limbs, hollow circular head with minimal dot eyes, simple black lines, vibrant colors.
+Character: Stick Figure A — a minimalist 2D animated stick figure wearing a bright red beanie (smooth rounded knit, no pom-pom) and a yellow t-shirt, simple black stick limbs and shorts, hollow circular head with minimal dot eyes, simple black lines, vibrant colors, smooth 2D animation style. Compose horizontally in 4:3 ratio with cinematic staging, keeping key subjects within the central safe area.
 
-First frame: the spotlight illuminates A sitting on the floor, eyes lowered, in the darkness from Clip 8.
+First frame: A sits quietly on the floor inside the warm spotlight circle.
 
-[0–3s] A giant glowing red beam of light descends from the top of the frame and touches A's head with a soft halo.
-[3–7s] The beam widens and pours glowing vivid red light over A; a red cloth band wraps around A's head, dimming its sight, while illusory heart icons float upward.
-[7–10s] The red beam dissolves into dozens of floating embers; the red band slips off and A lowers its head, dazed, as the embers gather for Clip 10.
+[0–3s] The overhead spotlight warms slightly as A gazes forward.
+[3–7s] A vertical cylindrical beam of soft red light descends from above, enveloping A; a decorative red ribbon drapes gently across A's eyes as floating heart outlines drift lazily into the dark.
+[7–10s] The red light dissolves into floating red embers; the ribbon falls away to the floor, and A sits slumped with head bowed in silence.
 
-Final frame: red embers gather and rise upward through the darkness.
+Final frame: red embers slowly drift away into darkness around the still figure.
 
 Audio-only dialogue, exactly once: "Affairs are nothing more than emotional painkillers. They release temporary dopamine to numb aging and boredom, but they cure absolutely nothing." Do not display or transcribe dialogue visually.
 
-Identical narrator: warm, articulate, mature young adult American male voice, calm analytical and deeply introspective tone, voice-first mix, audio voiceover only, strictly no speech bubbles or dialogue boxes. Audio: minor-key piano returns with solemn weight, a soft hollow liquid drop echo, faint surreal reverb, and a gentle glass chime; voice dominant.
+Identical narrator: warm, articulate, mature young adult American male voice, calm analytical and deeply introspective tone, voice-first mix, audio voiceover only, strictly no speech bubbles or dialogue boxes. Audio: soft dripping chime echo, gentle hollow synth pad, delicate fading wind bell; voice dominant.
 
 Negative constraints: no photorealistic human skin or faces, no 3D humanoid CGI uncanny valley models, no chaotic line glitches, no speech bubbles, no dialogue text boxes, no visible text. No violence, no weapons, no injury, no depiction of harm, no substances. Do not alter dialogue.
 ```
 
 ---
 
-## Clip 10 — The Paradox (人性的悖论)
+## Clip 10 — Fear of Collapse (恐惧崩盘悖论)
 
 ```text
-Create an approximately 10-second 9:16 vertical cinematic 2D animation clip targeting 720p at 24 FPS with synchronized audio.
+Create an approximately 10-second 4:3 horizontal cinematic 2D animation clip targeting 720p at 24 FPS with synchronized audio.
 
 This is a non-violent educational 2D line-animation about psychology; all characters are abstract minimalist symbols; every image is a symbolic metaphor.
 
-Environment: a quiet residential street at night in heavy rain, a small white-walled house leaning in the wind, warm light glowing from its windows, wet street reflecting the glow. Cinematic volumetric lighting, soft depth of field, storm tension.
+Environment: a rainswept suburban street corner at night, a white-walled cottage leaning precariously in the storm, warm amber light glowing from the cottage window in the 4:3 frame. Intense emotional turbulence and fragility.
 
-Character: Stick Figure A — a minimalist 2D animated stick figure wearing a bright red beanie and a yellow t-shirt, simple black stick limbs, hollow circular head with minimal dot eyes, simple black lines, vibrant colors.
+Character: Stick Figure A — a minimalist 2D animated stick figure wearing a bright red beanie (smooth rounded knit, no pom-pom) and a yellow t-shirt, simple black stick limbs and shorts, hollow circular head with minimal dot eyes, simple black lines, vibrant colors, smooth 2D animation style. Compose horizontally in 4:3 ratio with cinematic staging, keeping key subjects within the central safe area.
 
-First frame: the red embers from Clip 9 drift together and assemble into the peaked roofline of the small white house.
+First frame: floating red embers assemble into a wooden cottage roof framework; A uses both arms to brace and push up the collapsing roof beam.
 
-[0–3s] The house tilts sideways in the wind; A braces both arms under the beams, holding the structure up.
-[3–7s] A torrent of vivid red rain pours down; A's knees tremble but A holds on.
-[7–10s] The camera pulls back: inside the warm windows stand the peaceful silhouettes of a wife and child, while A's shadow on the wall stretches into a long red serpent shape for Clip 11.
+[0–3s] A stands braced with trembling arms, holding up the tilting cottage structure in the gale.
+[3–7s] Red-tinted rain lashes horizontally; A's legs shake and sink slightly, but A refuses to let go of the roof beam.
+[7–10s] Camera widens horizontally: inside the cottage window are warm silhouettes of a wife and child; yet A's shadow cast onto the wet exterior wall is a winding red serpent silhouette.
 
-Final frame: A's serpent-shaped shadow lengthens upward across the wet wall.
+Final frame: serpent shadow looms on the wall as A strains beneath the roof beam.
 
 Audio-only dialogue, exactly once: "Here lies the paradox: the man who betrayed the home is often the most terrified of its collapse. Yet staying inside is not the same as healing." Do not display or transcribe dialogue visually.
 
-Identical narrator: warm, articulate, mature young adult American male voice, calm analytical and deeply introspective tone, voice-first mix, audio voiceover only, strictly no speech bubbles or dialogue boxes. Audio: the same piano continues, with howling wind, torrential rain, creaking timber, and a deep steady heartbeat; voice dominant.
+Identical narrator: warm, articulate, mature young adult American male voice, calm analytical and deeply introspective tone, voice-first mix, audio voiceover only, strictly no speech bubbles or dialogue boxes. Audio: howling wind and driving rain, creaking wood strain, muffled heavy heartbeat thrum; voice dominant.
 
 Negative constraints: no photorealistic human skin or faces, no 3D humanoid CGI uncanny valley models, no chaotic line glitches, no speech bubbles, no dialogue text boxes, no visible text. No violence, no weapons, no injury, no depiction of harm, no substances. Do not alter dialogue.
 ```
 
 ---
 
-## Clip 11 — Not "Better" (从来不是因为更好)
+## Clip 11 — The Cowardly Exit (逃兵真相)
 
 ```text
-Create an approximately 10-second 9:16 vertical cinematic 2D animation clip targeting 720p at 24 FPS with synchronized audio.
+Create an approximately 10-second 4:3 horizontal cinematic 2D animation clip targeting 720p at 24 FPS with synchronized audio.
 
 This is a non-violent educational 2D line-animation about psychology; all characters are abstract minimalist symbols; every image is a symbolic metaphor.
 
-Environment: a half-lit bedroom at night, the bedside lamp dimming, red dust motes drifting in the air, cold blue walls. Cinematic volumetric lighting, soft depth of field, hollow quiet.
+Environment: a dimly lit bedroom at late night, bedside lamp fading out, atmospheric red haze drifting horizontally across the 4:3 frame. Somber, disorienting, deconstructive atmosphere.
 
-Character: Stick Figure A — a minimalist 2D animated stick figure wearing a bright red beanie and a yellow t-shirt, simple black stick limbs, hollow circular head with minimal dot eyes, simple black lines, vibrant colors.
+Character: Stick Figure A — a minimalist 2D animated stick figure wearing a bright red beanie (smooth rounded knit, no pom-pom) and a yellow t-shirt, simple black stick limbs and shorts, hollow circular head with minimal dot eyes, simple black lines, vibrant colors, smooth 2D animation style. Compose horizontally in 4:3 ratio with cinematic staging, keeping key subjects within the central safe area.
 
-First frame: the serpent shadow from Clip 10 rises from the floor and coils in mid-air, morphing into a shimmering vivid red female silhouette.
+First frame: the red serpent shadow on the wall curls upward, morphing into an abstract, glowing red female silhouette hovering in mid-air.
 
-[0–3s] A stands looking up at the glowing red silhouette with outstretched, longing hands.
-[3–7s] The red glow evaporates, stripping away all vibrancy to reveal an incomplete, faceless grey wire mannequin.
-[7–10s] A's hands pass right through the empty mannequin; it dissolves into thin red smoke that curls into a vertical ring for Clip 12.
+[0–3s] The red silhouette floats before A, radiating soft crimson light.
+[3–7s] The red glow dissolves from the silhouette, revealing a hollow, fragmented grey wireframe mannequin with no facial features.
+[7–10s] A reaches out with both hands through the mannequin, grasping only dissipating red mist; the mist swirls into a glowing circular ring.
 
-Final frame: the red smoke forms a slowly rotating vertical ring in the dark.
+Final frame: red mist gathers into a glowing circular ring in the center frame.
 
-Audio-only dialogue, exactly once: "Wives often torment themselves asking: 'Does he love her more?' No. He didn't choose a superior woman; he chose a cowardly exit from reality." Do not display or transcribe dialogue visually.
+Audio-only dialogue, exactly once: "Wives often torment themselves asking: "Does he love her more?" No. He didn't choose a superior woman; he chose a cowardly exit from reality." Do not display or transcribe dialogue visually.
 
-Identical narrator: warm, articulate, mature young adult American male voice, calm analytical and deeply introspective tone, voice-first mix, audio voiceover only, strictly no speech bubbles or dialogue boxes. Audio: the same piano continues, with a sorrowful solo cello line, a dissolving wind rush, and a hollow empty whoosh; voice dominant.
+Identical narrator: warm, articulate, mature young adult American male voice, calm analytical and deeply introspective tone, voice-first mix, audio voiceover only, strictly no speech bubbles or dialogue boxes. Audio: gentle wind whoosh through mist, empty grasping swoosh, somber cello solo phrase; voice dominant.
 
 Negative constraints: no photorealistic human skin or faces, no 3D humanoid CGI uncanny valley models, no chaotic line glitches, no speech bubbles, no dialogue text boxes, no visible text. No violence, no weapons, no injury, no depiction of harm, no substances. Do not alter dialogue.
 ```
 
 ---
 
-## Clip 12 — The Mirror (终极审视)
+## Clip 12 — Mirror of Hard Truths (硬核自审)
 
 ```text
-Create an approximately 10-second 9:16 vertical cinematic 2D animation clip targeting 720p at 24 FPS with synchronized audio.
+Create an approximately 10-second 4:3 horizontal cinematic 2D animation clip targeting 720p at 24 FPS with synchronized audio.
 
 This is a non-violent educational 2D line-animation about psychology; all characters are abstract minimalist symbols; every image is a symbolic metaphor.
 
-Environment: a dim room at night, one tall floor mirror with misted glass, cool rim light outlining its frame, floorboards faintly reflected. Cinematic volumetric lighting, soft depth of field, introspective silence.
+Environment: a dim room with a tall full-length dressing mirror, rim-lit by a soft backlight, the mirror surface clouded with delicate mist. Quiet, piercing, transformative mood.
 
-Character: Stick Figure A — a minimalist 2D animated stick figure wearing a bright red beanie and a yellow t-shirt, simple black stick limbs, hollow circular head with minimal dot eyes, simple black lines, vibrant colors.
+Character: Stick Figure A — a minimalist 2D animated stick figure wearing a bright red beanie (smooth rounded knit, no pom-pom) and a yellow t-shirt, simple black stick limbs and shorts, hollow circular head with minimal dot eyes, simple black lines, vibrant colors, smooth 2D animation style. Compose horizontally in 4:3 ratio with cinematic staging, keeping key subjects within the central safe area.
 
-First frame: the red smoke ring from Clip 11 solidifies into a tall vertical mirror standing in the room.
+First frame: the red mist ring expands into the full-length mirror; A walks slowly toward the mirror in the horizontal 4:3 staging.
 
-[0–3s] A steps forward and stands directly before the mirror, looking into its reflection.
-[3–7s] In the reflection, instead of A, a small trembling grey figure huddles in the corner, gently wrapped in heavy cool violet threads.
-[7–10s] A lowers its head in deep thought; a hairline warm gold fissure cracks open straight down the center of the mirror for Clip 13.
+[0–3s] A approaches the mirror and stops before the clouded glass.
+[3–7s] The mirror reflection does not mirror A's posture; instead, it shows a trembling grey figure huddled in the corner, tightly bound by dense violet threads.
+[7–10s] A stands motionless facing the reflection; a fine, hairline crack glowing with warm golden light splits vertically down the center of the mirror.
 
-Final frame: the golden fissure glows along the mirror's center line.
+Final frame: mirror crack radiates intense warm golden light horizontally across frame.
 
 Audio-only dialogue, exactly once: "If you are a man in this crisis, look in the mirror. Did betrayal solve your marital void, or did it expose your complete inability to face hard truths?" Do not display or transcribe dialogue visually.
 
-Identical narrator: warm, articulate, mature young adult American male voice, calm analytical and deeply introspective tone, voice-first mix, audio voiceover only, strictly no speech bubbles or dialogue boxes. Audio: the cello cuts out; one beat of silence, then a deep heartbeat and a clean resonating golden hum; voice dominant.
+Identical narrator: warm, articulate, mature young adult American male voice, calm analytical and deeply introspective tone, voice-first mix, audio voiceover only, strictly no speech bubbles or dialogue boxes. Audio: cello phrase pauses, resonant mirror hum, deep calm heartbeat, golden energy fracture chime; voice dominant.
 
 Negative constraints: no photorealistic human skin or faces, no 3D humanoid CGI uncanny valley models, no chaotic line glitches, no speech bubbles, no dialogue text boxes, no visible text. No violence, no weapons, no injury, no depiction of harm, no substances. Do not alter dialogue.
 ```
 
 ---
 
-## Clip 13 — The Weight of Real Cost (面对真实代价)
+## Clip 13 — Carrying the Weight (扛起代价)
 
 ```text
-Create an approximately 10-second 9:16 vertical cinematic 2D animation clip targeting 720p at 24 FPS with synchronized audio.
+Create an approximately 10-second 4:3 horizontal cinematic 2D animation clip targeting 720p at 24 FPS with synchronized audio.
 
 This is a non-violent educational 2D line-animation about psychology; all characters are abstract minimalist symbols; every image is a symbolic metaphor.
 
-Environment: a stone quarry stairway before dawn, wide stone steps ascending into warm golden morning light, quarry walls on both sides, dust glowing in the beam. Cinematic volumetric lighting, soft depth of field, solemn resolve.
+Environment: a pre-dawn stone quarry with wide stone steps ascending into a warm golden morning sky, rugged granite walls framing the left and right in 4:3 composition. Monumental, resolute, heroic atmosphere.
 
-Character: Stick Figure A — a minimalist 2D animated stick figure wearing a bright red beanie and a yellow t-shirt, simple black stick limbs, hollow circular head with minimal dot eyes, simple black lines, vibrant colors.
+Character: Stick Figure A — a minimalist 2D animated stick figure wearing a bright red beanie (smooth rounded knit, no pom-pom) and a yellow t-shirt, simple black stick limbs and shorts, hollow circular head with minimal dot eyes, simple black lines, vibrant colors, smooth 2D animation style. Compose horizontally in 4:3 ratio with cinematic staging, keeping key subjects within the central safe area.
 
-First frame: the golden fissure from Clip 12 spreads wide and settles into a steep stone stairway.
+First frame: golden mirror fracture widens into the steep stone steps; a massive dark stone tablet rests on the incline.
 
-[0–3s] A large dark monolith stands on the steps; A sets its shoulder firmly under the base.
-[3–7s] A drives the monolith upward step by step, body straining with steady effort.
-[7–10s] Dark red impurities along the monolith's base burn away in the warm gold light, leaving pure white stone for Clip 14.
+[0–3s] A stands at the foot of the stone stairway looking up at the summit.
+[3–7s] A sets its shoulder against the heavy base of the stone tablet, muscles tensing, pushing the tablet upward step by step.
+[7–10s] Dark crimson impurities on the tablet burn away in the morning light, leaving the tablet as pure white polished stone.
 
-Final frame: the whitened stone rests on the upper step, golden light washing over it.
+Final frame: A pushes the purified white stone onto a level landing bathed in sunlight.
 
 Audio-only dialogue, exactly once: "True redemption requires the spine to carry real weight. Stop playing the victim. Pay the full price of your actions instead of demanding cheap forgiveness." Do not display or transcribe dialogue visually.
 
-Identical narrator: warm, articulate, mature young adult American male voice, calm analytical and deeply introspective tone, voice-first mix, audio voiceover only, strictly no speech bubbles or dialogue boxes. Audio: a firm 104 BPM acoustic piano enters as the BGM foundation, with heavy stone friction, deep footsteps, and warm fire-like shimmer; voice dominant.
+Identical narrator: warm, articulate, mature young adult American male voice, calm analytical and deeply introspective tone, voice-first mix, audio voiceover only, strictly no speech bubbles or dialogue boxes. Audio: 104 BPM resolute acoustic piano enters with strength, heavy stone grinding rumble, warm golden light flare sound; voice dominant.
 
 Negative constraints: no photorealistic human skin or faces, no 3D humanoid CGI uncanny valley models, no chaotic line glitches, no speech bubbles, no dialogue text boxes, no visible text. No violence, no weapons, no injury, no depiction of harm, no substances. Do not alter dialogue.
 ```
 
 ---
 
-## Clip 14 — Her Awakening (女性的觉醒)
+## Clip 14 — Stepping Out of the Storm (抽离情绪风暴)
 
 ```text
-Create an approximately 10-second 9:16 vertical cinematic 2D animation clip targeting 720p at 24 FPS with synchronized audio.
+Create an approximately 10-second 4:3 horizontal cinematic 2D animation clip targeting 720p at 24 FPS with synchronized audio.
 
 This is a non-violent educational 2D line-animation about psychology; all characters are abstract minimalist symbols; every image is a symbolic metaphor.
 
-Environment: a rooftop terrace at dusk, distant violet-black storm clouds churning, the last warm gold light raking low across the platform floor. Cinematic volumetric lighting, soft depth of field, calm rising resolve.
+Environment: a high open stone terrace at dusk, distant violet storm clouds rolling in from the left, warm golden twilight illuminating the terrace floor in the 4:3 frame. Majestic, empowering, poised atmosphere.
 
-Character: Stick Figure B — the same minimalist 2D animated stick figure wearing a grey t-shirt, no beanie, hollow circular head with minimal dot eyes, simple black stick limbs, simple black lines, vibrant colors.
+Character: Stick Figure B — a minimalist 2D animated stick figure wearing a grey t-shirt, no beanie, hollow circular head with minimal dot eyes, simple black stick limbs, simple black lines, vibrant colors, smooth 2D animation style.
 
-First frame: the camera pans to the right side of the frame, where B stands firmly on the raised platform.
+First frame: Stick Figure B (grey t-shirt, no beanie) stands tall in the center of the terrace, facing the incoming winds with calm poise.
 
-[0–3s] Fierce swirling cool violet storm clouds rush in from the left, trying to envelop B.
-[3–7s] B deliberately raises its right arm; a vertical translucent warm gold shield expands from B's hand and holds the storm back completely.
-[7–10s] The storm breaks apart and clears; beside B, an icon-only golden balance scale and ruler glow with calm steady light for Clip 15.
+[0–3s] Stick Figure B stands resolute on the terrace looking toward the dark horizon.
+[3–7s] B raises its right arm forward; a vertical translucent golden energy shield unfolds in front of B, deflecting the turbulent violet storm wind.
+[7–10s] The storm clouds break and dissipate; glowing golden balance scale and ruler icons materialize steadily beside B, emitting stable clear light.
 
-Final frame: the golden scale and ruler stay lit beside B as the sky calms.
+Final frame: B stands calmly beside the glowing golden scale and ruler icons.
 
 Audio-only dialogue, exactly once: "And for the wife: your greatest enemy right now is not heartbreak, but sinking under blind emotion. Step back. Look at his structural capacity to change." Do not display or transcribe dialogue visually.
 
-Identical narrator: warm, articulate, mature young adult American male voice, calm analytical and deeply introspective tone, voice-first mix, audio voiceover only, strictly no speech bubbles or dialogue boxes. Audio: the 104 BPM piano and warm synth continue, with howling wind deflected by a resonant crystalline shield chime, settling into a clear quiet melody; voice dominant.
+Identical narrator: warm, articulate, mature young adult American male voice, calm analytical and deeply introspective tone, voice-first mix, audio voiceover only, strictly no speech bubbles or dialogue boxes. Audio: uplifting 104 BPM piano progression, resonant energy shield deflection tone, storm wind calming, clear luminous halo chime; voice dominant.
 
 Negative constraints: no photorealistic human skin or faces, no 3D humanoid CGI uncanny valley models, no chaotic line glitches, no speech bubbles, no dialogue text boxes, no visible text. No violence, no weapons, no injury, no depiction of harm, no substances. Do not alter dialogue.
 ```
 
 ---
 
-## Clip 15 — Burn the Bridge (不破不立)
+## Clip 15 — Burning the Fragile Bridge (烧毁危桥)
 
 ```text
-Create an approximately 10-second 9:16 vertical cinematic 2D animation clip targeting 720p at 24 FPS with synchronized audio.
+Create an approximately 10-second 4:3 horizontal cinematic 2D animation clip targeting 720p at 24 FPS with synchronized audio.
 
 This is a non-violent educational 2D line-animation about psychology; all characters are abstract minimalist symbols; every image is a symbolic metaphor.
 
-Environment: a high stone ridge at daybreak, two solid black stone platforms facing each other across a deep dark gap, a thin line of warm gold light on the horizon. Cinematic volumetric lighting, soft depth of field, decisive clarity.
+Environment: a dawn mountain cliff chasm, two solid granite platforms separated by a deep dark abyss, first horizontal rays of golden dawn on the horizon. Stark, honest, clean architectural atmosphere.
 
-Characters: Stick Figure A on the left rock — bright red beanie and yellow t-shirt; Stick Figure B on the right rock — grey t-shirt, no beanie. Both are minimalist 2D animated stick figures with hollow circular heads, minimal dot eyes, simple black stick limbs, simple black lines and vibrant colors.
+Character: Stick Figure A (bright red beanie and yellow t-shirt, simple black limbs) and Stick Figure B (grey t-shirt, no beanie, simple black limbs). Both are minimalist 2D animated stick figures with simple black lines and vibrant colors. Compose horizontally in 4:3 ratio with balanced staging.
 
-First frame: wide vertical view: A on the left rock and B on the right rock, connected by a fragile white paper bridge.
+First frame: Stick Figure A stands on the left platform, Stick Figure B on the right platform; a fragile white paper bridge connects the two across the chasm.
 
-[0–3s] A and B look toward each other across the flimsy paper bridge above the deep dark gap.
-[3–7s] A vertical bolt of warm gold lightning strikes down from top center, instantly vaporizing the paper bridge into glowing embers that drift away into the darkness.
-[7–10s] A and B stand grounded on solid black stone on either side; all cover is gone and only truth and stone remain for Clip 16.
+[0–3s] A and B look toward each other across the fragile paper bridge in the 4:3 frame.
+[3–7s] A vertical beam of golden morning energy descends from the sky, striking the paper bridge and dissolving it into golden dust that drifts into the chasm.
+[7–10s] Both figures remain firmly standing on their solid rock platforms; all illusions vanish, leaving only bedrock and open sky.
 
-Final frame: the two stand firmly on their stone platforms, embers fading below.
+Final frame: both figures grounded on their respective rocky cliffs, chasm clear between them.
 
 Audio-only dialogue, exactly once: "Do not settle for fragile apologies to keep an illusion alive. Sometimes, the rotten bridge must burn completely before an honest foundation can be built." Do not display or transcribe dialogue visually.
 
-Identical narrator: warm, articulate, mature young adult American male voice, calm analytical and deeply introspective tone, voice-first mix, audio voiceover only, strictly no speech bubbles or dialogue boxes. Audio: the 104 BPM piano continues, with a clean thunder crack, sizzling paper burn, and solid stone impact; voice dominant.
+Identical narrator: warm, articulate, mature young adult American male voice, calm analytical and deeply introspective tone, voice-first mix, audio voiceover only, strictly no speech bubbles or dialogue boxes. Audio: crisp energy clap, dissolving paper sizzle, deep bedrock vibration, piano rising with clarity and strength; voice dominant.
 
 Negative constraints: no photorealistic human skin or faces, no 3D humanoid CGI uncanny valley models, no chaotic line glitches, no speech bubbles, no dialogue text boxes, no visible text. No violence, no weapons, no injury, no depiction of harm, no substances. Do not alter dialogue.
 ```
 
 ---
 
-## Clip 16 — Rebuild the Boundaries (重构边界)
+## Clip 16 — Building the Boundary Bridge (立下铁律之桥)
 
 ```text
-Create an approximately 10-second 9:16 vertical cinematic 2D animation clip targeting 720p at 24 FPS with synchronized audio.
+Create an approximately 10-second 4:3 horizontal cinematic 2D animation clip targeting 720p at 24 FPS with synchronized audio.
 
 This is a non-violent educational 2D line-animation about psychology; all characters are abstract minimalist symbols; every image is a symbolic metaphor.
 
-Environment: the same high stone ridge at sunrise, sky shifting from cool blue to warm gold-orange, rock faces lit clearly, calm open air. Cinematic volumetric lighting, soft depth of field, stable hopeful mood.
+Environment: the cliff chasm at sunrise, sky transitioning from deep blue to luminous amber gold, rugged stone surfaces highlighted in crisp detail across the 4:3 frame. Solid, triumphant, orderly atmosphere.
 
-Characters: Stick Figure A — bright red beanie and yellow t-shirt; Stick Figure B — grey t-shirt, no beanie. Both are minimalist 2D animated stick figures with hollow circular heads, minimal dot eyes, simple black stick limbs, simple black lines and vibrant colors.
+Character: Stick Figure A (bright red beanie and yellow t-shirt, simple black limbs) and Stick Figure B (grey t-shirt, no beanie, simple black limbs). Both are minimalist 2D animated stick figures with simple black lines and vibrant colors. Compose horizontally in 4:3 ratio with balanced staging.
 
-First frame: from the golden scale of Clip 15, both figures stand on their stone platforms facing each other.
+First frame: A and B stand on their solid rock platforms facing each other across the gap as dawn breaks.
 
-[0–3s] Golden pillars of light rise from the ground on both sides, forming two straight boundary markers.
-[3–7s] A translucent, strong golden light-cable stretches between the pillars and pulls taut into a glowing bridge.
-[7–10s] A and B step onto the light bridge together; concentric golden ripples spread beneath their feet for Clip 17.
+[0–3s] Two luminous golden boundary pillars rise straight up from the bedrock on both sides of the chasm.
+[3–7s] A brilliant, resilient golden light-cable pulls taut between the two boundary pillars, forming a solid, illuminated suspension bridge.
+[7–10s] A and B simultaneously step forward onto the golden light-bridge; concentric golden ripples pulse across the bridge floor beneath their footsteps.
 
-Final frame: the two stand on the glowing bridge, ripples widening outward.
+Final frame: A and B walking toward center of golden bridge, footsteps pulsing with light.
 
 Audio-only dialogue, exactly once: "Healing is not rewinding to an innocent past. It is writing non-negotiable boundaries, forging clear rules, and making the relationship sustainable again." Do not display or transcribe dialogue visually.
 
-Identical narrator: warm, articulate, mature young adult American male voice, calm analytical and deeply introspective tone, voice-first mix, audio voiceover only, strictly no speech bubbles or dialogue boxes. Audio: a solemn orchestral swell joins the piano, with a resonant cable tension tone, firm footsteps, and spreading golden ripples; voice dominant.
+Identical narrator: warm, articulate, mature young adult American male voice, calm analytical and deeply introspective tone, voice-first mix, audio voiceover only, strictly no speech bubbles or dialogue boxes. Audio: majestic orchestral harmony, cable tension resonance, firm confident footsteps, golden ripple sound; voice dominant.
 
 Negative constraints: no photorealistic human skin or faces, no 3D humanoid CGI uncanny valley models, no chaotic line glitches, no speech bubbles, no dialogue text boxes, no visible text. No violence, no weapons, no injury, no depiction of harm, no substances. Do not alter dialogue.
 ```
 
 ---
 
-## Clip 17 — Stop the Bleeding (停止自我耗竭)
+## Clip 17 — Severing the Bleeding Cycle (斩断失血死循环)
 
 ```text
-Create an approximately 10-second 9:16 vertical cinematic 2D animation clip targeting 720p at 24 FPS with synchronized audio.
+Create an approximately 10-second 4:3 horizontal cinematic 2D animation clip targeting 720p at 24 FPS with synchronized audio.
 
 This is a non-violent educational 2D line-animation about psychology; all characters are abstract minimalist symbols; every image is a symbolic metaphor.
 
-Environment: a vast golden morning landscape, sunrise breaking on the horizon, distant ridges edged in warm light, clear sky. Cinematic volumetric lighting, soft depth of field, expansive release.
+Environment: an expansive golden morning landscape, sun rising over a distant mountain ridge, bathing rolling hills and sky in rich warm light. Majestic, liberating, epic atmosphere.
 
-Characters: Stick Figure A — bright red beanie and yellow t-shirt; Stick Figure B — grey t-shirt, no beanie. Both are minimalist 2D animated stick figures with hollow circular heads, minimal dot eyes, simple black stick limbs, simple black lines and vibrant colors.
+Character: Stick Figure A (bright red beanie and yellow t-shirt, simple black limbs) and Stick Figure B (grey t-shirt, no beanie, simple black limbs). Both are minimalist 2D animated stick figures with simple black lines and vibrant colors. Compose horizontally in 4:3 ratio with balanced staging.
 
-First frame: the camera pulls back from the light bridge of Clip 16, revealing the wide golden world.
+First frame: wide horizontal 4:3 camera view across the golden panorama, morning sunlight washing away all traces of shadow.
 
-[0–3s] The camera keeps pulling back as the golden world opens and the last darkness is driven away by morning light.
-[3–7s] A large golden loop symbol floats at the center of the frame and is cut vertically by a golden light blade.
-[7–10s] A and B stand side by side before the golden horizon as the sun rises for Clip 18.
+[0–3s] The sweeping golden vista expands under the morning sun.
+[3–7s] A glowing golden infinity loop floats in the upper center sky; a vertical beam of golden light strikes through the loop, cleanly snapping the closed circle.
+[7–10s] A and B stand side by side as equals on the golden ridge, gazing toward the sunrise together.
 
-Final frame: the two stand side by side, sunrise glowing along the horizon.
+Final frame: two figures standing side by side on ridge looking at rising sun.
 
 Audio-only dialogue, exactly once: "The fatal poison in marriage was never just the mistake itself. It is both partners bleeding endlessly in the wrong cycle. Stop the bleeding. Choose radical truth." Do not display or transcribe dialogue visually.
 
-Identical narrator: warm, articulate, mature young adult American male voice, calm analytical and deeply introspective tone, voice-first mix, audio voiceover only, strictly no speech bubbles or dialogue boxes. Audio: the emotional peak chord, a clean blade-cut chime, and a warm sunrise synth swell; voice dominant.
+Identical narrator: warm, articulate, mature young adult American male voice, calm analytical and deeply introspective tone, voice-first mix, audio voiceover only, strictly no speech bubbles or dialogue boxes. Audio: emotional climax chord, clean chime of snapping loop, radiant warm sunrise synthesizer swell; voice dominant.
 
 Negative constraints: no photorealistic human skin or faces, no 3D humanoid CGI uncanny valley models, no chaotic line glitches, no speech bubbles, no dialogue text boxes, no visible text. No violence, no weapons, no injury, no depiction of harm, no substances. Do not alter dialogue.
 ```
 
 ---
 
-## Clip 18 — CTA (收束与行动倡议)
+## Clip 18 — Radical Truth and Rebirth (终极重生与行动)
 
 ```text
-Create an approximately 10-second 9:16 vertical cinematic 2D animation clip targeting 720p at 24 FPS with synchronized audio.
+Create an approximately 10-second 4:3 horizontal cinematic 2D animation clip targeting 720p at 24 FPS with synchronized audio.
 
 This is a non-violent educational 2D line-animation about psychology; all characters are abstract minimalist symbols; every image is a symbolic metaphor.
 
-Environment: an open highland after sunrise, clean and transparent sky, warm light across grass and stone, generous negative space in the upper frame. Cinematic volumetric lighting, soft depth of field, resolved and hopeful.
+Environment: an open high plateau in full bright morning sunlight, crystal clear golden-white sky, generous clean negative space in the upper half of the 4:3 frame. Calm, resolute, hopeful, peaceful atmosphere.
 
-Characters: Stick Figure A — bright red beanie and yellow t-shirt; Stick Figure B — grey t-shirt, no beanie. Both are minimalist 2D animated stick figures with hollow circular heads, minimal dot eyes, simple black stick limbs, simple black lines and vibrant colors.
+Character: Stick Figure A (bright red beanie and yellow t-shirt, simple black limbs) and Stick Figure B (grey t-shirt, no beanie, simple black limbs). Both are minimalist 2D animated stick figures with simple black lines and vibrant colors. Compose horizontally in 4:3 ratio with balanced staging.
 
-First frame: A and B stand side by side facing the sunrise, the landscape open before them.
+First frame: A and B walking side by side forward across the plateau in the bright morning light, long clean shadows extending behind them.
 
-[0–3s] The two walk forward together in the morning light; the last haze dissolves behind them.
-[3–7s] The upper center of the frame stays as clean open sky, kept free for later text overlay in editing.
-[7–10s] The final frame holds on their backs walking steadily onward, a warm golden halo pulsing gently at the center.
+[0–3s] The two figures walk steadily side by side across the plateau, past hardships receding into the distance.
+[3–7s] The camera follows from behind at a comfortable distance, maintaining generous clear sky in the upper frame.
+[7–10s] The final frame holds on the two figures walking steadily toward the golden horizon; a warm luminous golden ring pulses gently in the center sky.
 
-Final frame: their backs walk toward the horizon, golden halo softly breathing.
+Final frame: two figures walking into golden horizon, subtle golden ring pulsating gently above.
 
 Audio-only dialogue, exactly once: "Real love is not flawless innocence; it is the courage to rebuild on solid rock. Confront the reality, set your boundaries, and take back your life." Do not display or transcribe dialogue visually.
 
-Identical narrator: warm, articulate, mature young adult American male voice, calm analytical and deeply introspective tone, voice-first mix, audio voiceover only, strictly no speech bubbles or dialogue boxes. Audio: the grand warm outro, a light breeze, and a sustained piano note slowly fading; voice dominant.
+Identical narrator: warm, articulate, mature young adult American male voice, calm analytical and deeply introspective tone, voice-first mix, audio voiceover only, strictly no speech bubbles or dialogue boxes. Audio: warm poignant acoustic piano trailing off, gentle breeze, rich sustaining chord slowly fading to silence; voice dominant.
 
 Negative constraints: no photorealistic human skin or faces, no 3D humanoid CGI uncanny valley models, no chaotic line glitches, no speech bubbles, no dialogue text boxes, no visible text. No violence, no weapons, no injury, no depiction of harm, no substances. Do not alter dialogue.
 ```
-
----
-
-## 拼接指南 (Stitching Guide)
-
-| 切点 | 出画状态（Clip N 末帧） | 入画状态（Clip N+1 首帧） |
-|---|---|---|
-| 01 → 02 | 冰紫裂缝贯穿地板，镜头下潜 | 镜头从裂缝升出，A 双臂成天平 |
-| 02 → 03 | 双影坠入黑暗，紫碎片上飘 | A 落地跪坐于卧室地板 |
-| 03 → 04 | 冰紫光栅收拢包围 A | 光栅合拢为玻璃盒 |
-| 04 → 05 | A 滑坐玻璃盒内，面具落地碎裂 | 面具碎片散落，A 在灰色长廊行走 |
-| 05 → 06 | 红丝带缠绕双肩，A 被拉向白门 | 红丝带将 A 拽停白门前 |
-| 06 → 07 | 冰紫问号悬于门楣，暗红波纹扩散 | 波纹化为俯视车内视角 |
-| 07 → 08 | 车停于白色警戒线，路尽头黑暗 | 高角度俯视车头前方岩台 |
-| 08 → 09 | A 顺岩壁滑入黑暗 | 黑暗中一束顶光点亮 A |
-| 09 → 10 | 红色余烬聚集上升 | 余烬在空中拼成小屋屋脊 |
-| 10 → 11 | 墙上红蛇影向上蔓延 | 蛇影盘旋升空化为红色女性轮廓 |
-| 11 → 12 | 红烟聚成环形 | 环形红烟凝成巨镜 |
-| 12 → 13 | 镜面中央裂开金色细缝 | 金光横向展开为石阶 |
-| 13 → 14 | A 推石上行，脚步坚定 | 镜头拉远切至黄昏天台 B 独立 |
-| 14 → 15 | 金色天平与标尺发光 | 断崖两端，A 与 B 隔纸桥相望 |
-| 15 → 16 | 二人立于岩台，遮蔽散尽 | 金色界碑自地底升起 |
-| 16 → 17 | 二人踏光桥前行 | 镜头拉远，金色世界展开 |
-| 17 → 18 | 二人并肩立于地平线前 | 二人并肩在晨光中前行 |
-
----
-
-## 旁白与音乐连续性说明 (Voice & Music Continuity)
-
-1. 18 段提示词逐字复用同一位旁白描述；BGM 由 Clip 1 确立主题，后续显式声明"无缝延续"。
-2. 若平台支持参考音频/角色音色，优先复用同一音色；否则依赖逐字锁定的旁白描述。
-3. 最终成片阶段保留统一配乐与混音校正的选项（voice-first 混音）。
-
----
-
-## 安全与合规检查 (Safety Checklist)
-
-- [x] 无身体伤害/勒颈/窒息/针筒注射等描写（Clip 5 红丝带缠绕双肩；Clip 9 红色光束照射）
-- [x] 无成瘾物词汇（narcotic 已替换为 painkiller；cocktail 已替换为 glass）
-- [x] 无未成年人受困描写（Clip 12 为"灰色颤抖剪影 + 冰紫细线"）
-- [x] 无危险情境特写（Clip 7 停于警戒线；Clip 8 沿岩壁滑落）
-- [x] 全片零可见文字；色彩仅用普通描述词（vivid red / cool violet / warm gold / grey）
-- [x] 旁白锁定与 BGM 连续性锁定逐段复用

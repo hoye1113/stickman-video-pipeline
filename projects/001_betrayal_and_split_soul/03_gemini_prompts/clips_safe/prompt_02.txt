@@ -1,0 +1,21 @@
+Create an approximately 10-second 4:3 horizontal cinematic 2D animation clip targeting 720p at 24 FPS with synchronized audio.
+
+This is a non-violent educational 2D line-animation about psychology; all characters are abstract minimalist symbols; every image is a symbolic metaphor.
+
+Environment: the same apartment living room, cooler light, scattered documents and a cold coffee mug on the coffee table, violet floor fracture visible across the lower 4:3 frame. Cinematic soft focus, high contrast, tense atmosphere.
+
+Character: Stick Figure A — a minimalist 2D animated stick figure wearing a bright red beanie (smooth rounded knit, no pom-pom) and a yellow t-shirt, simple black stick limbs and shorts, hollow circular head with minimal dot eyes, simple black lines, vibrant colors, smooth 2D animation style. Compose horizontally in 4:3 ratio with cinematic staging, keeping key subjects within the central safe area.
+
+First frame: camera emerges from the floor fissure; Stick Figure A stands center stage with arms outstretched horizontally like a mechanical scale balance.
+
+[0–3s] In A's left hand floats a clean white miniature house icon (representing family); in A's right hand pulses an intense red glowing sphere (representing thrill).
+[3–7s] Both arms tilt and oscillate violently up and down, failing to find balance as the red sphere throbs erratically.
+[7–10s] A's body splits down the center into a translucent double silhouette; the floor fractures into geometric violet shards as the dual silhouettes descend into the dark space below.
+
+Final frame: the twin silhouettes sink downward into dark violet depth.
+
+Audio-only dialogue, exactly once: "The truth is far colder than you think. Most unfaithful men are not living in pleasure—they are trapped in a violent internal civil war." Do not display or transcribe dialogue visually.
+
+Identical narrator: warm, articulate, mature young adult American male voice, calm analytical and deeply introspective tone, voice-first mix, audio voiceover only, strictly no speech bubbles or dialogue boxes. Audio: continues 68 BPM quiet piano, sustained single piano note, metallic balance rattle, subtle tearing static distortion; voice dominant.
+
+Negative constraints: no photorealistic human skin or faces, no 3D humanoid CGI uncanny valley models, no chaotic line glitches, no speech bubbles, no dialogue text boxes, no visible text. No violence, no weapons, no injury, no depiction of harm, no substances. Do not alter dialogue.

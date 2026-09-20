@@ -1,0 +1,21 @@
+Create an approximately 10-second 4:3 horizontal cinematic 2D animation clip targeting 720p at 24 FPS with synchronized audio.
+
+This is a non-violent educational 2D line-animation about psychology; all characters are abstract minimalist symbols; every image is a symbolic metaphor.
+
+Environment: a pre-dawn stone quarry with wide stone steps ascending into a warm golden morning sky, rugged granite walls framing the left and right in 4:3 composition. Monumental, resolute, heroic atmosphere.
+
+Character: Stick Figure A — a minimalist 2D animated stick figure wearing a bright red beanie (smooth rounded knit, no pom-pom) and a yellow t-shirt, simple black stick limbs and shorts, hollow circular head with minimal dot eyes, simple black lines, vibrant colors, smooth 2D animation style. Compose horizontally in 4:3 ratio with cinematic staging, keeping key subjects within the central safe area.
+
+First frame: golden mirror fracture widens into the steep stone steps; a massive dark stone tablet rests on the incline.
+
+[0–3s] A stands at the foot of the stone stairway looking up at the summit.
+[3–7s] A sets its shoulder against the heavy base of the stone tablet, muscles tensing, pushing the tablet upward step by step.
+[7–10s] Dark crimson impurities on the tablet burn away in the morning light, leaving the tablet as pure white polished stone.
+
+Final frame: A pushes the purified white stone onto a level landing bathed in sunlight.
+
+Audio-only dialogue, exactly once: "True redemption requires the spine to carry real weight. Stop playing the victim. Pay the full price of your actions instead of demanding cheap forgiveness." Do not display or transcribe dialogue visually.
+
+Identical narrator: warm, articulate, mature young adult American male voice, calm analytical and deeply introspective tone, voice-first mix, audio voiceover only, strictly no speech bubbles or dialogue boxes. Audio: 104 BPM resolute acoustic piano enters with strength, heavy stone grinding rumble, warm golden light flare sound; voice dominant.
+
+Negative constraints: no photorealistic human skin or faces, no 3D humanoid CGI uncanny valley models, no chaotic line glitches, no speech bubbles, no dialogue text boxes, no visible text. No violence, no weapons, no injury, no depiction of harm, no substances. Do not alter dialogue.

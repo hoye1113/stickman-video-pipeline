@@ -1,0 +1,21 @@
+Create an approximately 10-second 4:3 horizontal cinematic 2D animation clip targeting 720p at 24 FPS with synchronized audio.
+
+This is a non-violent educational 2D line-animation about psychology; all characters are abstract minimalist symbols; every image is a symbolic metaphor.
+
+Environment: a rainswept suburban street corner at night, a white-walled cottage leaning precariously in the storm, warm amber light glowing from the cottage window in the 4:3 frame. Intense emotional turbulence and fragility.
+
+Character: Stick Figure A — a minimalist 2D animated stick figure wearing a bright red beanie (smooth rounded knit, no pom-pom) and a yellow t-shirt, simple black stick limbs and shorts, hollow circular head with minimal dot eyes, simple black lines, vibrant colors, smooth 2D animation style. Compose horizontally in 4:3 ratio with cinematic staging, keeping key subjects within the central safe area.
+
+First frame: floating red embers assemble into a wooden cottage roof framework; A uses both arms to brace and push up the collapsing roof beam.
+
+[0–3s] A stands braced with trembling arms, holding up the tilting cottage structure in the gale.
+[3–7s] Red-tinted rain lashes horizontally; A's legs shake and sink slightly, but A refuses to let go of the roof beam.
+[7–10s] Camera widens horizontally: inside the cottage window are warm silhouettes of a wife and child; yet A's shadow cast onto the wet exterior wall is a winding red serpent silhouette.
+
+Final frame: serpent shadow looms on the wall as A strains beneath the roof beam.
+
+Audio-only dialogue, exactly once: "Here lies the paradox: the man who betrayed the home is often the most terrified of its collapse. Yet staying inside is not the same as healing." Do not display or transcribe dialogue visually.
+
+Identical narrator: warm, articulate, mature young adult American male voice, calm analytical and deeply introspective tone, voice-first mix, audio voiceover only, strictly no speech bubbles or dialogue boxes. Audio: howling wind and driving rain, creaking wood strain, muffled heavy heartbeat thrum; voice dominant.
+
+Negative constraints: no photorealistic human skin or faces, no 3D humanoid CGI uncanny valley models, no chaotic line glitches, no speech bubbles, no dialogue text boxes, no visible text. No violence, no weapons, no injury, no depiction of harm, no substances. Do not alter dialogue.

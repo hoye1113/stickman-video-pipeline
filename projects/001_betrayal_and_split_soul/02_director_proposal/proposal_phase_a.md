@@ -1,71 +1,131 @@
-# Phase A — 导演预案 (Director's Proposal)
+# Phase A 修订版 01 — 风格升级为 Style 2B (Cinematic Story)
 
-**English title:** *The Split Soul: Does a Cheating Man Still Love His Wife?*  
-**中文标题：**《男人的自白：背叛之后，他到底还爱不爱妻子？》
-
----
-
-## 核心企划与规格设定
-
-1. **核心观点 (Core Message)**：  
-   男人背叛婚姻，极少是因为找到了“真爱”，更多是对平淡与自我平庸的**懦弱逃避与情绪麻醉**。背叛者身处其中的真实状态绝非享受，而是被愧疚与贪婪撕裂的**高压内耗**。关系的真正重生，绝不是回到过去的伪和平，而是彻底打碎幻想、直面代价并重建不可逾越的规则边界。
-2. **黄金 Hook**：  
-   “背叛之后的男人，还会真心爱自己的妻子吗？当他抱住你的时候，脑海里到底在想什么？来自男人内心的真实答案，比你想象的更残酷、更现实。”
-3. **画面规格与风格**：  
-   `9:16` 竖屏竖向调度（完美适配抖音、小红书）。采用 **Style 1 Dark（纯黑画布，纯白极简线条火柴人）**。关键主体与视线严格落在画面垂直居中 20%–80% 界面安全区内，避免被短视频 UI 遮挡。
-4. **旁白设定**：  
-   成熟、沉稳、自省且如手术刀般冷峻克制的年轻成年美式男性英语原声 (`warm, articulate, mature young adult American male voice, calm analytical and deeply introspective tone`)。语速约 140–145 词/分钟。全片 18 段，英文总词数约 **425 词**，总时长约 **180 秒（3 分钟）**。
-5. **三大饱和强调色与语义分配**：
-   - **诱惑暗红 (Saturated Danger Red)**：代表婚外诱惑、多巴胺刺激、警报、虚伪的遮羞布；
-   - **焦虑冰紫 (Anxiety Violet)**：代表内耗死循环、认知失调、假性回归的窒息高压舱、监视牢笼；
-   - **清醒冷金 (Clarity Gold)**：代表打破麻醉的理性光芒、直面代价的勇气、重构的秩序边界与重生。
-6. **BGM 曲线与情绪弧光**：
-   - **第一幕（0–60s，揭露撕裂）**：68 BPM 低沉循环钢琴，伴随冰冷的时钟滴答与压抑的心跳声，营造冷峻的剖析氛围；
-   - **第二幕（60–120s，机制解构）**：低音大提琴拉扯与数字电流杂音介入，心跳加速，焦虑与失控感层层攀升；
-   - **第三幕（120–180s，认知破局）**：玻璃破碎的清脆顿音，在 135 秒切换至 104 BPM 坚定、宽广的沉稳原声钢琴与暖声合成器，最终以极其庄重有力的持续和弦收束。
+> **修订说明**：本文档替代 `proposal_phase_a.md` 中的视觉风格设定。叙事结构、三幕编排、英文 VO 与中文对照、BGM 情绪曲线**保持不变**；角色设计与环境体系由 **Style 1 Dark（纯黑画布火柴人）** 全局升级为 **Style 2B（全彩电影叙事 + 红帽黄衫角色）**。
+>
+> **依据**：`skills/directing-stickman-videos/references/style-catalog.md` §3 Sub-Style 2B；风格变更按 SKILL.md 第 32 条"全局变更需重组 Phase A 并重新审批"执行。
+>
+> **安全**：所有提示词生成版本均遵循 `docs/prompt_safety_policy.md`。
 
 ---
 
-## 18 段三幕式分镜头脚本表 (9:16 竖屏专用)
+## 一、规格设定（更新后）
 
-| 时间 | 叙事目的 | 火柴人场景 (3 拍点设计) | 动作、镜头与转场 (9:16) | English VO | 中文参考对照 | BGM / SFX |
+| 项目 | 设定 |
+|---|---|
+| 画幅 / 时长 | **4:3 横屏（Academy 经典比例 1.33:1，960×720 / 1440×1080）**；18 × 10 秒，总计约 180 秒 |
+| 视觉风格 | **Style 2B — Cinematic Story（全彩电影叙事）** |
+| 画面技术 | 720p（目标 1080p 可选）、24fps、同步音频 |
+| 旁白 | 成熟、沉稳、自省克制的年轻美式男声（逐字不变），语速 140–145 词/分钟，总词数约 425 词 |
+| BGM 曲线 | 与初版一致：68 BPM 钢琴 → 大提琴张力 → 104 BPM 金色钢琴收束 |
+| 后期叠字 | 与初版一致（Clip 2 / 9 / 16 / 17 顶部短句，单独列出，不进生成提示词） |
+
+---
+
+## 二、Style 2B 视觉体系定义
+
+### 1. 角色锚点（Character DNA Lock）
+
+**A（丈夫）— 全片统一锚点**：
+
+```text
+The same minimalist 2D animated stick figure in a bright red beanie (smooth rounded knit, no pom-pom) and a yellow t-shirt, with simple black stick limbs and shorts. Simple black lines, vibrant colors, smooth 2D animation style.
+```
+
+**B（妻子）— 差异化锚点**（导演选择，审批可调整）：
+
+```text
+The same minimalist 2D animated stick figure wearing a grey t-shirt, no beanie, with a hollow circular head and minimal dot eyes, simple black stick limbs. Simple black lines, vibrant colors, smooth 2D animation style.
+```
+
+> 说明：A = 红帽 + 黄衫；B = 无帽 + 灰衫。所有含 B 的镜头（14–18）显式写锚点，防止漂移。
+
+### 2. 环境公式（每镜必写）
+
+```text
+in a rich full-color cinematic environment [具体场景 + 时间 + 光源]. Cinematic volumetric lighting, soft depth of field, atmospheric narrative mood. The character remains the same minimalist 2D stick figure with simple black lines and vibrant colors, composited naturally inside the photographic-feeling environment.
+```
+
+### 3. 负向约束（每镜必带）
+
+```text
+Negative constraints: no photorealistic human skin or faces, no 3D humanoid CGI uncanny valley models, no chaotic line glitches, no speech bubbles, no dialogue text boxes, no visible text. No violence, no weapons, no injury, no depiction of harm, no substances.
+```
+
+### 4. 色彩与情绪弧光
+
+| 幕 | 环境基调 | 强调色功能 |
+|---|---|---|
+| 第一幕 1–6（撕裂） | 夜/室内的冷蓝灰，孤立点光源（台灯、路灯、手机光） | 红灯＝诱惑与警报；冰紫＝焦虑与监视 |
+| 第二幕 7–12（解构） | 暴雨夜、山道、暗室、聚光灯——饱和度降低、对比拉高 | 红＝麻醉与失控；紫＝内耗；暴雨灰＝耗竭 |
+| 第三幕 13–18（重生） | 黎明/日出暖金，开阔石材与天空 | 暖金＝理性、边界与新生 |
+
+### 5. 连续性策略
+
+- 相邻片段首尾帧动作与镜头动量严格咬合（每镜首帧显式"继承"上镜末态，末帧显式"交出"给下镜）。
+- 角色比例、线宽、色彩风格、旁白音色全片锁定，不做任何变化。
+- 环境可由同一"叙事世界"进化：同一客厅 → 同一条走廊 → 同一段山路 → 同一片断崖，避免场景随机跳变。
+
+### 6. 事实与内容安全
+
+- 不做医学/统计断言；机制描述沿用 `01_research/research_summary.md`。
+- VO 按 `docs/prompt_safety_policy.md` 第 7 节完成 4 处安全微调（见下表标注）。
+
+---
+
+## 三、18 段三幕式分镜表（Style 2B 重排）
+
+| 时间 | 叙事目的 | 场景环境 (2B) | 动作、镜头与转场 (4:3 横版) | English VO | 中文参考对照 | BGM / SFX |
 |---|---|---|---|---|---|---|
-| **0–10s** (Clip 1) | **强 Hook：提出灵魂疑问** | **0–3s：** 垂直俯视，火柴人 A 孤立在漆黑画布中央。**3–7s：** 画面上方降下一道红色面具虚影，A 抬头，面具眼眶燃起微弱红光。**7–10s：** 面具从正中裂开一道冰冷紫缝，裂隙向下穿透地板。 | 垂直向下微推、面具缓慢下沉、裂纹垂直撕裂、镜头顺着紫光纵深穿入。下一段承接纵向裂缝。 | Can a man who betrayed his marriage ever truly love his wife again? When he holds her, who is really in his mind? | 背叛之后的男人，还会真心爱自己的妻子吗？当他抱住你的时候，脑海里到底在想什么？ | 68 BPM 极简低音钢琴、沉闷心跳一声、面具碎裂微响。 |
-| **10–20s** (Clip 2) | **认知反转：不是享受是撕裂** | **0–3s：** 镜头穿出裂缝，A 双臂展开成天平形态。**3–7s：** 左手托着一幢白色极简房子（家庭），右手托着跳动的红色液滴（刺激），两端激烈上下晃动。**7–10s：** A 的身体沿中轴线撕扯成半透明重影，脚下地面塌陷。 | 镜头轻微仰拍、天平剧烈失衡、双重重影错位、垂直下坠镜头。下一段承接下坠落地。 | The truth is far colder than you think. Most unfaithful men are not living in pleasure—they are trapped in a violent internal civil war. | 真实的答案比你想象的更冷酷。绝大多数背叛的男人并不是在享受，而是困在自我撕裂的内战中。 | 钢琴单音延音、金属天平晃动声、身体撕扯杂音。 |
-| **20–30s** (Clip 3) | **案例一：意外曝光与失控恐惧** | **0–3s：** A 坠落在地，旁边是一台发光的极简手机图标。**3–7s：** 手机突然炸开刺目红光，上方显现妻子巨大冰冷的眼睛剪影，A 膝盖一软跪倒在地。**7–10s：** A 双手向上伸出做求饶状，四周升起垂直的紫色栏杆。 | 落地震动、红光爆炸冲击、巨幅投影压迫、垂直牢笼快速拔地而起。下一段栏杆收缩。 | Take Mr. Zhou. When a random notification exposed his three-year secret, his desperate跪 down was not pure guilt. It was sheer panic over losing control. | 周先生的秘密被一条弹窗意外曝光，那一刻他崩溃下跪认错，本质不是纯粹的愧疚，而是对失去控制的极端恐慌。 | 强烈的短促警报音、膝盖跪地钝响、金属铁栏升起声。 |
-| **30–40s** (Clip 4) | **假性回归：窒息的伪和平** | **0–3s：** 紫色栏杆化作密不透风的玻璃盒，A 在盒内僵硬地戴上一副白色“微笑面具”。**3–7s：** 盒外无数双紫色眼睛来回扫射，A 机械地擦桌子、递交手机，动作僵硬。**7–10s：** 玻璃盒内空气耗尽，A 捂住喉咙向后瘫倒，面具脱落。 | 纵向框式构图、面具卡扣微动作、红外扫描线自上而下扫过、缺氧推焦。下一段从瘫倒地面平移。 | He deleted accounts and surrendered passwords, living as a daytime saint and nighttime prisoner. Pseudo-remorse creates a suffocating cage, turning marriage into chronic exhaustion. | 他删光账号上交密码，白天扮演好丈夫，夜晚彻夜难眠。恐惧驱动的假性回归，把婚姻变成了窒息的消耗战。 | 沉闷钟摆声、机械转动声、心率过速、缺氧低频蜂鸣。 |
-| **40–50s** (Clip 5) | **案例二：平淡婚姻中的自恋代偿** | **0–3s：** 画面切换至一条无限延伸的灰色单调直线，A 佝偻着背在灰线上木讷行走。**3–7s：** 右侧浮现一杯倾斜的红色酒杯，红光包裹 A，A 身形瞬间拔高，周围漂浮崇拜的星芒。**7–10s：** 虚幻星芒突然收缩为紧箍咒般的红色绳索，套住 A 的脖颈。 | 水平平移转仰拍、红光膨胀爆发、身形虚假拔高、绳索瞬间勒紧。下一段由绳索向下拖拽。 | Then there is Mr. Liu. Decades of flat routine made him feel invisible. The outside affair was not love—it was a cheap narcotic to resurrect his dying vanity. | 还有刘先生。数十年的平淡让他感到自我枯死。婚外的刺激根本不是爱，而是一剂重新唤醒脆弱虚荣的廉价麻醉药。 | 沉闷单调机械脚步、红酒荡漾声、虚幻高音合成器、绳索勒紧骤响。 |
-| **50–60s** (Clip 6) | **顺从补偿：愧疚与贪婪的同谋** | **0–3s：** A 被绳索拖回一扇白色房门前，脸上迅速堆起谄媚的笑容。**3–7s：** A 双手捧着一颗跳动的红色心脏献给门内的剪影，但背后却死死藏着另一把带血的钥匙。**7–10s：** 门上的锁突然变成紫色问号，地面裂开红色暗流。 | 门框纵向透视、双面动作对比、暗流自下而上涌出、问号旋转。下一段从红色暗流中升起。 | Guilt and betrayal easily coexist. He acted extra obedient at home, using synthetic sweetness as emotional currency to buy temporary peace of mind. | 愧疚与背叛完全可以同时存在。他在家里加倍顺从体贴，不过是用虚伪的讨好，给自己买一份暂时的心安。 | 虚伪的轻柔提琴、门锁转动咔哒声、液体暗流翻滚。 |
-| **60–70s** (Clip 7) | **案例三：惊魂电话与双面伪装** | **0–3s：** A 在黑夜中驾车（仅由白色车轮与方向盘线条勾勒），窗外掠过红色路灯。**3–7s：** 仪表盘弹出一个巨大的震动电话图标，红光狂闪，A 猛打方向盘，车身在悬崖边剧烈摇晃。**7–10s：** A 猛踩刹车，车头停在深渊边缘，冷汗化作白色粒子飘散。 | 垂直纵深车道急速后退、仪表红光高频爆闪、车身急转侧滑、定格在深渊边缘。下一段从深渊俯视。 | Mr. Li ended the affair quickly, but lived in perpetual terror. One unexpected phone call from his wife forced a frantic three-hour midnight sprint. | 李先生主动断掉了关系，却活在无休止的恐惧中。一次妻子要钥匙的意外电话，逼得他深夜狂奔三小时回赶。 | 急促汽车引擎轰鸣、刺耳刹车声、电话高频急促震鸣、急促喘息。 |
-| **70–80s** (Clip 8) | **警觉耗竭：精神电量的彻底归零** | **0–3s：** 镜头垂直向下看进深渊，A 仰面悬在半空中，胸口浮现一个电量标尺。**3–7s：** 电量由微弱黄光骤降为闪烁的红杠，无数红色借口与紫色谎言气泡如千斤重石压在胸口。**7–10s：** 标尺“啪”的一声熄灭，A 如断线木偶般直线下坠。 | 俯视深渊坠落感、电池图标逐格抽干、重物撞击下压、断电黑屏一瞬。下一段自黑暗中重新点亮。 | He realized this double life was never romantic freedom. It was a brutal energy vampire, exhausting every drop of sanity until complete collapse. | 他终于看清，这种双重生活根本不是浪漫自由，而是一只残酷吸干他精力的吸血鬼，直到精神彻底枯竭。 | 电池枯竭警告蜂鸣、重物压击闷响、电灯短路断电音。 |
-| **80–90s** (Clip 9) | **底层剖析：情绪麻醉剂的假象** | **0–3s：** 黑暗中央点亮一束顶光，照着一根巨大的红色针筒刺入火柴人大脑。**3–7s：** 针筒内流淌的是虚假的掌声与爱心图标，注射进去后，A 的双眼被红色布条遮蔽。**7–10s：** 针筒碎裂成锋利玻璃渣，扎进 A 的胸膛，红布脱落露出空洞双眼。 | 聚光灯由上至下打下、针筒压下特写、红布遮眼、玻璃炸裂慢动作。下一段承接玻璃碎片。 | Affairs are nothing more than emotional painkillers. They inject temporary dopamine to numb aging and boredom, but they cure absolutely nothing. | 婚外情不过是短命的心理止痛药。它注入廉价的多巴胺来麻痹衰老和平庸，却治不好任何现实的溃烂。 | 液体注入微声、虚假掌声回音、清脆玻璃爆碎。 |
-| **90–100s** (Clip 10) | **人性的悖论：最背叛的人最怕崩盘** | **0–3s：** 玻璃碎片在空中化为房屋的屋顶瓦片，A 用双手死死顶住即将倾塌的白色房屋骨架。**3–7s：** 外面下着红色暴雨，A 的双腿颤抖下沉，但他依然咬牙不肯松手。**7–10s：** 镜头从房屋正面拉开，屋内站着妻子与孩子的纯白背影，A 的影子却是一条红色的毒蛇。 | 纵向广角推拉、倾覆重力感、垂直暴雨冲刷、背影与毒蛇影子的影子戏对比。下一段蛇影向上蔓延。 | Here lies the paradox: the man who betrayed the home is often the most terrified of its collapse. Yet staying inside is not the same as healing. | 这就是最讽刺的悖论：背叛家庭的人，往往最害怕家庭解体。但留在原地，绝不等于伤口已经愈合。 | 狂风暴雨轰鸣、房屋木架断裂呻吟、压抑心跳重击。 |
-| **100–110s** (Clip 11) | **击碎误区：她从来不是因为“更好”** | **0–3s：** 蛇影在半空盘旋，化作一个模糊的红色女性轮廓。**3–7s：** 轮廓退去虚幻红光，里面不过是一个毫无特点、甚至残缺不全的灰色线条人偶。**7–10s：** A 伸出的双手穿过人偶胸膛，抓到的只是一团虚无的红色烟雾。 | 轮廓消散解构、色彩剥离退色、双手抓空穿透、烟雾四散。下一段烟雾聚合成一面镜子。 | Wives often torture themselves asking: "Does he love her more?" No. He didn't choose a superior woman; he chose a cowardly exit from reality. | 很多妻子最折磨自己的问题是：“他是不是更爱她？”不，他从来不是选择了更好的女人，他只是选择了当一个逃兵。 | 烟雾呼啸穿梭声、虚无抓空风声、冷峻大提琴 solo。 |
-| **110–120s** (Clip 12) | **终极审视：你到底在逃避什么？** | **0–3s：** 红色烟雾聚合成一面巨大的黑色镜子，火柴人 A 站在镜前。**3–7s：** 镜中映射出的不是 A，而是一个蜷缩在角落啼哭的矮小懦弱婴儿，身上缠满锁链。**7–10s：** A 缓缓低头，镜面上浮现一道垂直的金色裂缝，金光破开黑暗。 | 镜面正对视角、镜像心理投影对比、金光自镜面中轴破茧而出。下一段金光横向展开。 | If you are a man in this crisis, look in the mirror. Did betrayal solve your marital void, or did it expose your complete inability to face hard truths? | 正在经历危机的男人，照照镜子吧。背叛真的解决了婚姻的空虚吗？还是它彻底撕开了你不敢直面现实的软弱无能？ | 提琴音骤停、镜面微鸣震动、深沉心跳、金色能量裂变声。 |
-| **120–130s** (Clip 13) | **认知反转：面对真实代价的重量** | **0–3s：** 金光铺成一条向上的陡峭台阶，台阶上压着一块沉重的黑色巨石（刻有“责任与后果”图形）。**3–7s：** A 咬牙将肩膀顶在巨石下方，肌肉线条紧绷，一步步向上推行。**7–10s：** 巨石底部的红色杂质被金光灼烧殆尽，化作纯净白石。 | 低机位垂直仰拍、沉重推石动作、金色光芒净化红色暗斑、稳健脚步震地。下一段承接抬脚迈步。 | True redemption requires the spine to carry real weight. Stop playing the victim. Pay the full price of your actions instead of demanding cheap forgiveness. | 真正的救赎需要一副能扛起重量的硬骨头。停止扮演受害者。为你犯下的错支付全部代价，而不是乞求廉价的原谅。 | **104 BPM 坚定原声钢琴切入**、巨石摩擦沉重轰鸣、金色烈焰燃烧声。 |
-| **130–140s** (Clip 14) | **女性的觉醒：从情绪风暴中抽离** | **0–3s：** 画面右侧，火柴人 B（妻子）站在一处高台上，周身狂卷着紫色的情绪风暴。**3–7s：** B 缓缓抬起右手，在自己胸口前画下一道金色光盾，紫色风暴被硬生生阻隔在外。**7–10s：** B 的眼神变得坚定明亮，身旁浮现一个由金色天平与标尺组成的清醒徽标。 | 侧向推进、金色护盾展开、风暴撞击消散、天平标尺图标点亮。下一段聚焦于标尺与天平。 | And for the wife: your greatest enemy right now is not heartbreak, but drowning in blind emotion. Step back. Look at his structural capacity to change. | 而对妻子来说：此时最大的敌人不是心痛，而是溺死在盲目的情绪里。抽身退后一步。看清他是否具备重塑关系的真正能力。 | 琴音高扬开阔、护盾抵挡重击声、风暴平息风鸣、清澈光晕音。 |
-| **140–150s** (Clip 15) | **打破假和平：不破不立的清醒** | **0–3s：** A 和 B 之间原本有一座由单薄白纸折成的脆弱桥梁。**3–7s：** 一道金色闪电从天而降，将纸桥劈得粉碎，残渣落入深渊。**7–10s：** 两人隔着断崖相对而立，彼此中间不再有任何遮掩与伪装，地面露出坚硬的花岗岩。 | 纵向全景、闪电垂直精准劈下、纸桥碎屑飞溅、尘埃落定露出磐石。下一段自断崖边缘拉起。 | Do not settle for fragile apologies to keep an illusion alive. Sometimes, the rotten bridge must burn completely before an honest foundation can be built. | 别为了维持一段虚幻的平静，而接受摇摇欲坠的道歉。有时，腐烂的危桥必须彻底烧毁，诚实的基石才能真正建立。 | 清脆雷鸣电击、烈火吞噬纸张、岩石重重碰撞、钢琴旋律坚定上升。 |
-| **150–160s** (Clip 16) | **重构边界：建立可承受的铁律** | **0–3s：** 断崖两侧，金色光芒自地底升起，筑起两座笔直的金色界碑。**3–7s：** 一根坚固的金色光缆从界碑中间延伸拉紧，形成一座通透强韧的透明桥梁。**7–10s：** A 和 B 同时迈出一步，脚踩在光梁之上，脚下泛起层层金色同心波纹。 | 垂直立柱拔地而起、光缆张力拉紧、迈步踏上新桥、同心圆光波扩散。下一段跟随两人脚步前移。 | Healing is not rewinding to an innocent past. It is writing non-negotiable boundaries, forging clear rules, and making the relationship sustainable again. | 修复从不是回到天真的过去。而是立下不可侵犯的边界，铸造清醒透明的规则，让这段关系重新变得可承受、可持续。 | 庄严大气的管弦乐合奏、光缆绷紧共振、坚实落地脚步、金色波纹扩散声。 |
-| **160–170s** (Clip 17) | **终极金句：停止自我耗竭** | **0–3s：** 镜头拉远，整座黑暗世界被金色的网格与道路重新照亮。**3–7s：** 画面中间浮现一个由金色线条构成的循环破坏符号，彻底切断了曾经的紫色内耗死循环。**7–10s：** A 与 B 平等并肩站立在金色地平线前，阳光自地平线升起。 | 宏大远景后拉、死循环被金色利剑垂直切断、地平线日出光芒普照。下一段定格于地平线。 | The fatal poison in marriage was never just the mistake itself. It is both partners bleeding endlessly in the wrong cycle. Stop the bleeding. Choose radical truth. | 婚姻中最致命的毒药，从来不是错误本身，而是双方在错误的循环里流血至死。止住失血，选择赤裸的真相。 | 情绪最高潮和弦、利剑斩断锁链清脆轰鸣、温暖壮丽的日出合成音。 |
-| **170–180s** (Clip 18) | **收束与行动倡议 (CTA)** | **0–3s：** 两人在阳光下迈步前行，身后的黑暗与阴霾彻底消散。**3–7s：** 画面上方中央留出大片干净的留白安全区。**7–10s：** 最后一帧定格在两人坚定前行的背影，一道温暖的金色光环在画面中央轻微脉动。 | 稳健向前推焦、阴霾蒸发消散、保留顶部与右侧安全区、金色光环呼吸律动定格。 | Real love is not flawless innocence; it is the courage to rebuild on solid rock. Confront the reality, set your boundaries, and take back your life. | 真正的爱不是未遭玷污的天真，而是在坚硬磐石上重建的勇气。直面现实，立下边界，拿回属于你的人生。 | 宏大而深情的余音回荡、微风拂过、温暖的钢琴延音缓缓淡出。 |
+| **0–10s** (Clip 1) | **强 Hook：提出灵魂疑问** | 深夜单身公寓客厅：冷蓝灰主调，一盏暖色落地灯，窗外城市夜景虚化 | **0–3s：** 垂直微俯，A（红帽黄衫）独自坐在沙发边缘。**3–7s：** 上方降下一道红色面具虚影，A 抬头，面具眼眶亮起微光。**7–10s：** 面具正中裂开冰紫裂缝，裂隙向地板延伸，镜头顺紫光穿入。下一段承接裂缝。 | Can a man who betrayed his marriage ever truly love his wife again? When he holds her, who is really in his mind? | 背叛之后的男人，还会真心爱自己的妻子吗？当他抱住你的时候，脑海里到底在想什么？ | 68 BPM 极简低音钢琴、沉闷心跳一声、面具碎裂微响。 |
+| **10–20s** (Clip 2) | **认知反转：不是享受是撕裂** | 同一客厅，落地灯变冷，茶几上散着文件与冷掉的咖啡；地板可见裂纹 | **0–3s：** 镜头穿出裂缝：A 双臂平举如天平。**3–7s：** 左手托白色微缩房屋（家庭），右手托跳动的红色光球（刺激），两端剧烈起伏。**7–10s：** A 身体沿中轴撕成半透明重影，地板碎成冰紫碎片，双影坠入下方黑暗。下一段承接下坠。 | The truth is far colder than you think. Most unfaithful men are not living in pleasure—they are trapped in a violent internal civil war. | 真实的答案比你想象的更冷酷。绝大多数背叛的男人并不是在享受，而是困在自我撕裂的内战中。 | 钢琴单音延音、金属天平晃动声、身体撕扯杂音。 |
+| **20–30s** (Clip 3) | **案例一：意外曝光与失控恐惧** | 深夜卧室：床头灯昏黄，墙上有窗外车灯掠过的投影 | **0–3s：** A 落地跪坐，身旁是发光的手机。**3–7s：** 手机炸开刺目红光，墙上投出妻子巨大而冰冷的眼睛剪影，A 跌坐后退。**7–10s：** A 双手前伸，四周升起冰紫垂直栅影（百叶窗/门框光栅化），逐渐收拢。下一段栅影维持。 | Take Mr. Zhou. When a random notification exposed his three-year secret, his desperate kneel down was not pure guilt. It was sheer panic over losing control. | 周先生的秘密被一条弹窗意外曝光，那一刻他崩溃下跪认错，本质不是纯粹的愧疚，而是对失去控制的极端恐慌。 | 强烈的短促警报音、膝盖跪地钝响、金属栏影上升声。 |
+| **30–40s** (Clip 4) | **假性回归：窒息的伪和平** | 客厅/卧室：冷蓝灰，窗帘紧闭，室内薄雾，一盏顶灯投下硬光 | **0–3s：** 冰紫栅影合拢成透明玻璃盒，A 在盒内戴上白色微笑面具。**3–7s：** 盒外多双冰紫眼光扫射（投影在雾上），A 机械擦桌、递手机。**7–10s：** 盒内空气混浊，A 扶墙缓缓滑坐，面具脱落碎裂。下一段自地面碎片平移。 | He deleted accounts and surrendered passwords, living as a daytime saint and nighttime prisoner. Pseudo-remorse creates a suffocating cage, turning marriage into chronic exhaustion. | 他删光账号上交密码，白天扮演好丈夫，夜晚彻夜难眠。恐惧驱动的假性回归，把婚姻变成了窒息的消耗战。 | 沉闷钟摆声、机械转动声、心率过速、低频蜂鸣。 |
+| **40–50s** (Clip 5) | **案例二：平淡婚姻中的自恋代偿** | 黄昏的灰色长廊（家→办公室的走道）：单调、无表情，尽头发白 | **0–3s：** A 佝偻着背沿长廊木然前行。**3–7s：** 右侧悬浮一只倾斜玻璃杯，倾倒红色液体光，红光笼罩 A，身形瞬间拔高，周身浮起崇拜星芒。**7–10s：** 星芒骤缩为一条红丝带，缠绕双肩，将 A 向后拽向一扇白门。下一段白门前承接。 | Then there is Mr. Liu. Decades of flat routine made him feel invisible. The outside affair was not love—it was a cheap painkiller to resurrect his dying vanity. | 还有刘先生。数十年的平淡让他感到自我枯死。婚外的刺激根本不是爱，而是一剂重新唤醒脆弱虚荣的廉价麻醉药。 | 单调机械脚步、红酒荡漾声、虚幻高音合成器、丝带绷紧骤响。 |
+| **50–60s** (Clip 6) | **顺从补偿：愧疚与贪婪的同谋** | 同一长廊尽头：一扇高大白门，门缝透出暖光，地面浮着暗红波纹 | **0–3s：** 红丝带将 A 拽停门前，A 立刻堆起谄媚的顺从姿态。**3–7s：** A 双手捧出跳动红光的心形图标送入门口，背后却藏着一把发光的红钥匙。**7–10s：** 门楣上方凝出巨大的冰紫问号缓慢旋转，地面暗红波纹向外扩散。下一段自波纹升起。 | Guilt and betrayal easily coexist. He acted extra obedient at home, using synthetic sweetness as emotional currency to buy temporary peace of mind. | 愧疚与背叛完全可以同时存在。他在家里加倍顺从体贴，不过是用虚伪的讨好，给自己买一份暂时的心安。 | 虚伪的轻柔提琴、门锁转动咔哒声、液体暗流翻滚。 |
+| **60–70s** (Clip 7) | **案例三：惊魂电话与双面伪装** | 深夜盘山公路：车窗外红色路灯掠过，远处城市灯火在雾中模糊 | **0–3s：** 俯视车内，A 紧握方向盘，车道虚线快速后退。**3–7s：** 仪表台上巨型来电图标炸开红光，A 猛打方向，车辆侧滑。**7–10s：** A 双脚重刹，车身在白色警戒线前停稳，线外道路没入黑暗。下一段自车头前方俯视。 | Mr. Li ended the affair quickly, but lived in perpetual terror. One unexpected phone call from his wife forced a frantic three-hour midnight sprint. | 李先生主动断掉了关系，却活在无休止的恐惧中。一次妻子要钥匙的意外电话，逼得他深夜狂奔三小时回赶。 | 急促引擎、刺耳刹车、电话高频震鸣、紧绷呼吸。 |
+| **70–80s** (Clip 8) | **警觉耗竭：精神电量的彻底归零** | 深夜暴雨的岩壁边缘：雨幕、冷光、湿岩反光 | **0–3s：** 高角度俯视，A 伏在岩台上，胸前浮起四格白色电量标尺。**3–7s：** 冰紫沉重石块图标从上方缓缓压下、堆叠在 A 背上，电量骤降、最后一格红光急闪。**7–10s：** 电量熄灭，A 肢体松垂如断线木偶，顺岩壁滑入黑暗。下一段自黑暗中点亮。 | He realized this double life was never romantic freedom. It was a brutal energy vampire, exhausting every drop of sanity until complete collapse. | 他终于看清，这种双重生活根本不是浪漫自由，而是一只残酷吸干他精力的吸血鬼，直到精神彻底枯竭。 | 电池枯竭警告蜂鸣、重物压击闷响、电灯短路断电音。 |
+| **80–90s** (Clip 9) | **底层剖析：情绪麻醉剂的假象** | 全黑房间，仅一束顶光；空气中有微尘可见 | **0–3s：** 顶光下 A 坐在地上，一道巨型红色光束自上方垂落，轻触 A 的头顶，泛起柔和光环。**3–7s：** 光束扩大，红光倾注而下；一条红布条缠上 A 的头部遮眼，四周浮起虚幻爱心图标。**7–10s：** 光束碎散成漂浮余烬，红布条脱落，A 垂头失神。下一段自余烬聚集。 | Affairs are nothing more than emotional painkillers. They release temporary dopamine to numb aging and boredom, but they cure absolutely nothing. | 婚外情不过是短命的心理止痛药。它释放廉价的多巴胺来麻痹衰老和平庸，却治不好任何现实的溃烂。 | 液体滴落回声、虚假掌声回音、温柔的玻璃风铃。 |
+| **90–100s** (Clip 10) | **人性的悖论：最背叛的人最怕崩盘** | 暴雨夜的居民区街口：一栋白墙小屋在风雨中倾斜，窗内透出暖光 | **0–3s：** 红色余烬在空中拼成小屋屋脊线框，A 用双臂死死顶住倾颓的屋架。**3–7s：** 红色暴雨倾泻，A 双腿颤抖下沉，仍不松手。**7–10s：** 镜头拉远：屋内是妻子与孩子的暖光剪影；A 投在墙上的影子却是一条红色蛇影。下一段蛇影升起。 | Here lies the paradox: the man who betrayed the home is often the most terrified of its collapse. Yet staying inside is not the same as healing. | 这就是最讽刺的悖论：背叛家庭的人，往往最害怕家庭解体。但留在原地，绝不等于伤口已经愈合。 | 狂风暴雨、木架断裂呻吟、压抑心跳重击。 |
+| **100–110s** (Clip 11) | **击碎误区：她从来不是因为"更好"** | 半明半暗的卧室：床头灯将熄，空气中浮着红色烟尘 | **0–3s：** 蛇影盘旋升空，化作模糊的红色女性轮廓。**3–7s：** 轮廓退去红光，露出一个残缺的灰色线偶人（无脸）。**7–10s：** A 双手前伸穿过线偶，只抓到虚无红烟；红烟聚成环形。下一段自红烟成镜。 | Wives often torment themselves asking: "Does he love her more?" No. He didn't choose a superior woman; he chose a cowardly exit from reality. | 很多妻子最折磨自己的问题是："他是不是更爱她？"不，他从来不是选择了更好的女人，他只是选择了当一个逃兵。 | 烟雾呼啸、抓空风声、冷峻大提琴 solo。 |
+| **110–120s** (Clip 12) | **终极审视：你到底在逃避什么？** | 昏暗房间：一面高大穿衣镜，镜面蒙着薄雾，逆光勾出轮廓 | **0–3s：** 红烟凝成巨镜，A 走到镜前。**3–7s：** 镜中映出的不是 A，而是一个缩在角落、微微发抖的灰影，身上缠着厚重的冰紫细线。**7–10s：** A 低头静立，镜面中央裂开一道发丝般温暖的金色裂隙。下一段金光横向展开。 | If you are a man in this crisis, look in the mirror. Did betrayal solve your marital void, or did it expose your complete inability to face hard truths? | 正在经历危机的男人，照照镜子吧。背叛真的解决了婚姻的空虚吗？还是它彻底撕开了你不敢直面现实的软弱无能？ | 提琴骤停、镜面微鸣、深沉心跳、金色能量裂变声。 |
+| **120–130s** (Clip 13) | **认知反转：面对真实代价的重量** | 黎明前的采石场石阶：巨石台阶向上隐入金色晨光，两侧是石壁 | **0–3s：** 金色裂隙铺成陡峭石阶，阶上立着一块巨大的深色石碑。**3–7s：** A 咬牙以肩顶住石碑下方，肌肉紧绷，一级级向上推。**7–10s：** 石碑底部的暗红杂质被金光灼净，化为纯净白石。下一段承接迈步。 | True redemption requires the spine to carry real weight. Stop playing the victim. Pay the full price of your actions instead of demanding cheap forgiveness. | 真正的救赎需要一副能扛起重量的硬骨头。停止扮演受害者。为你犯下的错支付全部代价，而不是乞求廉价的原谅。 | **104 BPM 坚定原声钢琴切入**、巨石摩擦轰鸣、金色烈焰声。 |
+| **130–140s** (Clip 14) | **女性的觉醒：从情绪风暴中抽离** | 黄昏天台/高台：远处天空压着紫黑色风暴云，地面被最后一线金光斜照 | **0–3s：** B（黄衫无帽）独立高台，左侧涌来狂暴的冰紫风云。**3–7s：** B 抬右臂，胸前展开垂直的温暖金盾，风暴被硬生生阻隔。**7–10s：** 风暴溃散，B 身旁浮现金色天平与标尺图标，稳定发光。下一段聚焦天平与标尺。 | And for the wife: your greatest enemy right now is not heartbreak, but sinking under blind emotion. Step back. Look at his structural capacity to change. | 而对妻子来说：此时最大的敌人不是心痛，而是溺死在盲目的情绪里。抽身退后一步。看清他是否具备重塑关系的真正能力。 | 琴音高扬、护盾抵挡重击、风暴平息、清澈光晕音。 |
+| **140–150s** (Clip 15) | **打破假和平：不破不立的清醒** | 破晓的断崖：两侧为坚实岩台，中间是深不见底的黑暗峡口，天际一线金光 | **0–3s：** A 与 B 隔着脆弱的白纸桥望向彼此。**3–7s：** 一道金色闪电自天顶垂直劈下，纸桥瞬间气化为飘散的金色余烬，坠入深暗。**7–10s：** 二人分立坚硬岩台，一切遮蔽散尽，只余真相与磐石。下一段自断崖边拉起。 | Do not settle for fragile apologies to keep an illusion alive. Sometimes, the rotten bridge must burn completely before an honest foundation can be built. | 别为了维持一段虚幻的平静，而接受摇摇欲坠的道歉。有时，腐烂的危桥必须彻底烧毁，诚实的基石才能真正建立。 | 清脆雷鸣、燃烧纸屑嘶声、岩石重撞、钢琴坚定上升。 |
+| **150–160s** (Clip 16) | **重构边界：建立可承受的铁律** | 日出时分的断崖：天空从冷蓝过渡到温暖金橙，岩面被照得清晰 | **0–3s：** 金色光柱自两侧地底升起，形成两根笔直的金色界碑。**3–7s：** 一道通透强韧的金色光缆在界碑间绷紧，构成一座光影之桥。**7–10s：** A 与 B 同时迈步踏上光桥，脚下荡开层层金色同心波纹。下一段随脚步前移。 | Healing is not rewinding to an innocent past. It is writing non-negotiable boundaries, forging clear rules, and making the relationship sustainable again. | 修复从不是回到天真的过去。而是立下不可侵犯的边界，铸造清醒透明的规则，让这段关系重新变得可承受、可持续。 | 庄严管弦合奏、光缆绷紧共振、坚实脚步、金色波纹声。 |
+| **160–170s** (Clip 17) | **终极金句：停止自我耗竭** | 金色清晨的辽阔地貌：地平线日出，远处山脊被晨光镀金 | **0–3s：** 镜头拉远，整个金色世界展开，黑暗被晨光驱散。**3–7s：** 画面中央浮起一个金色循环符号，被一柄金色光刃垂直切断。**7–10s：** A 与 B 平等并肩立于金色地平线前，日光升起。下一段定格于地平线。 | The fatal poison in marriage was never just the mistake itself. It is both partners bleeding endlessly in the wrong cycle. Stop the bleeding. Choose radical truth. | 婚姻中最致命的毒药，从来不是错误本身，而是双方在错误的循环里流血至死。止住失血，选择赤裸的真相。 | 情绪最高潮和弦、利刃斩断锁链脆响、温暖壮丽的日出合成音。 |
+| **170–180s** (Clip 18) | **收束与行动倡议 (CTA)** | 日出后的开阔高地：天空干净通透，顶部大面积留白安全区 | **0–3s：** 二人并肩在晨光中前行，身后的阴霾彻底消散。**3–7s：** 画面上方中央保留大片干净天空。**7–10s：** 末帧定格在两人坚定前行的背影，画面中央一道温暖金色光环轻微脉动。 | Real love is not flawless innocence; it is the courage to rebuild on solid rock. Confront the reality, set your boundaries, and take back your life. | 真正的爱不是未遭玷污的天真，而是在坚硬磐石上重建的勇气。直面现实，立下边界，拿回属于你的人生。 | 宏大深情的余音回荡、微风、温暖钢琴延音缓淡出。 |
 
 ---
 
-## 可选后期文字叠加 (Post-Production Overlays)
-*提示：以下文字仅在后期剪辑与字幕压制阶段添加，绝不输入 AI 视频生成提示词。*
-- **Clip 2 顶部**：“不是享受，是撕裂” (Not Pleasure, But Internal War)
-- **Clip 9 顶部**：“短命的情绪麻醉剂” (Cheap Emotional Painkiller)
-- **Clip 16 顶部**：“建立不可侵犯的边界” (Non-Negotiable Boundaries)
-- **Clip 17 顶部**：“止住内耗，直面真相” (Stop The Bleeding. Choose Truth.)
+## 四、与初版差异清单（供审批核对）
+
+| 项目 | 初版 (Style 1 Dark) | 修订版 (Style 2B) |
+|---|---|---|
+| 角色 | 纯白线条火柴人，无脸/无衣 | 红帽+黄衫拟人角色（A）；黄衫无帽（B） |
+| 画布 | 纯黑 + 三强调色 | 全彩电影场景（夜/雨/黄昏/日出） |
+| 环境 | 抽象图形装置 | 具象场景：公寓、卧室、长廊、山路、断崖、采石场、天台 |
+| 强调色 | 红/紫/金（语义映射不变） | 作为**光源与道具色**融入场景（语义映射不变） |
+| 叙事 / VO | — | **完全不变**（仅 4 处安全微调：painkiller / release / torment / sinking） |
+| 分镜节拍 | — | 108 个拍点结构、装置与语义全部保留 |
 
 ---
 
-## 门禁确认指令 (Setup & Review Gate)
+## 五、重渲范围与成本（重要）
 
-根据我们的本地工作流规范与您的指令，**本阶段必须在此严格停止！**
+- 已生成的 clip_01–04、16、17 以及候选 clip_05 全部为 **Style 1**，在 2B 下**全部作废**，需重渲 → **18 条全量重生成**。
+- 生成渠道与成本：
+  - **Google Flow (Storyboard Studio)**：使用 Google One AI Premium Pro 官方每月 1,000 积分额度（每 10s 约 15 积分，可产出 60+ 镜头），支持首尾帧衔接与 Nano Banana 2 零积分预览。
+- 预计排期：18 条片段在 Google Flow 中连续生成，预计消耗约 270 积分。
 
-请您审阅这份 Phase A 导演预案：
-1. **是否批准当前 18 段分镜编排与中英文台词？**
-2. **是否有需要调整的叙事细节、比喻装置或台词节奏？**
+---
 
-待您明确回复**“确认”或“通过”**后，我才会启动下一步：为您生成 18 条完全符合 Google Flow 生产规范的 Phase B 生产提示词！
+## 六、审批门禁 (Review Gate)
+
+依据 skill 规范，本阶段在此停止。请你确认：
+
+1. 是否批准 **Style 2B** 全局风格（含 A/B 角色锚点与"红帽/无帽"区分方式）？
+2. 18 段场景重排（公寓 → 长廊 → 山路 → 断崖 → 日出）是否接受？
+3. 4 处 VO 安全微调是否确认？
+4. 是否同意 18 条全量重渲（旧 Style 1 素材归档保留，不删除）？
+
+确认后我将执行：更新 `meta.json` 风格字段 → 生成 Style 2B 版 `prompts_all.md` 与 `clips_safe/` 18 条安全提示词 → 按配额窗口排期重渲。

@@ -1,17 +1,21 @@
-Create an approximately 10-second 9:16 vertical 2D kinetic motion-graphics clip targeting 720p at 24 FPS with synchronized audio.
+Create an approximately 10-second 4:3 horizontal cinematic 2D animation clip targeting 720p at 24 FPS with synchronized audio.
 
-This is a non-violent educational 2D line-animation about psychology; all characters are abstract faceless symbols; every image is a symbolic metaphor.
+This is a non-violent educational 2D line-animation about psychology; all characters are abstract minimalist symbols; every image is a symbolic metaphor.
 
-Use a flat, uniform, digitally pure-black canvas and Stick Figure B (Wife) with identical hollow circular head, no face, no clothing, uniform medium white line weight. Accents: cool violet and warm gold. Compose vertically in 9:16 with safe margins. Strictly no visible text, letters, numbers, speech bubbles, or subtitles.
+Environment: a high open stone terrace at dusk, distant violet storm clouds rolling in from the left, warm golden twilight illuminating the terrace floor in the 4:3 frame. Majestic, empowering, poised atmosphere.
 
-First frame: Camera pans to the right side of the vertical frame, where Stick Figure B stands firmly on a raised white platform.
+Character: Stick Figure B — a minimalist 2D animated stick figure wearing a grey t-shirt, no beanie, hollow circular head with minimal dot eyes, simple black stick limbs, simple black lines, vibrant colors, smooth 2D animation style.
 
-[0–3s] Fierce swirling tornadoes of cool violet emotional clouds rush from the left, attempting to envelop B.
-[3–7s] B raises its right arm deliberately. A vertical semi-transparent shield of brilliant warm gold light expands from B's hand, blocking the violet storm completely.
-[7–10s] The violet storm breaks and dissipates against the golden shield. Beside B, an icon-only golden balance scale and ruler illuminate with calm, steady light for Clip 15.
+First frame: Stick Figure B (grey t-shirt, no beanie) stands tall in the center of the terrace, facing the incoming winds with calm poise.
+
+[0–3s] Stick Figure B stands resolute on the terrace looking toward the dark horizon.
+[3–7s] B raises its right arm forward; a vertical translucent golden energy shield unfolds in front of B, deflecting the turbulent violet storm wind.
+[7–10s] The storm clouds break and dissipate; glowing golden balance scale and ruler icons materialize steadily beside B, emitting stable clear light.
+
+Final frame: B stands calmly beside the glowing golden scale and ruler icons.
 
 Audio-only dialogue, exactly once: "And for the wife: your greatest enemy right now is not heartbreak, but sinking under blind emotion. Step back. Look at his structural capacity to change." Do not display or transcribe dialogue visually.
 
-Identical narrator: warm, articulate, mature young adult American male voice, calm analytical and deeply introspective tone, voice-first mix, audio voiceover only, strictly no speech bubbles or dialogue boxes. Audio: Seamlessly continues 104 BPM piano and synth from clip 13, howling wind deflected by a resonant crystalline shield chime, settling into clear quiet melody; voice dominant.
+Identical narrator: warm, articulate, mature young adult American male voice, calm analytical and deeply introspective tone, voice-first mix, audio voiceover only, strictly no speech bubbles or dialogue boxes. Audio: uplifting 104 BPM piano progression, resonant energy shield deflection tone, storm wind calming, clear luminous halo chime; voice dominant.
 
-Do not generate photorealism, 3D humanoid rendering, eyes, hair, clothing, speech bubbles, text boxes, visible letters, subtitles, or watermarks. No violence, no weapons, no injury, no depiction of harm, no substances. Do not alter dialogue.
+Negative constraints: no photorealistic human skin or faces, no 3D humanoid CGI uncanny valley models, no chaotic line glitches, no speech bubbles, no dialogue text boxes, no visible text. No violence, no weapons, no injury, no depiction of harm, no substances. Do not alter dialogue.

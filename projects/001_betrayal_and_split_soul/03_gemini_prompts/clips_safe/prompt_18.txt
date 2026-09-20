@@ -1,0 +1,21 @@
+Create an approximately 10-second 4:3 horizontal cinematic 2D animation clip targeting 720p at 24 FPS with synchronized audio.
+
+This is a non-violent educational 2D line-animation about psychology; all characters are abstract minimalist symbols; every image is a symbolic metaphor.
+
+Environment: an open high plateau in full bright morning sunlight, crystal clear golden-white sky, generous clean negative space in the upper half of the 4:3 frame. Calm, resolute, hopeful, peaceful atmosphere.
+
+Character: Stick Figure A (bright red beanie and yellow t-shirt, simple black limbs) and Stick Figure B (grey t-shirt, no beanie, simple black limbs). Both are minimalist 2D animated stick figures with simple black lines and vibrant colors. Compose horizontally in 4:3 ratio with balanced staging.
+
+First frame: A and B walking side by side forward across the plateau in the bright morning light, long clean shadows extending behind them.
+
+[0–3s] The two figures walk steadily side by side across the plateau, past hardships receding into the distance.
+[3–7s] The camera follows from behind at a comfortable distance, maintaining generous clear sky in the upper frame.
+[7–10s] The final frame holds on the two figures walking steadily toward the golden horizon; a warm luminous golden ring pulses gently in the center sky.
+
+Final frame: two figures walking into golden horizon, subtle golden ring pulsating gently above.
+
+Audio-only dialogue, exactly once: "Real love is not flawless innocence; it is the courage to rebuild on solid rock. Confront the reality, set your boundaries, and take back your life." Do not display or transcribe dialogue visually.
+
+Identical narrator: warm, articulate, mature young adult American male voice, calm analytical and deeply introspective tone, voice-first mix, audio voiceover only, strictly no speech bubbles or dialogue boxes. Audio: warm poignant acoustic piano trailing off, gentle breeze, rich sustaining chord slowly fading to silence; voice dominant.
+
+Negative constraints: no photorealistic human skin or faces, no 3D humanoid CGI uncanny valley models, no chaotic line glitches, no speech bubbles, no dialogue text boxes, no visible text. No violence, no weapons, no injury, no depiction of harm, no substances. Do not alter dialogue.

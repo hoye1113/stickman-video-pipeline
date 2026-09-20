@@ -1,17 +1,21 @@
-Create an approximately 10-second 9:16 vertical 2D kinetic motion-graphics clip targeting 720p at 24 FPS with synchronized audio.
+Create an approximately 10-second 4:3 horizontal cinematic 2D animation clip targeting 720p at 24 FPS with synchronized audio.
 
-This is a non-violent educational 2D line-animation about psychology; all characters are abstract faceless symbols; every image is a symbolic metaphor.
+This is a non-violent educational 2D line-animation about psychology; all characters are abstract minimalist symbols; every image is a symbolic metaphor.
 
-Use a flat, uniform, digitally pure-black canvas and Stick Figures A and B with identical hollow circular heads, no faces, no clothing, uniform medium white line weight. Accents: warm gold. Compose vertically in 9:16 with safe margins. Strictly no visible text, letters, numbers, speech bubbles, or subtitles.
+Environment: a dawn mountain cliff chasm, two solid granite platforms separated by a deep dark abyss, first horizontal rays of golden dawn on the horizon. Stark, honest, clean architectural atmosphere.
 
-First frame: From the balance scale of Clip 14, wide vertical composition showing A on the left stone platform and B on the right stone platform, connected by a fragile white paper bridge.
+Character: Stick Figure A (bright red beanie and yellow t-shirt, simple black limbs) and Stick Figure B (grey t-shirt, no beanie, simple black limbs). Both are minimalist 2D animated stick figures with simple black lines and vibrant colors. Compose horizontally in 4:3 ratio with balanced staging.
 
-[0–3s] A and B look toward each other across the flimsy paper bridge stretching over a deep dark gap.
-[3–7s] A vertical bolt of warm gold lightning strikes down from top center, instantly vaporizing the paper bridge into glowing embers that drift away into deep darkness.
-[7–10s] A and B stand grounded on solid black stone on either side. All fake cover is gone; only pure truth and sturdy stone remain for Clip 16.
+First frame: Stick Figure A stands on the left platform, Stick Figure B on the right platform; a fragile white paper bridge connects the two across the chasm.
+
+[0–3s] A and B look toward each other across the fragile paper bridge in the 4:3 frame.
+[3–7s] A vertical beam of golden morning energy descends from the sky, striking the paper bridge and dissolving it into golden dust that drifts into the chasm.
+[7–10s] Both figures remain firmly standing on their solid rock platforms; all illusions vanish, leaving only bedrock and open sky.
+
+Final frame: both figures grounded on their respective rocky cliffs, chasm clear between them.
 
 Audio-only dialogue, exactly once: "Do not settle for fragile apologies to keep an illusion alive. Sometimes, the rotten bridge must burn completely before an honest foundation can be built." Do not display or transcribe dialogue visually.
 
-Identical narrator: warm, articulate, mature young adult American male voice, calm analytical and deeply introspective tone, voice-first mix, audio voiceover only, strictly no speech bubbles or dialogue boxes. Audio: Seamlessly continues 104 BPM piano, a clean crack of thunder lightning, sizzling paper burn, and solid stone impact; voice dominant.
+Identical narrator: warm, articulate, mature young adult American male voice, calm analytical and deeply introspective tone, voice-first mix, audio voiceover only, strictly no speech bubbles or dialogue boxes. Audio: crisp energy clap, dissolving paper sizzle, deep bedrock vibration, piano rising with clarity and strength; voice dominant.
 
-Do not generate photorealism, 3D humanoid rendering, eyes, hair, clothing, speech bubbles, text boxes, visible writing, subtitles, or watermarks. No violence, no weapons, no injury, no depiction of harm, no substances. Do not alter dialogue.
+Negative constraints: no photorealistic human skin or faces, no 3D humanoid CGI uncanny valley models, no chaotic line glitches, no speech bubbles, no dialogue text boxes, no visible text. No violence, no weapons, no injury, no depiction of harm, no substances. Do not alter dialogue.

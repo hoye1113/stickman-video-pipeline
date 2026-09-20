@@ -1,0 +1,21 @@
+Create an approximately 10-second 4:3 horizontal cinematic 2D animation clip targeting 720p at 24 FPS with synchronized audio.
+
+This is a non-violent educational 2D line-animation about psychology; all characters are abstract minimalist symbols; every image is a symbolic metaphor.
+
+Environment: an enclosed room bathed in cool blue-grey haze, harsh downward overhead spotlight illuminating dust particles in the 4:3 stage. Tense, sterile, exhausting atmosphere.
+
+Character: Stick Figure A — a minimalist 2D animated stick figure wearing a bright red beanie (smooth rounded knit, no pom-pom) and a yellow t-shirt, simple black stick limbs and shorts, hollow circular head with minimal dot eyes, simple black lines, vibrant colors, smooth 2D animation style. Compose horizontally in 4:3 ratio with cinematic staging, keeping key subjects within the central safe area.
+
+First frame: the violet slat cage solidifies into a transparent glass cube in the horizontal center; A stands inside wearing a white smiling mask.
+
+[0–3s] A stands rigidly inside the glass box, wearing the clean white smiling mask.
+[3–7s] Sweeping cool violet searchlights scan outside the glass box; A performs stiff mechanical actions, wiping the tabletop and offering a smartphone.
+[7–10s] Air inside the box thickens with haze; A slides down against the glass wall exhausted, and the white smiling mask slips off, shattering on the floor.
+
+Final frame: A sits slumped inside the box, mask fragments scattered on the floor.
+
+Audio-only dialogue, exactly once: "He deleted accounts and surrendered passwords, living as a daytime saint and nighttime prisoner. Pseudo-remorse creates a suffocating cage, turning marriage into chronic exhaustion." Do not display or transcribe dialogue visually.
+
+Identical narrator: warm, articulate, mature young adult American male voice, calm analytical and deeply introspective tone, voice-first mix, audio voiceover only, strictly no speech bubbles or dialogue boxes. Audio: heavy pendulum ticking, subtle clockwork gear whir, accelerating heartbeat thrum; voice dominant.
+
+Negative constraints: no photorealistic human skin or faces, no 3D humanoid CGI uncanny valley models, no chaotic line glitches, no speech bubbles, no dialogue text boxes, no visible text. No violence, no weapons, no injury, no depiction of harm, no substances. Do not alter dialogue.

@@ -1,0 +1,21 @@
+Create an approximately 10-second 4:3 horizontal cinematic 2D animation clip targeting 720p at 24 FPS with synchronized audio.
+
+This is a non-violent educational 2D line-animation about psychology; all characters are abstract minimalist symbols; every image is a symbolic metaphor.
+
+Environment: a dim bedroom at night, warm yellow bedside lamp illuminating the right side of the 4:3 frame, shadows of passing headlights sweeping across the back wall. Dramatic atmospheric shadows, claustrophobic mood.
+
+Character: Stick Figure A — a minimalist 2D animated stick figure wearing a bright red beanie (smooth rounded knit, no pom-pom) and a yellow t-shirt, simple black stick limbs and shorts, hollow circular head with minimal dot eyes, simple black lines, vibrant colors, smooth 2D animation style. Compose horizontally in 4:3 ratio with cinematic staging, keeping key subjects within the central safe area.
+
+First frame: A lands in a kneeling position on the bedroom floor beside a glowing smartphone screen.
+
+[0–3s] The smartphone screen pulses with a sudden burst of warning red light.
+[3–7s] A giant cold silhouette of a wife's watchful eyes projects across the bedroom wall; A recoils backwards in shock and panic.
+[7–10s] Vertical cool violet shadow slats rise from the floor like geometric prison bars, closing in around A.
+
+Final frame: vertical violet slats fully surround A in the center frame.
+
+Audio-only dialogue, exactly once: "Take Mr. Zhou. When a random notification exposed his three-year secret, his desperate kneel down was not pure guilt. It was sheer panic over losing control." Do not display or transcribe dialogue visually.
+
+Identical narrator: warm, articulate, mature young adult American male voice, calm analytical and deeply introspective tone, voice-first mix, audio voiceover only, strictly no speech bubbles or dialogue boxes. Audio: sharp brief electronic alert chime, knee impact thud, rising metallic slat whir; voice dominant.
+
+Negative constraints: no photorealistic human skin or faces, no 3D humanoid CGI uncanny valley models, no chaotic line glitches, no speech bubbles, no dialogue text boxes, no visible text. No violence, no weapons, no injury, no depiction of harm, no substances. Do not alter dialogue.

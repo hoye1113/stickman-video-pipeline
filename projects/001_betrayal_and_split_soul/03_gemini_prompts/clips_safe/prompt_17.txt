@@ -1,0 +1,21 @@
+Create an approximately 10-second 4:3 horizontal cinematic 2D animation clip targeting 720p at 24 FPS with synchronized audio.
+
+This is a non-violent educational 2D line-animation about psychology; all characters are abstract minimalist symbols; every image is a symbolic metaphor.
+
+Environment: an expansive golden morning landscape, sun rising over a distant mountain ridge, bathing rolling hills and sky in rich warm light. Majestic, liberating, epic atmosphere.
+
+Character: Stick Figure A (bright red beanie and yellow t-shirt, simple black limbs) and Stick Figure B (grey t-shirt, no beanie, simple black limbs). Both are minimalist 2D animated stick figures with simple black lines and vibrant colors. Compose horizontally in 4:3 ratio with balanced staging.
+
+First frame: wide horizontal 4:3 camera view across the golden panorama, morning sunlight washing away all traces of shadow.
+
+[0–3s] The sweeping golden vista expands under the morning sun.
+[3–7s] A glowing golden infinity loop floats in the upper center sky; a vertical beam of golden light strikes through the loop, cleanly snapping the closed circle.
+[7–10s] A and B stand side by side as equals on the golden ridge, gazing toward the sunrise together.
+
+Final frame: two figures standing side by side on ridge looking at rising sun.
+
+Audio-only dialogue, exactly once: "The fatal poison in marriage was never just the mistake itself. It is both partners bleeding endlessly in the wrong cycle. Stop the bleeding. Choose radical truth." Do not display or transcribe dialogue visually.
+
+Identical narrator: warm, articulate, mature young adult American male voice, calm analytical and deeply introspective tone, voice-first mix, audio voiceover only, strictly no speech bubbles or dialogue boxes. Audio: emotional climax chord, clean chime of snapping loop, radiant warm sunrise synthesizer swell; voice dominant.
+
+Negative constraints: no photorealistic human skin or faces, no 3D humanoid CGI uncanny valley models, no chaotic line glitches, no speech bubbles, no dialogue text boxes, no visible text. No violence, no weapons, no injury, no depiction of harm, no substances. Do not alter dialogue.

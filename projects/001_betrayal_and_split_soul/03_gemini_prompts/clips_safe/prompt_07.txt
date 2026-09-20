@@ -1,17 +1,21 @@
-Create an approximately 10-second 9:16 vertical 2D kinetic motion-graphics clip targeting 720p at 24 FPS with synchronized audio.
+Create an approximately 10-second 4:3 horizontal cinematic 2D animation clip targeting 720p at 24 FPS with synchronized audio.
 
-This is a non-violent educational 2D line-animation about psychology; all characters are abstract faceless symbols; every image is a symbolic metaphor.
+This is a non-violent educational 2D line-animation about psychology; all characters are abstract minimalist symbols; every image is a symbolic metaphor.
 
-Use a flat, uniform, digitally pure-black canvas and Stick Figure A with identical hollow circular head, no face, no clothing, uniform medium white line weight. Accents: vivid red and cool violet. Compose vertically in 9:16 with safe margins. Strictly no visible text, letters, numbers, speech bubbles, or subtitles.
+Environment: a nighttime winding road seen through the windshield of a car, dashboard console illuminated in dim green, streetlights and dashed road markings streaking past in the 4:3 frame. Cinematic motion blur, suspenseful thriller atmosphere.
 
-First frame: From the dark crimson ripples of Clip 6, top-down perspective of A gripping a minimalist white steering wheel inside a dark moving car outline.
+Character: Stick Figure A — a minimalist 2D animated stick figure wearing a bright red beanie (smooth rounded knit, no pom-pom) and a yellow t-shirt, simple black stick limbs and shorts, hollow circular head with minimal dot eyes, simple black lines, vibrant colors, smooth 2D animation style. Compose horizontally in 4:3 ratio with cinematic staging, keeping key subjects within the central safe area.
 
-[0–3s] Minimalist white road perspective lines rush downward rapidly beneath the car. Vivid red streetlamp rings fly past outside the frame.
-[3–7s] A giant phone handset icon flares with vivid red light on the dashboard. A turns the steering wheel quickly back and forth as the car skids sideways.
-[7–10s] A presses both feet on the brake pedal. The car screeches to a stop on a narrow mountain road, coming to rest exactly at a white warning line as the road beyond fades into deep black for Clip 8.
+First frame: overhead angle looking into the vehicle, A gripping the steering wheel firmly with both hands as dashed center lines race backward.
+
+[0–3s] The car speeds along the winding mountain road through the night.
+[3–7s] A large incoming call icon flashes bright danger red on the dashboard; A reacts with sudden panic, wrenching the wheel as tires squeal in a sideways skid.
+[7–10s] A hits the brakes hard; the car stops smoothly right before a glowing white safety line across the asphalt, darkness beyond.
+
+Final frame: car headlights beam onto the white safety line, dust settling.
 
 Audio-only dialogue, exactly once: "Mr. Li ended the affair quickly, but lived in perpetual terror. One unexpected phone call from his wife forced a frantic three-hour midnight sprint." Do not display or transcribe dialogue visually.
 
-Identical narrator: warm, articulate, mature young adult American male voice, calm analytical and deeply introspective tone, voice-first mix, audio voiceover only, strictly no speech bubbles or dialogue boxes. Audio: Transitioning BGM to tense cello pulse, roaring car engine, piercing tire screech, urgent phone ring vibration, and a tense breath; voice dominant.
+Identical narrator: warm, articulate, mature young adult American male voice, calm analytical and deeply introspective tone, voice-first mix, audio voiceover only, strictly no speech bubbles or dialogue boxes. Audio: tense accelerating car engine, sudden tire brake screech, high-frequency phone vibration, sharp gasp; voice dominant.
 
-Do not generate photorealism, 3D humanoid CGI, eyes, hair, clothing, speech bubbles, text boxes, visible text, subtitles, or watermarks. No violence, no weapons, no injury, no depiction of harm, no substances. Do not alter dialogue.
+Negative constraints: no photorealistic human skin or faces, no 3D humanoid CGI uncanny valley models, no chaotic line glitches, no speech bubbles, no dialogue text boxes, no visible text. No violence, no weapons, no injury, no depiction of harm, no substances. Do not alter dialogue.

@@ -1,17 +1,21 @@
-Create an approximately 10-second 9:16 vertical 2D kinetic motion-graphics clip targeting 720p at 24 FPS with synchronized audio.
+Create an approximately 10-second 4:3 horizontal cinematic 2D animation clip targeting 720p at 24 FPS with synchronized audio.
 
-This is a non-violent educational 2D line-animation about psychology; all characters are abstract faceless symbols; every image is a symbolic metaphor.
+This is a non-violent educational 2D line-animation about psychology; all characters are abstract minimalist symbols; every image is a symbolic metaphor.
 
-Use a flat, uniform, digitally pure-black canvas and Stick Figure A with identical hollow circular head, no face, no clothing, uniform medium white line weight. Accents: vivid red. Compose vertically in 9:16 with safe margins. Strictly no visible text, letters, numbers, speech bubbles, or subtitles.
+Environment: a long sterile grey office-to-home corridor at dusk, monotonous neutral walls stretching symmetrically across the 4:3 horizontal frame, a bright doorway glowing in the far distance. Cinematic depth of field, dull repetitive atmosphere.
 
-First frame: From the shattered mask fragments of Clip 4, A stands hunched on an infinite thin white horizontal line dividing the lower third of the screen.
+Character: Stick Figure A — a minimalist 2D animated stick figure wearing a bright red beanie (smooth rounded knit, no pom-pom) and a yellow t-shirt, simple black stick limbs and shorts, hollow circular head with minimal dot eyes, simple black lines, vibrant colors, smooth 2D animation style. Compose horizontally in 4:3 ratio with cinematic staging, keeping key subjects within the central safe area.
 
-[0–3s] A walks with tired, dragging steps along the monotonous white line in empty darkness.
-[3–7s] In the upper right frame, an oversized tilted glass pours a glowing stream of vivid red liquid light over A. A is bathed in crimson glow, its posture straightening unnaturally tall as floating red spark particles erupt around it.
-[7–10s] The floating red spark particles suddenly condense into a glowing red ribbon that coils gently around A's shoulders and pulls A firmly backward, drawing A off balance toward a white doorway for Clip 6.
+First frame: camera pans from floor debris to A walking slowly down the grey hallway, posture slouched and wooden.
+
+[0–3s] A walks with mechanical, lifeless steps along the monotonous corridor.
+[3–7s] A large translucent decorative glass overhead tilts gently, pouring a cascade of warm glowing red light particles over A; A's posture instantly straightens, and floating golden star icons surround A's head.
+[7–10s] The golden stars compress into a bright red ribbon wrapping comfortably around A's shoulders, gently pulling A backwards toward the doorway.
+
+Final frame: A is pulled toward the white doorway, red ribbon glowing on shoulders.
 
 Audio-only dialogue, exactly once: "Then there is Mr. Liu. Decades of flat routine made him feel invisible. The outside affair was not love—it was a cheap painkiller to resurrect his dying vanity." Do not display or transcribe dialogue visually.
 
-Identical narrator: warm, articulate, mature young adult American male voice, calm analytical and deeply introspective tone, voice-first mix, audio voiceover only, strictly no speech bubbles or dialogue boxes. Audio: Seamlessly continues piano from clip 4, sluggish dragging footstep sounds, soft pouring liquid effect, airy euphoric synth chord, and an abrupt sharp snap; voice dominant.
+Identical narrator: warm, articulate, mature young adult American male voice, calm analytical and deeply introspective tone, voice-first mix, audio voiceover only, strictly no speech bubbles or dialogue boxes. Audio: monotonous slow mechanical footsteps, gentle ethereal synth shimmer, crisp ribbon tension resonance; voice dominant.
 
-Do not generate photorealism, 3D humanoid models, facial features, clothing, speech bubbles, text boxes, visible text, subtitles, or watermarks. No violence, no weapons, no injury, no depiction of harm, no substances. Do not alter dialogue.
+Negative constraints: no photorealistic human skin or faces, no 3D humanoid CGI uncanny valley models, no chaotic line glitches, no speech bubbles, no dialogue text boxes, no visible text. No violence, no weapons, no injury, no depiction of harm, no substances. Do not alter dialogue.

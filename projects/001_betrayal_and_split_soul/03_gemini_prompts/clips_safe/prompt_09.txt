@@ -1,17 +1,21 @@
-Create an approximately 10-second 9:16 vertical 2D kinetic motion-graphics clip targeting 720p at 24 FPS with synchronized audio.
+Create an approximately 10-second 4:3 horizontal cinematic 2D animation clip targeting 720p at 24 FPS with synchronized audio.
 
-This is a non-violent educational 2D line-animation about psychology; all characters are abstract faceless symbols; every image is a symbolic metaphor.
+This is a non-violent educational 2D line-animation about psychology; all characters are abstract minimalist symbols; every image is a symbolic metaphor.
 
-Use a flat, uniform, digitally pure-black canvas and Stick Figure A with identical hollow circular head, no face, no clothing, uniform medium white line weight. Accents: vivid red. Compose vertically in 9:16 with safe margins. Strictly no visible text, letters, numbers, speech bubbles, or subtitles.
+Environment: a dark minimalist studio space, a single soft warm spotlight illuminating a circular area in the horizontal center, subtle floating dust particles. Melancholic, hollow, introspective mood.
 
-First frame: In the blackness from Clip 8, a vertical spotlight shines down from top center, illuminating A sitting on the floor.
+Character: Stick Figure A — a minimalist 2D animated stick figure wearing a bright red beanie (smooth rounded knit, no pom-pom) and a yellow t-shirt, simple black stick limbs and shorts, hollow circular head with minimal dot eyes, simple black lines, vibrant colors, smooth 2D animation style. Compose horizontally in 4:3 ratio with cinematic staging, keeping key subjects within the central safe area.
 
-[0–3s] A giant glowing red beam of light descends from the top of the frame, touching A's head with a soft halo.
-[3–7s] The beam widens and pours glowing vivid red light into A. A red cloth band wraps around A's circular head, dimming its sight, while illusory heart icons float upward.
-[7–10s] The glowing red beam dissolves into dozens of floating red embers. The red blindfold disintegrates, revealing A's hollow circular head slowly lowering, dazed, for Clip 10.
+First frame: A sits quietly on the floor inside the warm spotlight circle.
+
+[0–3s] The overhead spotlight warms slightly as A gazes forward.
+[3–7s] A vertical cylindrical beam of soft red light descends from above, enveloping A; a decorative red ribbon drapes gently across A's eyes as floating heart outlines drift lazily into the dark.
+[7–10s] The red light dissolves into floating red embers; the ribbon falls away to the floor, and A sits slumped with head bowed in silence.
+
+Final frame: red embers slowly drift away into darkness around the still figure.
 
 Audio-only dialogue, exactly once: "Affairs are nothing more than emotional painkillers. They release temporary dopamine to numb aging and boredom, but they cure absolutely nothing." Do not display or transcribe dialogue visually.
 
-Identical narrator: warm, articulate, mature young adult American male voice, calm analytical and deeply introspective tone, voice-first mix, audio voiceover only, strictly no speech bubbles or dialogue boxes. Audio: Minor-key piano returns with solemn weight, a soft hollow liquid drop echo, faint surreal echo, and a gentle glass chime; voice dominant.
+Identical narrator: warm, articulate, mature young adult American male voice, calm analytical and deeply introspective tone, voice-first mix, audio voiceover only, strictly no speech bubbles or dialogue boxes. Audio: soft dripping chime echo, gentle hollow synth pad, delicate fading wind bell; voice dominant.
 
-Do not generate photorealism, 3D humanoid rendering, eyes, hair, clothing, speech bubbles, text boxes, visible words, subtitles, or watermarks. No violence, no weapons, no injury, no depiction of harm, no substances. Do not alter dialogue.
+Negative constraints: no photorealistic human skin or faces, no 3D humanoid CGI uncanny valley models, no chaotic line glitches, no speech bubbles, no dialogue text boxes, no visible text. No violence, no weapons, no injury, no depiction of harm, no substances. Do not alter dialogue.
