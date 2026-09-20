@@ -8,9 +8,9 @@ import argparse
 from project_store import ProjectError, resolve_project
 
 
-def split_prompts(project):
-    md_path = project.file("03_gemini_prompts", "prompts_all.md")
-    out_dir = project.file("03_gemini_prompts", "clips")
+def split_prompts(project, md_name="prompts_all.md", out_dir_name="clips"):
+    md_path = project.file("03_gemini_prompts", md_name)
+    out_dir = project.file("03_gemini_prompts", out_dir_name)
     out_dir.mkdir(parents=True, exist_ok=True)
 
     if not md_path.is_file():
@@ -52,8 +52,10 @@ def split_prompts(project):
 
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="Split prompts_all.md into individual clips")
+    parser = argparse.ArgumentParser(description="Split a prompts package into individual clips")
     parser.add_argument("--project", "-p", default=None, help="Target project directory name")
+    parser.add_argument("--md", default="prompts_all.md", help="Package markdown filename inside 03_gemini_prompts")
+    parser.add_argument("--out-dir", default="clips", help="Output directory inside 03_gemini_prompts")
     args = parser.parse_args()
 
     try:
@@ -63,4 +65,4 @@ if __name__ == "__main__":
         sys.exit(1)
 
     print(f"[提示] 目标项目：{project.slug}")
-    split_prompts(project)
+    split_prompts(project, args.md, args.out_dir)

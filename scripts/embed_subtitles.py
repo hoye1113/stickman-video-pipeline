@@ -49,6 +49,19 @@ def detect_and_fix_rtl(srt_path):
     return srt_path
 
 
+def probe_video_size(path):
+    try:
+        out = subprocess.run(
+            ["ffprobe", "-v", "error", "-select_streams", "v:0",
+             "-show_entries", "stream=width,height", "-of", "csv=p=0", path],
+            capture_output=True, text=True, check=True,
+        )
+        w, h = out.stdout.strip().split(",")[:2]
+        return int(w), int(h)
+    except Exception:
+        return None
+
+
 def burn_subtitles(input_video, srt_path, output_video, font_size=22, font_name="Arial", margin=35):
     if not os.path.exists(input_video):
         print(f"[错误] 输入视频文件不存在: {input_video}")
@@ -64,7 +77,10 @@ def burn_subtitles(input_video, srt_path, output_video, font_size=22, font_name=
     escaped_srt = os.path.abspath(processed_srt).replace("\\", "/").replace(":", "\\:")
 
     # 构造 subtitles 过滤器参数 (Alignment: 2 = 底部居中)
-    sub_style = f"FontSize={font_size},FontName={font_name},PrimaryColour=&H00FFFFFF,OutlineColour=&H00000000,BorderStyle=1,Outline=2,Shadow=1,MarginV={margin},Alignment=2"
+    # PlayRes 必须与视频分辨率一致，否则 libass 会按默认 384x288 画布放大字号（竖屏会撑满全屏）
+    size = probe_video_size(input_video)
+    res_part = f",PlayResX={size[0]},PlayResY={size[1]}" if size else ""
+    sub_style = f"FontSize={font_size},FontName={font_name}{res_part},PrimaryColour=&H00FFFFFF,OutlineColour=&H00000000,BorderStyle=1,Outline=2,Shadow=1,MarginV={margin},Alignment=2"
     filter_arg = f"subtitles='{escaped_srt}':force_style='{sub_style}'"
 
     cmd = [
@@ -94,9 +110,9 @@ if __name__ == "__main__":
     parser.add_argument("-i", "--input", default=None, help="Input video file")
     parser.add_argument("-s", "--subtitles", default=None, help="SRT subtitle file")
     parser.add_argument("-o", "--output", default=None, help="Output video file")
-    parser.add_argument("--font-size", type=int, default=22, help="Font size in pixels")
+    parser.add_argument("--font-size", type=int, default=36, help="Font size in pixels (36 for 720x1280 mobile short-video)")
     parser.add_argument("--font-name", default="Arial", help="Font family name")
-    parser.add_argument("--margin", type=int, default=35, help="Margin from bottom in pixels")
+    parser.add_argument("--margin", type=int, default=350, help="Bottom margin in pixels; 350 lifts subtitles to ~55-75%% frame height, clear of Douyin/Xiaohongshu bottom UI")
 
     args = parser.parse_args()
 
