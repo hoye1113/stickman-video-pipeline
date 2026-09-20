@@ -12,8 +12,8 @@ if __name__ == "__main__":
     parser.add_argument("name", help="Project slug/directory name, e.g. 002_social_anxiety")
     parser.add_argument("--title-zh", default="未命名主题", help="Chinese title")
     parser.add_argument("--title-en", default="Untitled Project", help="English title")
-    parser.add_argument("--ratio", default="9:16", choices=["9:16", "16:9"], help="Aspect ratio")
-    parser.add_argument("--style", default="Style 1 Dark", help="Visual style")
+    parser.add_argument("--ratio", default="4:3", choices=["4:3", "16:9", "9:16", "1:1"], help="Aspect ratio")
+    parser.add_argument("--style", default="Style 2B (Cinematic Story)", help="Visual style")
     parser.add_argument("--source", default="", help="Path to source material file")
 
     args = parser.parse_args()

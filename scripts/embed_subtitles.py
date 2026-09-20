@@ -110,9 +110,9 @@ if __name__ == "__main__":
     parser.add_argument("-i", "--input", default=None, help="Input video file")
     parser.add_argument("-s", "--subtitles", default=None, help="SRT subtitle file")
     parser.add_argument("-o", "--output", default=None, help="Output video file")
-    parser.add_argument("--font-size", type=int, default=36, help="Font size in pixels (36 for 720x1280 mobile short-video)")
+    parser.add_argument("--font-size", type=int, default=None, help="Font size in pixels (default: auto 36 for vertical, 26 for horizontal)")
     parser.add_argument("--font-name", default="Arial", help="Font family name")
-    parser.add_argument("--margin", type=int, default=350, help="Bottom margin in pixels; 350 lifts subtitles to ~55-75%% frame height, clear of Douyin/Xiaohongshu bottom UI")
+    parser.add_argument("--margin", type=int, default=None, help="Bottom margin in pixels (default: auto 350 for vertical, 50 for horizontal 4:3/16:9)")
 
     args = parser.parse_args()
 
@@ -138,4 +138,21 @@ if __name__ == "__main__":
         if not output_video:
             output_video = str(project.file("06_final_video", "final_subtitled.mp4"))
 
-    sys.exit(0 if burn_subtitles(input_video, srt_path, output_video, args.font_size, args.font_name, args.margin) else 1)
+    # 智能自适应分辨率与画幅比例
+    size = probe_video_size(input_video) if input_video and os.path.exists(input_video) else None
+    is_vertical = (size[1] > size[0]) if size else False
+
+    if args.font_size is not None:
+        font_size = args.font_size
+    else:
+        font_size = 36 if is_vertical else 26
+
+    if args.margin is not None:
+        margin = args.margin
+    else:
+        # 竖屏需抬高 350px 避让短视频底部 UI；横屏（4:3 或 16:9）置于底部安全边距 50px
+        margin = 350 if is_vertical else 50
+
+    print(f"[配置] 视频分辨率：{size or '未知'} | 模式：{'竖屏 9:16' if is_vertical else '横屏 4:3/16:9'} | 字号：{font_size} | 底部边距：{margin}px")
+
+    sys.exit(0 if burn_subtitles(input_video, srt_path, output_video, font_size, args.font_name, margin) else 1)

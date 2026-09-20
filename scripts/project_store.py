@@ -134,7 +134,7 @@ def resolve_project(slug=None, root=None):
 
 
 def create_project(slug, title_zh="未命名主题", title_en="Untitled Project",
-                   ratio="9:16", style="Style 1 Dark", source="", root=None):
+                   ratio="4:3", style="Style 2B (Cinematic Story)", source="", root=None):
     root = Path(root) if root else repo_root()
     if not slug or any(sep in slug for sep in ("/", "\\")):
         raise ProjectError(f"非法项目名：{slug}")
