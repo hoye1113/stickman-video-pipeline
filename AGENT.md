@@ -1,15 +1,86 @@
 # AGENT 指南：火柴人视频矩阵化全自动生产工作流 (Agent Handover Guide)
 
-> **目标**：本文档为后续接手本项目的任何 AI Agent（或人类工程师）提供完整的项目背景、环境配置、多项目矩阵管理架构、避坑经验与自动化生产操作手册。遵循本手册可实现 100% 零冲突、零覆盖的无人值守连续生产。
+> **目标**：本文档为后续接手本项目的任何 AI Agent（或人类工程师）提供完整的战略背景、核心价值目标、Google Flow 原生生成策略、提示词安全风控、多项目矩阵管理架构与自动化生产操作 SOP。遵循本手册可实现 100% 零冲突、零覆盖、零封禁的无人值守连续生产。
 
 ---
 
-## 1. 架构总览：多项目矩阵架构 (Multi-Project Architecture)
+## 1. 项目核心背景与战略目标 (Why This Exists)
 
-为了防止不同主题的视频相互覆盖，本项目采用**内容矩阵工程模式**：
-- 根目录为通用的**生产引擎与工具链中心**（包含通用脚本、共享 Skills、全局文档）；
-- 每一个独立视频主题作为一个独立工程，存放在 `projects/<project_slug>/` 目录下；
-- 每个子工程内部拥有专属的 `01_` 至 `06_` 阶段流转目录与 `meta.json` 元数据。
+### 1.1 核心驱动力与自媒体闭环哲学
+本项目源自推友 **“疯狂的烤妹儿 🩵”**（`@CrazyKaomei`）提出的 **“一人可落地的「AI + 自媒体」最小阻力路径”** 理念：
+- **痛点**：传统 AIGC 视频制作成本高昂（Midjourney 每月上百，Runway/Kling 每月大几百），高心理与资金试错成本导致创作者在斤斤计较中磨灭了所有灵感；
+- **破局**：借助极低成本的 Google One AI Premium PRO 会员（如 18 个月活动），打通了**零边际成本的视频生产通道**；
+- **核心认知**：
+  > **“你占到了一个入口，不等于你拥有了作品。用不起来的便宜，依然是昂贵的浪费。别把会员当主角，它只是一声开门声。真正要做的是打磨出一套属于你自己的内容生产闭环。”**
+- **本项目的根本使命**：将这套零边际成本的生成通道，通过 **脚本自动化 + 提示词工业契约 + 多项目矩阵管理**，沉淀为一套可全自动量产 3 分钟高质量科普短视频的标准化流水线。
+
+---
+
+## 2. 账号体系与 Google Flow 生产架构 (Platform Architecture)
+
+- **用户账号**：`hoyework@gmail.com`（已订阅 **Google One AI Premium PRO** 会员，拥有官方每月 1,000 点视频积分与 Gemini 完整权限）。
+- **零成本原则**：**严禁调用 Google Cloud 付费 API**（无 API 额度）。所有图文与视频生成均通过浏览器自动化在 **Google Flow 前端页面**完成。
+
+### 核心生产平台：Google Flow (`https://labs.google/fx/tools/flow`)
+
+```text
+┌────────────────────────────────────────────────────────────────────────┐
+│               Google One AI Premium PRO (hoyework@gmail.com)           │
+└───────────────────────────────────┬────────────────────────────────────┘
+                                    │ 浏览器自动化 (bsk)
+                                    ▼
+       【唯一核心生产平台：Google Flow (Storyboard Studio)】
+                   https://labs.google/fx/tools/flow
+    ──────────────────────────────────────────────────────────────
+    • Storyboard Studio：18 镜头分镜卡片流，独立渲染绝无多轮干扰
+    • 首尾帧控制 (First & Last Frame Control)：实现物理级平滑过渡
+    • Nano Banana 2 (0 Credits)：零积分无限量生成 4 张关键帧测角色
+    • 官方消费级积分：每段 10s 约 15 点，月 1000 点可产出 60+ 镜头
+    • 纯净合规：无开发者接口 403 限流风险，无单会话超长累加崩溃
+```
+
+### 为什么选择 Google Flow 作为唯一生产平台？
+1. **Storyboard Studio 分镜架构**：Flow 原生提供故事板镜头卡片管理，与我们 Phase A 的 18 段分镜结构 1:1 完美映射；各卡片独立渲染，彻底根绝单会话连续生成时长累加（超 30s 崩溃）的问题；
+2. **首尾帧控制 (First & Last Frame Control)**：可将前一段视频的尾帧作为下一段的起始帧，实现模型级平滑衔接，彻底根绝纯文本盲猜导致的画面突变；
+3. **Nano Banana 2 免费垫底 (0 积分)**：在扣减视频积分前，可先用 0 积分无限量生成关键帧、测试角色一致性（每次出 4 张），定稿后再跑视频，大幅降低废片率；
+4. **官方配额稳定合规**：每段 10 秒 720p 视频仅消耗约 15 积分，每月 1,000 积分足以产出 60+ 条片段（即 3~4 条完整的 3 分钟大片），走的是官方会员消费级产品通道，杜绝权限拦截风险。
+
+---
+
+## 3. 视觉风格选型与分支管理
+
+本项目支持并维护两种主流视觉体系：
+
+| 风格编号 | 风格名称 | 核心特征与适用场景 | 归档与现状 |
+|---|---|---|---|
+| **Style 1** | 极简黑底高反差 (Dark Minimalist) | 纯黑画布、纯白极简线条火柴人、中粗线宽、空心圆头、无五官服装；辅以三色高饱和隐喻色（暗红、冰紫、冷金）。视觉冲击极强，适合深度心理学剖析。 | 首批生成的 Style 1 素材已安全归档至 `projects/<slug>/04_raw_clips/_style1_archive/`，作为历史资产备份。 |
+| **Style 2B** | 全彩电影叙事 (Cinematic Story) | 电影级光影环境（暖光卧室、雨夜车灯、昏黄窗台）、角色锁定（红色冷帽 + 黄色T恤 + 黑色四肢 + 无面部细节）、电影体积光与景深质感。代入感更强。 | **当前第一期项目（001_betrayal_and_split_soul）采用的主力风格**。旧平台测试片段已归档至 `_legacy_1min_archive/`，项目状态重置就绪，由 Google Flow 从 Clip 01 统一跑通。 |
+
+---
+
+### 4. 提示词安全风控规范 (Prompt Safety Policy)
+
+> 详细规定见 [`docs/prompt_safety_policy.md`](file:///d:/workSpace/git_clone_test/hoye-git/stickman-videos/docs/prompt_safety_policy.md)。所有新 Prompt 必须在交付生成前执行安全自检！
+
+视频生成平台（Google Flow / Veo / Gemini）具有严格的安全过滤机制。实测表明：写实性的危险、伤害、药物词汇会直接触发拒绝拦截。
+
+### 硬禁词与安全替换标准表：
+| 违禁类别 | 禁止出现的词汇 (Hard Forbidden) | 安全替代表达 (Safe Substitutions) |
+|---|---|---|
+| **身体伤害** | `throat`, `neck`, `strangle`, `choke`, `suffocate`, `gasp`, 勒颈, 窒息, 流血 | `freeze`, `stiffen`, `light dims`, `coiling around shoulders/arms` |
+| **危险工具** | `rope/lasso around throat`, `whip snap`, `weapon`, `stab` | `glowing ribbon pulling backward`, `sharp snap` |
+| **成瘾物** | `narcotic`, `drug`, `syringe`, `needle`, `inject`, `cocktail`, `wine` | `painkiller`, `illusion`, `glowing beam/probe of light`, `tilted glass of red liquid` |
+| **自伤/危险** | `car dangling over cliff`, `plunge into abyss`, `fall from heights` | `car stopping at white warning line`, `drift into deep darkness` |
+| **未成年人** | `baby/infant/child` 与哭泣、锁链、束缚组合 | `small fragile grey silhouette wrapped in heavy cool violet threads` |
+| **色彩与技术** | 十六进制色彩 `#FF0000`、含危险词的颜色名（如 `saturated danger red`） | **普通描述性颜色词**：`vivid red`, `cool violet`, `warm gold` |
+
+- **安全版目录**：经安全审查改写的 Prompt 存放于 `03_gemini_prompts/clips_safe/`；生成时优先调用 `clips_safe/` 中的版本。
+
+---
+
+## 5. 项目矩阵目录架构 (Multi-Project Architecture)
+
+所有视频项目均存放在 `projects/<slug>/`，各个主题物理隔离，杜绝覆盖：
 
 ```text
 stickman-videos/
@@ -25,159 +96,113 @@ stickman-videos/
 │   │
 │   ├── 001_betrayal_and_split_soul/            # 【第1期：背叛与撕裂】
 │   │   ├── 01_research/ (research_summary.md)
-│   │   ├── 02_director_proposal/ (proposal_phase_a.md)
-│   │   ├── 03_gemini_prompts/ (prompts_all.md, clips/)
-│   │   ├── 04_raw_clips/ (clip_01.mp4 ...)
-│   │   ├── 05_subtitles/
-│   │   ├── 06_final_video/
-│   │   └── meta.json                           # 记录画幅、风格、已生成片段列表
+│   │   ├── 02_director_proposal/ (Style 1 与 Style 2B 分镜预案)
+│   │   ├── 03_gemini_prompts/ (prompts_all_2b.md, clips_2b/, clips_safe/)
+│   │   ├── 04_raw_clips/ (_legacy_1min_archive/, _style1_archive/)
+│   │   ├── 05_subtitles/ (_legacy_1min_archive/)
+│   │   ├── 06_final_video/ (_legacy_1min_archive/)
+│   │   └── meta.json                           # 记录画幅、风格、已生成片段列表与状态
 │   │
 │   └── 002_future_topic/                       # 【未来第2期、第N期，互不影响】
 │       └── ...
 │
 ├── scripts/                                    # 参数化通用引擎脚本
 │   ├── new_project.py                          # 一键新建项目脚手架
-│   ├── download_clip.py                        # 支持 --project 目标路径
-│   ├── split_prompts.py                        # 支持 --project 目标路径
-│   ├── concat_clips.py                         # 支持 --project 目标路径
-│   └── embed_subtitles.py                      # 支持 --project 目标路径
+│   ├── download_clip.py                        # 支持 --project / --out / --tab-id 无感提取
+│   ├── split_prompts.py                        # 支持 --project / --md / --out-dir 拆分
+│   ├── concat_clips.py                         # 支持 --project 视频拼接
+│   └── embed_subtitles.py                      # 支持 --project 字幕压制
 │
 ├── skills/                                     # 全局共享 Skills 规范
-├── docs/                                       # 核心技术规范与工作流文档
+├── docs/                                       # 规范与安全风控文档
+│   ├── prompt_safety_policy.md                 # 提示词安全风控手册与替换表
+│   ├── workflow_spec.md                        # 完整业务规范
+│   └── lessons_learned.md                      # ★ 跨项目经验教训总纲（配额/bsk/水印/字幕/备份）
 ├── .gitignore                                  # 跨项目过滤所有 mp4/webm/mov
-└── AGENT.md                                    # 多项目交接总纲
+└── AGENT.md                                    # 本交接总纲
 ```
 
 ---
 
-## 2. 账号与运行平台（严禁走 API 付费接口）
+## 6. 浏览器自动化与实战避坑指南 (`bsk` 工具链)
 
-- **用户账号**：`hoyework@gmail.com`（已订阅 **Google One AI Premium PRO** 会员）。
-- **零成本方案**：**严禁调用 Google Cloud 付费 API**（用户无 API 额度）。所有视频生成**必须通过浏览器自动化**在 Google AI Studio 网页版前端执行：
-  - **URL**：`https://aistudio.google.com/prompts/new_chat?model=gemini-omni-1.1-flash`
-  - **模型名称**：`Gemini Omni 1.1 Flash` (`gemini-omni-1.1-flash`)
-
----
-
-## 3. 浏览器自动化环境 (`bsk` 工具链)
-
-项目依赖本地安装的 `bsk` 浏览器自动化 CLI（版本 0.3.0）：
+项目通过本地 `bsk` CLI（版本 0.3.0）控制已登录 Chrome：
 - **CLI 路径**：`C:\Users\38788\.local\bin\bsk.exe`
-- **通信协议**：通过 Chrome 扩展与本地前台打开的 Google Chrome 通信。
-
-### 核心操作守则与命令模式：
-1. **环境变量**：所有 PowerShell 命令必须加上 `$env:BSK_AUTO_START="0"`，防止沙箱环境下触发守护进程启动冲突：
-   ```powershell
-   $env:BSK_AUTO_START="0"; bsk <command>
-   ```
-2. **会话管理**：
-   - 检查现有会话：`bsk session list --json`
-   - 若返回空列表（会话超时断开），启动新会话：`bsk session start --json`（获取 `session_id`，如 `uwym`）。
-3. **标签页借用（Borrow）原则**：
-   - 列出标签页：`bsk tab list --session <session_id> --json`
-   - 借用 AI Studio 标签：`bsk tab borrow <tab_id> --session <session_id>`
-   - **重要原则**：一旦借用标签，**绝对不要主动调用 `bsk tab return` 归还**，保持页面常驻于 Agent Window 中，以便持续多轮交互。
-
----
-
-## 4. Google AI Studio 核心避坑指南 (Hard-won Experience)
-
-在实际调用中，我们踩平了以下所有关键技术坑点，接手的 Agent 必须牢记：
-
-### 坑点 1：Google Drive 强制绑定（Temporary Chat 不支持视频生成）
-- **现象**：当第一次点击 `Run Ctrl` 时，AI Studio 会弹出模态框：
-  > *"Temporary Chat is not supported: Video features are only available when saving conversations to Google Drive. Enable Google Drive to continue."*
-- **原因**：Google AI Studio 生成视频的媒体文件体积较大，必须持久化到用户的个人 Google Drive。
-- **解决方式**：
-  - 点击弹出框的 `Allow Drive access`，完成一次性 Google OAuth 授权；
-  - 授权完成后，当前会话自动保存为一个具有独立 ID 的 Prompt（如当前首个视频会话已持久化为：`https://aistudio.google.com/prompts/1FIfddPPJOLnI8r7BTnibSam0VJBBPxPY`，标题自动命名为 `Betrayal and the Fractured Soul`）；
-  - **后续片段生成可直接在此持久化 Prompt 中连续对话**，避免重新授权。
-
-### 坑点 2：右侧参数面板配置（每次开新会话必须检查）
-- `Aspect ratio`：点击下拉框，从默认的 `Auto` 改选为 `9:16`。
-- `Video duration`：保持滑块/数字框为 `10` 秒。
-- `Resolution`：默认往往是 `360p`，**必须手动下拉选中 `720p`**（若算力允许可设 1080p，720p 出片最稳定快捷且画质极佳）。
-- `Frame rate`：锁死 `24fps`。
-
-### 坑点 3：OS 级保存文件弹窗死锁 $\to$ 采用 DOM Base64 无损直提
-- **痛点**：如果使用浏览器常规的“点击下载”按钮，会触发操作系统的 Windows 文件保存对话框，阻塞 Agent 命令行执行。
-- **终极解决方案**：AI Studio 生成完毕后，页面 DOM 会渲染一个 `<video>` 标签，其 `src` 为浏览器内存中的 `blob:https://aistudio.google.com/...`。脚本会自动选取页面中**最新的 blob 视频**（跳过历史片段），避免在持久化长对话中误提取旧片段。
-- 我们编写了自动化提取脚本 [`scripts/download_clip.py`](file:///d:/workSpace/git_clone_test/hoye-git/stickman-videos/scripts/download_clip.py)：
+- **环境变量**：所有 PowerShell 命令必须加上 `$env:BSK_AUTO_START="0"`：
   ```powershell
-  python scripts/download_clip.py --session <session_id> --filename clip_01.mp4 --project <project_slug>
+  $env:BSK_AUTO_START="0"; bsk <command>
   ```
-  该脚本通过 JavaScript 将 blob 读取为 base64，直接由 Python 在本地写盘存入目标项目的 `04_raw_clips/`，并自动更新该项目的 `meta.json`。**速度极快（~1秒）、零弹窗、零死锁、100% 可靠**。
+- **会话机制**：`bsk session start --json` 获取 `session_id`。一旦借用标签，**切勿主动 return 归还**，保持页面常驻在 Agent Window。
+
+### 实战硬核避坑总结 (Hard-won Experience)：
+
+1. **坑点 1：OS 级文件保存对话框死锁**
+   - 严禁触发点击浏览器的原生下载按钮（会导致 Windows 保存弹窗阻塞命令行）。
+   - **统统使用 [`scripts/download_clip.py`](file:///d:/workSpace/git_clone_test/hoye-git/stickman-videos/scripts/download_clip.py)**：通过 JavaScript DOM 注入直接将 `<video>` 的 `blob:` 或带凭证的签名 URL 转为 Base64 写盘，1 秒无感落盘，零死锁。
+2. **坑点 2：Nano Banana 2 零积分预检锁角色**
+   - 不要在未确认画面构图前直接消耗 15 积分跑视频。利用 Flow 提供的 Nano Banana 2 免费生图（每次出 4 张），先校验火柴人的服装（红色冷帽 + 黄色T恤）与光影，确认没崩后再点击生成视频。
+3. **坑点 3：首尾帧衔接防止画面突变**
+   - 充分利用 Flow 的 **First & Last Frame Control** 特性：将前一个片段生成的最后关键帧作为下一个片段的起始帧输入，实现物理级平滑过渡，彻底解决人物姿态跳帧。
+4. **坑点 4：页面分镜卡片独立性**
+   - Flow 的 Storyboard Studio 采用镜头卡片流，每张卡片独立渲染 10 秒片段，避免在单会话内连续多轮延长导致超时报错。
 
 ---
 
-## 5. 新建与管理视频项目 (Multi-Project Lifecycle)
+## 7. 端到端生产操作 SOP (Step-by-Step Production SOP)
 
-### A. 一键创建新视频项目
-当需要制作一个新主题时，运行：
+### Step 1: 一键新建主题项目
 ```powershell
-python scripts/new_project.py 002_social_anxiety --title-zh "克服社交焦虑的心理法则" --title-en "Mastering Social Anxiety" --ratio 9:16 --style "Style 1 Dark"
+python scripts/new_project.py 002_social_anxiety --title-zh "克服社交焦虑" --title-en "Mastering Social Anxiety" --ratio 9:16 --style "Style 2B (Cinematic Story)"
 ```
-系统会自动基于 `projects/_template/` 初始化完整的 6 大阶段空目录，并生成规范的 `meta.json`。
 
-> **项目定位规则**：所有脚本通过 `scripts/project_store.py` 解析项目。当 `projects/` 下存在多个项目时，必须显式传 `--project <slug>`，否则直接报错并列出候选项目（不会静默选中或回落到某个固定项目）；仅当项目唯一时可省略 `--project`。
+### Step 2: 资料检索与 Phase A 导演预案
+1. 梳理心理学科学机制，保存在 `projects/<slug>/01_research/research_summary.md`；
+2. 按照三幕式 18 段结构编写分镜表，保存至 `projects/<slug>/02_director_proposal/proposal_phase_a.md`；
+3. **【门禁】在此必须暂停，等待人类用户审核批准分镜方案！**
 
-### B. 在指定项目中拆分提示词
-在项目的 `03_gemini_prompts/prompts_all.md` 写好后，运行：
+### Step 3: Phase B 提示词生成与安全扫描
+1. 编写 18 条生产级英文提示词（遵循零文字契约、角色防形变锁、动效三拍点）；
+2. 依据 [`docs/prompt_safety_policy.md`](file:///d:/workSpace/git_clone_test/hoye-git/stickman-videos/docs/prompt_safety_policy.md) 排除敏感词，改写版本放入 `clips_safe/`；
+3. 执行一键拆解：
+   ```powershell
+   python scripts/split_prompts.py --project <slug> --md prompts_all_2b.md --out-dir clips_2b
+   ```
+
+### Step 4: 视频生成与 Base64 提取落盘
+- **在 Google Flow (Storyboard Studio) 中**：
+  1. 设定 `9:16`、`10s`、`720p`；
+  2. 填入提示词，（可选前帧输入），点击生成；
+  3. 待视频加载完成后，运行提取脚本：
+     ```powershell
+     python scripts/download_clip.py --session <session_id> --filename clip_01.mp4 --project <slug>
+     ```
+  4. 重复完成 18 个片段的提取（已生成的片段会自动同步进 `meta.json`）。
+
+### Step 5: 视频无缝合并与字幕压制成片
 ```powershell
-python scripts/split_prompts.py --project 001_betrayal_and_split_soul
+# 1. FFmpeg 18 段视频合并 (生成 stitched_raw.mp4)
+python scripts/concat_clips.py --project <slug>
+
+# 2. 对齐字幕并硬编码压制成片 (生成 final_subtitled.mp4)
+python scripts/embed_subtitles.py --project <slug>
 ```
-会自动将该项目汇总的 18 条 Prompt 拆分为 `clips/prompt_01.txt` ~ `prompt_18.txt`。
-
-### C. 批量生成与提取视频片段
-对于项目中的片段 `N`（如 `02`）：
-1. 观察输入框与 Run 按钮 ref；
-2. 注入提示词：
-   ```powershell
-   $prompt_text = Get-Content "projects/001_betrayal_and_split_soul/03_gemini_prompts/clips/prompt_02.txt" -Raw
-   $env:BSK_AUTO_START="0"; bsk fill --ref "@e42" --value "$prompt_text" --session <session_id>
-   ```
-3. 点击 Run 按钮：
-   ```powershell
-   $env:BSK_AUTO_START="0"; bsk click --ref "@e47" --session <session_id>
-   ```
-4. 渲染完成后提取落盘：
-   ```powershell
-   python scripts/download_clip.py --session <session_id> --filename clip_02.mp4 --project 001_betrayal_and_split_soul
-   ```
-
-### D. 视频合并与字幕烧录
-全部片段生成完毕后：
-1. **拼接为完整成片**：
-   ```powershell
-   python scripts/concat_clips.py --project 001_betrayal_and_split_soul
-   ```
-   （自动寻找 `04_raw_clips` 内的所有片段，合并输出到 `06_final_video/stitched_raw.mp4`）
-2. **烧录字幕**：
-   ```powershell
-   python scripts/embed_subtitles.py --project 001_betrayal_and_split_soul
-   ```
-   （自动寻找该项目 `05_subtitles` 下的 SRT 字幕，输出最终带有双语字号边距的 `final_subtitled.mp4`）
 
 ---
 
-## 6. 核心自动化脚本清单
+## 8. 核心自动化脚本清单与参数速查
 
-| 脚本文件 | 作用与用法 |
-|---|---|
-| [`scripts/project_store.py`](file:///d:/workSpace/git_clone_test/hoye-git/stickman-videos/scripts/project_store.py) | **核心模块**：所有脚本共用的项目解析、meta.json 读写与阶段路径推导；多项目时必须显式定位 |
-| [`scripts/new_project.py`](file:///d:/workSpace/git_clone_test/hoye-git/stickman-videos/scripts/new_project.py) | **一键新建项目**：从 `_template` 复制初始化新项目目录与 `meta.json` |
-| [`scripts/split_prompts.py`](file:///d:/workSpace/git_clone_test/hoye-git/stickman-videos/scripts/split_prompts.py) | 拆分指定项目下的 `prompts_all.md` 为 18 个独立的 `prompt_01.txt` ~ `prompt_18.txt` |
-| [`scripts/download_clip.py`](file:///d:/workSpace/git_clone_test/hoye-git/stickman-videos/scripts/download_clip.py) | **核心提取脚本**：无弹窗将浏览器当前的 Blob 视频以 Base64 提取保存为目标项目的 `04_raw_clips/clip_XX.mp4`，并自动更新 `meta.json` |
-| [`scripts/concat_clips.py`](file:///d:/workSpace/git_clone_test/hoye-git/stickman-videos/scripts/concat_clips.py) | 批量调用 FFmpeg concat 将目标项目的所有片段拼接为 3 分钟成片，带自动 fallback 转码保障 |
-| [`scripts/embed_subtitles.py`](file:///d:/workSpace/git_clone_test/hoye-git/stickman-videos/scripts/embed_subtitles.py) | 将 SRT 字幕无损压制到目标项目的成片视频中，内置 RTL 双向文本与中文换行支持 |
+| 脚本文件 | 核心参数与示例 | 功能作用 |
+|---|---|---|
+| [`scripts/new_project.py`](file:///d:/workSpace/git_clone_test/hoye-git/stickman-videos/scripts/new_project.py) | `<name> [--title-zh] [--title-en] [--ratio] [--style]` | 自动克隆 `_template` 并生成专属 `meta.json` |
+| [`scripts/split_prompts.py`](file:///d:/workSpace/git_clone_test/hoye-git/stickman-videos/scripts/split_prompts.py) | `[--project <name>] [--md <filename>] [--out-dir <dir>]` | 将提示词总包一键拆解为 `prompt_01.txt` ~ `18.txt` |
+| [`scripts/download_clip.py`](file:///d:/workSpace/git_clone_test/hoye-git/stickman-videos/scripts/download_clip.py) | `[--session <id>] [--filename <name>] [--project <slug>] [--out <path>]` | 无弹窗 Base64 提取当前页面最新视频并更新 `meta.json` |
+| [`scripts/concat_clips.py`](file:///d:/workSpace/git_clone_test/hoye-git/stickman-videos/scripts/concat_clips.py) | `[--project <slug>] [--output <filename>]` | 自动排序拼接 `04_raw_clips` 内的所有视频并容错重编码 |
+| [`scripts/embed_subtitles.py`](file:///d:/workSpace/git_clone_test/hoye-git/stickman-videos/scripts/embed_subtitles.py) | `[--project <slug>] [-i <video>] [-s <srt>] [-o <out>]` | 烧录压制高清字幕，内置 RTL 自动修复与样式规范。**移动端规范**：`--font-size 36`、`--margin 350`（字幕置于画面 55%–75% 高度，避开抖音/小红书底部标题区）、`--font-name "Microsoft YaHei"`；内置 ffprobe 自动设置 PlayRes（防止竖屏字幕放大铺屏）；长台词须按语速拆成 3–4s 短条（详见 `docs/workflow_spec.md` 第 4 节） |
 
 ---
 
-## 7. 常见紧急排查 (Troubleshooting)
+## 9. 系列经验索引
 
-- **Q: 为什么 `bsk` 显示 `session not registered or already stopped`？**  
-  **A**: 会话闲置超过几分钟会自动停止。只需运行 `bsk session start --json` 创建新会话，然后重新借用（borrow）AI Studio 标签即可。
-- **Q: 为什么提示词输入后 Run 按钮仍然是灰色？**  
-  **A**: 确保 `bsk fill` 正确触发表单变更事件。如果变灰，可发送一次空格或用 JavaScript 触发 `input` / `change` 事件。
-- **Q: 生成的视频画面不小心被截断了？**  
-  **A**: 提示词已注入 `compose vertically with interface-safe margins, central 20% to 80%`，确保主体都在竖屏正中。
+- **跨项目通用经验教训总纲**（平台配额、多账号、bsk 避坑、水印去除、字幕规范、备份纪律、流程铁律）：[`docs/lessons_learned.md`](file:///d:/workSpace/git_clone_test/hoye-git/stickman-videos/docs/lessons_learned.md)
+- **提示词安全风控手册**（危险词禁令与安全替换表）：[`docs/prompt_safety_policy.md`](file:///d:/workSpace/git_clone_test/hoye-git/stickman-videos/docs/prompt_safety_policy.md)
+- **完整业务规范**（各阶段任务、门禁与目录职责）：[`docs/workflow_spec.md`](file:///d:/workSpace/git_clone_test/hoye-git/stickman-videos/docs/workflow_spec.md)

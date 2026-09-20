@@ -15,7 +15,7 @@
 ## 1. 必读本地 Skill 目录及重点文件（按顺序阅读）
 
 ### 阶段一：资料检索 (Unified Search)
-- **本地目录**：`D:/workSpace/hoye-skills-main/skill-collection/productivity/yichen-skills/yichen-unified-search`
+- **本地目录**：`./skills/yichen-unified-search`
 - **重点阅读文件**：
   - `SKILL.md`（核心原则与访问边界）
   - `references/routes.md`（离线路由与后端参数契约）
@@ -25,7 +25,7 @@
   围绕用户给定的情感科普主题（如焦虑内耗、情绪价值、破局行动、心理防御等），检索真实、有说服力的心理学/认知科学机制与科学比喻。检索结果整理至 `01_research/research_summary.md`。不捏造虚假论文、统计数据或未经证实的假想。
 
 ### 阶段二：火柴人分镜与提示词设计 (Directing Stickman Videos)
-- **本地目录**：`D:/workSpace/hoye-skills-main/skill-collection/creative/directing-stickman-videos`
+- **本地目录**：`./skills/directing-stickman-videos`
 - **重点阅读文件**：
   - `SKILL.md`（核心契约、设定闸门与两阶段流程）
   - `references/storyboard-template.md`（Phase A 导演预案模板与密度规范）
@@ -47,21 +47,22 @@
   - BGM 连续性锁定（Clip 1 确立主题，Clip 2–18 显式继承 Clip 1 的乐器与节奏）。
   - 相邻片段首尾帧动作/镜头必须连续（Visual Continuity Interface）。
 
-### 阶段三：Gemini 网页版视频生成 (Gemini Web Generation)
-- **目标平台**：[https://gemini.google.com](https://gemini.google.com/)
-- **说明**：Gemini 网页版无本地目录。
+### 阶段三：Google Flow 视频生成 (Google Flow Storyboard Studio)
+- **目标平台**：[https://flow.google.com](https://flow.google.com/)
+- **说明**：唯一工业化生成工坊，利用 Google One Pro 官方每月 1,000 点额度。
 - **职责**：
-  - 在 Phase B 提示词通过后，将 18 条 Prompt 依次提交给 Gemini 网页版（手动或通过浏览器自动化）。
-  - 生成 18 段约 10 秒的视频，下载并统一保存在本地 `04_raw_clips/clip_01.mp4` 至 `clip_18.mp4`。
+  - 在 Phase B 提示词通过并完成安全自检（遵循 `docs/prompt_safety_policy.md`）后，在 Google Flow Storyboard Studio 中依次生成 18 个分镜卡片；
+  - 必须采用首尾帧连续性控制（First & Last Frame Control），将前一卡片的尾帧作为后一卡片的首帧输入；
+  - 运行 `python scripts/download_clip.py --session <id> --filename clip_XX.mp4 --project <slug>` 无感提取落盘至 `04_raw_clips/clip_XX.mp4` 并同步进度至 `meta.json`。
 
 ### 阶段四：字幕处理与拼接 (Embed Subtitles)
-- **本地目录**：`D:/workSpace/hoye-skills-main/skill-collection/creative/embed-subtitles`
+- **本地目录**：`./skills/embed-subtitles`
 - **重点阅读文件**：
   - `SKILL.md`（FFmpeg 字幕压制参数、样式规则、RTL 自动检测修复）
 - **职责**：
-  - 使用 FFmpeg 将 `04_raw_clips/` 中的 18 个视频按顺序无缝拼接为完整视频。
-  - 提取或对齐 18 段台词制作 `narration.en.srt`（与 `narration.zh.srt`）。
-  - 按照标准样式（字号 22–24px、底边距 35–45px、描边 2）将字幕压制烧录进最终成片 `06_final_video/final_stickman_video.mp4`。
+  - 使用 FFmpeg 将 `04_raw_clips/` 中的 18 个视频按顺序无缝拼接为完整视频（`python scripts/concat_clips.py --project <slug>`）。
+  - 提取或对齐 18 段台词制作 `05_subtitles/narration.bilingual.srt`。
+  - 按照标准样式（字号 22–24px、底边距 35–45px、描边 2）将字幕压制烧录进最终成片 `06_final_video/final_subtitled.mp4`（`python scripts/embed_subtitles.py --project <slug>`）。
 
 ---
 

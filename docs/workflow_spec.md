@@ -66,19 +66,43 @@
 
 ---
 
-### 3. Google AI Studio 视频生成与资产收录 (Omni Flash Video Generation)
-- **平台位置**：[Google AI Studio Playground](https://aistudio.google.com/prompts/new_chat)
-- **底层模型**：`Gemini Omni 1.1 Flash` (`gemini-omni-1.1-flash`)
-- **关键视频参数**：
-  - `Video duration`：10 秒（与提示词契约一致）
-  - `Aspect ratio`：16:9 / 9:16 / 1:1
-  - `Frame rate`：24fps
-  - `Resolution`：360p / 720p / 1080p
-- **执行方式（Agent 自动化接管）**：
-  - 复用宿主机已登录 Google Pro 会话的浏览器窗口，保持会话常驻连接。
-  - Agent 依次将各片段提示词填入输入框，触发 `Run Ctrl ↵`。
-  - 渲染完成后调用 `scripts/download_clip.py --session <id> --filename clip_XX.mp4 --project <slug>` 自动以 Base64 读取并保存在该项目的 `04_raw_clips/clip_XX.mp4`。
-  - 质量校验：检查各片段时长、画面比例是否一致，有无明显的文字混入或肢体崩坏。
+### 3. Google Flow 视频生成与资产收录 (Google Flow Storyboard Studio)
+
+#### 3.1 战略背景与核心哲学 (Philosophy & Strategy)
+本项目源自推友 **“疯狂的烤妹儿 🩵”**（`@CrazyKaomei`）提出的 **“一人可落地的「AI + 自媒体」最小阻力路径”**：
+- **核心认知**：“你占到了一个入口，不等于你拥有了作品。用不起来的便宜，依然是昂贵的浪费。别把会员当主角，它只是一声开门声。真正要做的是打磨出一套属于你自己的内容生产闭环。”
+- 依托用户已订阅的 **Google One AI Premium PRO** 会员（每月 1,000 点官方积分），通过浏览器自动化打通**零边际成本的视频生产通道**，拒绝调用 Google Cloud 付费 API，将便宜的算力入口转化为工业化稳定交付的作品。
+
+#### 3.2 平台生产架构与特性优势 (Platform Architecture)
+生产唯一选用 **Google Flow (`https://labs.google/fx/tools/flow`)** 作为端到端视频工坊：
+1. **Storyboard Studio 镜头卡片流**：
+   - 原生提供故事板卡片（Shot Cards），完美映射 Phase A 的 18 段分镜结构；
+   - 每张卡片独立生成与重绘，杜绝单会话连续多轮时长累加（超 30s 崩溃）的硬伤。
+2. **首尾帧连续性控制 (First & Last Frame Control)**：
+   - 将上一片段的尾帧无缝作为下一片段的起始帧，实现物理级平滑过渡，根绝纯文本生成中的角色动作突变。
+3. **Nano Banana 2 零积分角色锁定 (0 Credits)**：
+   - 生视频前先用 0 积分生成 4 张高清静态关键帧，校验角色的服装（如红色冷帽+黄色T恤）、配色与光影；确认无畸变后再消耗约 15 积分渲染 10 秒视频，大幅消除试错损耗。
+4. **官方合规配额通道**：
+   - 走 Google One Pro 官方消费级权益，每月 1,000 积分稳定可产出 60+ 个 10 秒片段（可支撑 3~4 条完整的 3 分钟大片），彻底杜绝权限限流与账号风控。
+
+#### 3.3 生产前风控门禁：提示词安全审计 (Prompt Safety Gate)
+- **执行规则**：所有提示词必须经过 [`docs/prompt_safety_policy.md`](prompt_safety_policy.md) 审查。
+- **硬禁词拦截**：严禁出现 `throat`, `neck`, `choke`, `strangle`, `syringe`, `inject`, `narcotic`, `cliff edge`, `baby in chains` 等伤害或成瘾描写。
+- **安全版本归档**：审查改写后的提示词保存在 `projects/<slug>/03_gemini_prompts/clips_safe/`。视频生成时**强制优先调用 `clips_safe/`**。
+
+#### 3.4 视频参数契约与无感落盘规范
+- **视频标准参数**：
+  - `Aspect Ratio`：9:16 竖屏（默认）/ 16:9 横屏
+  - `Duration`：每片段精确 10 秒
+  - `Frame Rate`：24fps
+  - `Resolution`：720p（平衡质感与生成速度）
+- **无感 Base64 提取与落盘**：
+  - **严禁触发原生下载对话框**（避免阻塞自动化命令行）。
+  - 生成完成后，运行：
+    ```powershell
+    python scripts/download_clip.py --session <session_id> --filename clip_XX.mp4 --project <slug>
+    ```
+  - 脚本自动通过 JavaScript 注入将页面 `<video>` 元素的 `blob:` 或带签名的资源直转 Base64 写入 `04_raw_clips/clip_XX.mp4`，并同步更新 `meta.json`。
 
 ---
 
@@ -89,9 +113,14 @@
   - `SKILL.md`（FFmpeg 字幕压制参数、样式控制、RTL 自动检测修复）
 - **核心执行规则**：
   1. **无缝拼接**：运行 `python scripts/concat_clips.py --project <slug>`（FFmpeg），自动对目标项目的 `04_raw_clips/` 中的所有片段按序无损拼接，生成 `06_final_video/stitched_raw.mp4`。
-  2. **时间轴对齐**：在目标项目的 `05_subtitles/` 生成双语字幕。
-  3. **样式与安全区**：字幕字号推荐 22–24px，底部边距 35–45px，添加黑色描边（outline 2）以防背景干扰。
-  4. **压制生成成片**：运行 `python scripts/embed_subtitles.py --project <slug>` 将字幕硬编码烧录进成片，保存至 `06_final_video/final_subtitled.mp4`。
+  2. **时间轴对齐**：在目标项目的 `05_subtitles/` 生成双语字幕（推荐文件名 `narration.bilingual.srt`，单文件内含"英文行 + 中文对照行"）。
+  3. **移动端字幕规范（实战经验，2026-09 定稿）**：
+     - **安全区（最重要）**：抖音/小红书的底部标题、账号信息与右侧按钮会遮挡画面下方约 25% 区域。字幕必须上移到**画面 55%–75% 高度区间**：720×1280 竖屏对应 `--margin 350`
+     - **字号**：`--font-size 36`（720×1280 竖屏）；22/30 在移动端均偏小，勿用
+     - **拆条原则**：长台词必须按语速拆成 **3–4 秒/条**的短句，每条英文不超过一行、中文不超过一行；用户没有耐心读长文本
+     - **中文字体**：必须指定 CJK 字体，如 `--font-name "Microsoft YaHei"`，否则中文可能渲染为方框
+     - **PlayRes 铁律**：libass 默认按 384×288 画布计算字号，竖屏视频会放大约 4 倍导致字幕铺满全屏；`embed_subtitles.py` 已内置 ffprobe 探测并按视频分辨率自动设置 `PlayResX/PlayResY`，不要绕过
+  4. **压制生成成片**：运行 `python scripts/embed_subtitles.py --project <slug> --font-name "Microsoft YaHei"` 将字幕硬编码烧录进成片，保存至 `06_final_video/final_subtitled.mp4`。
 
 ---
 
@@ -102,8 +131,9 @@
 | `projects/<slug>/01_research/research_summary.md` | 资料检索 Agent | Markdown 结构化研究报告 | 收集整理 → 确认事实源 |
 | `projects/<slug>/02_director_proposal/proposal_phase_a.md` | 导演 Agent | 完整 Phase A 提案（含18行分镜表） | 草稿 → **用户审核通过** |
 | `projects/<slug>/03_gemini_prompts/prompts_all.md` | 编剧/Prompt Agent | 18条独立英文 Prompt + 拼接指南 | 仅在 Phase A 确认后生成 |
-| `projects/<slug>/03_gemini_prompts/clips/prompt_01~18.txt` | 编剧/Prompt Agent | 纯文本 Prompt，方便批处理 | 就绪 |
-| `projects/<slug>/04_raw_clips/clip_01~18.mp4` | 浏览器生成 Agent | 720p MP4 视频，每个约10秒 | 逐段生成并归档校验（Git忽略） |
+| `projects/<slug>/03_gemini_prompts/clips/prompt_01~18.txt` | 编剧/Prompt Agent | 纯文本 Prompt，方便批处理 | 就绪（原文归档） |
+| `projects/<slug>/03_gemini_prompts/clips_safe/prompt_XX.txt` | 安全审查 Agent | 经风控审查与隐喻改写后的安全版 | **生产优先调用** |
+| `projects/<slug>/04_raw_clips/clip_01~18.mp4` | 浏览器生成 Agent | 720p 9:16 MP4 视频，每个约10秒 | Google Flow 提取落盘（Git忽略） |
 | `projects/<slug>/05_subtitles/narration.en.srt` | 字幕处理 Agent | 严格符合 SRT 格式标准 | 基于实际时间轴对齐 |
 | `projects/<slug>/06_final_video/final_subtitled.mp4` | 后期合成脚本/Agent | 最终交付成品视频 | 拼接+压制成片（Git忽略） |
-| `projects/<slug>/meta.json` | 工程管理 Agent | JSON 结构化元数据 | 记录配置参数与生成进度 |
+| `projects/<slug>/meta.json` | 工程管理 Agent | JSON 结构化元数据 | 记录画幅、风格、已生成片段列表 |
