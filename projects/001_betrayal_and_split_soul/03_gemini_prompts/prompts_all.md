@@ -1,6 +1,6 @@
 # Phase B — Omni Flash 生产级提示词总汇 (18 Clips Package)
 
-**适用平台**：Google AI Studio (`gemini-omni-1.1-flash`)  
+**适用平台**：Google Flow (`https://labs.google/fx/tools/flow`)  
 **画幅规格**：`9:16` 竖屏，10 秒时长，24 FPS，720p/1080p 目标，同步音频  
 **主题风格**：Style 1 Dark（纯黑画布，纯白极简线条火柴人）  
 **强调色**：Saturated Danger Red (暗红), Anxiety Violet (冰紫), Clarity Gold (冷金)  

@@ -1,0 +1,21 @@
+Create an approximately 10-second 9:16 vertical cinematic 2D animation clip targeting 720p at 24 FPS with synchronized audio.
+
+This is a non-violent educational 2D line-animation about psychology; all characters are abstract minimalist symbols; every image is a symbolic metaphor.
+
+Environment: a completely dark room, one vertical spotlight from above, fine dust drifting through the beam. Cinematic volumetric lighting, soft depth of field, solemn isolation.
+
+Character: Stick Figure A — the same minimalist 2D animated stick figure wearing a bright red beanie and a yellow t-shirt, simple black stick limbs, hollow circular head with minimal dot eyes, simple black lines, vibrant colors.
+
+First frame: the spotlight illuminates A sitting on the floor, eyes lowered, in the darkness from Clip 8.
+
+[0–3s] A giant glowing red beam of light descends from the top of the frame and touches A's head with a soft halo.
+[3–7s] The beam widens and pours glowing vivid red light over A; a red cloth band wraps around A's head, dimming its sight, while illusory heart icons float upward.
+[7–10s] The red beam dissolves into dozens of floating embers; the red band slips off and A lowers its head, dazed, as the embers gather for Clip 10.
+
+Final frame: red embers gather and rise upward through the darkness.
+
+Audio-only dialogue, exactly once: "Affairs are nothing more than emotional painkillers. They release temporary dopamine to numb aging and boredom, but they cure absolutely nothing." Do not display or transcribe dialogue visually.
+
+Identical narrator: warm, articulate, mature young adult American male voice, calm analytical and deeply introspective tone, voice-first mix, audio voiceover only, strictly no speech bubbles or dialogue boxes. Audio: minor-key piano returns with solemn weight, a soft hollow liquid drop echo, faint surreal reverb, and a gentle glass chime; voice dominant.
+
+Negative constraints: no photorealistic human skin or faces, no 3D humanoid CGI uncanny valley models, no chaotic line glitches, no speech bubbles, no dialogue text boxes, no visible text. No violence, no weapons, no injury, no depiction of harm, no substances. Do not alter dialogue.

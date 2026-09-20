@@ -1,0 +1,21 @@
+Create an approximately 10-second 9:16 vertical cinematic 2D animation clip targeting 720p at 24 FPS with synchronized audio.
+
+This is a non-violent educational 2D line-animation about psychology; all characters are abstract minimalist symbols; every image is a symbolic metaphor.
+
+Environment: a stone quarry stairway before dawn, wide stone steps ascending into warm golden morning light, quarry walls on both sides, dust glowing in the beam. Cinematic volumetric lighting, soft depth of field, solemn resolve.
+
+Character: Stick Figure A — a minimalist 2D animated stick figure wearing a bright red beanie and a yellow t-shirt, simple black stick limbs, hollow circular head with minimal dot eyes, simple black lines, vibrant colors.
+
+First frame: the golden fissure from Clip 12 spreads wide and settles into a steep stone stairway.
+
+[0–3s] A large dark monolith stands on the steps; A sets its shoulder firmly under the base.
+[3–7s] A drives the monolith upward step by step, body straining with steady effort.
+[7–10s] Dark red impurities along the monolith's base burn away in the warm gold light, leaving pure white stone for Clip 14.
+
+Final frame: the whitened stone rests on the upper step, golden light washing over it.
+
+Audio-only dialogue, exactly once: "True redemption requires the spine to carry real weight. Stop playing the victim. Pay the full price of your actions instead of demanding cheap forgiveness." Do not display or transcribe dialogue visually.
+
+Identical narrator: warm, articulate, mature young adult American male voice, calm analytical and deeply introspective tone, voice-first mix, audio voiceover only, strictly no speech bubbles or dialogue boxes. Audio: a firm 104 BPM acoustic piano enters as the BGM foundation, with heavy stone friction, deep footsteps, and warm fire-like shimmer; voice dominant.
+
+Negative constraints: no photorealistic human skin or faces, no 3D humanoid CGI uncanny valley models, no chaotic line glitches, no speech bubbles, no dialogue text boxes, no visible text. No violence, no weapons, no injury, no depiction of harm, no substances. Do not alter dialogue.

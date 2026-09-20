@@ -1,0 +1,21 @@
+Create an approximately 10-second 9:16 vertical cinematic 2D animation clip targeting 720p at 24 FPS with synchronized audio.
+
+This is a non-violent educational 2D line-animation about psychology; all characters are abstract minimalist symbols; every image is a symbolic metaphor.
+
+Environment: a rooftop terrace at dusk, distant violet-black storm clouds churning, the last warm gold light raking low across the platform floor. Cinematic volumetric lighting, soft depth of field, calm rising resolve.
+
+Character: Stick Figure B — the same minimalist 2D animated stick figure wearing a grey t-shirt, no beanie, hollow circular head with minimal dot eyes, simple black stick limbs, simple black lines, vibrant colors.
+
+First frame: the camera pans to the right side of the frame, where B stands firmly on the raised platform.
+
+[0–3s] Fierce swirling cool violet storm clouds rush in from the left, trying to envelop B.
+[3–7s] B deliberately raises its right arm; a vertical translucent warm gold shield expands from B's hand and holds the storm back completely.
+[7–10s] The storm breaks apart and clears; beside B, an icon-only golden balance scale and ruler glow with calm steady light for Clip 15.
+
+Final frame: the golden scale and ruler stay lit beside B as the sky calms.
+
+Audio-only dialogue, exactly once: "And for the wife: your greatest enemy right now is not heartbreak, but sinking under blind emotion. Step back. Look at his structural capacity to change." Do not display or transcribe dialogue visually.
+
+Identical narrator: warm, articulate, mature young adult American male voice, calm analytical and deeply introspective tone, voice-first mix, audio voiceover only, strictly no speech bubbles or dialogue boxes. Audio: the 104 BPM piano and warm synth continue, with howling wind deflected by a resonant crystalline shield chime, settling into a clear quiet melody; voice dominant.
+
+Negative constraints: no photorealistic human skin or faces, no 3D humanoid CGI uncanny valley models, no chaotic line glitches, no speech bubbles, no dialogue text boxes, no visible text. No violence, no weapons, no injury, no depiction of harm, no substances. Do not alter dialogue.

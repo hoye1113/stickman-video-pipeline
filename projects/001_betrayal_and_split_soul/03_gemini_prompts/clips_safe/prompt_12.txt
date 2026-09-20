@@ -1,0 +1,17 @@
+Create an approximately 10-second 9:16 vertical 2D kinetic motion-graphics clip targeting 720p at 24 FPS with synchronized audio.
+
+This is a non-violent educational 2D line-animation about psychology; all characters are abstract faceless symbols; every image is a symbolic metaphor.
+
+Use a flat, uniform, digitally pure-black canvas and Stick Figure A with identical hollow circular head, no face, no clothing, uniform medium white line weight. Accents: vivid red, cool violet, and warm gold. Compose vertically in 9:16 with safe margins. Strictly no visible text, letters, numbers, speech bubbles, or subtitles.
+
+First frame: The red smoke from Clip 11 solidifies into a towering vertical rectangular mirror outlined in clean white lines facing the camera.
+
+[0–3s] Stick Figure A steps forward and stands directly in front of the mirror, looking into its reflection.
+[3–7s] In the mirror reflection, instead of A, sits a tiny, shrunken, trembling grey silhouette huddled in the corner, gently wrapped in heavy cool violet threads.
+[7–10s] A bows its head in deep introspection. Suddenly, a brilliant hairline vertical fissure of warm gold light cracks open straight down the center of the mirror for Clip 13.
+
+Audio-only dialogue, exactly once: "If you are a man in this crisis, look in the mirror. Did betrayal solve your marital void, or did it expose your complete inability to face hard truths?" Do not display or transcribe dialogue visually.
+
+Identical narrator: warm, articulate, mature young adult American male voice, calm analytical and deeply introspective tone, voice-first mix, audio voiceover only, strictly no speech bubbles or dialogue boxes. Audio: Cello cuts out; silence hangs for one beat, followed by a heavy deep heartbeat and a clean, resonating golden energy hum; voice dominant.
+
+Do not generate photorealism, 3D humanoid rendering, eyes, hair, clothing, speech bubbles, text boxes, visible writing, subtitles, or watermarks. No violence, no weapons, no injury, no depiction of harm, no substances. Do not alter dialogue.

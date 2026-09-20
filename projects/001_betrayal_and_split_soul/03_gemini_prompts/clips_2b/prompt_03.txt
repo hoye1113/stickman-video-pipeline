@@ -1,0 +1,21 @@
+Create an approximately 10-second 9:16 vertical cinematic 2D animation clip targeting 720p at 24 FPS with synchronized audio.
+
+This is a non-violent educational 2D line-animation about psychology; all characters are abstract minimalist symbols; every image is a symbolic metaphor.
+
+Environment: a dark bedroom at night, warm bedside lamp, curtains half drawn, passing car headlights sweeping faint light across the wall. Cinematic volumetric lighting, soft depth of field, anxious mood.
+
+Character: Stick Figure A — the same minimalist 2D animated stick figure wearing a bright red beanie and a yellow t-shirt, simple black stick limbs, hollow circular head with minimal dot eyes, simple black lines, vibrant colors.
+
+First frame: A crouches on the bedroom floor beside a small glowing phone.
+
+[0–3s] The phone suddenly bursts into vivid red light, casting long shadows across the room.
+[3–7s] On the wall, a huge cold pale eye silhouette appears; A scrambles backward and sits against the wall, head lowered.
+[7–10s] Cool violet vertical light bars rise around A like window blinds turning into light, closing in slowly for Clip 4.
+
+Final frame: the violet light bars surround A, tightening their spacing.
+
+Audio-only dialogue, exactly once: "Take Mr. Zhou. When a random notification exposed his three-year secret, his desperate kneel down was not pure guilt. It was sheer panic over losing control." Do not display or transcribe dialogue visually.
+
+Identical narrator: warm, articulate, mature young adult American male voice, calm analytical and deeply introspective tone, voice-first mix, audio voiceover only, strictly no speech bubbles or dialogue boxes. Audio: the same minor-key piano continues, with a sharp notification chime, a heavy thud, and rising metallic bar tones; voice dominant.
+
+Negative constraints: no photorealistic human skin or faces, no 3D humanoid CGI uncanny valley models, no chaotic line glitches, no speech bubbles, no dialogue text boxes, no visible text. No violence, no weapons, no injury, no depiction of harm, no substances. Do not alter dialogue.

@@ -1,0 +1,21 @@
+Create an approximately 10-second 9:16 vertical cinematic 2D animation clip targeting 720p at 24 FPS with synchronized audio.
+
+This is a non-violent educational 2D line-animation about psychology; all characters are abstract minimalist symbols; every image is a symbolic metaphor.
+
+Environment: a quiet residential street at night in heavy rain, a small white-walled house leaning in the wind, warm light glowing from its windows, wet street reflecting the glow. Cinematic volumetric lighting, soft depth of field, storm tension.
+
+Character: Stick Figure A — a minimalist 2D animated stick figure wearing a bright red beanie and a yellow t-shirt, simple black stick limbs, hollow circular head with minimal dot eyes, simple black lines, vibrant colors.
+
+First frame: the red embers from Clip 9 drift together and assemble into the peaked roofline of the small white house.
+
+[0–3s] The house tilts sideways in the wind; A braces both arms under the beams, holding the structure up.
+[3–7s] A torrent of vivid red rain pours down; A's knees tremble but A holds on.
+[7–10s] The camera pulls back: inside the warm windows stand the peaceful silhouettes of a wife and child, while A's shadow on the wall stretches into a long red serpent shape for Clip 11.
+
+Final frame: A's serpent-shaped shadow lengthens upward across the wet wall.
+
+Audio-only dialogue, exactly once: "Here lies the paradox: the man who betrayed the home is often the most terrified of its collapse. Yet staying inside is not the same as healing." Do not display or transcribe dialogue visually.
+
+Identical narrator: warm, articulate, mature young adult American male voice, calm analytical and deeply introspective tone, voice-first mix, audio voiceover only, strictly no speech bubbles or dialogue boxes. Audio: the same piano continues, with howling wind, torrential rain, creaking timber, and a deep steady heartbeat; voice dominant.
+
+Negative constraints: no photorealistic human skin or faces, no 3D humanoid CGI uncanny valley models, no chaotic line glitches, no speech bubbles, no dialogue text boxes, no visible text. No violence, no weapons, no injury, no depiction of harm, no substances. Do not alter dialogue.

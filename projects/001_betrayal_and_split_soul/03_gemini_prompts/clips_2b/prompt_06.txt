@@ -1,0 +1,21 @@
+Create an approximately 10-second 9:16 vertical cinematic 2D animation clip targeting 720p at 24 FPS with synchronized audio.
+
+This is a non-violent educational 2D line-animation about psychology; all characters are abstract minimalist symbols; every image is a symbolic metaphor.
+
+Environment: the end of the grey corridor; a tall white door glows with warm light through its seam; faint dark red ripples spread across the floor. Cinematic volumetric lighting, soft depth of field, uneasy warmth.
+
+Character: Stick Figure A — the same minimalist 2D animated stick figure wearing a bright red beanie and a yellow t-shirt, simple black stick limbs, hollow circular head with minimal dot eyes, simple black lines, vibrant colors.
+
+First frame: the red ribbon from Clip 5 brings A to a stop in front of the tall white door.
+
+[0–3s] A immediately adopts an exaggerated, submissive bow toward the doorway.
+[3–7s] With both hands, A offers a glowing vivid red heart icon forward, while its left hand quietly hides a small glowing red key behind its back.
+[7–10s] Above the door frame, a large cool violet question mark forms and rotates slowly; dark red ripples spread outward across the floor for Clip 7.
+
+Final frame: the violet question mark hovers above the door, ripples widening on the floor.
+
+Audio-only dialogue, exactly once: "Guilt and betrayal easily coexist. He acted extra obedient at home, using synthetic sweetness as emotional currency to buy temporary peace of mind." Do not display or transcribe dialogue visually.
+
+Identical narrator: warm, articulate, mature young adult American male voice, calm analytical and deeply introspective tone, voice-first mix, audio voiceover only, strictly no speech bubbles or dialogue boxes. Audio: the same piano continues, adding a sweet false violin tremolo, a door latch click, and murky bubbling; voice dominant.
+
+Negative constraints: no photorealistic human skin or faces, no 3D humanoid CGI uncanny valley models, no chaotic line glitches, no speech bubbles, no dialogue text boxes, no visible text. No violence, no weapons, no injury, no depiction of harm, no substances. Do not alter dialogue.

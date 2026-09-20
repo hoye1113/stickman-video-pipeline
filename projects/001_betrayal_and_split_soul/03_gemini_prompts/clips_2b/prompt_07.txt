@@ -1,0 +1,21 @@
+Create an approximately 10-second 9:16 vertical cinematic 2D animation clip targeting 720p at 24 FPS with synchronized audio.
+
+This is a non-violent educational 2D line-animation about psychology; all characters are abstract minimalist symbols; every image is a symbolic metaphor.
+
+Environment: a mountain road at midnight, wet asphalt reflecting vivid red streetlights, mist gathering ahead, distant city glow blurred below. Cinematic volumetric lighting, soft depth of field, tense night driving mood.
+
+Character: Stick Figure A — the same minimalist 2D animated stick figure wearing a bright red beanie and a yellow t-shirt, simple black stick limbs, hollow circular head with minimal dot eyes, simple black lines, vibrant colors.
+
+First frame: the dark red ripples from Clip 6 resolve into a top-down view of A gripping a steering wheel inside a dark moving car.
+
+[0–3s] White lane-dash perspective lines rush downward beneath the car; vivid red streetlight rings flash past outside.
+[3–7s] A large phone handset icon flares with vivid red light on the dashboard; A turns the wheel quickly back and forth as the car skids sideways.
+[7–10s] A presses both feet on the brake pedal; the car screeches to a stop exactly at a white warning line as the road beyond fades into deep black for Clip 8.
+
+Final frame: the car rests at the white warning line, darkness beyond the road edge.
+
+Audio-only dialogue, exactly once: "Mr. Li ended the affair quickly, but lived in perpetual terror. One unexpected phone call from his wife forced a frantic three-hour midnight sprint." Do not display or transcribe dialogue visually.
+
+Identical narrator: warm, articulate, mature young adult American male voice, calm analytical and deeply introspective tone, voice-first mix, audio voiceover only, strictly no speech bubbles or dialogue boxes. Audio: BGM shifts to a tense cello pulse, with roaring engine, piercing tire screech, urgent phone vibration, and a tense breath; voice dominant.
+
+Negative constraints: no photorealistic human skin or faces, no 3D humanoid CGI uncanny valley models, no chaotic line glitches, no speech bubbles, no dialogue text boxes, no visible text. No violence, no weapons, no injury, no depiction of harm, no substances. Do not alter dialogue.

@@ -1,0 +1,17 @@
+Create an approximately 10-second 9:16 vertical 2D kinetic motion-graphics clip targeting 720p at 24 FPS with synchronized audio.
+
+This is a non-violent educational 2D line-animation about psychology; all characters are abstract faceless symbols; every image is a symbolic metaphor.
+
+Use a flat, uniform, digitally pure-black canvas and Stick Figure A with identical hollow circular head, no face, no clothing, uniform medium white line weight. Accents: vivid red. Compose vertically in 9:16 with safe margins. Strictly no visible text, letters, numbers, speech bubbles, or subtitles.
+
+First frame: From the shattered mask fragments of Clip 4, A stands hunched on an infinite thin white horizontal line dividing the lower third of the screen.
+
+[0–3s] A walks with tired, dragging steps along the monotonous white line in empty darkness.
+[3–7s] In the upper right frame, an oversized tilted glass pours a glowing stream of vivid red liquid light over A. A is bathed in crimson glow, its posture straightening unnaturally tall as floating red spark particles erupt around it.
+[7–10s] The floating red spark particles suddenly condense into a glowing red ribbon that coils gently around A's shoulders and pulls A firmly backward, drawing A off balance toward a white doorway for Clip 6.
+
+Audio-only dialogue, exactly once: "Then there is Mr. Liu. Decades of flat routine made him feel invisible. The outside affair was not love—it was a cheap painkiller to resurrect his dying vanity." Do not display or transcribe dialogue visually.
+
+Identical narrator: warm, articulate, mature young adult American male voice, calm analytical and deeply introspective tone, voice-first mix, audio voiceover only, strictly no speech bubbles or dialogue boxes. Audio: Seamlessly continues piano from clip 4, sluggish dragging footstep sounds, soft pouring liquid effect, airy euphoric synth chord, and an abrupt sharp snap; voice dominant.
+
+Do not generate photorealism, 3D humanoid models, facial features, clothing, speech bubbles, text boxes, visible text, subtitles, or watermarks. No violence, no weapons, no injury, no depiction of harm, no substances. Do not alter dialogue.

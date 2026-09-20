@@ -1,0 +1,22 @@
+Create an approximately 30-second 9:16 vertical cinematic 2D animation clip targeting 720p at 24 FPS with synchronized audio, structured as three linked 10-second scenes that flow into one continuous piece.
+
+This is a non-violent educational 2D line-animation about psychology; all characters are abstract minimalist symbols; every image is a symbolic metaphor. Keep the same character design, line weight, and color language across all three scenes.
+
+Characters: Stick Figure A — a minimalist 2D animated stick figure wearing a bright red beanie (smooth rounded knit, no pom-pom) and a yellow t-shirt; Stick Figure B — the same minimalist style figure wearing a grey t-shirt with no beanie. Both have hollow circular heads with minimal dot eyes, simple black stick limbs, simple black lines and vibrant colors. Compose vertically in 9:16 within the central safe area.
+
+Scene 1 — [0–10s], dark room and mirror: a completely dark room with one vertical spotlight from above and fine dust drifting through the beam. A sits on the floor as a glowing red beam of light descends and touches A's head; a red cloth band wraps over A's eyes while illusory heart icons float upward. The red beam dissolves into floating embers; A walks to a tall floor mirror where the reflection shows, instead of A, a small trembling grey figure huddled in a corner, wrapped in heavy cool violet threads. A lowers its head and a hairline warm gold fissure cracks open straight down the center of the mirror.
+Dialogue (audio only, exactly once, in this scene): "The affair was never love. It was a cheap painkiller for his fading vanity. The mirror shows not a better woman—but a man escaping himself."
+
+Scene 2 — [10–20s], rooftop and the burning bridge: first a rooftop terrace at dusk with churning violet-black storm clouds, then a high stone ridge at daybreak. B stands firm on the platform as fierce cool violet storm clouds rush in from the left; B raises its right arm and a vertical translucent warm gold shield expands from B's hand, holding the storm back completely. The storm clears and a golden balance scale and ruler glow beside B. Match cut: A and B face each other across a fragile white paper bridge above a deep dark gap; a vertical bolt of warm gold lightning strikes down from top center and vaporizes the bridge into glowing embers that drift into the darkness.
+Dialogue (audio only, exactly once, in this scene): "For the wife, the enemy is not heartbreak but blind emotion. Burn the fragile bridge; only honest boundaries can carry real weight."
+
+Scene 3 — [20–30s], sunrise rebuild and take back: an open highland at sunrise, clean transparent sky, warm light across grass and stone. Golden pillars of light rise on both sides and a translucent golden light-cable stretches between them into a glowing bridge. A and B step onto the bridge together; concentric golden ripples spread beneath their feet and a large golden loop symbol at the center of the frame is cut vertically by a golden light blade. The two walk side by side into the sunrise; the final frame holds on their backs as a warm golden halo pulses gently.
+Dialogue (audio only, exactly once, in this scene): "Real love is not flawless innocence. It is the courage to rebuild on solid rock. Face the truth, set your boundaries, and take back your life."
+
+Identical narrator across all three scenes: warm, articulate, mature young adult American male voice, calm analytical and deeply introspective tone, voice-first mix, audio voiceover only, strictly no speech bubbles or dialogue boxes. Do not display or transcribe any dialogue visually.
+
+Audio: a continuous 104 BPM warm acoustic piano and synth bed flowing across all three scenes, joined by a soft hollow liquid drop echo, a resonant crystalline shield chime, a clean thunder crack, a golden blade-cut chime, and a solemn orchestral swell, with the piano sustaining and slowly fading at the end; voice dominant.
+
+Final frame: their backs walk toward the horizon, golden halo softly breathing.
+
+Negative constraints: no photorealistic human skin or faces, no 3D humanoid CGI uncanny valley models, no chaotic line glitches, no speech bubbles, no dialogue text boxes, no visible text. No violence, no weapons, no injury, no depiction of harm, no substances. Do not alter dialogue.

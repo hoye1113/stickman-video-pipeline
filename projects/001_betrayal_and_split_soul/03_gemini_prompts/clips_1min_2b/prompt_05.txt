@@ -1,0 +1,21 @@
+Create an approximately 10-second 9:16 vertical cinematic 2D animation clip targeting 720p at 24 FPS with synchronized audio.
+
+This is a non-violent educational 2D line-animation about psychology; all characters are abstract minimalist symbols; every image is a symbolic metaphor.
+
+Environment: first a rooftop terrace at dusk with churning violet-black storm clouds and the last warm gold light raking the platform; then a high stone ridge at daybreak with two solid black stone platforms facing a deep dark gap. Cinematic volumetric lighting, soft depth of field, rising resolve.
+
+Characters: Stick Figure B — a minimalist 2D animated stick figure wearing a grey t-shirt, no beanie, hollow circular head with minimal dot eyes, simple black stick limbs; Stick Figure A — the same style figure with a bright red beanie and a yellow t-shirt. Simple black lines, vibrant colors, smooth 2D animation.
+
+First frame: warm gold light from the mirror crack spills upward and fades into the dusk sky above the rooftop where B stands.
+
+[0–3s] Fierce swirling cool violet storm clouds rush in from the left; B deliberately raises its right arm and a vertical translucent warm gold shield expands from B's hand, holding the storm back completely.
+[3–7s] The storm breaks apart and clears; beside B, an icon-only golden balance scale and ruler glow with calm steady light.
+[7–10s] Match cut to the ridge: A and B face each other across a fragile white paper bridge above the deep dark gap; a vertical bolt of warm gold lightning strikes down from top center and vaporizes the bridge into glowing embers that drift away into the darkness for Clip 6.
+
+Final frame: embers fade above the dark gap, both figures standing on solid stone.
+
+Audio-only dialogue, exactly once: "For the wife, the enemy is not heartbreak but blind emotion. Burn the fragile bridge; only honest boundaries can carry real weight." Do not display or transcribe dialogue visually.
+
+Identical narrator: warm, articulate, mature young adult American male voice, calm analytical and deeply introspective tone, voice-first mix, audio voiceover only, strictly no speech bubbles or dialogue boxes. Audio: a firm 104 BPM acoustic piano enters, with a resonant crystalline shield chime, howling wind, a clean thunder crack, and sizzling paper burn; voice dominant.
+
+Negative constraints: no photorealistic human skin or faces, no 3D humanoid CGI uncanny valley models, no chaotic line glitches, no speech bubbles, no dialogue text boxes, no visible text. No violence, no weapons, no injury, no depiction of harm, no substances. Do not alter dialogue.

@@ -1,0 +1,21 @@
+Create an approximately 10-second 9:16 vertical cinematic 2D animation clip targeting 720p at 24 FPS with synchronized audio.
+
+This is a non-violent educational 2D line-animation about psychology; all characters are abstract minimalist symbols; every image is a symbolic metaphor.
+
+Environment: a long monotonous grey corridor at dusk, doors repeating along the walls, pale light at the far end, dust floating in the air. Cinematic volumetric lighting, soft depth of field, monotonous mood.
+
+Character: Stick Figure A — the same minimalist 2D animated stick figure wearing a bright red beanie and a yellow t-shirt, simple black stick limbs, hollow circular head with minimal dot eyes, simple black lines, vibrant colors.
+
+First frame: mask fragments from Clip 4 scatter and dissolve as A walks, hunched, along the grey corridor.
+
+[0–3s] A walks with tired, dragging steps down the endless corridor.
+[3–7s] A tilted glass floats in from the right and pours a glowing stream of vivid red light over A; A straightens unnaturally tall while faint star shapes drift upward around it.
+[7–10s] The star shapes collapse into a glowing red ribbon that coils gently around A's shoulders and pulls A backward toward a tall white door for Clip 6.
+
+Final frame: A is drawn backward toward the white door, red ribbon taut across the shoulders.
+
+Audio-only dialogue, exactly once: "Then there is Mr. Liu. Decades of flat routine made him feel invisible. The outside affair was not love—it was a cheap painkiller to resurrect his dying vanity." Do not display or transcribe dialogue visually.
+
+Identical narrator: warm, articulate, mature young adult American male voice, calm analytical and deeply introspective tone, voice-first mix, audio voiceover only, strictly no speech bubbles or dialogue boxes. Audio: the same piano continues, with slow dragging footsteps, soft liquid pour, ethereal synth chord, and a taut ribbon snap; voice dominant.
+
+Negative constraints: no photorealistic human skin or faces, no 3D humanoid CGI uncanny valley models, no chaotic line glitches, no speech bubbles, no dialogue text boxes, no visible text. No violence, no weapons, no injury, no depiction of harm, no substances. Do not alter dialogue.

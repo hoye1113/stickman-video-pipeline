@@ -1,0 +1,17 @@
+Create an approximately 10-second 9:16 vertical 2D kinetic motion-graphics clip targeting 720p at 24 FPS with synchronized audio.
+
+This is a non-violent educational 2D line-animation about psychology; all characters are abstract faceless symbols; every image is a symbolic metaphor.
+
+Use a flat, uniform, digitally pure-black canvas and Stick Figure A with identical hollow circular head, no face, no clothing, uniform medium white line weight. Accents: vivid red and cool violet. Compose vertically in 9:16 with safe margins. Strictly no visible text, letters, numbers, speech bubbles, or subtitles.
+
+First frame: The red serpent shadow from Clip 10 rises from the floor and coils in mid-air, morphing into a shimmering vivid red female silhouette.
+
+[0–3s] A stands looking upward at the glowing crimson silhouette with outstretched, longing hands.
+[3–7s] The crimson glow suddenly evaporates, stripping away all vibrancy to reveal an ordinary, faceless, broken gray wire mannequin.
+[7–10s] A's hands reach forward to grasp the mannequin, but pass right through hollow empty space. The gray mannequin dissolves into thin red smoke that swirls into a vertical circle for Clip 12.
+
+Audio-only dialogue, exactly once: "Wives often torment themselves asking: 'Does he love her more?' No. He didn't choose a superior woman; he chose a cowardly exit from reality." Do not display or transcribe dialogue visually.
+
+Identical narrator: warm, articulate, mature young adult American male voice, calm analytical and deeply introspective tone, voice-first mix, audio voiceover only, strictly no speech bubbles or dialogue boxes. Audio: Seamlessly continues piano, sorrowful solo cello phrase, dissolving wind rush, and hollow empty whoosh; voice dominant.
+
+Do not generate photorealism, 3D humanoid rendering, eyes, hair, clothing, speech bubbles, text boxes, visible text, subtitles, or watermarks. No violence, no weapons, no injury, no depiction of harm, no substances. Do not alter dialogue.

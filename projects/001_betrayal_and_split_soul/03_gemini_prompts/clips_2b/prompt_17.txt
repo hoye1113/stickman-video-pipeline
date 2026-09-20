@@ -1,0 +1,21 @@
+Create an approximately 10-second 9:16 vertical cinematic 2D animation clip targeting 720p at 24 FPS with synchronized audio.
+
+This is a non-violent educational 2D line-animation about psychology; all characters are abstract minimalist symbols; every image is a symbolic metaphor.
+
+Environment: a vast golden morning landscape, sunrise breaking on the horizon, distant ridges edged in warm light, clear sky. Cinematic volumetric lighting, soft depth of field, expansive release.
+
+Characters: Stick Figure A — bright red beanie and yellow t-shirt; Stick Figure B — grey t-shirt, no beanie. Both are minimalist 2D animated stick figures with hollow circular heads, minimal dot eyes, simple black stick limbs, simple black lines and vibrant colors.
+
+First frame: the camera pulls back from the light bridge of Clip 16, revealing the wide golden world.
+
+[0–3s] The camera keeps pulling back as the golden world opens and the last darkness is driven away by morning light.
+[3–7s] A large golden loop symbol floats at the center of the frame and is cut vertically by a golden light blade.
+[7–10s] A and B stand side by side before the golden horizon as the sun rises for Clip 18.
+
+Final frame: the two stand side by side, sunrise glowing along the horizon.
+
+Audio-only dialogue, exactly once: "The fatal poison in marriage was never just the mistake itself. It is both partners bleeding endlessly in the wrong cycle. Stop the bleeding. Choose radical truth." Do not display or transcribe dialogue visually.
+
+Identical narrator: warm, articulate, mature young adult American male voice, calm analytical and deeply introspective tone, voice-first mix, audio voiceover only, strictly no speech bubbles or dialogue boxes. Audio: the emotional peak chord, a clean blade-cut chime, and a warm sunrise synth swell; voice dominant.
+
+Negative constraints: no photorealistic human skin or faces, no 3D humanoid CGI uncanny valley models, no chaotic line glitches, no speech bubbles, no dialogue text boxes, no visible text. No violence, no weapons, no injury, no depiction of harm, no substances. Do not alter dialogue.

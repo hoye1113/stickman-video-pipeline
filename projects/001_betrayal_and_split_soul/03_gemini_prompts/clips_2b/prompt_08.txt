@@ -1,0 +1,21 @@
+Create an approximately 10-second 9:16 vertical cinematic 2D animation clip targeting 720p at 24 FPS with synchronized audio.
+
+This is a non-violent educational 2D line-animation about psychology; all characters are abstract minimalist symbols; every image is a symbolic metaphor.
+
+Environment: a rain-soaked rocky ledge at night, cold blue-grey light, glistening wet stone, rain streaks in the air. Cinematic volumetric lighting, soft depth of field, bleak exhaustion.
+
+Character: Stick Figure A — the same minimalist 2D animated stick figure wearing a bright red beanie and a yellow t-shirt, simple black stick limbs, hollow circular head with minimal dot eyes, simple black lines, vibrant colors.
+
+First frame: high-angle view looking down past the stopped car toward the rocky ledge, where A lies prone on the wet stone.
+
+[0–3s] A vertical white battery meter with four glowing bars floats above A's back.
+[3–7s] Heavy cool violet stone icons drift down and stack onto A's back; the battery bars drain rapidly to one blinking vivid red bar.
+[7–10s] The last bar fizzles out with a spark; A's limbs go slack like a resting marionette and A slides gently down the rock face into darkness for Clip 9.
+
+Final frame: A slides down into pure blackness, rain fading above.
+
+Audio-only dialogue, exactly once: "He realized this double life was never romantic freedom. It was a brutal energy vampire, exhausting every drop of sanity until complete collapse." Do not display or transcribe dialogue visually.
+
+Identical narrator: warm, articulate, mature young adult American male voice, calm analytical and deeply introspective tone, voice-first mix, audio voiceover only, strictly no speech bubbles or dialogue boxes. Audio: the tense cello continues, with heavy rain, dull impacts, rapid battery-warning beeps, an electrical short spark, then silence; voice dominant.
+
+Negative constraints: no photorealistic human skin or faces, no 3D humanoid CGI uncanny valley models, no chaotic line glitches, no speech bubbles, no dialogue text boxes, no visible text. No violence, no weapons, no injury, no depiction of harm, no substances. Do not alter dialogue.

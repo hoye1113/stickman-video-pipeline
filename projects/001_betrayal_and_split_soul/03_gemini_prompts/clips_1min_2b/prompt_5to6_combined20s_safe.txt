@@ -1,0 +1,21 @@
+Create an approximately 20-second 9:16 vertical cinematic 2D animation clip targeting 720p at 24 FPS with synchronized audio, structured as two linked 10-second scenes that flow into one continuous piece.
+
+This is a non-violent educational 2D line-animation about psychology; all characters are abstract minimalist symbols; every image is a symbolic metaphor. Keep the same character design, line weight, and color language across both scenes.
+
+Characters: Stick Figure A — a minimalist 2D animated stick figure wearing a bright red beanie (smooth rounded knit, no pom-pom) and a yellow t-shirt; Stick Figure B — the same minimalist style figure wearing a grey t-shirt with no beanie. Both have hollow circular heads with minimal dot eyes, simple black stick limbs, simple black lines and vibrant colors. Compose vertically in 9:16 within the central safe area.
+
+First frame: the warm gold fissure from the previous scene glows across the mirror, then golden light spills upward into the evening sky above a quiet rooftop terrace.
+
+Scene 1 — [0–10s], the calm shield: B stands firm on the rooftop terrace at dusk as soft cool violet clouds swirl in from the left. B calmly raises its right arm and a vertical translucent warm gold shield of light expands from B's hand; the violet clouds slow, soften, and clear into calm open sky. Beside B, a golden balance scale and ruler glow with steady light. The view then shifts to two solid stone platforms facing each other across a quiet open space at first light: A and B face each other over a fragile white paper bridge; a warm gold beam of light sweeps gently along the bridge, and the paper softly dissolves into glowing golden motes that drift away on the breeze.
+Dialogue (audio only, exactly once, in this scene): "For the wife, the enemy is not heartbreak but blind emotion. Burn the fragile bridge; only honest boundaries can carry real weight."
+
+Scene 2 — [10–20s], rebuild at sunrise: an open highland at sunrise, clean transparent sky, warm light across grass and stone. Golden pillars of light rise on both sides and a translucent golden light-cable stretches between them into a glowing bridge. A and B step onto the bridge together; concentric golden ripples spread beneath their feet, and a glowing golden loop symbol at the center of the frame gently unwinds and fades into the sunrise. The two walk side by side into the morning light; the final frame holds on their backs as a warm golden halo pulses softly.
+Dialogue (audio only, exactly once, in this scene): "Real love is not flawless innocence. It is the courage to rebuild on solid rock. Face the truth, set your boundaries, and take back your life."
+
+Identical narrator across both scenes: warm, articulate, mature young adult American male voice, calm analytical and deeply introspective tone, voice-first mix, audio voiceover only, strictly no speech bubbles or dialogue boxes. Do not display or transcribe any dialogue visually.
+
+Audio: a continuous 104 BPM warm acoustic piano and synth bed flowing across both scenes, joined by a resonant crystalline chime as the shield expands, a quiet breeze, a gentle golden shimmer, and a solemn orchestral swell, with the piano sustaining and slowly fading at the end; voice dominant.
+
+Final frame: their backs walk toward the horizon, golden halo softly breathing.
+
+Negative constraints: no photorealistic human skin or faces, no 3D humanoid CGI uncanny valley models, no chaotic line glitches, no speech bubbles, no dialogue text boxes, no visible text. No violence, no weapons, no injury, no depiction of harm, no substances. Do not alter dialogue.

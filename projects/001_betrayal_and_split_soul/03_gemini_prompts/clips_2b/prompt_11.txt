@@ -1,0 +1,21 @@
+Create an approximately 10-second 9:16 vertical cinematic 2D animation clip targeting 720p at 24 FPS with synchronized audio.
+
+This is a non-violent educational 2D line-animation about psychology; all characters are abstract minimalist symbols; every image is a symbolic metaphor.
+
+Environment: a half-lit bedroom at night, the bedside lamp dimming, red dust motes drifting in the air, cold blue walls. Cinematic volumetric lighting, soft depth of field, hollow quiet.
+
+Character: Stick Figure A — a minimalist 2D animated stick figure wearing a bright red beanie and a yellow t-shirt, simple black stick limbs, hollow circular head with minimal dot eyes, simple black lines, vibrant colors.
+
+First frame: the serpent shadow from Clip 10 rises from the floor and coils in mid-air, morphing into a shimmering vivid red female silhouette.
+
+[0–3s] A stands looking up at the glowing red silhouette with outstretched, longing hands.
+[3–7s] The red glow evaporates, stripping away all vibrancy to reveal an incomplete, faceless grey wire mannequin.
+[7–10s] A's hands pass right through the empty mannequin; it dissolves into thin red smoke that curls into a vertical ring for Clip 12.
+
+Final frame: the red smoke forms a slowly rotating vertical ring in the dark.
+
+Audio-only dialogue, exactly once: "Wives often torment themselves asking: 'Does he love her more?' No. He didn't choose a superior woman; he chose a cowardly exit from reality." Do not display or transcribe dialogue visually.
+
+Identical narrator: warm, articulate, mature young adult American male voice, calm analytical and deeply introspective tone, voice-first mix, audio voiceover only, strictly no speech bubbles or dialogue boxes. Audio: the same piano continues, with a sorrowful solo cello line, a dissolving wind rush, and a hollow empty whoosh; voice dominant.
+
+Negative constraints: no photorealistic human skin or faces, no 3D humanoid CGI uncanny valley models, no chaotic line glitches, no speech bubbles, no dialogue text boxes, no visible text. No violence, no weapons, no injury, no depiction of harm, no substances. Do not alter dialogue.

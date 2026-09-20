@@ -1,0 +1,21 @@
+Create an approximately 10-second 9:16 vertical cinematic 2D animation clip targeting 720p at 24 FPS with synchronized audio.
+
+This is a non-violent educational 2D line-animation about psychology; all characters are abstract minimalist symbols; every image is a symbolic metaphor.
+
+Environment: a high stone ridge at daybreak, two solid black stone platforms facing each other across a deep dark gap, a thin line of warm gold light on the horizon. Cinematic volumetric lighting, soft depth of field, decisive clarity.
+
+Characters: Stick Figure A on the left rock — bright red beanie and yellow t-shirt; Stick Figure B on the right rock — grey t-shirt, no beanie. Both are minimalist 2D animated stick figures with hollow circular heads, minimal dot eyes, simple black stick limbs, simple black lines and vibrant colors.
+
+First frame: wide vertical view: A on the left rock and B on the right rock, connected by a fragile white paper bridge.
+
+[0–3s] A and B look toward each other across the flimsy paper bridge above the deep dark gap.
+[3–7s] A vertical bolt of warm gold lightning strikes down from top center, instantly vaporizing the paper bridge into glowing embers that drift away into the darkness.
+[7–10s] A and B stand grounded on solid black stone on either side; all cover is gone and only truth and stone remain for Clip 16.
+
+Final frame: the two stand firmly on their stone platforms, embers fading below.
+
+Audio-only dialogue, exactly once: "Do not settle for fragile apologies to keep an illusion alive. Sometimes, the rotten bridge must burn completely before an honest foundation can be built." Do not display or transcribe dialogue visually.
+
+Identical narrator: warm, articulate, mature young adult American male voice, calm analytical and deeply introspective tone, voice-first mix, audio voiceover only, strictly no speech bubbles or dialogue boxes. Audio: the 104 BPM piano continues, with a clean thunder crack, sizzling paper burn, and solid stone impact; voice dominant.
+
+Negative constraints: no photorealistic human skin or faces, no 3D humanoid CGI uncanny valley models, no chaotic line glitches, no speech bubbles, no dialogue text boxes, no visible text. No violence, no weapons, no injury, no depiction of harm, no substances. Do not alter dialogue.

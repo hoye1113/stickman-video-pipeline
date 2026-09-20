@@ -1,0 +1,21 @@
+Create an approximately 10-second 9:16 vertical cinematic 2D animation clip targeting 720p at 24 FPS with synchronized audio.
+
+This is a non-violent educational 2D line-animation about psychology; all characters are abstract minimalist symbols; every image is a symbolic metaphor.
+
+Environment: an open highland at sunrise, clean transparent sky, warm light across grass and stone, generous negative space in the upper frame. Cinematic volumetric lighting, soft depth of field, resolved and hopeful.
+
+Characters: Stick Figure A — bright red beanie and yellow t-shirt; Stick Figure B — grey t-shirt, no beanie. Both are minimalist 2D animated stick figures with hollow circular heads, minimal dot eyes, simple black stick limbs, simple black lines and vibrant colors.
+
+First frame: the last embers fade above the dark gap as dawn light fills the sky.
+
+[0–3s] Golden pillars of light rise from the ground on both sides, and a translucent strong golden light-cable stretches between them and pulls taut into a glowing bridge.
+[3–7s] A and B step onto the light bridge together; concentric golden ripples spread beneath their feet, and a large golden loop symbol at the center of the frame is cut vertically by a golden light blade.
+[7–10s] The two walk side by side into the sunrise, the last haze dissolving behind them; the final frame holds on their backs as a warm golden halo pulses gently at the center.
+
+Final frame: their backs walk toward the horizon, golden halo softly breathing.
+
+Audio-only dialogue, exactly once: "Real love is not flawless innocence. It is the courage to rebuild on solid rock. Face the truth, set your boundaries, and take back your life." Do not display or transcribe dialogue visually.
+
+Identical narrator: warm, articulate, mature young adult American male voice, calm analytical and deeply introspective tone, voice-first mix, audio voiceover only, strictly no speech bubbles or dialogue boxes. Audio: a solemn orchestral swell with the 104 BPM piano, a clean golden blade-cut chime, firm footsteps, and a sustained warm piano note fading out; voice dominant.
+
+Negative constraints: no photorealistic human skin or faces, no 3D humanoid CGI uncanny valley models, no chaotic line glitches, no speech bubbles, no dialogue text boxes, no visible text. No violence, no weapons, no injury, no depiction of harm, no substances. Do not alter dialogue.

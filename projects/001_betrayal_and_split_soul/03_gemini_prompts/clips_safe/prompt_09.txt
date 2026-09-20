@@ -1,0 +1,17 @@
+Create an approximately 10-second 9:16 vertical 2D kinetic motion-graphics clip targeting 720p at 24 FPS with synchronized audio.
+
+This is a non-violent educational 2D line-animation about psychology; all characters are abstract faceless symbols; every image is a symbolic metaphor.
+
+Use a flat, uniform, digitally pure-black canvas and Stick Figure A with identical hollow circular head, no face, no clothing, uniform medium white line weight. Accents: vivid red. Compose vertically in 9:16 with safe margins. Strictly no visible text, letters, numbers, speech bubbles, or subtitles.
+
+First frame: In the blackness from Clip 8, a vertical spotlight shines down from top center, illuminating A sitting on the floor.
+
+[0–3s] A giant glowing red beam of light descends from the top of the frame, touching A's head with a soft halo.
+[3–7s] The beam widens and pours glowing vivid red light into A. A red cloth band wraps around A's circular head, dimming its sight, while illusory heart icons float upward.
+[7–10s] The glowing red beam dissolves into dozens of floating red embers. The red blindfold disintegrates, revealing A's hollow circular head slowly lowering, dazed, for Clip 10.
+
+Audio-only dialogue, exactly once: "Affairs are nothing more than emotional painkillers. They release temporary dopamine to numb aging and boredom, but they cure absolutely nothing." Do not display or transcribe dialogue visually.
+
+Identical narrator: warm, articulate, mature young adult American male voice, calm analytical and deeply introspective tone, voice-first mix, audio voiceover only, strictly no speech bubbles or dialogue boxes. Audio: Minor-key piano returns with solemn weight, a soft hollow liquid drop echo, faint surreal echo, and a gentle glass chime; voice dominant.
+
+Do not generate photorealism, 3D humanoid rendering, eyes, hair, clothing, speech bubbles, text boxes, visible words, subtitles, or watermarks. No violence, no weapons, no injury, no depiction of harm, no substances. Do not alter dialogue.

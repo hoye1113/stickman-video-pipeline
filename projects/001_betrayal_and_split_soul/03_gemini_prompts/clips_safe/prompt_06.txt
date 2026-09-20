@@ -1,0 +1,17 @@
+Create an approximately 10-second 9:16 vertical 2D kinetic motion-graphics clip targeting 720p at 24 FPS with synchronized audio.
+
+This is a non-violent educational 2D line-animation about psychology; all characters are abstract faceless symbols; every image is a symbolic metaphor.
+
+Use a flat, uniform, digitally pure-black canvas and Stick Figure A with identical hollow circular head, no face, no clothing, uniform medium white line weight. Accents: vivid red and cool violet. Compose vertically in 9:16 with safe margins. Strictly no visible text, letters, numbers, speech bubbles, or subtitles.
+
+First frame: The glowing red ribbon from Clip 5 pulls A to a sudden halt in front of a tall, minimalist white doorway in the center.
+
+[0–3s] A immediately adopts an exaggerated, submissive bowed posture before the doorway, hiding all tension.
+[3–7s] With both hands, A politely offers a glowing vivid red heart icon into the open doorway. But behind A's back, its left hand secretly holds a small glowing red key hidden behind its back.
+[7–10s] Above the doorframe, an enormous glowing cool violet question mark materializes and rotates slowly. Dark crimson ripple waves spread outward beneath A's feet for Clip 7.
+
+Audio-only dialogue, exactly once: "Guilt and betrayal easily coexist. He acted extra obedient at home, using synthetic sweetness as emotional currency to buy temporary peace of mind." Do not display or transcribe dialogue visually.
+
+Identical narrator: warm, articulate, mature young adult American male voice, calm analytical and deeply introspective tone, voice-first mix, audio voiceover only, strictly no speech bubbles or dialogue boxes. Audio: Seamlessly continues piano, adding false sweet violin tremolo, door latch click, and murky fluid bubbling; voice dominant.
+
+Do not generate photorealism, 3D humanoid rendering, eyes, hair, clothing, speech bubbles, text boxes, visible writing, captions, subtitles, or watermarks. No violence, no weapons, no injury, no depiction of harm, no substances. Do not alter dialogue.

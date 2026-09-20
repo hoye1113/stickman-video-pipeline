@@ -1,0 +1,17 @@
+Create an approximately 10-second 9:16 vertical 2D kinetic motion-graphics clip targeting 720p at 24 FPS with synchronized audio.
+
+This is a non-violent educational 2D line-animation about psychology; all characters are abstract faceless symbols; every image is a symbolic metaphor.
+
+Use a flat, uniform, digitally pure-black canvas and Stick Figure A with identical hollow circular head, no face, no clothing, uniform medium white line weight. Accents: vivid red and cool violet. Compose vertically in 9:16 with safe margins. Strictly no visible text, letters, numbers, speech bubbles, or subtitles.
+
+First frame: From the dark crimson ripples of Clip 6, top-down perspective of A gripping a minimalist white steering wheel inside a dark moving car outline.
+
+[0–3s] Minimalist white road perspective lines rush downward rapidly beneath the car. Vivid red streetlamp rings fly past outside the frame.
+[3–7s] A giant phone handset icon flares with vivid red light on the dashboard. A turns the steering wheel quickly back and forth as the car skids sideways.
+[7–10s] A presses both feet on the brake pedal. The car screeches to a stop on a narrow mountain road, coming to rest exactly at a white warning line as the road beyond fades into deep black for Clip 8.
+
+Audio-only dialogue, exactly once: "Mr. Li ended the affair quickly, but lived in perpetual terror. One unexpected phone call from his wife forced a frantic three-hour midnight sprint." Do not display or transcribe dialogue visually.
+
+Identical narrator: warm, articulate, mature young adult American male voice, calm analytical and deeply introspective tone, voice-first mix, audio voiceover only, strictly no speech bubbles or dialogue boxes. Audio: Transitioning BGM to tense cello pulse, roaring car engine, piercing tire screech, urgent phone ring vibration, and a tense breath; voice dominant.
+
+Do not generate photorealism, 3D humanoid CGI, eyes, hair, clothing, speech bubbles, text boxes, visible text, subtitles, or watermarks. No violence, no weapons, no injury, no depiction of harm, no substances. Do not alter dialogue.

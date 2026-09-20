@@ -1,0 +1,21 @@
+Create an approximately 10-second 9:16 vertical cinematic 2D animation clip targeting 720p at 24 FPS with synchronized audio.
+
+This is a non-violent educational 2D line-animation about psychology; all characters are abstract minimalist symbols; every image is a symbolic metaphor.
+
+Environment: a dim room at night, one tall floor mirror with misted glass, cool rim light outlining its frame, floorboards faintly reflected. Cinematic volumetric lighting, soft depth of field, introspective silence.
+
+Character: Stick Figure A — a minimalist 2D animated stick figure wearing a bright red beanie and a yellow t-shirt, simple black stick limbs, hollow circular head with minimal dot eyes, simple black lines, vibrant colors.
+
+First frame: the red smoke ring from Clip 11 solidifies into a tall vertical mirror standing in the room.
+
+[0–3s] A steps forward and stands directly before the mirror, looking into its reflection.
+[3–7s] In the reflection, instead of A, a small trembling grey figure huddles in the corner, gently wrapped in heavy cool violet threads.
+[7–10s] A lowers its head in deep thought; a hairline warm gold fissure cracks open straight down the center of the mirror for Clip 13.
+
+Final frame: the golden fissure glows along the mirror's center line.
+
+Audio-only dialogue, exactly once: "If you are a man in this crisis, look in the mirror. Did betrayal solve your marital void, or did it expose your complete inability to face hard truths?" Do not display or transcribe dialogue visually.
+
+Identical narrator: warm, articulate, mature young adult American male voice, calm analytical and deeply introspective tone, voice-first mix, audio voiceover only, strictly no speech bubbles or dialogue boxes. Audio: the cello cuts out; one beat of silence, then a deep heartbeat and a clean resonating golden hum; voice dominant.
+
+Negative constraints: no photorealistic human skin or faces, no 3D humanoid CGI uncanny valley models, no chaotic line glitches, no speech bubbles, no dialogue text boxes, no visible text. No violence, no weapons, no injury, no depiction of harm, no substances. Do not alter dialogue.

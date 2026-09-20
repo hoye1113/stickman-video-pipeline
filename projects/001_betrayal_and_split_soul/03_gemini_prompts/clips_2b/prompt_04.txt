@@ -1,0 +1,21 @@
+Create an approximately 10-second 9:16 vertical cinematic 2D animation clip targeting 720p at 24 FPS with synchronized audio.
+
+This is a non-violent educational 2D line-animation about psychology; all characters are abstract minimalist symbols; every image is a symbolic metaphor.
+
+Environment: the same apartment interior, shutters closed, thin haze in the air, a single hard ceiling light, cool blue-grey palette. Cinematic volumetric lighting, soft depth of field, airless stillness.
+
+Character: Stick Figure A — the same minimalist 2D animated stick figure wearing a bright red beanie and a yellow t-shirt, simple black stick limbs, hollow circular head with minimal dot eyes, simple black lines, vibrant colors.
+
+First frame: the violet light bars from Clip 3 close into a transparent glass box around A.
+
+[0–3s] Inside the box, A puts on a plain white smiling mask and sits very straight.
+[3–7s] Outside, several cool violet eye-shapes drift through the haze, scanning the room; A mechanically wipes the table and hands a phone forward.
+[7–10s] The haze thickens inside the box; A leans against the glass wall and slowly slides down, and the white mask slips off and cracks on the floor for Clip 5.
+
+Final frame: A sits collapsed against the glass, the cracked white mask on the floor.
+
+Audio-only dialogue, exactly once: "He deleted accounts and surrendered passwords, living as a daytime saint and nighttime prisoner. Pseudo-remorse creates a suffocating cage, turning marriage into chronic exhaustion." Do not display or transcribe dialogue visually.
+
+Identical narrator: warm, articulate, mature young adult American male voice, calm analytical and deeply introspective tone, voice-first mix, audio voiceover only, strictly no speech bubbles or dialogue boxes. Audio: the same piano continues, with a muffled pendulum, mechanical ticking, quickened heartbeat, and a low room hum; voice dominant.
+
+Negative constraints: no photorealistic human skin or faces, no 3D humanoid CGI uncanny valley models, no chaotic line glitches, no speech bubbles, no dialogue text boxes, no visible text. No violence, no weapons, no injury, no depiction of harm, no substances. Do not alter dialogue.

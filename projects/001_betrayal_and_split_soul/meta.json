@@ -5,7 +5,7 @@
   "aspect_ratio": "9:16",
   "resolution": "720p",
   "fps": 24,
-  "style": "Style 1 Dark",
+  "style": "Style 2B (Cinematic Story)",
   "accents": [
     "Saturated Danger Red",
     "Anxiety Violet",
@@ -13,8 +13,11 @@
   ],
   "narrator": "warm, articulate, mature young adult American male voice, calm analytical and deeply introspective tone",
   "total_clips": 18,
-  "clips_generated": [1],
-  "status": "in_progress",
+  "clips_generated": [],
+  "production_platform": "Google Flow (Storyboard Studio)",
+  "legacy_archive": "04_raw_clips/_legacy_1min_archive",
+  "status": "ready_for_generation",
   "created_at": "2026-09-20T12:05:00+08:00",
-  "source_file": "D:/AllDownload/2026-07/user_pasted_clipboard_long_content_as_file_站在男人角度告诉你，犯错的男人还会不会爱.txt"
+  "source_file": "D:/AllDownload/2026-07/user_pasted_clipboard_long_content_as_file_站在男人角度告诉你，犯错的男人还会不会爱.txt",
+  "style_revision": "01_style2b"
 }

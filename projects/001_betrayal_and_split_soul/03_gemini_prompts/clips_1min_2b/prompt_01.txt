@@ -1,0 +1,21 @@
+Create an approximately 10-second 9:16 vertical cinematic 2D animation clip targeting 720p at 24 FPS with synchronized audio.
+
+This is a non-violent educational 2D line-animation about psychology; all characters are abstract minimalist symbols; every image is a symbolic metaphor.
+
+Environment: a dim city apartment living room at night, warm floor lamp beside a sofa, blurred city lights beyond the window, cool blue-grey tones. Cinematic volumetric lighting, soft depth of field, quiet melancholic mood.
+
+Character: Stick Figure A — a minimalist 2D animated stick figure wearing a bright red beanie (smooth rounded knit, no pom-pom) and a yellow t-shirt, simple black stick limbs and shorts, hollow circular head with minimal dot eyes, simple black lines, vibrant colors. Compose vertically in 9:16 within the central safe area.
+
+First frame: A sits alone at the edge of the sofa, motionless, in the dim room.
+
+[0–3s] The camera slowly pushes in; a red mask silhouette descends from above, hovering over A.
+[3–7s] A lifts its head toward the mask; faint red light pulses inside the mask's empty eye sockets.
+[7–10s] The mask splits down the middle into a jagged cool violet fissure; violet light runs across the floor and the camera plunges toward the glowing crack for Clip 2.
+
+Final frame: the violet fissure glows through the floor, camera diving in.
+
+Audio-only dialogue, exactly once: "Can a man who betrayed his marriage ever truly love his wife again? When he holds her, who is really in his mind?" Do not display or transcribe dialogue visually.
+
+Identical narrator: warm, articulate, mature young adult American male voice, calm analytical and deeply introspective tone, voice-first mix, audio voiceover only, strictly no speech bubbles or dialogue boxes. Audio: 68 BPM quiet minor-key piano, one muffled heartbeat thud, subtle room tone; voice dominant.
+
+Negative constraints: no photorealistic human skin or faces, no 3D humanoid CGI uncanny valley models, no chaotic line glitches, no speech bubbles, no dialogue text boxes, no visible text. No violence, no weapons, no injury, no depiction of harm, no substances. Do not alter dialogue.

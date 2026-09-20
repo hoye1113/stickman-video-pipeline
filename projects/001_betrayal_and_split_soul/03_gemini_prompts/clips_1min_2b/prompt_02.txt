@@ -1,0 +1,21 @@
+Create an approximately 10-second 9:16 vertical cinematic 2D animation clip targeting 720p at 24 FPS with synchronized audio.
+
+This is a non-violent educational 2D line-animation about psychology; all characters are abstract minimalist symbols; every image is a symbolic metaphor.
+
+Environment: the same apartment living room, now colder; the floor lamp dims, papers and a cold coffee cup rest on the table, hairline cracks spread across the wooden floor. Cinematic volumetric lighting, soft depth of field, tense stillness.
+
+Character: Stick Figure A — the same minimalist 2D animated stick figure wearing a bright red beanie and a yellow t-shirt, simple black stick limbs, hollow circular head with minimal dot eyes, simple black lines, vibrant colors.
+
+First frame: the camera rises out of the violet fissure from Clip 1, revealing A standing with both arms outstretched like a scale balance.
+
+[0–3s] A's left hand holds a small white house model; A's right hand carries a pulsing vivid red orb.
+[3–7s] The two arms tilt sharply up and down; A's body splits along its centerline into two flickering semi-transparent ghost figures pulling in opposite directions.
+[7–10s] The floor cracks into floating cool violet shards; both silhouettes drop into the darkness below for Clip 3.
+
+Final frame: A's double silhouette falls into darkness, violet shards scattering above.
+
+Audio-only dialogue, exactly once: "The truth is colder than you think. Most unfaithful men are not enjoying freedom—they are trapped in a painful civil war between guilt and desire." Do not display or transcribe dialogue visually.
+
+Identical narrator: warm, articulate, mature young adult American male voice, calm analytical and deeply introspective tone, voice-first mix, audio voiceover only, strictly no speech bubbles or dialogue boxes. Audio: the identical 68 BPM minor-key piano continues seamlessly, joined by metallic scale clinking and a low falling drone; voice dominant.
+
+Negative constraints: no photorealistic human skin or faces, no 3D humanoid CGI uncanny valley models, no chaotic line glitches, no speech bubbles, no dialogue text boxes, no visible text. No violence, no weapons, no injury, no depiction of harm, no substances. Do not alter dialogue.
