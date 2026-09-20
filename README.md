@@ -56,9 +56,9 @@ stickman-videos/
 │   ├── 001_betrayal_and_split_soul/ # 第1期：背叛与撕裂
 │   │   ├── 01_research/           # 阶段 1：科学事实检索成果归档
 │   │   ├── 02_director_proposal/  # 阶段 2：Phase A 导演预案（分镜表）
-│   │   ├── 03_gemini_prompts/     # 阶段 3：Phase B 提示词 (clips/ 原文, clips_safe/ 安全版)
+│   │   ├── 03_gemini_prompts/     # 阶段 3：Phase B 提示词 (clips_safe/ 18镜4:3全集, _legacy_*)
 │   │   ├── 04_raw_clips/          # 阶段 4：生成收录的 18 段原始视频 (Git忽略)
-│   │   ├── 05_subtitles/          # 阶段 5：时间轴对齐的双语字幕文件 (.srt)
+│   │   ├── 05_subtitles/          # 阶段 5：时间轴对齐的双语字幕文件 (narration.bilingual.srt)
 │   │   ├── 06_final_video/        # 阶段 6：最终 3 分钟高清成片 (Git忽略)
 │   │   └── meta.json              # 项目元数据与生成进度追踪
 │   └── 002_xxx/                   # 第2期及未来新主题项目
@@ -83,15 +83,15 @@ stickman-videos/
 
 ### 1. 一键创建新视频主题
 ```powershell
-python scripts/new_project.py 002_social_anxiety --title-zh "克服社交焦虑" --title-en "Mastering Social Anxiety" --ratio 9:16 --style "Style 2B (Cinematic Story)"
+python scripts/new_project.py 002_social_anxiety --title-zh "克服社交焦虑" --title-en "Mastering Social Anxiety" --ratio 4:3 --style "Style 2B (Cinematic Story)"
 ```
 
 ### 2. 准备分镜、生成提示词并做安全审查
 1. 在 `projects/<slug>/02_director_proposal/proposal_phase_a.md` 编写 18 段分镜预案，**等待用户审核批准**；
-2. 编写 `03_gemini_prompts/prompts_all_2b.md`，执行安全词检查与改写；
+2. 编写 `03_gemini_prompts/prompts_all.md`，执行安全词检查与改写；
 3. 一键拆分：
    ```powershell
-   python scripts/split_prompts.py --project 002_social_anxiety --md prompts_all_2b.md --out-dir clips_2b
+   python scripts/split_prompts.py --project 002_social_anxiety --md prompts_all.md --out-dir clips_safe
    ```
 
 ### 3. 生成与提取视频片段 (Google Flow)
@@ -102,10 +102,10 @@ python scripts/download_clip.py --session <session_id> --filename clip_01.mp4 --
 
 ### 4. 视频拼接与字幕压制
 ```powershell
-# 18 段视频无缝拼接 (生成 stitched_raw.mp4)
-python scripts/concat_clips.py --project 002_social_anxiety
+# 18 段视频无缝拼接 (生成 stitched_raw.mp4，支持 4:3 居中裁切)
+python scripts/concat_clips.py --project 002_social_anxiety --crop-ratio 4:3
 
-# 烧录高清双语字幕成片 (生成 final_subtitled.mp4)
+# 自动探测画幅并压制双语字幕 (生成 final_subtitled.mp4)
 python scripts/embed_subtitles.py --project 002_social_anxiety
 ```
 

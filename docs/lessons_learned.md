@@ -45,7 +45,7 @@
     - 严禁出现勒颈、针筒注射、自残深渊、毒药等具象词汇，改用光束、红丝带、警戒线等温和隐喻；
     - 被拒不会扣除积分，但需立即在 `clips_safe/` 沉淀改写版。
 13. **标准产出规格**：
-    - 9:16 竖屏（720×1280）、24fps、精准 10.00 秒、H.264 + AAC。
+    - 4:3 经典横屏（960×720，推荐）或 9:16 竖屏（720×1280）、24fps、精准 10.00 秒、H.264 + AAC。
 14. **每次生成完成后立即入库**：
     - 运行 `python scripts/download_clip.py --session <id> --filename clip_XX.mp4 --project <slug>`，Base64 DOM 直提，秒级落盘并自动同步进 `meta.json`。
 
@@ -69,16 +69,34 @@
 
 ## 六、流程编排铁律（任何 Agent 直接照做）
 
-1. **新建工程**：`python scripts/new_project.py <slug> ...`（自动建立 6 大阶段目录与标准模板）。
+1. **新建工程**：`python scripts/new_project.py <slug> ...`（默认 4:3 横版与 Style 2B 风格）。
 2. **Phase A 预案**：编写 18 段三幕式分镜（`02_director_proposal/proposal_phase_a.md`）→ **【门禁】停止并请求人类批准**。
-3. **Phase B 提示词**：编写 18 条生产 Prompt → 经过 `prompt_safety_policy.md` 自检净化 → `split_prompts.py` 拆解为 `clips_2b/` 与 `clips_safe/`。
+3. **Phase B 提示词**：编写 18 条生产 Prompt → 经过 `prompt_safety_policy.md` 自检净化 → 生成完整的 18 镜 `clips_safe/`（无缺失、无回退）。
 4. **Google Flow 连续生产**：
    - 确认 Chrome 实例 ID（`bsk browsers`）；
    - 使用 Nano Banana 2 免费生图锁定火柴人服装与光影；
    - 在 Storyboard Studio 中依次生成 18 张卡片，传递前一卡片尾帧为后一卡片起始帧；
    - 逐段运行 `download_clip.py` 提取至 `04_raw_clips/clip_XX.mp4`。
 5. **自动化后期交付**：
-   - `python scripts/concat_clips.py --project <slug>`（无缝拼接 18 段生成 `stitched_raw.mp4`）；
+   - `python scripts/concat_clips.py --project <slug>`（无缝拼接 18 段生成 `stitched_raw.mp4`，支持 `--crop-ratio 4:3`）；
    - 制作双语字幕 `05_subtitles/narration.bilingual.srt`；
-   - `python scripts/embed_subtitles.py --project <slug>`（烧录压制成片 `final_subtitled.mp4`）。
+   - `python scripts/embed_subtitles.py --project <slug>`（自动探测横竖屏并烧录压制 `final_subtitled.mp4`）。
 6. **收尾同步**：确认 `meta.json` 进度完备，关闭浏览器会话。
+
+## 七、横版 4:3 比例演进与生产级 SSOT 目录规范
+
+21. **横版 4:3（Academy 经典比例 1.33:1）工程考量**：
+    - **平台契合度**：针对 B 站、知乎、微信公号、YouTube 与小红书横屏，4:3 比 16:9 构图更加紧凑聚焦，给极简火柴人带来经典故事片的舞台呼吸感，避免画面过宽导致主体空旷。
+    - **画面技术规格**：目标 960×720（或 1440×1080），24fps，提示词中明确声明 `4:3 horizontal cinematic composition (central staging, generous negative space)`。
+    - **下游裁切自适应**：若 Flow 默认渲染为 16:9，`concat_clips.py --crop-ratio 4:3` 内置 `crop=ih*4/3:ih` 滤镜，可实现像素级无损居中裁剪为 4:3。
+
+22. **字幕画幅智能自适应**：
+    - `embed_subtitles.py` 内置视频尺寸自动探针：
+      - **横屏（4:3 或 16:9）**：默认底部边距 `--margin 50`，字号 `26`，置于底部自然安全区；
+      - **竖屏（9:16）**：默认底部边距 `--margin 350`，字号 `36`，抬高至 55%–75% 画面避让移动端 UI。
+
+23. **生产级单一事实源（SSOT）铁律**：
+    - **严禁跨目录回退**：自动化脚本严禁设计“A 存在读 A，不存在回退读 B”的逻辑（曾导致误读废弃 Style 1 提示词的隐患）。
+    - **完备自闭环**：`03_gemini_prompts/clips_safe/` 必须完整包含 1 至 18 镜全量 Prompt 文件，且全部满足 Style 2B + 4:3 + 安全词隐喻转译标准。
+    - **历史版本归档**：过时的 Style 1 与 9:16 提示词统一隔离至 `_legacy_style1_archive/` 与 `_legacy_9_16_archive/`，从生产主路径彻底物理剥离。
+

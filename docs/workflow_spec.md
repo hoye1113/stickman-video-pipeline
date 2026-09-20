@@ -11,7 +11,7 @@
 - 每个项目拥有独立的 `01_research/` 至 `06_final_video/` 6大阶段目录与 `meta.json` 状态记录；
 - 创建新项目时统一运行脚手架：
   ```powershell
-  python scripts/new_project.py <slug> --title-zh "<中文标题>" --title-en "<英文标题>" --ratio 9:16
+  python scripts/new_project.py <slug> --title-zh "<中文标题>" --title-en "<英文标题>" --ratio 4:3
   ```
 - 严禁在根目录直接堆放临时多媒体文件，所有中间产物严格归集在对应项目目录下。
 
@@ -51,12 +51,12 @@
     - **第二幕（Act 2: Clips 7–12，60–120s）**：机制科普与认知剖析（大脑杏仁核反应、情绪循环机制、认知盲区拆解）。
     - **第三幕（Act 3: Clips 13–18，120–180s）**：认知重构与微行动解脱（微行动破坏内耗循环、能量爆发、升华总结与有力 Call-to-Action）。
 - **Phase A 必备闸门 (Setup Gate & Review Gate)**：
-  - 必须在规划前明确：**画面比例**（16:9 / 9:16 / 1:1）、**视觉风格**（Style 1 极简黑白灰 / Style 2A 科技白底青蓝玻璃 / Style 2B 全彩电影叙事）。
+  - 必须在规划前明确：**画面比例**（4:3 经典横屏推荐 / 16:9 / 9:16 / 1:1）、**视觉风格**（Style 2B 全彩电影叙事推荐 / Style 2A 科技白底青蓝玻璃 / Style 1 极简黑白灰）。
   - 输出到目标项目的 `02_director_proposal/proposal_phase_a.md`。
   - **必须严格停止并请求用户批准 Phase A**，未经用户确认，**绝对不得提前生成 Phase B 提示词或视频**！
 - **Phase B 生产提示词铁律**：
   - 对应底层模型：**`Gemini Omni 1.1 Flash` (`gemini-omni-1.1-flash`)**。
-  - 输出到目标项目的 `03_gemini_prompts/prompts_all.md`，并通过 `scripts/split_prompts.py --project <slug>` 自动拆解到 `clips/prompt_01.txt` ~ `prompt_18.txt`。
+  - 输出到目标项目的 `03_gemini_prompts/prompts_all.md`，并通过 `scripts/split_prompts.py --project <slug>` 自动拆解到 `clips_safe/prompt_01.txt` ~ `prompt_18.txt`。
   - 每段划分为 `[0–3s]`、`[3–7s]`、`[7–10s]` 三个时钟拍点，至少 4 个明确视觉装置。
   - 严禁画面中出现任何文字、字母、数字、字幕或对话框（`strictly no speech bubbles, no dialogue boxes`）。
   - 旁白纯音频驱动，使用双引号包裹精确英文文本。
@@ -88,11 +88,11 @@
 #### 3.3 生产前风控门禁：提示词安全审计 (Prompt Safety Gate)
 - **执行规则**：所有提示词必须经过 [`docs/prompt_safety_policy.md`](prompt_safety_policy.md) 审查。
 - **硬禁词拦截**：严禁出现 `throat`, `neck`, `choke`, `strangle`, `syringe`, `inject`, `narcotic`, `cliff edge`, `baby in chains` 等伤害或成瘾描写。
-- **安全版本归档**：审查改写后的提示词保存在 `projects/<slug>/03_gemini_prompts/clips_safe/`。视频生成时**强制优先调用 `clips_safe/`**。
+- **安全版本归档**：审查改写后的提示词保存在 `projects/<slug>/03_gemini_prompts/clips_safe/`。视频生成时**直接顺序调用 `clips_safe/`**（包含 1–18 镜全集自闭环，杜绝回退）。
 
 #### 3.4 视频参数契约与无感落盘规范
 - **视频标准参数**：
-  - `Aspect Ratio`：9:16 竖屏（默认）/ 16:9 横屏
+  - `Aspect Ratio`：4:3 横屏（默认推荐，Academy 经典故事比例）/ 16:9 横屏 / 9:16 竖屏
   - `Duration`：每片段精确 10 秒
   - `Frame Rate`：24fps
   - `Resolution`：720p（平衡质感与生成速度）
@@ -131,9 +131,9 @@
 | `projects/<slug>/01_research/research_summary.md` | 资料检索 Agent | Markdown 结构化研究报告 | 收集整理 → 确认事实源 |
 | `projects/<slug>/02_director_proposal/proposal_phase_a.md` | 导演 Agent | 完整 Phase A 提案（含18行分镜表） | 草稿 → **用户审核通过** |
 | `projects/<slug>/03_gemini_prompts/prompts_all.md` | 编剧/Prompt Agent | 18条独立英文 Prompt + 拼接指南 | 仅在 Phase A 确认后生成 |
-| `projects/<slug>/03_gemini_prompts/clips/prompt_01~18.txt` | 编剧/Prompt Agent | 纯文本 Prompt，方便批处理 | 就绪（原文归档） |
-| `projects/<slug>/03_gemini_prompts/clips_safe/prompt_XX.txt` | 安全审查 Agent | 经风控审查与隐喻改写后的安全版 | **生产优先调用** |
-| `projects/<slug>/04_raw_clips/clip_01~18.mp4` | 浏览器生成 Agent | 720p 9:16 MP4 视频，每个约10秒 | Google Flow 提取落盘（Git忽略） |
+| `projects/<slug>/03_gemini_prompts/_legacy_*/` | 编剧/Prompt Agent | 历史风格与旧画幅提示词 | 隔离归档 |
+| `projects/<slug>/03_gemini_prompts/clips_safe/prompt_01~18.txt` | 安全审查 Agent | 完备 18 镜 Style 2B 4:3 生产提示词 | **唯一生产目录** |
+| `projects/<slug>/04_raw_clips/clip_01~18.mp4` | 浏览器生成 Agent | 720p 4:3/9:16 MP4 视频，每个约10秒 | Google Flow 提取落盘（Git忽略） |
 | `projects/<slug>/05_subtitles/narration.en.srt` | 字幕处理 Agent | 严格符合 SRT 格式标准 | 基于实际时间轴对齐 |
 | `projects/<slug>/06_final_video/final_subtitled.mp4` | 后期合成脚本/Agent | 最终交付成品视频 | 拼接+压制成片（Git忽略） |
 | `projects/<slug>/meta.json` | 工程管理 Agent | JSON 结构化元数据 | 记录画幅、风格、已生成片段列表 |

@@ -73,11 +73,11 @@ No violence, no weapons, no injury, no depiction of harm, no substances.
 
 | 路径 | 用途 |
 |---|---|
-| `03_gemini_prompts/clips/` | Phase A 审批原文（**归档，不用于生成**） |
-| `03_gemini_prompts/clips_safe/` | 经本规范审计的**生成用版本**；只放被改写的片段 |
+| `03_gemini_prompts/clips_safe/` | **唯一生产提示词目录**；完整包含 1–18 镜全量安全合规提示词 |
+| `03_gemini_prompts/_legacy_*/` | 历史版本归档（Style 1 与 9:16 竖屏版本，完全物理隔离） |
 | `docs/prompt_safety_policy.md` | 本规范与改写对照表 |
 
-生成时优先使用 `clips_safe/` 中存在的版本；不存在则使用 `clips/` 原文。
+生产生成时**直接顺序调用 `clips_safe/prompt_XX.txt`**，目录完备自闭环，严禁任何跨目录回退。
 
 ---
 

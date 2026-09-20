@@ -74,7 +74,7 @@
 | **未成年人** | `baby/infant/child` 与哭泣、锁链、束缚组合 | `small fragile grey silhouette wrapped in heavy cool violet threads` |
 | **色彩与技术** | 十六进制色彩 `#FF0000`、含危险词的颜色名（如 `saturated danger red`） | **普通描述性颜色词**：`vivid red`, `cool violet`, `warm gold` |
 
-- **安全版目录**：经安全审查改写的 Prompt 存放于 `03_gemini_prompts/clips_safe/`；生成时优先调用 `clips_safe/` 中的版本。
+- **唯一生产目录**：经安全审查与 4:3 适配的 Prompt 存放于 `03_gemini_prompts/clips_safe/`；生成时直接调用 `clips_safe/` 中的 18 镜全量独立文件（自闭环，严禁跨目录回退）。
 
 ---
 
@@ -85,7 +85,7 @@
 ```text
 stickman-videos/
 ├── projects/                                    # 视频项目矩阵目录
-│   ├── _template/                              # 新建工程模板（包含标准 .gitkeep 与结构）
+│   ├── _template/                              # 新建工程模板（默认 4:3 横版与 Style 2B）
 │   │   ├── 01_research/.gitkeep
 │   │   ├── 02_director_proposal/.gitkeep
 │   │   ├── 03_gemini_prompts/clips/.gitkeep
@@ -96,12 +96,12 @@ stickman-videos/
 │   │
 │   ├── 001_betrayal_and_split_soul/            # 【第1期：背叛与撕裂】
 │   │   ├── 01_research/ (research_summary.md)
-│   │   ├── 02_director_proposal/ (Style 1 与 Style 2B 分镜预案)
-│   │   ├── 03_gemini_prompts/ (prompts_all_2b.md, clips_2b/, clips_safe/)
+│   │   ├── 02_director_proposal/ (Style 2B 4:3 横版分镜预案)
+│   │   ├── 03_gemini_prompts/ (prompts_all.md, clips_safe/ 18镜全集, _legacy_*)
 │   │   ├── 04_raw_clips/ (_legacy_1min_archive/, _style1_archive/)
-│   │   ├── 05_subtitles/ (_legacy_1min_archive/)
+│   │   ├── 05_subtitles/ (narration.bilingual.srt, _legacy_1min_archive/)
 │   │   ├── 06_final_video/ (_legacy_1min_archive/)
-│   │   └── meta.json                           # 记录画幅、风格、已生成片段列表与状态
+│   │   └── meta.json                           # 记录 4:3 横版、Style 2B、已生成片段列表与状态
 │   │
 │   └── 002_future_topic/                       # 【未来第2期、第N期，互不影响】
 │       └── ...
@@ -152,25 +152,22 @@ stickman-videos/
 
 ### Step 1: 一键新建主题项目
 ```powershell
-python scripts/new_project.py 002_social_anxiety --title-zh "克服社交焦虑" --title-en "Mastering Social Anxiety" --ratio 9:16 --style "Style 2B (Cinematic Story)"
+python scripts/new_project.py 002_social_anxiety --title-zh "克服社交焦虑" --title-en "Mastering Social Anxiety" --ratio 4:3 --style "Style 2B (Cinematic Story)"
 ```
 
 ### Step 2: 资料检索与 Phase A 导演预案
 1. 梳理心理学科学机制，保存在 `projects/<slug>/01_research/research_summary.md`；
-2. 按照三幕式 18 段结构编写分镜表，保存至 `projects/<slug>/02_director_proposal/proposal_phase_a.md`；
+2. 按照三幕式 18 段结构编写分镜表（画幅首选 `4:3` 横屏，兼顾 B站/知乎/微信公号/YouTube），保存至 `projects/<slug>/02_director_proposal/proposal_phase_a.md`；
 3. **【门禁】在此必须暂停，等待人类用户审核批准分镜方案！**
 
 ### Step 3: Phase B 提示词生成与安全扫描
-1. 编写 18 条生产级英文提示词（遵循零文字契约、角色防形变锁、动效三拍点）；
-2. 依据 [`docs/prompt_safety_policy.md`](file:///d:/workSpace/git_clone_test/hoye-git/stickman-videos/docs/prompt_safety_policy.md) 排除敏感词，改写版本放入 `clips_safe/`；
-3. 执行一键拆解：
-   ```powershell
-   python scripts/split_prompts.py --project <slug> --md prompts_all_2b.md --out-dir clips_2b
-   ```
+1. 编写 18 条生产级英文提示词（遵循零文字契约、4:3 横屏构图声明、角色防形变锁、动效三拍点）；
+2. 依据 [`docs/prompt_safety_policy.md`](file:///d:/workSpace/git_clone_test/hoye-git/stickman-videos/docs/prompt_safety_policy.md) 排除敏感词，改写后生成完备的 18 镜全集置于 `clips_safe/`；
+3. 主控文档 `prompts_all.md` 与 `prompts_all_2b.md` 保持与 `clips_safe/` 严格一致，严禁跨目录回退调用旧文件。
 
 ### Step 4: 视频生成与 Base64 提取落盘
 - **在 Google Flow (Storyboard Studio) 中**：
-  1. 设定 `9:16`、`10s`、`720p`；
+  1. 设定 `4:3` 横屏（若页面无 4:3 选项则选横版 16:9，由后续脚本自动居中裁切）、`10s`、`720p`；
   2. 填入提示词，（可选前帧输入），点击生成；
   3. 待视频加载完成后，运行提取脚本：
      ```powershell
@@ -180,8 +177,8 @@ python scripts/new_project.py 002_social_anxiety --title-zh "克服社交焦虑"
 
 ### Step 5: 视频无缝合并与字幕压制成片
 ```powershell
-# 1. FFmpeg 18 段视频合并 (生成 stitched_raw.mp4)
-python scripts/concat_clips.py --project <slug>
+# 1. FFmpeg 18 段视频合并 (生成 stitched_raw.mp4，可选 --crop-ratio 4:3 居中裁切)
+python scripts/concat_clips.py --project <slug> --crop-ratio 4:3
 
 # 2. 对齐字幕并硬编码压制成片 (生成 final_subtitled.mp4)
 python scripts/embed_subtitles.py --project <slug>
@@ -193,11 +190,11 @@ python scripts/embed_subtitles.py --project <slug>
 
 | 脚本文件 | 核心参数与示例 | 功能作用 |
 |---|---|---|
-| [`scripts/new_project.py`](file:///d:/workSpace/git_clone_test/hoye-git/stickman-videos/scripts/new_project.py) | `<name> [--title-zh] [--title-en] [--ratio] [--style]` | 自动克隆 `_template` 并生成专属 `meta.json` |
+| [`scripts/new_project.py`](file:///d:/workSpace/git_clone_test/hoye-git/stickman-videos/scripts/new_project.py) | `<name> [--title-zh] [--title-en] [--ratio {4:3,16:9,9:16,1:1}] [--style]` | 自动克隆 `_template` 并生成专属 `meta.json`（默认 4:3 与 Style 2B） |
 | [`scripts/split_prompts.py`](file:///d:/workSpace/git_clone_test/hoye-git/stickman-videos/scripts/split_prompts.py) | `[--project <name>] [--md <filename>] [--out-dir <dir>]` | 将提示词总包一键拆解为 `prompt_01.txt` ~ `18.txt` |
 | [`scripts/download_clip.py`](file:///d:/workSpace/git_clone_test/hoye-git/stickman-videos/scripts/download_clip.py) | `[--session <id>] [--filename <name>] [--project <slug>] [--out <path>]` | 无弹窗 Base64 提取当前页面最新视频并更新 `meta.json` |
-| [`scripts/concat_clips.py`](file:///d:/workSpace/git_clone_test/hoye-git/stickman-videos/scripts/concat_clips.py) | `[--project <slug>] [--output <filename>]` | 自动排序拼接 `04_raw_clips` 内的所有视频并容错重编码 |
-| [`scripts/embed_subtitles.py`](file:///d:/workSpace/git_clone_test/hoye-git/stickman-videos/scripts/embed_subtitles.py) | `[--project <slug>] [-i <video>] [-s <srt>] [-o <out>]` | 烧录压制高清字幕，内置 RTL 自动修复与样式规范。**移动端规范**：`--font-size 36`、`--margin 350`（字幕置于画面 55%–75% 高度，避开抖音/小红书底部标题区）、`--font-name "Microsoft YaHei"`；内置 ffprobe 自动设置 PlayRes（防止竖屏字幕放大铺屏）；长台词须按语速拆成 3–4s 短条（详见 `docs/workflow_spec.md` 第 4 节） |
+| [`scripts/concat_clips.py`](file:///d:/workSpace/git_clone_test/hoye-git/stickman-videos/scripts/concat_clips.py) | `[--project <slug>] [--output <filename>] [--crop-ratio {4:3,16:9,1:1}]` | 自动排序拼接 `04_raw_clips` 内的所有视频，支持 4:3 居中无损裁切 |
+| [`scripts/embed_subtitles.py`](file:///d:/workSpace/git_clone_test/hoye-git/stickman-videos/scripts/embed_subtitles.py) | `[--project <slug>] [-i <video>] [-s <srt>] [-o <out>] [--font-size] [--margin]` | 烧录压制高清双语字幕，内置 RTL 自动修复与画幅探针：**横屏 4:3/16:9 默认 margin 50、字号 26；竖屏 9:16 默认 margin 350、字号 36**；内置 ffprobe 自动设置 PlayRes（防止字幕放大铺屏） |
 
 ---
 

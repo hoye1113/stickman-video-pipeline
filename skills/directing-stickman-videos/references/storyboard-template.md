@@ -78,6 +78,7 @@ Default the generated video to no visible words, letters, numbers, captions, sub
 
 ## Composition by aspect ratio
 
+- `4:3` (Academy / Classic Horizontal, recommended default): use balanced center staging, cinematic theatrical framing, medium lateral movements, and generous left/right breathing room. Perfect for storytelling, educational explainers, and clean cross-platform publishing (Bilibili, Zhihu, YouTube, WeChat, Xiaohongshu landscape).
 - `16:9`: use left-center-right staging, lateral tracking, horizontal match cuts, and deliberate negative space. Reserve clean space for optional post-production overlays when useful.
 - `9:16`: use foreground/background depth, vertical reveals, stacked motion, foreground passes, and interface-safe overlay space.
 - `1:1`: keep action compact and center-weighted. Use short travel paths and avoid crucial events at extreme edges.

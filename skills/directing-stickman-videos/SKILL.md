@@ -14,14 +14,13 @@ Turn one source into a confirmed director's proposal and then six standalone pro
 Require these before planning:
 
 - source material
-- aspect ratio: `16:9`, `9:16`, or `1:1`
+- aspect ratio: `4:3` (classic horizontal / Academy, recommended default), `16:9`, `9:16`, or `1:1`
 - visual style and theme:
+  - `Style 2B (Cinematic Story)`: full-color narrative environments, cinematic lighting & depth (recommended default)
+  - `Style 2A (Modern Studio Tech)`: pure white high-key studio, subtle light-gray perspective grid, floating cyan/blue glass UI
   - `Style 1 (Classic Minimalist)`: light (white background, black figure) or dark (black background, white figure)
-  - `Style 2 (Modern Beanie Zeke)`:
-    - `Style 2A (Modern Studio Tech)`: pure white high-key studio, subtle light-gray perspective grid, floating cyan/blue glass UI
-    - `Style 2B (Cinematic Story)`: full-color narrative environments, cinematic lighting & depth
 
-If anything is missing, ask for all missing items in one concise message and stop. If a user specifies only light or dark theme, default to Style 1. Never select an aspect ratio or style silently. Do not re-ask choices already supplied.
+If anything is missing, ask for all missing items in one concise message and stop. If a user specifies horizontal without ratio, default to 4:3. Default style is Style 2B. Never select an aspect ratio or style silently when contradictory. Do not re-ask choices already supplied.
 
 Urgency, generation cost, client pressure, and requests to "pick normal settings" do not waive this gate.
 
