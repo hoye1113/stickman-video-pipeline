@@ -1,0 +1,10 @@
+{
+  "project_characters": {
+    "protagonist": {
+      "name": "主角名称",
+      "role": "侦探/旅人/主角",
+      "appearance_prompt": "A sharp-eyed young man in a worn dark trench coat, messy black hair, bandage across left temple, expressive eyes",
+      "fixed_style_anchor": "masterpiece, manga illustration style, fine ink line art, rich moody shadows, film noir cinematic lighting, 4:3 aspect ratio"
+    }
+  }
+}

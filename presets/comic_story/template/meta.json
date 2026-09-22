@@ -1,0 +1,18 @@
+{
+  "project_id": "template",
+  "genre": "comic_story",
+  "title_zh": "动态漫画故事标题",
+  "title_en": "Motion Comic Story Title",
+  "aspect_ratio": "4:3",
+  "resolution": "1440x1080",
+  "fps": 24,
+  "style": "Manga Ink & Dramatic Shadow",
+  "character_anchor_protagonist": "A determined detective in a dark trench coat, messy black hair, sharp eyes, vintage manga ink style, stark hatching shadows.",
+  "narrator": "zh-CN-YunxiNeural, deep storytelling voice, calm, reflective, cinematic pacing",
+  "total_panels": 0,
+  "panels_generated": [],
+  "production_platform": "AI ImageGen + Motion Comic Renderer",
+  "status": "draft",
+  "created_at": "",
+  "source_file": ""
+}

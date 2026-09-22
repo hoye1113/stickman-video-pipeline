@@ -1,0 +1,23 @@
+{
+  "project_id": "template",
+  "genre": "stickman",
+  "title_zh": "项目中文标题",
+  "title_en": "Project English Title",
+  "aspect_ratio": "4:3",
+  "resolution": "720p",
+  "fps": 24,
+  "style": "Style 2B (Cinematic Story)",
+  "character_anchor_A": "The same minimalist 2D animated stick figure in a bright red beanie (smooth rounded knit, no pom-pom) and a yellow t-shirt, with simple black stick limbs and shorts. Simple black lines, vibrant colors, smooth 2D animation style.",
+  "accents": [
+    "Saturated Danger Red",
+    "Anxiety Violet",
+    "Clarity Gold"
+  ],
+  "narrator": "warm, articulate, mature young adult American male voice, calm analytical and deeply introspective tone",
+  "total_clips": 18,
+  "clips_generated": [],
+  "production_platform": "Google Flow (Storyboard Studio)",
+  "status": "draft",
+  "created_at": "",
+  "source_file": ""
+}
