@@ -36,6 +36,32 @@ def probe_video_size(path):
         return None
 
 
+def probe_media_duration(path):
+    """
+    探测音视频媒体文件的精确时长（秒）。
+    返回 float(seconds) 或 None。
+    """
+    if not path or not os.path.exists(path):
+        return None
+    try:
+        out = subprocess.run(
+            [
+                "ffprobe", "-v", "error",
+                "-show_entries", "format=duration",
+                "-of", "default=noprint_wrappers=1:nokey=1",
+                str(path)
+            ],
+            capture_output=True, text=True, check=True,
+        )
+        val = out.stdout.strip()
+        if val:
+            return float(val)
+        return None
+    except Exception:
+        return None
+
+
+
 def detect_and_fix_rtl(srt_path):
     """
     检测并在必要时为从右至左语言（希伯来语、阿拉伯语等）注入 Unicode 换向标记 (U+202B, U+202C)。

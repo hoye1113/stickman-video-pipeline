@@ -113,6 +113,9 @@ stickman-video-pipeline/
 │
 ├── scripts/                                    # 命令行门面工具 (向后兼容，透传 core)
 │   ├── new_project.py                          # 支持 --genre stickman / comic_story
+│   ├── generate_tts.py                         # 【0积分动态漫】Edge-TTS 语音合成与时间戳对齐
+│   ├── animate_panels.py                       # 【0积分动态漫】FFmpeg Ken Burns 动态运镜引擎
+│   ├── assemble_comic.py                       # 【0积分动态漫】成片无缝拼接、混音与字幕烧录
 │   ├── download_clip.py                        # 支持 --project / --out / --tab-id 无感提取
 │   ├── split_prompts.py                        # 支持 --project / --md / --out-dir 拆分
 │   ├── concat_clips.py                         # 支持 --project 视频拼接
@@ -209,6 +212,9 @@ python scripts/embed_subtitles.py --project <slug>
 | 脚本文件 | 核心参数与示例 | 功能作用 |
 |---|---|---|
 | [`scripts/new_project.py`](file:///d:/workSpace/git_clone_test/hoye-git/stickman-videos/scripts/new_project.py) | `<name> [--genre {stickman,comic_story}] [--title-zh] [--title-en] [--ratio {4:3,16:9,9:16,1:1}] [--style]` | 自动基于题材模板初始化项目并生成专属 `meta.json`（默认 stickman 4:3 与 Style 2B） |
+| [`scripts/generate_tts.py`](file:///d:/workSpace/git_clone_test/hoye-git/stickman-videos/scripts/generate_tts.py) | `[--project <name>] [--voice zh-CN-YunxiNeural] [--text <str>]` | 微软 Edge-TTS 高保真语音合成，一键输出画格音频、SRT 字幕与连续时间戳 |
+| [`scripts/animate_panels.py`](file:///d:/workSpace/git_clone_test/hoye-git/stickman-videos/scripts/animate_panels.py) | `[--project <name>] [-i <image>] [-m {slow_push,pan_right,drift...}]` | 纯本地 FFmpeg Ken Burns 动态运镜引擎，毫秒级赋予静态画格电影级运镜动效 |
+| [`scripts/assemble_comic.py`](file:///d:/workSpace/git_clone_test/hoye-git/stickman-videos/scripts/assemble_comic.py) | `[--project <name>] [--bgm <path>] [--no-subs]` | 自动无损拼接运镜切片、混入环境 BGM，并烧录工业级白字黑边字幕输出成片 |
 | [`scripts/split_prompts.py`](file:///d:/workSpace/git_clone_test/hoye-git/stickman-videos/scripts/split_prompts.py) | `[--project <name>] [--md <filename>] [--out-dir <dir>]` | 将提示词总包一键拆解为 `prompt_01.txt` ~ `18.txt` |
 | [`scripts/download_clip.py`](file:///d:/workSpace/git_clone_test/hoye-git/stickman-videos/scripts/download_clip.py) | `[--session <id>] [--filename <name>] [--project <slug>] [--out <path>]` | 无弹窗 Base64 提取当前页面最新视频并更新 `meta.json` |
 | [`scripts/concat_clips.py`](file:///d:/workSpace/git_clone_test/hoye-git/stickman-videos/scripts/concat_clips.py) | `[--project <slug>] [--output <filename>] [--crop-ratio {4:3,16:9,1:1}]` | 自动排序拼接 `04_raw_clips` 内的所有视频，支持 4:3 居中无损裁切 |
@@ -219,8 +225,10 @@ python scripts/embed_subtitles.py --project <slug>
 ## 9. 系列经验索引
 
 - **调研与策划提案管理中心**（行业白皮书、爆款拆解与提案 RFC）：[`docs/research/README.md`](file:///d:/workSpace/git_clone_test/hoye-git/stickman-videos/docs/research/README.md)
+- **提案 RFC-002：零积分动态漫/图文故事短视频生产流水线**：[`docs/research/proposals/proposal_002_zero_credit_motion_comic.md`](file:///d:/workSpace/git_clone_test/hoye-git/stickman-videos/docs/research/proposals/proposal_002_zero_credit_motion_comic.md)
 - **@CrazyKaomei AI 短视频实战白皮书**（两阶段生成、开源生态、Lucas Patiri 转化漏斗与白字黑边规范）：[`docs/research/benchmarks/2026-09-crazykaomei_short_video_playbook.md`](file:///d:/workSpace/git_clone_test/hoye-git/stickman-videos/docs/research/benchmarks/2026-09-crazykaomei_short_video_playbook.md)
 - **跨项目通用经验教训总纲**（平台配额、多账号、bsk 避坑、水印去除、字幕规范、备份纪律、流程铁律）：[`docs/lessons_learned.md`](file:///d:/workSpace/git_clone_test/hoye-git/stickman-videos/docs/lessons_learned.md)
 - **提示词安全风控手册**（危险词禁令与安全替换表）：[`docs/prompt_safety_policy.md`](file:///d:/workSpace/git_clone_test/hoye-git/stickman-videos/docs/prompt_safety_policy.md)
 - **完整业务规范**（各阶段任务、门禁与目录职责）：[`docs/workflow_spec.md`](file:///d:/workSpace/git_clone_test/hoye-git/stickman-videos/docs/workflow_spec.md)
+
 

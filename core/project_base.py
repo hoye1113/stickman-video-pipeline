@@ -84,6 +84,11 @@ class Project:
         return self.dir.joinpath(stage, *parts)
 
     @property
+    def path(self):
+        """兼容性路径别名"""
+        return self.dir
+
+    @property
     def genre(self):
         """当前项目的题材分类 (默认为 stickman)"""
         return self.meta.get("genre", DEFAULT_GENRE)
