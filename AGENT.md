@@ -124,7 +124,11 @@ stickman-video-pipeline/
 │   ├── directing-comic-story/                  # 动态漫画导演分镜技能
 │   └── embed-subtitles/                        # 工业级字幕烧录规范
 │
-├── docs/                                       # 规范与安全风控文档
+├── docs/                                       # 规范、安全风控与调研管理
+│   ├── research/                               # ★ 行业调研、对标白皮书与创意策划提案库
+│   │   ├── benchmarks/                         # 外部优秀实践、爆款拆解 (@CrazyKaomei 等)
+│   │   ├── proposals/                          # 创意策划案、题材试验与 RFC (含模板)
+│   │   └── README.md                           # 调研与提案生命周期流转规范
 │   ├── prompt_safety_policy.md                 # 提示词安全风控手册与替换表
 │   ├── workflow_spec.md                        # 完整业务规范与多题材契约
 │   └── lessons_learned.md                      # ★ 跨项目经验教训总纲（配额/bsk/水印/字幕/备份）
@@ -214,6 +218,9 @@ python scripts/embed_subtitles.py --project <slug>
 
 ## 9. 系列经验索引
 
+- **调研与策划提案管理中心**（行业白皮书、爆款拆解与提案 RFC）：[`docs/research/README.md`](file:///d:/workSpace/git_clone_test/hoye-git/stickman-videos/docs/research/README.md)
+- **@CrazyKaomei AI 短视频实战白皮书**（两阶段生成、开源生态、Lucas Patiri 转化漏斗与白字黑边规范）：[`docs/research/benchmarks/2026-09-crazykaomei_short_video_playbook.md`](file:///d:/workSpace/git_clone_test/hoye-git/stickman-videos/docs/research/benchmarks/2026-09-crazykaomei_short_video_playbook.md)
 - **跨项目通用经验教训总纲**（平台配额、多账号、bsk 避坑、水印去除、字幕规范、备份纪律、流程铁律）：[`docs/lessons_learned.md`](file:///d:/workSpace/git_clone_test/hoye-git/stickman-videos/docs/lessons_learned.md)
 - **提示词安全风控手册**（危险词禁令与安全替换表）：[`docs/prompt_safety_policy.md`](file:///d:/workSpace/git_clone_test/hoye-git/stickman-videos/docs/prompt_safety_policy.md)
 - **完整业务规范**（各阶段任务、门禁与目录职责）：[`docs/workflow_spec.md`](file:///d:/workSpace/git_clone_test/hoye-git/stickman-videos/docs/workflow_spec.md)
+

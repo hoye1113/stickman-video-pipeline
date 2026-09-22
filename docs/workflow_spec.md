@@ -11,6 +11,9 @@
 - **题材套件 (`presets/`)**：
   - `stickman`：火柴人视频流水线（Google Flow / Veo、4:3 横屏、Style 2B、18 镜分镜）；
   - `comic_story`：动态漫画故事流水线（剧本大纲、角色一致性锚点卡、画格生图、TTS 配音与运镜切片）；
+- **调研与提案中心 (`docs/research/`)**：
+  - `benchmarks/`：行业标杆拆解、爆款漏斗模型与开源生态评测（如 `@CrazyKaomei` 实战白皮书）；
+  - `proposals/`：新题材立项、流水线 RFC 与创意设计案（基于 `proposal_template.md`），经人类确认后方可转化为实体套件或工程；
 - **项目隔离 (`projects/<slug>/`)**：
   - 每一个独立视频项目在 `meta.json` 中明确声明 `genre`（如 `"genre": "stickman"` 或 `"genre": "comic_story"`）；
   - 创建新项目时统一运行脚手架：
@@ -132,6 +135,8 @@
 
 | 目录/文件 | 责任角色 | 格式要求 | 状态流转 |
 |---|---|---|---|
+| `docs/research/benchmarks/*.md` | 行业调研/竞品分析 Agent | Markdown 结构化白皮书与拆解报告 | 行业采集 → 方法论沉淀 |
+| `docs/research/proposals/*.md` | 创意策划/架构师 Agent | Markdown 标准提案 RFC (含模板) | 创意构思 → 用户评审 → 立项落地 |
 | `projects/<slug>/01_research/research_summary.md` | 资料检索 Agent | Markdown 结构化研究报告 | 收集整理 → 确认事实源 |
 | `projects/<slug>/02_director_proposal/proposal_phase_a.md` | 导演 Agent | 完整 Phase A 提案（含18行分镜表） | 草稿 → **用户审核通过** |
 | `projects/<slug>/03_gemini_prompts/prompts_all.md` | 编剧/Prompt Agent | 18条独立英文 Prompt + 拼接指南 | 仅在 Phase A 确认后生成 |
@@ -141,3 +146,4 @@
 | `projects/<slug>/05_subtitles/narration.en.srt` | 字幕处理 Agent | 严格符合 SRT 格式标准 | 基于实际时间轴对齐 |
 | `projects/<slug>/06_final_video/final_subtitled.mp4` | 后期合成脚本/Agent | 最终交付成品视频 | 拼接+压制成片（Git忽略） |
 | `projects/<slug>/meta.json` | 工程管理 Agent | JSON 结构化元数据 | 记录画幅、风格、已生成片段列表 |
+
