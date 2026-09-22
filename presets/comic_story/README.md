@@ -42,8 +42,13 @@ python scripts/generate_tts.py --project 002_rainy_detective --voice "zh-CN-Yunx
 ```
 *自动在 `05_voiceover_and_srt/` 生成各画格 MP3 语音、单格 SRT 字幕、连续主字幕 `narration.srt` 以及精确时长映射 `durations.json`。*
 
-### Step 4: 零积分静态生图 (Nano Banana 2)
-在 **Google Flow (Storyboard Studio)** 中选用 **Nano Banana 2（0 积分无限量）**，基于 `03_panel_prompts/` 提示词生成画格图片，挑选最佳图片下载存入 `04_raw_panels/panel_01.png` ~ `panel_XX.png`。
+### Step 4: 零积分静态生图 (Nano Banana 2) 与无感落盘
+在 **Google Flow (Storyboard Studio)** 中选用 **Nano Banana 2（0 积分无限量）**，基于 `03_panel_prompts/` 提示词生成画格图片：
+- **自动化无感落盘（推荐）**：在页面中查看画格大图后直接运行：
+  ```powershell
+  python scripts/download_panel.py --session <session_id> --filename panel_01.png --project 002_rainy_detective
+  ```
+- **或手动另存**：下载并放入 `04_raw_panels/panel_01.png` ~ `panel_XX.png`。
 
 ### Step 5: 本地动态运镜批量渲染 (Ken Burns Engine)
 ```powershell

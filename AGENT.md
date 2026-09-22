@@ -116,7 +116,8 @@ stickman-video-pipeline/
 │   ├── generate_tts.py                         # 【0积分动态漫】Edge-TTS 语音合成与时间戳对齐
 │   ├── animate_panels.py                       # 【0积分动态漫】FFmpeg Ken Burns 动态运镜引擎
 │   ├── assemble_comic.py                       # 【0积分动态漫】成片无缝拼接、混音与字幕烧录
-│   ├── download_clip.py                        # 支持 --project / --out / --tab-id 无感提取
+│   ├── download_clip.py                        # 支持 --project / --out / --tab-id 视频无感提取
+│   ├── download_panel.py                       # 【0积分动态漫】Flow Nano Banana 2 画格图片无感提取
 │   ├── split_prompts.py                        # 支持 --project / --md / --out-dir 拆分
 │   ├── concat_clips.py                         # 支持 --project 视频拼接
 │   ├── embed_subtitles.py                      # 支持 --project 字幕压制 (基于 core.engine)
@@ -217,6 +218,7 @@ python scripts/embed_subtitles.py --project <slug>
 | [`scripts/assemble_comic.py`](file:///d:/workSpace/git_clone_test/hoye-git/stickman-videos/scripts/assemble_comic.py) | `[--project <name>] [--bgm <path>] [--no-subs]` | 自动无损拼接运镜切片、混入环境 BGM，并烧录工业级白字黑边字幕输出成片 |
 | [`scripts/split_prompts.py`](file:///d:/workSpace/git_clone_test/hoye-git/stickman-videos/scripts/split_prompts.py) | `[--project <name>] [--md <filename>] [--out-dir <dir>]` | 将提示词总包一键拆解为 `prompt_01.txt` ~ `18.txt` |
 | [`scripts/download_clip.py`](file:///d:/workSpace/git_clone_test/hoye-git/stickman-videos/scripts/download_clip.py) | `[--session <id>] [--filename <name>] [--project <slug>] [--out <path>]` | 无弹窗 Base64 提取当前页面最新视频并更新 `meta.json` |
+| [`scripts/download_panel.py`](file:///d:/workSpace/git_clone_test/hoye-git/stickman-videos/scripts/download_panel.py) | `[--session <id>] [--filename <name>] [--project <slug>] [--out <path>]` | 无弹窗 Base64 提取当前页面最新画格图片写入 `04_raw_panels` 并更新 `meta.json` |
 | [`scripts/concat_clips.py`](file:///d:/workSpace/git_clone_test/hoye-git/stickman-videos/scripts/concat_clips.py) | `[--project <slug>] [--output <filename>] [--crop-ratio {4:3,16:9,1:1}]` | 自动排序拼接 `04_raw_clips` 内的所有视频，支持 4:3 居中无损裁切 |
 | [`scripts/embed_subtitles.py`](file:///d:/workSpace/git_clone_test/hoye-git/stickman-videos/scripts/embed_subtitles.py) | `[--project <slug>] [-i <video>] [-s <srt>] [-o <out>] [--font-size] [--margin]` | 烧录压制高清双语字幕，内置 RTL 自动修复与画幅探针：**横屏 4:3/16:9 默认 margin 50、字号 26；竖屏 9:16 默认 margin 350、字号 36**；内置 ffprobe 自动设置 PlayRes（防止字幕放大铺屏） |
 

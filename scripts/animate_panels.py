@@ -159,12 +159,12 @@ def render_panel_clip(
     ])
 
     if audio_path and os.path.exists(audio_path):
-        cmd.extend(["-c:a", "aac", "-b:a", "192k", "-shortest"])
+        cmd.extend(["-c:a", "aac", "-ar", "44100", "-ac", "2", "-b:a", "192k", "-shortest"])
     else:
-        # 如果没有传入音频，生成静音频轨以保证后续无缝拼接兼容性
+        # 如果没有传入音频，生成静音频轨以保证后续无缝拼接兼容性 (44100Hz stereo)
         cmd.extend([
             "-f", "lavfi", "-i", "anullsrc=r=44100:cl=stereo",
-            "-c:a", "aac", "-b:a", "128k", "-shortest"
+            "-c:a", "aac", "-ar", "44100", "-ac", "2", "-b:a", "128k", "-shortest"
         ])
 
     cmd.append(str(output_path))
