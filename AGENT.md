@@ -78,45 +78,55 @@
 
 ---
 
-## 5. 项目矩阵目录架构 (Multi-Project Architecture)
+## 5. 多题材矩阵与分层架构 (Core Engine + Genre Presets)
 
-所有视频项目均存放在 `projects/<slug>/`，各个主题物理隔离，杜绝覆盖：
+系统采用**“共享核心底座 (Core Engine) + 题材套件层 (Genre Presets) + 实体项目库 (Projects)”**的分层架构，支持火柴人视频、动态漫画故事等多题材并存扩展：
 
 ```text
-stickman-videos/
-├── projects/                                    # 视频项目矩阵目录
-│   ├── _template/                              # 新建工程模板（默认 4:3 横版与 Style 2B）
-│   │   ├── 01_research/.gitkeep
-│   │   ├── 02_director_proposal/.gitkeep
-│   │   ├── 03_gemini_prompts/clips/.gitkeep
-│   │   ├── 04_raw_clips/.gitkeep
-│   │   ├── 05_subtitles/.gitkeep
-│   │   ├── 06_final_video/.gitkeep
-│   │   └── meta.json
-│   │
-│   ├── 001_betrayal_and_split_soul/            # 【第1期：背叛与撕裂】
+stickman-video-pipeline/
+├── core/                                        # 【共享核心底座】所有题材共用
+│   ├── engine/
+│   │   └── ffmpeg_utils.py                      # 分辨率探测、RTL 修正、自适应字幕压制底层
+│   └── project_base.py                          # 跨题材项目模型、元数据解析与脚手架内核
+│
+├── presets/                                     # 【题材套件库】各题材模板与独立规范
+│   ├── stickman/                                # 1. 火柴人题材套件
+│   │   ├── template/ (01~06 阶段骨架)
+│   │   └── README.md
+│   ├── comic_story/                             # 2. 动态漫画故事套件
+│   │   ├── template/ (分镜大纲/人设锚点/画格/配音/动效/成片)
+│   │   └── README.md
+│   └── _template_guide.md                       # 新题材接入指南 (3 步扩展)
+│
+├── projects/                                    # 视频项目矩阵目录 (物理隔离，杜绝冲突)
+│   ├── 001_betrayal_and_split_soul/            # 【火柴人第1期：背叛与撕裂】(genre: stickman)
 │   │   ├── 01_research/ (research_summary.md)
 │   │   ├── 02_director_proposal/ (Style 2B 4:3 横版分镜预案)
 │   │   ├── 03_gemini_prompts/ (prompts_all.md, clips_safe/ 18镜全集, _legacy_*)
 │   │   ├── 04_raw_clips/ (_legacy_1min_archive/, _style1_archive/)
 │   │   ├── 05_subtitles/ (narration.bilingual.srt, _legacy_1min_archive/)
 │   │   ├── 06_final_video/ (_legacy_1min_archive/)
-│   │   └── meta.json                           # 记录 4:3 横版、Style 2B、已生成片段列表与状态
+│   │   └── meta.json                           # 记录 genre: stickman, 4:3 横版、Style 2B 等
 │   │
-│   └── 002_future_topic/                       # 【未来第2期、第N期，互不影响】
+│   └── 002_future_comic_story/                 # 【动态漫第1期】(genre: comic_story)
 │       └── ...
 │
-├── scripts/                                    # 参数化通用引擎脚本
-│   ├── new_project.py                          # 一键新建项目脚手架
+├── scripts/                                    # 命令行门面工具 (向后兼容，透传 core)
+│   ├── new_project.py                          # 支持 --genre stickman / comic_story
 │   ├── download_clip.py                        # 支持 --project / --out / --tab-id 无感提取
 │   ├── split_prompts.py                        # 支持 --project / --md / --out-dir 拆分
 │   ├── concat_clips.py                         # 支持 --project 视频拼接
-│   └── embed_subtitles.py                      # 支持 --project 字幕压制
+│   ├── embed_subtitles.py                      # 支持 --project 字幕压制 (基于 core.engine)
+│   └── project_store.py                        # 门面代理 (透传 core.project_base)
 │
-├── skills/                                     # 全局共享 Skills 规范
+├── skills/                                     # 智能体导演技能规范
+│   ├── directing-stickman-videos/              # 火柴人导演分镜技能
+│   ├── directing-comic-story/                  # 动态漫画导演分镜技能
+│   └── embed-subtitles/                        # 工业级字幕烧录规范
+│
 ├── docs/                                       # 规范与安全风控文档
 │   ├── prompt_safety_policy.md                 # 提示词安全风控手册与替换表
-│   ├── workflow_spec.md                        # 完整业务规范
+│   ├── workflow_spec.md                        # 完整业务规范与多题材契约
 │   └── lessons_learned.md                      # ★ 跨项目经验教训总纲（配额/bsk/水印/字幕/备份）
 ├── .gitignore                                  # 跨项目过滤所有 mp4/webm/mov
 └── AGENT.md                                    # 本交接总纲
@@ -150,9 +160,13 @@ stickman-videos/
 
 ## 7. 端到端生产操作 SOP (Step-by-Step Production SOP)
 
-### Step 1: 一键新建主题项目
+### Step 1: 一键新建主题项目 (支持多题材)
 ```powershell
-python scripts/new_project.py 002_social_anxiety --title-zh "克服社交焦虑" --title-en "Mastering Social Anxiety" --ratio 4:3 --style "Style 2B (Cinematic Story)"
+# 火柴人视频题材
+python scripts/new_project.py 002_social_anxiety --genre stickman --title-zh "克服社交焦虑" --title-en "Mastering Social Anxiety" --ratio 4:3
+
+# 动态漫画故事题材
+python scripts/new_project.py 002_rainy_detective --genre comic_story --title-zh "雨夜侦探" --title-en "The Rainy Night Detective" --ratio 4:3
 ```
 
 ### Step 2: 资料检索与 Phase A 导演预案
@@ -190,7 +204,7 @@ python scripts/embed_subtitles.py --project <slug>
 
 | 脚本文件 | 核心参数与示例 | 功能作用 |
 |---|---|---|
-| [`scripts/new_project.py`](file:///d:/workSpace/git_clone_test/hoye-git/stickman-videos/scripts/new_project.py) | `<name> [--title-zh] [--title-en] [--ratio {4:3,16:9,9:16,1:1}] [--style]` | 自动克隆 `_template` 并生成专属 `meta.json`（默认 4:3 与 Style 2B） |
+| [`scripts/new_project.py`](file:///d:/workSpace/git_clone_test/hoye-git/stickman-videos/scripts/new_project.py) | `<name> [--genre {stickman,comic_story}] [--title-zh] [--title-en] [--ratio {4:3,16:9,9:16,1:1}] [--style]` | 自动基于题材模板初始化项目并生成专属 `meta.json`（默认 stickman 4:3 与 Style 2B） |
 | [`scripts/split_prompts.py`](file:///d:/workSpace/git_clone_test/hoye-git/stickman-videos/scripts/split_prompts.py) | `[--project <name>] [--md <filename>] [--out-dir <dir>]` | 将提示词总包一键拆解为 `prompt_01.txt` ~ `18.txt` |
 | [`scripts/download_clip.py`](file:///d:/workSpace/git_clone_test/hoye-git/stickman-videos/scripts/download_clip.py) | `[--session <id>] [--filename <name>] [--project <slug>] [--out <path>]` | 无弹窗 Base64 提取当前页面最新视频并更新 `meta.json` |
 | [`scripts/concat_clips.py`](file:///d:/workSpace/git_clone_test/hoye-git/stickman-videos/scripts/concat_clips.py) | `[--project <slug>] [--output <filename>] [--crop-ratio {4:3,16:9,1:1}]` | 自动排序拼接 `04_raw_clips` 内的所有视频，支持 4:3 居中无损裁切 |

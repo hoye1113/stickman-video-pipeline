@@ -4,15 +4,19 @@
 
 ---
 
-## 零、多项目矩阵管理规范 (Multi-Project Governance)
+## 零、多题材矩阵分层规范 (Multi-Genre Architecture Governance)
 
-项目采用**矩阵化工程隔离体系**：
-- 每一个独立视频主题保存在 `projects/<project_slug>/`（如 `projects/001_betrayal_and_split_soul/`）；
-- 每个项目拥有独立的 `01_research/` 至 `06_final_video/` 6大阶段目录与 `meta.json` 状态记录；
-- 创建新项目时统一运行脚手架：
-  ```powershell
-  python scripts/new_project.py <slug> --title-zh "<中文标题>" --title-en "<英文标题>" --ratio 4:3
-  ```
+项目采用**“核心底座（Core Engine） + 题材套件（Genre Presets） + 矩阵工程（Projects）”**的分层架构：
+- **核心底座 (`core/`)**：封装 FFmpeg 探针、自适应字幕压制、Unicode RTL 纠正与通用项目元数据模型；
+- **题材套件 (`presets/`)**：
+  - `stickman`：火柴人视频流水线（Google Flow / Veo、4:3 横屏、Style 2B、18 镜分镜）；
+  - `comic_story`：动态漫画故事流水线（剧本大纲、角色一致性锚点卡、画格生图、TTS 配音与运镜切片）；
+- **项目隔离 (`projects/<slug>/`)**：
+  - 每一个独立视频项目在 `meta.json` 中明确声明 `genre`（如 `"genre": "stickman"` 或 `"genre": "comic_story"`）；
+  - 创建新项目时统一运行脚手架：
+    ```powershell
+    python scripts/new_project.py <slug> --genre <stickman|comic_story> --title-zh "<中文标题>" --ratio 4:3
+    ```
 - 严禁在根目录直接堆放临时多媒体文件，所有中间产物严格归集在对应项目目录下。
 
 ---

@@ -46,29 +46,26 @@ stickman-videos/
 ├── .gitignore                     # Git 忽略配置（严格跨项目忽略大体积 MP4 二进制文件）
 ├── README.md                      # 本说明文档
 ├── AGENT.md                       # Agent 自动化接手与操作总纲
-├── docs/
-│   ├── prompt_safety_policy.md    # 提示词安全风控手册与替换对照表
-│   ├── workflow_spec.md           # 完整工作流规范与 Skill 契约说明
-│   ├── lessons_learned.md         # ★ 跨项目经验教训总纲（配额/bsk/水印/字幕/备份）
-│   └── agent_notes.md             # 历史交接备忘录
-├── projects/                      # 视频项目矩阵目录
-│   ├── _template/                 # 新建工程模板（包含标准 .gitkeep 与结构）
-│   ├── 001_betrayal_and_split_soul/ # 第1期：背叛与撕裂
-│   │   ├── 01_research/           # 阶段 1：科学事实检索成果归档
-│   │   ├── 02_director_proposal/  # 阶段 2：Phase A 导演预案（分镜表）
-│   │   ├── 03_gemini_prompts/     # 阶段 3：Phase B 提示词 (clips_safe/ 18镜4:3全集, _legacy_*)
-│   │   ├── 04_raw_clips/          # 阶段 4：生成收录的 18 段原始视频 (Git忽略)
-│   │   ├── 05_subtitles/          # 阶段 5：时间轴对齐的双语字幕文件 (narration.bilingual.srt)
-│   │   ├── 06_final_video/        # 阶段 6：最终 3 分钟高清成片 (Git忽略)
-│   │   └── meta.json              # 项目元数据与生成进度追踪
-│   └── 002_xxx/                   # 第2期及未来新主题项目
-├── skills/                        # 项目内置核心技能库
+├── core/                          # 【共享核心底座 (Core Engine)】所有题材共用
+│   ├── engine/
+│   │   └── ffmpeg_utils.py        # 探针、RTL 修复、自适应字幕压制底层
+│   └── project_base.py            # 跨题材项目模型、元数据解析与统一脚手架内核
+├── presets/                       # 【题材套件库 (Genre Presets)】
+│   ├── stickman/                  # 1. 火柴人题材套件 (template/, README.md)
+│   ├── comic_story/               # 2. 动态漫画故事套件 (template/, README.md)
+│   └── _template_guide.md         # 新题材套件接入指南
+├── projects/                      # 视频项目矩阵目录 (物理隔离)
+│   ├── 001_betrayal_and_split_soul/ # 第1期：背叛与撕裂 (genre: stickman, 4:3)
+│   └── 002_xxx/                   # 第2期及未来新题材项目
+├── skills/                        # 智能体导演技能库
 │   ├── directing-stickman-videos/ # 火柴人导演分镜与提示词契约
+│   ├── directing-comic-story/     # 动态漫画故事导演技能规范
 │   ├── embed-subtitles/           # FFmpeg 字幕烧录与 RTL 自动修复规则
 │   └── yichen-unified-search/     # 离线路由、事实核验与候选检索系统
-└── scripts/                       # 参数化音视频自动化脚本
-    ├── project_store.py           # 项目解析、meta.json 读写与路径统一
-    ├── new_project.py             # 一键脚手架新建项目
+├── docs/                          # 规范与安全风控文档
+└── scripts/                       # 命令行工具门面 (向后兼容，委托 core)
+    ├── project_store.py           # 项目统一存取门面
+    ├── new_project.py             # 一键脚手架新建项目 (支持 --genre)
     ├── split_prompts.py           # 拆分指定项目的提示词文件
     ├── download_clip.py           # Base64 直提浏览器当前生成的 Blob 视频
     ├── concat_clips.py            # FFmpeg 批量视频无缝拼接
@@ -81,9 +78,13 @@ stickman-videos/
 
 > 当 `projects/` 下存在多个项目时，除 `new_project.py` 外的所有脚本必须显式传 `--project <slug>`，否则脚本会报错并列出候选项目；项目唯一时可省略。
 
-### 1. 一键创建新视频主题
+### 1. 一键创建新项目 (支持题材指定)
 ```powershell
-python scripts/new_project.py 002_social_anxiety --title-zh "克服社交焦虑" --title-en "Mastering Social Anxiety" --ratio 4:3 --style "Style 2B (Cinematic Story)"
+# 创建火柴人视频项目 (默认)
+python scripts/new_project.py 002_social_anxiety --genre stickman --title-zh "克服社交焦虑" --title-en "Mastering Social Anxiety" --ratio 4:3
+
+# 创建动态漫画故事项目
+python scripts/new_project.py 002_rainy_detective --genre comic_story --title-zh "雨夜侦探" --title-en "The Rainy Night Detective" --ratio 4:3
 ```
 
 ### 2. 准备分镜、生成提示词并做安全审查
