@@ -1,5 +1,6 @@
 {
   "project_id": "template",
+  "genre": "stickman",
   "title_zh": "项目中文标题",
   "title_en": "Project English Title",
   "aspect_ratio": "4:3",
