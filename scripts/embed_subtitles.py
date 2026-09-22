@@ -54,12 +54,31 @@ if __name__ == "__main__":
     output_video = args.output
 
     if project:
+        # 根据不同题材规范自适应字幕与成片目录
+        if project.genre == "comic_story":
+            sub_stage = "05_voiceover_and_srt"
+            out_stage = "07_final_video"
+        else:
+            sub_stage = "05_subtitles"
+            out_stage = "06_final_video"
+
         if not input_video:
-            input_video = str(project.file("06_final_video", "stitched_raw.mp4"))
+            candidates = [
+                project.file(out_stage, "stitched_raw.mp4"),
+                project.file(out_stage, "story_stitched.mp4"),
+            ]
+            for cand in candidates:
+                if cand.exists():
+                    input_video = str(cand)
+                    break
+            if not input_video:
+                input_video = str(candidates[0])
+
         if not srt_path:
-            srts = sorted(glob.glob(str(project.file("05_subtitles", "*.srt"))))
-            srt_path = srts[0] if srts else str(project.file("05_subtitles", "narration.srt"))
+            srts = sorted(glob.glob(str(project.file(sub_stage, "*.srt"))))
+            srt_path = srts[0] if srts else str(project.file(sub_stage, "narration.srt"))
+
         if not output_video:
-            output_video = str(project.file("06_final_video", "final_subtitled.mp4"))
+            output_video = str(project.file(out_stage, "final_subtitled.mp4"))
 
     sys.exit(0 if burn_subtitles(input_video, srt_path, output_video, args.font_size, args.font_name, args.margin) else 1)

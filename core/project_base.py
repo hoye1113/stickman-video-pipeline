@@ -93,6 +93,11 @@ class Project:
         total = self.meta.get("total_clips")
         return total if isinstance(total, int) and total > 0 else None
 
+    @property
+    def total_panels(self):
+        total = self.meta.get("total_panels")
+        return total if isinstance(total, int) and total > 0 else None
+
     def clips(self):
         clips_dir = self.file("04_raw_clips")
         if not clips_dir.is_dir():
@@ -103,6 +108,21 @@ class Project:
             return int(num) if num.isdigit() else 10 ** 9
 
         return sorted(clips_dir.glob("clip_*.mp4"), key=sort_key)
+
+    def panels(self):
+        panels_dir = self.file("04_raw_panels")
+        if not panels_dir.is_dir():
+            return []
+
+        def sort_key(p):
+            num = p.stem.replace("panel_", "")
+            return int(num) if num.isdigit() else 10 ** 9
+
+        extensions = ("*.png", "*.jpg", "*.jpeg", "*.webp")
+        found = []
+        for ext in extensions:
+            found.extend(panels_dir.glob(ext))
+        return sorted(found, key=sort_key)
 
     def clip_indices(self):
         indices = []
@@ -126,12 +146,27 @@ class Project:
         self.meta["project_id"] = self.meta.get("project_id", self.slug)
         self.save_meta()
 
+    def record_panel(self, index):
+        generated = self.meta.setdefault("panels_generated", [])
+        if index not in generated:
+            generated.append(index)
+            generated.sort()
+        self.meta["project_id"] = self.meta.get("project_id", self.slug)
+        self.save_meta()
+
     def summary(self):
-        total = self.total_clips or "?"
         title = self.meta.get("title_zh") or self.meta.get("title_en") or ""
         status = self.meta.get("status", "unknown")
         genre = self.genre
-        return f"[{self.slug}] ({genre}) {title} | clips {len(self.clips())}/{total} | status: {status}"
+        if genre == "stickman":
+            total = self.total_clips or "?"
+            count_str = f"clips {len(self.clips())}/{total}"
+        elif genre == "comic_story":
+            total = self.total_panels or "?"
+            count_str = f"panels {len(self.panels())}/{total}"
+        else:
+            count_str = f"status: {status}"
+        return f"[{self.slug}] ({genre}) {title} | {count_str} | status: {status}"
 
 
 def resolve_project(slug=None, root=None):
@@ -167,18 +202,21 @@ def locate_template(genre=DEFAULT_GENRE, root=None):
     定位指定题材的骨架模板。
     优先级：
     1. presets/{genre}/template
-    2. projects/_template (向后兼容)
+    2. 若 genre 为 stickman，向后兼容允许 fallback 到 projects/_template
+    3. 其他非法或未知 genre 直接报错，禁止静默回退
     """
     root = Path(root) if root else repo_root()
     preset_template = presets_dir(root) / genre / "template"
     if preset_template.is_dir():
         return preset_template
 
-    legacy_template = projects_dir(root) / LEGACY_TEMPLATE_NAME
-    if legacy_template.is_dir():
-        return legacy_template
+    if genre == DEFAULT_GENRE:
+        legacy_template = projects_dir(root) / LEGACY_TEMPLATE_NAME
+        if legacy_template.is_dir():
+            return legacy_template
 
-    raise ProjectError(f"未找到题材 '{genre}' 的模板目录，检查 {preset_template} 或 {legacy_template}")
+    available = ", ".join(list_presets(root))
+    raise ProjectError(f"未找到题材 '{genre}' 的模板目录。可用题材：{available}")
 
 
 def create_project(slug, genre=DEFAULT_GENRE, title_zh="未命名主题", title_en="Untitled Project",

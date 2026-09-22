@@ -17,7 +17,8 @@ if __name__ == "__main__":
     parser.add_argument("--title-zh", default="未命名主题", help="Chinese title")
     parser.add_argument("--title-en", default="Untitled Project", help="English title")
     parser.add_argument("--ratio", default="4:3", choices=["4:3", "16:9", "9:16", "1:1"], help="Aspect ratio")
-    parser.add_argument("--style", default=None, help="Visual style (defaults to genre-specific style)")
+    parser.add_argument("--style", default=None,
+                        help="Visual style (defaults: stickman -> 'Style 2B (Cinematic Story)', comic_story -> 'Manga Ink & Watercolor')")
     parser.add_argument("--source", default="", help="Path to source material file")
 
     args = parser.parse_args()

@@ -80,7 +80,7 @@ def build_subtitles_filter(srt_path, font_size=26, font_name="Arial", margin=50,
     构建 Windows / POSIX 兼容的 FFmpeg subtitles 滤镜参数。
     PlayRes 必须与视频分辨率对齐，避免 libass 在竖屏等非默认比例下字号缩放异常。
     """
-    escaped_srt = os.path.abspath(srt_path).replace("\\", "/").replace(":", "\\:")
+    escaped_srt = os.path.abspath(srt_path).replace("\\", "/").replace(":", "\\:").replace("'", r"\'")
     res_part = f",PlayResX={video_size[0]},PlayResY={video_size[1]}" if video_size else ""
     sub_style = (
         f"FontSize={font_size},FontName={font_name}{res_part},"
