@@ -5,10 +5,21 @@ projects/**/04_raw_clips/*.mkv
 projects/**/04_raw_clips/*.mov
 projects/**/04_raw_clips/*.png
 projects/**/04_raw_clips/concat_list.txt
+projects/**/04_raw_panels/*.png
+projects/**/04_raw_panels/*.jpg
+projects/**/04_raw_panels/*.jpeg
+projects/**/04_raw_panels/*.webp
+projects/**/05_voiceover_and_srt/*.mp3
+projects/**/05_voiceover_and_srt/*.wav
+projects/**/06_animated_clips/*.mp4
 projects/**/06_final_video/*.mp4
 projects/**/06_final_video/*.webm
 projects/**/06_final_video/*.mkv
 projects/**/06_final_video/*.mov
+projects/**/07_final_video/*.mp4
+projects/**/07_final_video/*.webm
+projects/**/07_final_video/*.mkv
+
 
 # Global media ignores
 *.mp4

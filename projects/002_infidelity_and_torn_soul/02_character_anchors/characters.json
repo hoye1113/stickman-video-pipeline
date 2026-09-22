@@ -1,0 +1,16 @@
+{
+  "project_characters": {
+    "protagonist_husband": {
+      "name": "周/刘/李综合心理化身（出轨丈夫）",
+      "role": "中青年职场男性 / 心理撕裂者",
+      "appearance_prompt": "A 35-year-old Asian man in a crumpled grey dress shirt and dark coat, messy black hair, weary complex expression, dark bags under eyes, high psychological tension",
+      "fixed_style_anchor": "masterpiece, cinematic noir graphic novel, vintage manga ink illustration, deep chiaroscuro lighting, heavy shadows with moody yellow-lamp rim light, 4:3 aspect ratio"
+    },
+    "wife": {
+      "name": "妻子（受伤但坚毅）",
+      "role": "妻子 / 规则重建者",
+      "appearance_prompt": "A poised Asian woman in an elegant dark knit sweater, sharp wounded gaze, standing across the dimly lit room, clear-eyed, resolute and composed",
+      "fixed_style_anchor": "masterpiece, cinematic noir graphic novel, vintage manga ink illustration, deep chiaroscuro lighting, 4:3 aspect ratio"
+    }
+  }
+}
