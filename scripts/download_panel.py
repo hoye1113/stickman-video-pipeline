@@ -35,10 +35,10 @@ except ImportError:
 
 def build_extract_js():
     """
-    DOM 注入脚本：精确定位页面中生成的最新画格图像并转为 Base64
+    DOM 注入脚本：精确定位页面中生成的最新画格图像 URL
     """
     return """
-(async () => {
+(() => {
   const imgs = Array.from(document.querySelectorAll('img'));
   // 过滤小图标与头像，优先匹配大尺寸画格或带签名图片
   const validImgs = imgs.filter((img) => {
@@ -49,6 +49,7 @@ def build_extract_js():
     return (
       w >= 256 ||
       h >= 256 ||
+      src.includes('flow-content.google') ||
       src.includes('googleusercontent.com') ||
       src.startsWith('blob:')
     );
@@ -56,21 +57,14 @@ def build_extract_js():
 
   const target = validImgs.length ? validImgs[validImgs.length - 1] : null;
   if (!target) return 'no_image';
-
-  const src = target.currentSrc || target.src;
-  const res = await fetch(src, { credentials: 'include' });
-  const blob = await res.blob();
-
-  return new Promise((resolve) => {
-    const reader = new FileReader();
-    reader.onloadend = () => resolve(reader.result);
-    reader.readAsDataURL(blob);
-  });
+  return target.currentSrc || target.src;
 })()
 """.strip()
 
 
-def fetch_image_base64(session_id, tab_id=None):
+def fetch_image_bytes(session_id, tab_id=None):
+    import urllib.request
+
     cmd = ["bsk", "evaluate", "--session", session_id]
     if tab_id:
         cmd += ["--tab-id", str(tab_id)]
@@ -81,22 +75,30 @@ def fetch_image_base64(session_id, tab_id=None):
         print("[错误] bsk evaluate 执行失败:", res.stderr, file=sys.stderr)
         return None
 
-    data_url = res.stdout.strip()
-    if data_url == "no_image":
+    src_or_data = res.stdout.strip()
+    if not src_or_data or src_or_data == "no_image":
         print("[错误] 页面中未探测到符合条件的画格图片 (no_image)", file=sys.stderr)
         return None
 
-    if "base64," not in data_url:
-        print(f"[错误] 未预期的响应数据: {data_url[:150]}", file=sys.stderr)
-        return None
+    if src_or_data.startswith("http://") or src_or_data.startswith("https://"):
+        req = urllib.request.Request(
+            src_or_data,
+            headers={"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"},
+        )
+        with urllib.request.urlopen(req, timeout=30) as resp:
+            return resp.read()
 
-    _, b64_data = data_url.split("base64,", 1)
-    return base64.b64decode(b64_data)
+    if "base64," in src_or_data:
+        _, b64_data = src_or_data.split("base64,", 1)
+        return base64.b64decode(b64_data)
+
+    print(f"[错误] 未预期的响应数据: {src_or_data[:150]}", file=sys.stderr)
+    return None
 
 
 def download_panel(session_id, out_path, project=None, out_filename=None, tab_id=None):
     out_path = Path(out_path).resolve()
-    img_bytes = fetch_image_base64(session_id, tab_id)
+    img_bytes = fetch_image_bytes(session_id, tab_id)
     if img_bytes is None:
         return False
 
