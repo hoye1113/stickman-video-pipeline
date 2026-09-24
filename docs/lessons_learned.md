@@ -100,3 +100,70 @@
     - **完备自闭环**：`03_gemini_prompts/clips_safe/` 必须完整包含 1 至 18 镜全量 Prompt 文件，且全部满足 Style 2B + 4:3 + 安全词隐喻转译标准。
     - **历史版本归档**：过时的 Style 1 与 9:16 提示词统一隔离至 `_legacy_style1_archive/` 与 `_legacy_9_16_archive/`，从生产主路径彻底物理剥离。
 
+---
+
+## 八、动态漫画与图文分镜：角色一致性、场景锚定与画风防漂移铁律
+
+### 24. Project 002 视觉失控惨痛复盘（Disaster Analysis）
+在项目 `002_infidelity_and_torn_soul` 首轮自动化生成中，出现了严重的视觉撕裂事故：
+1. **画风随机突变**：
+   - Panel 01：黑白墨线日漫风（30 岁东亚卫衣男）；
+   - Panel 05：彩色霓虹居酒屋美漫风（50 岁花白头发西装男）；
+   - **Panel 11：彻底突变为写实真人摄影（欧美男性冷水洗脸实拍相片）**；
+   - Panel 13：生成了带有英文对话气泡（"We did it, Elias."）的复古报刊连环画。
+2. **人设与种族彻底漂移**：
+   - 同一部短片中，主角男主在 30 岁东亚男性、50 岁日系大叔、欧美胡茬糙汉、欧美老年老兵之间剧烈跳变；
+   - 观众完全无法识别这是同一个人在不同阶段的心理历程，叙事信度归零。
+
+### 25. 根因拆解（Why Did It Fail?）
+1. **致命失误：跳过了【视觉定妆先行】闸门（Skipped Pre-flight Visual Anchor Gate）**：
+   - 尽管建立了 `02_character_anchors/characters.json`，但**没有在生分镜前真正出一张基准定妆图并冻结落盘**；
+   - 没有角色基准图作为视觉 SSOT，后续每一张分镜全都在用大模型盲盒抽卡。
+2. **提示词拼装漏洞（Prompt Leakage & Omission）**：
+   - 单镜提示词由人工手写在分镜表中，未通过程序强制编译装配；
+   - Panel 11 漏写了 `Asian man`、`manga ink illustration`，而写了 `cinematic side lighting`，`cinematic` 一词在无画风约束时高概率触发大模型的真人电影摄影权重；
+   - Panel 13 写了 `master comic book final panel`，模型直接匹配并生成了欧美漫画中的实体对话气泡与英文台词。
+3. **未约束负向反向契约（Missing Negative Contracts）**：
+   - 未在提示词中加入 `no photorealism, no real human photos, no 3d, no text, no speech bubbles, no dialogue balloons`；
+   - 导致大模型把“漫画”理解为带台词气泡的出版物，把“写实/电影感”理解为单反实拍。
+4. **未启用 Google Flow 官方角色与垫图能力**：
+   - Google Flow 原生具备 `Characters (@tag)` 与 `Add Asset (参考图垫图)` 能力，纯文本驱动自然无法保证跨画格一致性。
+
+### 26. 动态漫画防漂移五步 SOP 铁律（Mandatory Anti-Drift SOP）
+
+#### 第一步：角色与场景定妆先行（Visual Anchors First）
+任何分镜画格出图前，必须严格执行以下前置动作：
+1. **生成并冻结主角定妆图**：
+   - 输出正脸/半身 4:3 概念定妆图，保存至 `02_character_anchors/husband_anchor.png`、`wife_anchor.png`；
+   - 锁定具体特征：如 `A 35-year-old Asian man, messy black hair, tired dark eye circles, crumpled grey dress shirt`。
+2. **生成并冻结核心场景图**：
+   - 输出关键环境参考图（如 `bedroom_anchor.png`、`livingroom_anchor.png`），锁定光影基调。
+3. **【门禁】定妆图必须经目视预审确认后，方可启动分镜批量出图。**
+
+#### 第二步：提示词强制组装器（Prompt Assembler Formula）
+**严禁任何 Agent 或人工直接手写裸 Prompt！**
+所有分镜提示词必须由自动化工具（如 `scripts/assemble_prompts.py`）严格按照以下公式强制编译拼装：
+$$\text{Final Prompt} = [\text{角色锚点特征}] + [\text{分镜专属构图动作}] + [\text{全局统一画风锁}] + [\text{负向防漂移契约}]$$
+
+- **角色锚点示例**：`A 35-year-old Asian man in crumpled grey dress shirt, messy black hair, dark bags under eyes,`
+- **分镜动作示例**：`splashing cold water on his face in front of a bathroom mirror at dawn, looking intently into his reflection, determined gaze,`
+- **全局画风锁示例**：`masterpiece, cinematic noir graphic novel, vintage monochrome manga ink illustration, fine lineart cross-hatching, deep chiaroscuro lighting, heavy shadows with warm yellow lamp rim light, 4:3 aspect ratio,`
+- **负向排他契约示例**：`no photorealism, no real human photography, no 3d render, no text, no words, no speech bubbles, no dialogue balloons, clean artwork.`
+
+#### 第三步：Google Flow 垫图与角色参考驱动（Image-to-Image / Reference）
+1. 在 Google Flow 中，将 `husband_anchor.png` 作为角色添加到工作台，或在提示词输入框中通过【添加素材 (Add Asset)】上传定妆图作为参考；
+2. 基于参考图（Image-to-Image）结合组装后的分镜提示词生成，让大模型以定妆图的面部与画风为骨架进行姿态外推。
+
+#### 第四步：画面无文本契约（No Visual Text Contract）
+1. 动态漫画的故事叙述与心理独白**100% 由底部高保真白字黑边字幕（`embed_subtitles`）承担**；
+2. 画面内绝对禁止出现任何形式的对话框、手写体文字、英文拟声词或气泡，违者直接视为废片。
+
+#### 第五步：全片目视一致性预检门禁（Consistency Review Gate）
+1. 批量生成完成后，必须先生成一张包含所有画格的矩阵预览拼图；
+2. 执行三项红线检查：
+   - [ ] 画风一致性：是否全片均为统一的黑白墨线漫画（无彩色突变、无真人实拍突变）？
+   - [ ] 角色一致性：主角五官、发型、服装、年龄、人种是否完全同一？
+   - [ ] 画面纯净度：是否存在生成的乱码文字或对话气泡？
+3. 检查 100% 通过后，才允许进入 `animate_panels.py` 和 `assemble_comic.py` 后期合成。
+
+
