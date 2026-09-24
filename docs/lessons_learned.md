@@ -161,9 +161,40 @@ $$\text{Final Prompt} = [\text{角色锚点特征}] + [\text{分镜专属构图�
 #### 第五步：全片目视一致性预检门禁（Consistency Review Gate）
 1. 批量生成完成后，必须先生成一张包含所有画格的矩阵预览拼图；
 2. 执行三项红线检查：
-   - [ ] 画风一致性：是否全片均为统一的黑白墨线漫画（无彩色突变、无真人实拍突变）？
+   - [ ] 画风一致性：是否全片均为统一的美术风格（无真人实拍突变）？
    - [ ] 角色一致性：主角五官、发型、服装、年龄、人种是否完全同一？
    - [ ] 画面纯净度：是否存在生成的乱码文字或对话气泡？
 3. 检查 100% 通过后，才允许进入 `animate_panels.py` 和 `assemble_comic.py` 后期合成。
+
+---
+
+## 9. 动态漫画从黑白升级彩色与运镜平滑去抖技术复盘 (Color Comic & Smooth Motion Engine)
+
+### 27. 黑白画风 vs 全彩漫剧（Modern Webtoon Color）的视觉认知升级
+- **教训与痛点**：
+  - 黑白墨线排线虽然技术上极度安全（有效杜绝了色彩漂移），但在中长视频（>3分钟）连续播放时，单色调会让普通观众感到压抑、枯燥、陈旧，缺乏短视频与现代移动端视觉所必需的“新鲜感与色彩冲击力”。
+  - 现代短剧与漫画解说用户更习惯接受韩国高精 Webtoon、全彩条漫与电影感色彩光影（Atmospheric Color Lighting）。
+- **破局方案：全彩漫画风格锁 (Webtoon Color Lock)**：
+  - 必须升级画风锁为：`masterpiece, modern color webtoon comic style, expressive colored graphic novel art, clean crisp lineart, rich cinematic color palette, dramatic moody chiaroscuro lighting, emotional warm and cool tones, 4:3 aspect ratio`；
+  - **关键防漂移红线**：即便上色，**负向排他契约绝不可放松**（必须依然锁定 `no photorealism, no real human photography, no 3d render, no realistic photo`），以保证上色依然是“纯正二次元/高精全彩漫画质感”，绝不滑向真人影楼实拍！
+
+### 28. 视频运镜抖动根因剖析与平滑消除方案 (Smooth Motion Engine)
+- **教训与痛点**：
+  - 用户反馈视频存在明显的“抖动效果”。审查代码与成片后发现存在两大抖动来源：
+    1. **人为振荡算法（Algorithm Jitter）**：
+       - `breathing_drift` 原本使用了 `4*cos(2*PI*on/cycle_frames)` 和 `3*sin(...)` 周期摆动，本意是模拟呼吸感，但在 24fps 慢速长镜头下表现为人眼厌烦的“机械式抽搐”；
+       - `shake` 包含了高频随机震荡，加剧了画面晃动。
+    2. **FFmpeg zoompan 亚像素阶梯截断（Sub-pixel Quantization Jitter）**：
+       - 当输入分辨率与输出分辨率一致（`1440x1080 -> 1440x1080`）时，`zoompan` 内部浮点步进（如每帧位移 0.15 像素）会被量化截断到整数像素，造成连续微小的像素级阶梯式跳帧（Stair-stepping Jitter）。
+- **彻底消除抖动的工程级解决方案**：
+  1. **彻底废除晃动滤镜**：
+     - 将 `breathing_drift` 彻底重构为极度平缓、单向微移的“丝滑微推”（1.0 -> 1.03x 慢速直线微推）或“稳态微推”，彻底移除任何 `sin/cos` 周期晃动参数；
+     - 故事叙事向动态漫画只使用 4 种确定性、单向匀速运镜：`slow_push`（沉浸前推）、`slow_pull`（宏观拉远）、`pan_left`（平稳左移）、`pan_right`（平稳右移）。
+  2. **超采样抗抖动滤镜链（2X Supersampling Anti-Jitter Pipeline）**：
+     - 在执行 `zoompan` 之前，强制将原始图像按 2 倍超分辨率拉伸（如 `scale=2880:2160`）；
+     - `zoompan` 在 2880x2160 的高密度画布上执行高精度微小步进运算；
+     - `zoompan` 缩放裁剪完成后，再以高精度双三次降采样回目标画幅 `s=1440x1080`；
+     - 这一技术将位移精度提升 200%，彻底消除了像素取整导致的画面抽搐与微抖。
+
 
 

@@ -20,21 +20,32 @@ if str(REPO_ROOT) not in sys.path:
 from core.project_base import resolve_project
 from scripts.generate_tts import parse_storyboard_table
 
-GLOBAL_STYLE_LOCK = (
+GLOBAL_STYLE_LOCK_MONO = (
     "masterpiece, fine lineart, vintage monochrome manga ink drawing, "
     "rich cross-hatching shadows, deep chiaroscuro lighting, "
     "4:3 aspect ratio"
 )
 
-NEGATIVE_CONSTRAINTS = (
+NEGATIVE_CONSTRAINTS_MONO = (
     "no photorealism, no real human photography, no realistic photo, no 3d render, "
     "no color, no vibrant colors, no rainbow colors, no text, no words, no speech bubbles, "
     "no dialogue balloons, no English captions, clean high contrast monochrome comic artwork"
 )
 
+GLOBAL_STYLE_LOCK_COLOR = (
+    "masterpiece, clean crisp lineart, modern color webtoon comic style, "
+    "rich cinematic color palette, dramatic moody chiaroscuro lighting, emotional warm and cool tones, "
+    "4:3 aspect ratio"
+)
+
+NEGATIVE_CONSTRAINTS_COLOR = (
+    "no photorealism, no real human photography, no realistic photo, no 3d render, "
+    "no monochrome, no black and white, no dull greyscale, no text, no words, no speech bubbles, "
+    "no dialogue balloons, no English captions, clean high contrast colorful comic artwork"
+)
 
 
-def assemble_panel_prompt(action_desc: str, character_desc: str, style_lock: str = GLOBAL_STYLE_LOCK, negatives: str = NEGATIVE_CONSTRAINTS) -> str:
+def assemble_panel_prompt(action_desc: str, character_desc: str, style_lock: str, negatives: str) -> str:
     """按四要素标准拼装自包含提示词"""
     parts = []
     
@@ -60,6 +71,7 @@ def assemble_panel_prompt(action_desc: str, character_desc: str, style_lock: str
 def main():
     parser = argparse.ArgumentParser(description="批量编译组装动态漫画防漂移提示词")
     parser.add_argument("--project", "-p", required=True, help="项目 slug 或目录路径")
+    parser.add_argument("--color", action="store_true", help="采用现代全彩条漫/Webtoon风格编译提示词")
     parser.add_argument("--dry-run", action="store_true", help="仅打印拼装结果，不写盘")
     args = parser.parse_args()
 
@@ -129,11 +141,14 @@ def main():
         )
         cleaned_action = re.sub(r"\s+", " ", cleaned_action).strip(", ")
 
+        style_lock = GLOBAL_STYLE_LOCK_COLOR if args.color else GLOBAL_STYLE_LOCK_MONO
+        negatives = NEGATIVE_CONSTRAINTS_COLOR if args.color else NEGATIVE_CONSTRAINTS_MONO
+
         compiled = assemble_panel_prompt(
             action_desc=cleaned_action,
             character_desc=char_anchor,
-            style_lock=GLOBAL_STYLE_LOCK,
-            negatives=NEGATIVE_CONSTRAINTS
+            style_lock=style_lock,
+            negatives=negatives
         )
 
         out_file = prompts_dir / f"{pid}.txt"

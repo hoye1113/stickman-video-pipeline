@@ -72,31 +72,54 @@ if __name__ == "__main__":
     parser.add_argument("--session", "-s", required=True, help="bsk 会话 ID")
     parser.add_argument("--project", "-p", default="002_infidelity_and_torn_soul", help="项目 slug")
     parser.add_argument("--role", "-r", default="husband", help="角色名 (husband / wife)")
+    parser.add_argument("--color", action="store_true", help="生成现代全彩条漫/Webtoon风格定妆图")
     args = parser.parse_args()
     
     project = resolve_project(args.project)
     out_dir = project.file("02_character_anchors")
     
     if args.role == "husband":
-        prompt = (
-            "A 35-year-old Asian man, weary exhausted expression, messy natural black parted hair, "
-            "prominent dark under-eye circles, dressed in a slightly crumpled white dress shirt under an open charcoal coat, "
-            "front view, masterpiece, fine lineart, vintage monochrome manga ink drawing, rich cross-hatching shadows, "
-            "deep chiaroscuro lighting, solid white background, "
-            "no photorealism, no real human photography, no 3d render, no color, no vibrant colors, no text, "
-            "no words, no speech bubbles, no dialogue balloons, 4:3 aspect ratio"
-        )
-        out_file = out_dir / "husband_anchor.png"
+        if args.color:
+            prompt = (
+                "A 35-year-old Asian man, weary exhausted expression, messy natural black parted hair, "
+                "prominent dark under-eye circles, wearing a slightly crumpled white dress shirt under an open charcoal navy overcoat, "
+                "front view, masterpiece, clean crisp lineart, modern color webtoon comic style, rich cinematic color palette, "
+                "dramatic moody chiaroscuro lighting, emotional warm and cool tones, solid soft background, "
+                "no photorealism, no real human photography, no 3d render, no monochrome, no black and white, no text, "
+                "no words, no speech bubbles, no dialogue balloons, 4:3 aspect ratio"
+            )
+            out_file = out_dir / "husband_color_anchor.png"
+        else:
+            prompt = (
+                "A 35-year-old Asian man, weary exhausted expression, messy natural black parted hair, "
+                "prominent dark under-eye circles, dressed in a slightly crumpled white dress shirt under an open charcoal coat, "
+                "front view, masterpiece, fine lineart, vintage monochrome manga ink drawing, rich cross-hatching shadows, "
+                "deep chiaroscuro lighting, solid white background, "
+                "no photorealism, no real human photography, no 3d render, no color, no vibrant colors, no text, "
+                "no words, no speech bubbles, no dialogue balloons, 4:3 aspect ratio"
+            )
+            out_file = out_dir / "husband_anchor.png"
     elif args.role == "wife":
-        prompt = (
-            "A 32-year-old poised Asian woman, sharp wounded resolute gaze, shoulder-length straight black hair, "
-            "wearing an elegant dark knit sweater, front view, "
-            "masterpiece, fine lineart, vintage monochrome manga ink drawing, rich cross-hatching shadows, "
-            "deep chiaroscuro lighting, solid white background, "
-            "no photorealism, no real human photography, no 3d render, no color, no vibrant colors, no text, "
-            "no words, no speech bubbles, no dialogue balloons, 4:3 aspect ratio"
-        )
-        out_file = out_dir / "wife_anchor.png"
+        if args.color:
+            prompt = (
+                "A 32-year-old poised Asian woman, sharp wounded resolute gaze, shoulder-length straight black hair, "
+                "wearing an elegant burgundy dark knit sweater, front view, "
+                "masterpiece, clean crisp lineart, modern color webtoon comic style, rich cinematic color palette, "
+                "dramatic moody chiaroscuro lighting, emotional warm and cool tones, solid soft background, "
+                "no photorealism, no real human photography, no 3d render, no monochrome, no black and white, no text, "
+                "no words, no speech bubbles, no dialogue balloons, 4:3 aspect ratio"
+            )
+            out_file = out_dir / "wife_color_anchor.png"
+        else:
+            prompt = (
+                "A 32-year-old poised Asian woman, sharp wounded resolute gaze, shoulder-length straight black hair, "
+                "wearing an elegant dark knit sweater, front view, "
+                "masterpiece, fine lineart, vintage monochrome manga ink drawing, rich cross-hatching shadows, "
+                "deep chiaroscuro lighting, solid white background, "
+                "no photorealism, no real human photography, no 3d render, no color, no vibrant colors, no text, "
+                "no words, no speech bubbles, no dialogue balloons, 4:3 aspect ratio"
+            )
+            out_file = out_dir / "wife_anchor.png"
     else:
         print(f"未知角色: {args.role}")
         sys.exit(1)

@@ -20,9 +20,9 @@ description: Use when turning story outlines, novels, urban legends, mysteries, 
 * **故事源文本 (Source Story/Script)**：小说、悬疑短篇、都市传说或自述独白。
 * **画幅比例 (Aspect Ratio)**：`4:3`（经典漫画黄金画格，推荐默认）或 `16:9`。
 * **漫画画风基准 (Comic Art Style)**：
-  - `Manga Ink & Dramatic Shadow`（黑白高对比墨线，极富张力的网点与阴影，推荐默认）
+  - `Modern Webtoon Color & Atmospheric Lighting`（全彩韩漫/现代高精条漫风格，明朗线条、电影级情绪光影与冷暖氛围，推荐现代流行默认）
+  - `Manga Ink & Dramatic Shadow`（黑白高对比墨线，极富张力的网点与阴影，适合纯悬疑短篇）
   - `Vintage Noir Graphic Novel`（复古美漫/侦探黑色电影风，低饱和水彩与暗调光影）
-  - `Modern Webtoon Color`（全彩韩漫/现代数码条漫风格，明快线条与鲜艳氛围光）
 * **核心角色锚点 (Character Anchors)**：主角固定长相、发型、代表性服装与显著特征。
 * **讲故事音色与基调 (Narrator Persona)**：沉稳叙述、悬疑低语、情感起伏等。
 
@@ -65,10 +65,10 @@ description: Use when turning story outlines, novels, urban legends, mysteries, 
 3. **旁白/台词**：纯文案，无括号动作提示，便于直接送入 TTS 语音引擎；
 4. **预估时长**：根据台词字数测算（中文约 3.5~4 字/秒）；
 5. **镜头运镜意图 (Camera Motion Intent)**：
-   - `Slow Push (慢速推进)`：从全景缓慢向前推 5%~10%，营造压抑或沉浸感；
-   - `Snap Zoom (特写疾推)`：0.3 秒内快速推至角色眼神或关键道具；
-   - `Pan Horizontal (平移扫镜)`：从背景环境平滑摇镜至人物侧脸；
-   - `Breathing Drift (呼吸微晃)`：极微弱的镜头漂移，给画面生命力。
+   - `Slow Push (沉浸慢推)`：全景向主角面部或关键信息缓慢推进 5%~10%（严禁正弦振荡，保持单向超采样平滑）；
+   - `Slow Pull (宏观拉远)`：从特写平稳拉远至环境全貌，营造疏离或唏嘘感；
+   - `Pan Horizontal (平稳横移)`：水平方向匀速移动，扫视环境细节或双人对峙；
+   - **【去抖铁律】**：严禁在叙事漫剧中引入 `sin/cos` 周期晃动（如呼吸抖动、震屏），所有运镜必须通过 2X 超采样执行抗亚像素阶梯抖动。
 
 ### 3. 提示词编译器自动组装 (`03_panel_prompts/panel_XX.txt`)
 **严禁人工手写各个分镜的自由提示词！**

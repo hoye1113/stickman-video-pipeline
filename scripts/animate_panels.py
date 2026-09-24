@@ -38,85 +38,75 @@ DEFAULT_FPS = 24
 
 def build_motion_filter(motion, duration, width, height, fps=24):
     """
-    根据运镜意图构建精确的 FFmpeg scale + crop + zoompan 滤镜链。
-    保证输入任意比例图片均自适应填充画布，且运镜平滑无跳帧。
+    根据运镜意图构建精确的 FFmpeg scale + crop + zoompan + supersample 滤镜链。
+    采用 2X 超采样 (Supersampling) 抗亚像素阶梯抖动，并彻底剔除任何 sin/cos 周期性剧烈晃动，
+    实现专业电影级丝滑、平稳、无抽搐的镜头推拉与横移。
     """
     total_frames = max(1, int(round(fps * duration)))
     motion_clean = motion.lower().replace("-", "_").strip()
 
-    # 第一阶段：按比例缩放并居中裁剪，使输入严格匹配画布大小，防止 zoompan 默认降分辨率
-    pre_filter = f"scale={width}:{height}:force_original_aspect_ratio=increase,crop={width}:{height}"
+    # 第一阶段：2X 超采样预缩放（2880x2160），在更高像素网格上计算位移，消除量化跳帧
+    super_w = width * 2
+    super_h = height * 2
+    pre_filter = f"scale={super_w}:{super_h}:force_original_aspect_ratio=increase,crop={super_w}:{super_h}"
 
-    # 第二阶段：构建 zoompan 参数
+    # 第二阶段：构建纯线性、平稳平滑的 zoompan 坐标与缩放
     if motion_clean in ("slow_push", "zoom_in", "push"):
-        zoom_step = 0.15 / total_frames
-        z_expr = f"min(zoom+{zoom_step:.6f},1.15)"
+        # 匀速慢速推入 (1.0 -> 1.08)，沉浸聚焦
+        zoom_step = 0.08 / total_frames
+        z_expr = f"min(zoom+{zoom_step:.6f},1.08)"
         x_expr = "iw/2-(iw/zoom/2)"
         y_expr = "ih/2-(ih/zoom/2)"
 
     elif motion_clean in ("slow_pull", "zoom_out", "pull"):
-        zoom_step = 0.15 / total_frames
-        z_expr = f"if(eq(on,1),1.15,max(1.0,zoom-{zoom_step:.6f}))"
+        # 匀速慢速拉远 (1.08 -> 1.0)，营造疏离与唏嘘感
+        zoom_step = 0.08 / total_frames
+        z_expr = f"if(eq(on,1),1.08,max(1.0,zoom-{zoom_step:.6f}))"
         x_expr = "iw/2-(iw/zoom/2)"
         y_expr = "ih/2-(ih/zoom/2)"
 
     elif motion_clean in ("pan_left", "left"):
-        # 放大 1.18x，从最右侧横摇至最左侧
-        z_expr = "1.18"
+        # 放大 1.10x，从右向左匀速平稳横移
+        z_expr = "1.10"
         x_expr = f"(iw-iw/zoom)*(1.0-on/{total_frames})"
         y_expr = "ih/2-(ih/zoom/2)"
 
     elif motion_clean in ("pan_right", "right"):
-        # 放大 1.18x，从最左侧横摇至最右侧
-        z_expr = "1.18"
+        # 放大 1.10x，从左向右匀速平稳横移
+        z_expr = "1.10"
         x_expr = f"(iw-iw/zoom)*(on/{total_frames})"
         y_expr = "ih/2-(ih/zoom/2)"
 
-    elif motion_clean in ("pan_up", "up"):
-        # 放大 1.18x，从底部向上摇
-        z_expr = "1.18"
-        x_expr = "iw/2-(iw/zoom/2)"
-        y_expr = f"(ih-ih/zoom)*(1.0-on/{total_frames})"
-
-    elif motion_clean in ("pan_down", "down"):
-        # 放大 1.18x，从顶部向下摇
-        z_expr = "1.18"
-        x_expr = "iw/2-(iw/zoom/2)"
-        y_expr = f"(ih-ih/zoom)*(on/{total_frames})"
-
     elif motion_clean in ("breathing_drift", "drift", "breathe"):
-        # 呼吸微幅缩放 (1.02 ~ 1.05) + 轻微正弦水平上下浮动，赋予静态角色生命感
-        cycle_frames = max(24, int(fps * 2.5))
-        z_expr = f"1.035+0.015*sin(2*PI*on/{cycle_frames})"
-        x_expr = f"iw/2-(iw/zoom/2)+4*cos(2*PI*on/{cycle_frames})"
-        y_expr = f"ih/2-(ih/zoom/2)+3*sin(2*PI*on/{cycle_frames})"
-
-    elif motion_clean in ("snap_zoom", "snap", "impact"):
-        # 前 30% 快速推入特写至 1.25x，后 70% 极慢平推
-        snap_f = max(6, int(total_frames * 0.28))
-        rem_f = max(1, total_frames - snap_f)
-        z_expr = f"if(lte(on,{snap_f}),1.0+0.22*(on/{snap_f}),1.22+0.03*((on-{snap_f})/{rem_f}))"
+        # 彻底废除 sin/cos 周期晃动！重构为极度平缓、沉稳的微推 (1.00 -> 1.04)
+        zoom_step = 0.04 / total_frames
+        z_expr = f"min(zoom+{zoom_step:.6f},1.04)"
         x_expr = "iw/2-(iw/zoom/2)"
         y_expr = "ih/2-(ih/zoom/2)"
 
-    elif motion_clean in ("shake", "earthquake"):
-        # 镜头剧烈微震（紧张、爆炸或受击场景）
-        z_expr = "1.08"
-        x_expr = "iw/2-(iw/zoom/2)+5*sin(13*on)"
-        y_expr = "ih/2-(ih/zoom/2)+4*cos(17*on)"
+    elif motion_clean in ("snap_zoom", "snap", "impact"):
+        # 前段平滑缓动推入至 1.10x，后段稳态慢推，彻底移除剧烈弹跳
+        snap_f = max(6, int(total_frames * 0.35))
+        rem_f = max(1, total_frames - snap_f)
+        z_expr = f"if(lte(on,{snap_f}),1.0+0.08*(on/{snap_f}),1.08+0.02*((on-{snap_f})/{rem_f}))"
+        x_expr = "iw/2-(iw/zoom/2)"
+        y_expr = "ih/2-(ih/zoom/2)"
 
     else:
-        # static / none
+        # static / none: 稳态居中展示
         z_expr = "1.0"
         x_expr = "iw/2-(iw/zoom/2)"
         y_expr = "ih/2-(ih/zoom/2)"
 
     zoompan_arg = (
         f"zoompan=z='{z_expr}':x='{x_expr}':y='{y_expr}':d={total_frames}:"
-        f"s={width}x{height}:fps={fps}"
+        f"s={super_w}x{super_h}:fps={fps}"
     )
 
-    return f"{pre_filter},{zoompan_arg}"
+    # 第三阶段：高品质 Lanczos 降采样回目标画布，平滑边缘并消除微小像素锯齿
+    post_filter = f"scale={width}:{height}:flags=lanczos"
+
+    return f"{pre_filter},{zoompan_arg},{post_filter}"
 
 
 def render_panel_clip(

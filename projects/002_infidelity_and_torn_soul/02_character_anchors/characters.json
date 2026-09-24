@@ -3,14 +3,16 @@
     "protagonist_husband": {
       "name": "周/刘/李综合心理化身（出轨丈夫）",
       "role": "中青年职场男性 / 心理撕裂者",
-      "appearance_prompt": "A 35-year-old Asian man, weary exhausted expression, messy natural black parted hair, prominent dark under-eye circles, wearing a slightly crumpled white dress shirt under an open charcoal coat",
-      "fixed_style_anchor": "masterpiece, fine lineart, vintage monochrome manga ink drawing, rich cross-hatching shadows, deep chiaroscuro lighting, 4:3 aspect ratio"
+      "appearance_prompt": "A 35-year-old Asian man, weary exhausted expression, messy natural black parted hair, prominent dark under-eye circles, wearing a slightly crumpled white dress shirt under an open charcoal navy overcoat",
+      "monochrome_style_anchor": "masterpiece, fine lineart, vintage monochrome manga ink drawing, rich cross-hatching shadows, deep chiaroscuro lighting, 4:3 aspect ratio",
+      "color_style_anchor": "masterpiece, clean crisp lineart, modern color webtoon comic style, rich cinematic color palette, dramatic moody chiaroscuro lighting, emotional warm and cool tones, 4:3 aspect ratio"
     },
     "wife": {
       "name": "妻子（受伤但坚毅）",
       "role": "妻子 / 规则重建者",
-      "appearance_prompt": "A 32-year-old poised Asian woman, sharp wounded resolute gaze, shoulder-length straight black hair, wearing an elegant dark knit sweater",
-      "fixed_style_anchor": "masterpiece, fine lineart, vintage monochrome manga ink drawing, rich cross-hatching shadows, deep chiaroscuro lighting, 4:3 aspect ratio"
+      "appearance_prompt": "A 32-year-old poised Asian woman, sharp wounded resolute gaze, shoulder-length straight black hair, wearing an elegant burgundy dark knit sweater",
+      "monochrome_style_anchor": "masterpiece, fine lineart, vintage monochrome manga ink drawing, rich cross-hatching shadows, deep chiaroscuro lighting, 4:3 aspect ratio",
+      "color_style_anchor": "masterpiece, clean crisp lineart, modern color webtoon comic style, rich cinematic color palette, dramatic moody chiaroscuro lighting, emotional warm and cool tones, 4:3 aspect ratio"
     }
   }
 }

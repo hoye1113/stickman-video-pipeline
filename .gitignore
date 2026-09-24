@@ -10,6 +10,7 @@ projects/**/04_raw_panels/*.jpg
 projects/**/04_raw_panels/*.jpeg
 projects/**/04_raw_panels/*.webp
 projects/**/04_raw_panels_legacy_backup/
+projects/**/04_raw_panels_mono_backup/
 projects/**/05_voiceover_and_srt/*.mp3
 projects/**/05_voiceover_and_srt/*.wav
 projects/**/06_animated_clips/*.mp4
