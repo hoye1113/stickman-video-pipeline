@@ -151,8 +151,9 @@ def process_project_assembly(
             print(f"[交付] 跳过字幕烧录，成片交付: {final_output}")
             return True
 
-    # 寻找字幕文件
+    # 寻找字幕文件（优先采用纯单行、基线绝对恒定的 single_line 字幕）
     srt_candidates = [
+        subs_dir / "narration.single_line.srt",
         subs_dir / "narration.srt",
         subs_dir / "narration.bilingual.srt",
     ]

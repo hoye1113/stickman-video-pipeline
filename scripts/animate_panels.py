@@ -45,6 +45,10 @@ def build_motion_filter(motion, duration, width, height, fps=24):
     total_frames = max(1, int(round(fps * duration)))
     motion_clean = motion.lower().replace("-", "_").strip()
 
+    # 零抖动纯静态呈现：彻底绕过 zoompan，杜绝任何逐帧亚像素重采样与线条摩尔纹微晃
+    if motion_clean in ("static", "none", "steady", "still", "freeze"):
+        return f"scale={width}:{height}:force_original_aspect_ratio=decrease,pad={width}:{height}:(ow-iw)/2:(oh-ih)/2,setsar=1"
+
     # 第一阶段：2X 超采样预缩放（2880x2160），在更高像素网格上计算位移，消除量化跳帧
     super_w = width * 2
     super_h = height * 2
@@ -167,7 +171,7 @@ def render_panel_clip(
         return False
 
 
-def process_project_panels(project_dir, resolution=DEFAULT_RESOLUTION, fps=DEFAULT_FPS):
+def process_project_panels(project_dir, resolution=DEFAULT_RESOLUTION, fps=DEFAULT_FPS, all_static=False):
     """
     批量渲染项目的所有画格
     """
@@ -196,7 +200,8 @@ def process_project_panels(project_dir, resolution=DEFAULT_RESOLUTION, fps=DEFAU
         print("  提示: 请先在 Google Flow 中通过 Nano Banana 2 (0积分) 生成画格并存放于该目录下。")
         return False
 
-    print(f"[批处理] 发现 {len(raw_images)} 个原始画格，分辨率目标: {resolution} (FPS: {fps})")
+    mode_label = "100% 绝对零抖动纯静态模式" if all_static else "动态运镜模式"
+    print(f"[批处理] 发现 {len(raw_images)} 个原始画格，模式: {mode_label}，分辨率目标: {resolution} (FPS: {fps})")
 
     # 默认交替运镜序列
     default_motions = ["slow_push", "breathing_drift", "pan_right", "slow_pull", "snap_zoom"]
@@ -207,7 +212,7 @@ def process_project_panels(project_dir, resolution=DEFAULT_RESOLUTION, fps=DEFAU
         info = panel_info.get(pid, {})
 
         duration = info.get("duration", 3.5)
-        motion = info.get("motion", default_motions[idx % len(default_motions)])
+        motion = "static" if all_static else info.get("motion", default_motions[idx % len(default_motions)])
 
         # 查找匹配的语音文件
         audio_candidate = voice_dir / f"{pid}.mp3"
@@ -228,7 +233,7 @@ def process_project_panels(project_dir, resolution=DEFAULT_RESOLUTION, fps=DEFAU
         if ok:
             success_count += 1
 
-    print(f"\n[完成] 动态运镜渲染完成: 成功 {success_count}/{len(raw_images)} 个片段置于 {output_dir}")
+    print(f"\n[完成] 渲染完成: 成功 {success_count}/{len(raw_images)} 个片段置于 {output_dir}")
     return success_count == len(raw_images)
 
 
@@ -243,6 +248,7 @@ def main():
         choices=["slow_push", "slow_pull", "pan_left", "pan_right", "pan_up", "pan_down", "breathing_drift", "snap_zoom", "shake", "static"],
         help="运镜动作预设"
     )
+    parser.add_argument("--static", "--all-static", action="store_true", dest="all_static", help="所有分镜均采用100%%零晃动绝对静态呈现")
     parser.add_argument("--audio", "-a", help="可选绑定的语音 MP3 音频路径")
     parser.add_argument("--resolution", "-r", default=DEFAULT_RESOLUTION, help=f"目标分辨率 (默认: {DEFAULT_RESOLUTION})")
     parser.add_argument("--fps", type=int, default=DEFAULT_FPS, help=f"视频帧率 (默认: {DEFAULT_FPS})")
@@ -256,7 +262,7 @@ def main():
             print(f"[错误] 无法定位项目目录: {args.project}", file=sys.stderr)
             sys.exit(1)
 
-        ok = process_project_panels(target_dir, resolution=args.resolution, fps=args.fps)
+        ok = process_project_panels(target_dir, resolution=args.resolution, fps=args.fps, all_static=args.all_static)
         sys.exit(0 if ok else 1)
 
     elif args.image:

@@ -101,17 +101,18 @@ def detect_and_fix_rtl(srt_path):
     return srt_path
 
 
-def build_subtitles_filter(srt_path, font_size=26, font_name="Arial", margin=50, video_size=None):
+def build_subtitles_filter(srt_path, font_size=54, font_name="Arial", margin=60, video_size=None):
     """
     构建 Windows / POSIX 兼容的 FFmpeg subtitles 滤镜参数。
     PlayRes 必须与视频分辨率对齐，避免 libass 在竖屏等非默认比例下字号缩放异常。
+    采用纯白字、高对比度粗黑描边 (Outline=3, Shadow=0)、严格底部基线对齐 (Alignment=2)。
     """
     escaped_srt = os.path.abspath(srt_path).replace("\\", "/").replace(":", "\\:").replace("'", r"\'")
     res_part = f",PlayResX={video_size[0]},PlayResY={video_size[1]}" if video_size else ""
     sub_style = (
         f"FontSize={font_size},FontName={font_name}{res_part},"
         f"PrimaryColour=&H00FFFFFF,OutlineColour=&H00000000,"
-        f"BorderStyle=1,Outline=2,Shadow=1,MarginV={margin},Alignment=2"
+        f"BorderStyle=1,Outline=3,Shadow=0,MarginV={margin},Alignment=2"
     )
     return f"subtitles='{escaped_srt}':force_style='{sub_style}'"
 
@@ -119,7 +120,7 @@ def build_subtitles_filter(srt_path, font_size=26, font_name="Arial", margin=50,
 def burn_subtitles(input_video, srt_path, output_video, font_size=None, font_name="Arial", margin=None):
     """
     统一烧录字幕到视频并输出成片。
-    自动探测视频画幅（横屏/竖屏），并设定符合工业标准的字号与边距。
+    自动探测视频画幅（横屏/竖屏），并设定符合移动端高可读性的工业级大字号与固定安全边距。
     """
     if not os.path.exists(input_video):
         print(f"[错误] 输入视频文件不存在: {input_video}")
@@ -134,8 +135,9 @@ def burn_subtitles(input_video, srt_path, output_video, font_size=None, font_nam
     size = probe_video_size(input_video)
     is_vertical = (size[1] > size[0]) if size else False
 
-    actual_font_size = font_size if font_size is not None else (36 if is_vertical else 26)
-    actual_margin = margin if margin is not None else (350 if is_vertical else 50)
+    # 移动端横屏 4:3/16:9 字号提升至 54（原 26 的两倍以上，面积增大4倍），竖屏提升至 48
+    actual_font_size = font_size if font_size is not None else (48 if is_vertical else 54)
+    actual_margin = margin if margin is not None else (350 if is_vertical else 60)
 
     print(
         f"[配置] 视频分辨率：{size or '未知'} | 模式：{'竖屏 9:16' if is_vertical else '横屏 4:3/16:9'} | "
