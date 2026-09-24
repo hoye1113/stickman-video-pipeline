@@ -1,93 +1,198 @@
 {
   "panel_01": {
-    "text": "男人在外面犯错后，到底还会不会真心爱自己的老婆？他和老婆亲密时，脑子里想的究竟是谁？答案可能比你想象的更残酷。",
-    "motion": "snap_zoom",
-    "duration": 11.3,
+    "text": "男人在外面背叛了以后，还会不会再真心爱自己的老婆？",
+    "motion": "slow_push",
+    "duration": 4.82,
     "audio_file": "05_voiceover_and_srt/panel_01.mp3",
     "srt_file": "05_voiceover_and_srt/panel_01.srt"
   },
   "panel_02": {
-    "text": "大多数人以为背叛的男人在外面尽情享受。但上百个真实咨询案例告诉我：他们不是在享受，而是在撕裂。",
-    "motion": "slow_push",
-    "duration": 9.58,
+    "text": "他和老婆发生亲密关系的时候，脑子里到底有没有想到外面那个女人？",
+    "motion": "slow_pull",
+    "duration": 6.1,
     "audio_file": "05_voiceover_and_srt/panel_02.mp3",
     "srt_file": "05_voiceover_and_srt/panel_02.srt"
   },
   "panel_03": {
-    "text": "第一个故事，是周先生。3年的关系，因为孩子用他手机上网课弹出的消息彻底暴露。他那一刻的崩溃，不是愧疚，而是极度的恐惧。",
+    "text": "站在男人的视角，这个答案可能比你想象中更残酷；如果不捅破这层窗户纸，很多人可能一辈子都蒙在鼓里。",
     "motion": "snap_zoom",
-    "duration": 12.74,
+    "duration": 8.78,
     "audio_file": "05_voiceover_and_srt/panel_03.mp3",
     "srt_file": "05_voiceover_and_srt/panel_03.srt"
   },
   "panel_04": {
-    "text": "他立刻下跪认错，换副卡、清空所有社交账号。他以为这是回归，但妻子追问细节时，他每天活在窒息的防备里，白天演好丈夫，深夜彻底失眠。",
-    "motion": "slow_pull",
-    "duration": 13.92,
+    "text": "大多数人以为背叛的男人在外面尽情享受。但上百个真实案例告诉我：他们不是在享受，而是在撕裂。",
+    "motion": "breathing_drift",
+    "duration": 9.19,
     "audio_file": "05_voiceover_and_srt/panel_04.mp3",
     "srt_file": "05_voiceover_and_srt/panel_04.srt"
   },
   "panel_05": {
-    "text": "第二个是刘先生。大学相恋结婚多年，生活只剩平淡与责任分工。一次酒局接触到外面的关注，那种被崇拜的感觉，让他误以为自己重新活了一次。",
-    "motion": "pan_right",
-    "duration": 13.61,
+    "text": "第一个故事，是周先生。3年的婚外关系，因为孩子用他手机上网课，刚好弹出的一条消息彻底暴露。",
+    "motion": "slow_push",
+    "duration": 9.77,
     "audio_file": "05_voiceover_and_srt/panel_05.mp3",
     "srt_file": "05_voiceover_and_srt/panel_05.srt"
   },
   "panel_06": {
-    "text": "他知道不对，但他停不下来。回到家他加倍顺从，试图用这种补偿心态抵消内心的恐慌。他的愧疚是真实的，但背叛与愧疚却在同时发生。",
-    "motion": "breathing_drift",
-    "duration": 13.42,
+    "text": "他看见妻子那一刻的眼神，心里瞬间慌了。但那不是单纯的愧疚，而是极度的恐惧，怕孩子受到影响。",
+    "motion": "snap_zoom",
+    "duration": 9.58,
     "audio_file": "05_voiceover_and_srt/panel_06.mp3",
     "srt_file": "05_voiceover_and_srt/panel_06.srt"
   },
   "panel_07": {
-    "text": "第三个是李先生。他其实早就主动断了，但他活在长期的神经紧绷中。有一次说加班，妻子突然让他回家送钥匙，他第一反应不是解释，而是吓出一身冷汗。",
+    "text": "他的妻子当晚就拿出了离婚协议，他整个人直接崩掉，没有任何犹豫就认错，跪着求她原谅。",
     "motion": "slow_push",
-    "duration": 13.58,
+    "duration": 8.74,
     "audio_file": "05_voiceover_and_srt/panel_07.mp3",
     "srt_file": "05_voiceover_and_srt/panel_07.srt"
   },
   "panel_08": {
-    "text": "连夜开几个小时车赶回去的那一刻，他突然清醒了：这种躲躲藏藏的生活根本不是享受，而是一场把人榨干的漫长酷刑。",
-    "motion": "slow_pull",
-    "duration": 10.7,
+    "text": "他为了证明想回归家庭，主动把手机换成副卡，微信重新注册，删掉所有联系人，发了彻底断联消息。",
+    "motion": "pan_right",
+    "duration": 9.53,
     "audio_file": "05_voiceover_and_srt/panel_08.mp3",
     "srt_file": "05_voiceover_and_srt/panel_08.srt"
   },
   "panel_09": {
-    "text": "看懂这三个故事，你就会明白：婚外关系往往不是谁比谁更爱，而是他在不同需求之间彻底失控了。",
+    "text": "他以为这样就结束了，结果第二天妻子开始追问每一个细节，甚至提出要去对方家门口讨说法。",
     "motion": "slow_push",
-    "duration": 9.36,
+    "duration": 8.4,
     "audio_file": "05_voiceover_and_srt/panel_09.mp3",
     "srt_file": "05_voiceover_and_srt/panel_09.srt"
   },
   "panel_10": {
-    "text": "那不是真爱，那只是一剂短期的情绪麻醉剂。但麻醉过后，你要面对的是无休止的谎言、家庭的审判与撕裂的自我。",
-    "motion": "pan_left",
-    "duration": 11.3,
+    "text": "他嘴上答应，心里却极度抗拒。不是因为他还爱着对方，而是害怕事情会彻底失控。",
+    "motion": "snap_zoom",
+    "duration": 8.71,
     "audio_file": "05_voiceover_and_srt/panel_10.mp3",
     "srt_file": "05_voiceover_and_srt/panel_10.srt"
   },
   "panel_11": {
-    "text": "如果婚姻走到这一步，男人最该问自己的两件事：第一，你是在解决问题，还是在逃避问题？第二，你到底有没有勇气，去承担真实的代价？",
+    "text": "他白天竭力演一个好丈夫，深夜却整夜失眠，每天活在窒息的压迫感里，甚至开始怀疑自己还能否撑下去。",
     "motion": "breathing_drift",
-    "duration": 12.43,
+    "duration": 9.5,
     "audio_file": "05_voiceover_and_srt/panel_11.mp3",
     "srt_file": "05_voiceover_and_srt/panel_11.srt"
   },
   "panel_12": {
-    "text": "站在妻子的角度也一样：最危险的从来不是痛苦，而是失去理智只剩情绪。关系要不要继续，取决于他有没有承担后果的行动力，以及重建规则的能力。",
-    "motion": "slow_push",
-    "duration": 13.87,
+    "text": "第二个是刘先生。大学相恋结婚多年，生活极度稳定，但毫无波澜，沟通只剩下责任的分工。",
+    "motion": "slow_pull",
+    "duration": 9.0,
     "audio_file": "05_voiceover_and_srt/panel_12.mp3",
     "srt_file": "05_voiceover_and_srt/panel_12.srt"
   },
   "panel_13": {
-    "text": "婚姻里最怕的从来不是犯错，而是犯错后双方继续用错误的方式消耗彼此。真正的修复，是重新建立规则与边界。关注我，看清亲密关系里的真实人性。",
-    "motion": "slow_pull",
-    "duration": 14.33,
+    "text": "一次朋友酒局喝多了，接触了外面的关注。那种被崇拜、被情绪调动的感觉，让他误以为自己重新活了一次。",
+    "motion": "pan_left",
+    "duration": 9.79,
     "audio_file": "05_voiceover_and_srt/panel_13.mp3",
     "srt_file": "05_voiceover_and_srt/panel_13.srt"
+  },
+  "panel_14": {
+    "text": "他知道不对，但他停不下来。那种刺激感太强烈了，强烈到让他开始拿它和婚姻里的平淡做对比。",
+    "motion": "slow_push",
+    "duration": 9.0,
+    "audio_file": "05_voiceover_and_srt/panel_14.mp3",
+    "srt_file": "05_voiceover_and_srt/panel_14.srt"
+  },
+  "panel_15": {
+    "text": "后来回到家，面对妻子的情绪和质问，他反而更容易逃避。因为在外面他感觉被需要，在家里只有压力。",
+    "motion": "slow_pull",
+    "duration": 9.19,
+    "audio_file": "05_voiceover_and_srt/panel_15.mp3",
+    "srt_file": "05_voiceover_and_srt/panel_15.srt"
+  },
+  "panel_16": {
+    "text": "他开始用一种补偿心态去维持表面的和平，对妻子加倍顺从，试图以此抵消内心的恐慌与不安。",
+    "motion": "slow_push",
+    "duration": 8.59,
+    "audio_file": "05_voiceover_and_srt/panel_16.mp3",
+    "srt_file": "05_voiceover_and_srt/panel_16.srt"
+  },
+  "panel_17": {
+    "text": "他不是没有愧疚，而是愧疚与背叛，这两件事情可以在一个男人身上同时发生。",
+    "motion": "breathing_drift",
+    "duration": 7.08,
+    "audio_file": "05_voiceover_and_srt/panel_17.mp3",
+    "srt_file": "05_voiceover_and_srt/panel_17.srt"
+  },
+  "panel_18": {
+    "text": "第三个是李先生。他属于主动断掉的类型，但他却陷入了长期的精神高度紧绷中。",
+    "motion": "snap_zoom",
+    "duration": 7.44,
+    "audio_file": "05_voiceover_and_srt/panel_18.mp3",
+    "srt_file": "05_voiceover_and_srt/panel_18.srt"
+  },
+  "panel_19": {
+    "text": "白天维持正常生活，晚上装作什么都没发生。甚至在亲密关系时都不敢拒绝，因为害怕暴露任何异常。",
+    "motion": "slow_push",
+    "duration": 9.62,
+    "audio_file": "05_voiceover_and_srt/panel_19.mp3",
+    "srt_file": "05_voiceover_and_srt/panel_19.srt"
+  },
+  "panel_20": {
+    "text": "有一次他在外面说加班准备留宿，妻子突然打电话让他回家送钥匙。",
+    "motion": "snap_zoom",
+    "duration": 6.6,
+    "audio_file": "05_voiceover_and_srt/panel_20.mp3",
+    "srt_file": "05_voiceover_and_srt/panel_20.srt"
+  },
+  "panel_21": {
+    "text": "他的第一反应不是解释，而是极度的恐慌，立刻编了个理由连夜狂踩油门开车往回赶。",
+    "motion": "slow_push",
+    "duration": 7.92,
+    "audio_file": "05_voiceover_and_srt/panel_21.mp3",
+    "srt_file": "05_voiceover_and_srt/panel_21.srt"
+  },
+  "panel_22": {
+    "text": "连夜开了几个小时赶回来的那一刻，他突然清醒了：这种躲躲藏藏的生活根本不是享受，而是一场长期的酷刑。",
+    "motion": "slow_pull",
+    "duration": 9.7,
+    "audio_file": "05_voiceover_and_srt/panel_22.mp3",
+    "srt_file": "05_voiceover_and_srt/panel_22.srt"
+  },
+  "panel_23": {
+    "text": "3个故事讲完了。背叛的男人并不是单纯在享受，而是在撕裂。",
+    "motion": "slow_push",
+    "duration": 6.7,
+    "audio_file": "05_voiceover_and_srt/panel_23.mp3",
+    "srt_file": "05_voiceover_and_srt/panel_23.srt"
+  },
+  "panel_24": {
+    "text": "一边想维持家庭，一边想满足刺激；一边愧疚，一边合理化；一边害怕失去，一边无法自拔。看起来是在选择，其实是内在的彻底撕裂。",
+    "motion": "pan_right",
+    "duration": 12.86,
+    "audio_file": "05_voiceover_and_srt/panel_24.mp3",
+    "srt_file": "05_voiceover_and_srt/panel_24.srt"
+  },
+  "panel_25": {
+    "text": "很多妻子最难受的是以为他一定是更爱外面那个人。但真相往往不是谁更爱谁，而是他在不同需求之间彻底失控了。婚外关系只是一剂短期的情绪麻醉。",
+    "motion": "slow_push",
+    "duration": 14.21,
+    "audio_file": "05_voiceover_and_srt/panel_25.mp3",
+    "srt_file": "05_voiceover_and_srt/panel_25.srt"
+  },
+  "panel_26": {
+    "text": "麻醉过后，你要面对的是无休止的谎言、家庭的审判与撕裂的自我。回归家庭并不等于真正修复。",
+    "motion": "slow_pull",
+    "duration": 10.51,
+    "audio_file": "05_voiceover_and_srt/panel_26.mp3",
+    "srt_file": "05_voiceover_and_srt/panel_26.srt"
+  },
+  "panel_27": {
+    "text": "如果婚姻走到危机，男人最该问自己两件事：第一，你是在解决问题，还是在逃避问题？第二，你到底有没有勇气，去承担真实的代价？",
+    "motion": "snap_zoom",
+    "duration": 12.31,
+    "audio_file": "05_voiceover_and_srt/panel_27.mp3",
+    "srt_file": "05_voiceover_and_srt/panel_27.srt"
+  },
+  "panel_28": {
+    "text": "站在妻子的角度也一样，最危险的从来不是痛苦，而是失去理智只剩情绪。婚姻里最怕的从来不是犯错，而是犯错后继续用错误的方式消耗彼此。真正的修复，是重新建立规则与边界。关注我，看清亲密关系里的真实人性。",
+    "motion": "slow_pull",
+    "duration": 21.31,
+    "audio_file": "05_voiceover_and_srt/panel_28.mp3",
+    "srt_file": "05_voiceover_and_srt/panel_28.srt"
   }
 }

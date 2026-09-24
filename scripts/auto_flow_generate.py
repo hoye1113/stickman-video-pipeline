@@ -97,27 +97,29 @@ def fill_prompt_and_click(session_id: str, prompt_text: str) -> bool:
 
     time.sleep(1)
 
-    # 通过 bsk observe 查找最新的“开始生成”按钮 ref
+    # 循环等待可点击的“开始生成”按钮出现（防止上一张图还在“停止”收尾阶段）
     env = os.environ.copy()
     env["BSK_AUTO_START"] = "0"
-    obs = subprocess.run(["bsk", "observe", "--session", session_id], capture_output=True, text=True, encoding="utf-8", errors="replace", env=env)
-    
-    # 匹配 @eN button "开始生成"（忽略已禁用的情况）
-    matches = re.findall(r'(@e\d+)\s+button\s+"开始生成"(?!\s*\[disabled\])', obs.stdout)
-    if not matches:
-        # 尝试匹配无引号的情况
-        matches = re.findall(r'(@e\d+)\s+button.*开始生成(?!\s*\[disabled\])', obs.stdout)
+    btn_ref = None
+    for attempt in range(12):
+        obs = subprocess.run(["bsk", "observe", "--session", session_id], capture_output=True, text=True, encoding="utf-8", errors="replace", env=env)
+        matches = re.findall(r'(@e\d+)\s+button\s+"开始生成"(?!\s*\[disabled\])', obs.stdout)
+        if not matches:
+            matches = re.findall(r'(@e\d+)\s+button.*开始生成(?!\s*\[disabled\])', obs.stdout)
+        if matches:
+            btn_ref = matches[-1]
+            break
+        time.sleep(2.5)
 
-    if not matches:
-        print(f"     [错误] 未找到可点击的“开始生成”按钮！页面观察输出片段:\n{obs.stdout[-500:]}")
+    if not btn_ref:
+        print(f"     [错误] 未找到可点击的“开始生成”按钮！页面观察输出片段:\n{obs.stdout[-500:]}", flush=True)
         return False
 
-    btn_ref = matches[-1]
     click_res = subprocess.run(["bsk", "click", "--ref", btn_ref, "--session", session_id], capture_output=True, text=True, encoding="utf-8", errors="replace", env=env)
     if "click ok" in click_res.stdout or click_res.returncode == 0:
         return True
 
-    print(f"     [错误] 点击按钮失败: {click_res.stderr.strip() or click_res.stdout.strip()}")
+    print(f"     [错误] 点击按钮失败: {click_res.stderr.strip() or click_res.stdout.strip()}", flush=True)
     return False
 
 
@@ -131,24 +133,30 @@ def download_url(url: str, target_path: Path) -> bool:
         with urllib.request.urlopen(req, timeout=30) as resp:
             data = resp.read()
             if len(data) < 50000:
-                print(f"     [错误] 下载数据异常偏小: {len(data)} 字节")
+                print(f"     [错误] 下载数据异常偏小: {len(data)} 字节", flush=True)
                 return False
             target_path.parent.mkdir(parents=True, exist_ok=True)
             with open(target_path, "wb") as f:
                 f.write(data)
             return True
     except Exception as e:
-        print(f"     [错误] 下载图片异常: {e}")
-        return False
+        print(f"     [重试] urllib.request 失败 ({e})，尝试 urlretrieve...", flush=True)
+        try:
+            target_path.parent.mkdir(parents=True, exist_ok=True)
+            urllib.request.urlretrieve(url, str(target_path))
+            return target_path.exists() and target_path.stat().st_size > 50000
+        except Exception as e2:
+            print(f"     [错误] 下载图片异常: {e2}", flush=True)
+            return False
 
 
-def generate_panel(session_id: str, panel_idx: int, prompt_text: str, project, max_wait: int = 70):
+def generate_panel(session_id: str, panel_idx: int, prompt_text: str, project, max_wait: int = 90):
     """为指定分镜执行提交、等待并保存"""
     out_filename = f"panel_{panel_idx:02d}.png"
     target_path = project.file("04_raw_panels", out_filename)
 
-    print(f"\n[{panel_idx:02d}] 🚀 开始生成分镜: {out_filename}")
-    print(f"     提示词: {prompt_text[:75]}...")
+    print(f"\n[{panel_idx:02d}] 🚀 开始生成分镜: {out_filename}", flush=True)
+    print(f"     提示词: {prompt_text[:75]}...", flush=True)
 
     existing_urls = set(get_flow_image_urls(session_id))
 
@@ -157,7 +165,7 @@ def generate_panel(session_id: str, panel_idx: int, prompt_text: str, project, m
     if not ok:
         return False
 
-    print(f"[{panel_idx:02d}] ⏳ 任务已提交，等待 Nano Banana 2 渲染 (0 积分)...")
+    print(f"[{panel_idx:02d}] ⏳ 任务已提交，等待 Nano Banana 2 渲染 (0 积分)...", flush=True)
     start_time = time.time()
     time.sleep(4)  # 等待后端响应进入生成态
 
@@ -168,31 +176,30 @@ def generate_panel(session_id: str, panel_idx: int, prompt_text: str, project, m
         thinking = is_page_thinking(session_id)
 
         if new_urls and not thinking:
-            target_url = new_urls[0]
+            target_url = new_urls[-1]
             break
 
         time.sleep(2)
 
     if not target_url:
-        # 若新图集合为空，但页面已经生成结束，检查是否有最新的 flow-content URL
         curr_urls = get_flow_image_urls(session_id)
         new_urls = [u for u in curr_urls if u not in existing_urls]
         if new_urls:
-            target_url = new_urls[0]
+            target_url = new_urls[-1]
 
     if not target_url:
-        print(f"[{panel_idx:02d}] ❌ 等待生成超时，未获取到新生成的画格 URL")
+        print(f"[{panel_idx:02d}] ❌ 等待生成超时，未获取到新生成的画格 URL", flush=True)
         return False
 
     # 直接从 CDN 下载入库
     dl_ok = download_url(target_url, target_path)
     if dl_ok and target_path.exists():
         size_kb = target_path.stat().st_size / 1024
-        print(f"[{panel_idx:02d}] ✅ 成功落盘: {out_filename} ({size_kb:.1f} KB)")
+        print(f"[{panel_idx:02d}] ✅ 成功落盘: {out_filename} ({size_kb:.1f} KB)", flush=True)
         project.record_panel(panel_idx)
         return True
     else:
-        print(f"[{panel_idx:02d}] ❌ 下载落盘失败")
+        print(f"[{panel_idx:02d}] ❌ 下载落盘失败", flush=True)
         return False
 
 

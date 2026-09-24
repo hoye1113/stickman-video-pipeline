@@ -21,16 +21,17 @@ from core.project_base import resolve_project
 from scripts.generate_tts import parse_storyboard_table
 
 GLOBAL_STYLE_LOCK = (
-    "masterpiece, cinematic noir graphic novel, vintage monochrome manga ink illustration, "
-    "crisp lineart with rich cross-hatching shadows, deep chiaroscuro lighting, heavy shadows, "
+    "masterpiece, fine lineart, vintage monochrome manga ink drawing, "
+    "rich cross-hatching shadows, deep chiaroscuro lighting, "
     "4:3 aspect ratio"
 )
 
 NEGATIVE_CONSTRAINTS = (
     "no photorealism, no real human photography, no realistic photo, no 3d render, "
-    "no vibrant colors, no rainbow colors, no text, no words, no speech bubbles, "
-    "no dialogue balloons, no English captions, clean high contrast comic artwork"
+    "no color, no vibrant colors, no rainbow colors, no text, no words, no speech bubbles, "
+    "no dialogue balloons, no English captions, clean high contrast monochrome comic artwork"
 )
+
 
 
 def assemble_panel_prompt(action_desc: str, character_desc: str, style_lock: str = GLOBAL_STYLE_LOCK, negatives: str = NEGATIVE_CONSTRAINTS) -> str:
@@ -106,14 +107,19 @@ def main():
         pid = p["id"]
         raw_prompt = p["prompt"]
 
-        # 根据分镜内容智能选用角色锚点（男主、妻子或双人）
+        # 根据分镜内容智能选用角色锚点（男主、妻子、双人、儿童或静物特写）
         lower_prompt = raw_prompt.lower()
-        if "wife" in lower_prompt and ("husband" in lower_prompt or "man" in lower_prompt or "two people" in lower_prompt):
+        if any(k in lower_prompt for k in ["macro shot", "macro still life", "cut sim cards", "shattered wine glass"]):
+            char_anchor = ""
+        elif "child" in lower_prompt or "kid" in lower_prompt:
+            char_anchor = "A young Asian elementary school child"
+        elif "wife" in lower_prompt and ("husband" in lower_prompt or "man" in lower_prompt or "two people" in lower_prompt):
             char_anchor = f"{husband_anchor} and his wife ({wife_anchor})"
         elif "wife" in lower_prompt or "woman" in lower_prompt:
             char_anchor = wife_anchor
         else:
             char_anchor = husband_anchor
+
 
         # 清洗 raw_prompt 中原先可能存在的矛盾词
         cleaned_action = re.sub(
